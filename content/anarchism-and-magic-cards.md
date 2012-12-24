@@ -1,6 +1,6 @@
 Title: Anarchism and Magic...cards
 Date: 2011-05-26 03:26
-Author: Admin
+Author: isis
 Category: Anarchism, occult
 Tags: Anarchism, flavor text, geekiness, magic the gathering
 

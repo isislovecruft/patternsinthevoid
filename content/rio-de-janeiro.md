@@ -1,6 +1,6 @@
 Title: Rio de Janeiro
 Date: 2012-05-29 12:58
-Author: Admin
+Author: isis
 Category: Technology
 Tags: freebird, Guardian Project, ooni, rightscon, rio de janeiro, Tor, travel
 

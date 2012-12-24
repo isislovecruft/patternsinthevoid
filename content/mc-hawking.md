@@ -1,6 +1,6 @@
 Title: MC Hawking!
 Date: 2011-10-17 21:42
-Author: Admin
+Author: isis
 Category: Technology
 Tags: A* Heuristics, artificial intelligence, discern, facial recognition, hackmeet, MC Hawking, Noisebridge, python, robot, robotics
 

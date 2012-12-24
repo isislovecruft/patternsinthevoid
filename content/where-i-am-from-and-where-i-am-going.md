@@ -1,11 +1,12 @@
 Title: Where I Am From, and Where I Am Going
 Date: 2010-04-06 23:49
-Author: Admin
+Author: isis agora lovecruft
 Category: Art
 Tags: future, music, poetry, Rilke, time travel
 
-Yet another reason for my admittedly irrational belief that I will one
-day play a part in the invention of a time travel device:
+Further anecdotal evidence for my entirely irrational, albeit highly amusing,
+affect for feigning belief that I will one day play a part in the invention of
+a "time travel" device:
 
 Today, while walking, I decided on whim to take an obnoxious pedestrian
 bridge that I have never taken before, simply because it spans about two

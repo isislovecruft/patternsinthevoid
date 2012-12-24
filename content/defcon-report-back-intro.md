@@ -1,6 +1,6 @@
 Title: Defcon Report Back, Intro
 Date: 2011-08-08 15:28
-Author: Admin
+Author: isis
 Category: Technology
 Tags: black hat con, certificate authority, convergenge, Defcon, dr. zoz, fuck them, gender identity, hacking, las vegas, security
 

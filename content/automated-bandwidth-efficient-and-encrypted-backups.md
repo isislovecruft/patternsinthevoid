@@ -1,6 +1,6 @@
 Title: Automated, Bandwidth-Efficient, and Encrypted Backups
 Date: 2011-12-19 19:29
-Author: Admin
+Author: isis
 Category: Technology
 Tags: backup, bash scripting, command line, cryptography, duplicity, linux
 

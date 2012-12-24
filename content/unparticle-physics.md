@@ -1,7 +1,7 @@
 Title: Unparticle Physics
 Date: 2011-04-07 18:36
-Author: Admin
-Category: Physics, Technology
+Author: isis
+Category: Physics
 Tags: banks-zaks fields, beyond the standard model, black holes, dark matter/energy, fuck IP!, hawking radiation, theoretical physics, uncosmology, unparticle physics
 
 I recently discovered a young branch of theoretical physics: unparticle

@@ -1,6 +1,6 @@
 Title: Viennese Cathedrals & Sleepy Hollow
 Date: 2012-01-22 00:24
-Author: Admin
+Author: isis
 Category: Art
 Tags: cathedral, gothic, graveyard, sleepy hollow, vienna
 

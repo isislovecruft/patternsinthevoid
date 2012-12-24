@@ -1,6 +1,6 @@
 Title: Game Theory & Anarchism: Why Snitches Are Snitches, and Why Anarchists Are Not Snitches
 Date: 2011-01-07 17:08
-Author: Admin
+Author: isis
 Category: Anarchism, Game Theory
 Tags: Anarchism, game theory, logic, morality, mutual cooperation, rationalism, snitches are bitches
 

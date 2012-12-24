@@ -1,6 +1,6 @@
 Title: Broadcast De-auth DOS Attack: Jamming WiFi Networks
 Date: 2011-05-07 13:52
-Author: Admin
+Author: isis
 Category: Technology
 Tags: DOS, packet injection, wifi jamming
 

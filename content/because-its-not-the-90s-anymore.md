@@ -1,6 +1,6 @@
 Title: Because It's Not The '90s Anymore
 Date: 2011-06-17 20:26
-Author: Admin
+Author: isis
 Category: Technology
 Tags: anonymity, contact info, QR, security
 

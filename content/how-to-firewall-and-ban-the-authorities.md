@@ -1,6 +1,6 @@
 Title: How To Firewall and Ban The Authorities
 Date: 2011-03-14 13:46
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: .htaccess, Anarchism, crypto-anarchy, government IP addresses, IP block, proudhon, telecomix, telecomix crypto munitions bureau
 

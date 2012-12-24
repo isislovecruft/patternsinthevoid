@@ -1,6 +1,6 @@
 Title: Graceless: A Journal of the Radical Gothic
 Date: 2011-03-10 02:17
-Author: Admin
+Author: isis
 Category: Literature
 Tags: Anarchism, anarchist bookfair, gothic, graceless, radicalism
 

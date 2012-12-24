@@ -1,6 +1,6 @@
 Title: Robots Windsurfing Asteroids
 Date: 2011-09-02 17:24
-Author: Admin
+Author: isis
 Category: Politics, Technology
 Tags: apocalypse, asteroid, great chinese firewall, hacking, physics, robotics, Tor
 

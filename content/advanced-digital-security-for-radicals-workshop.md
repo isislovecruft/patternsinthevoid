@@ -1,6 +1,6 @@
 Title: Advanced Digital Security for Radicals Workshop
 Date: 2011-05-09 18:51
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: activism, Anarchism, Black Rose, crypto-anarchism, cryptography, darknet, DDoS, encryption, freenet, i2p, plausible deniability, radicalism, security, steganography, Tor, virtual machines, virtual private network
 

@@ -1,6 +1,6 @@
 Title: Journey to the End of the Night
 Date: 2012-01-04 02:55
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 
 In Berlin, on New Year's Eve, I participated in a race through the

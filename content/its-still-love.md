@@ -1,6 +1,6 @@
 Title: It's Still Love
 Date: 2011-08-26 17:05
-Author: Admin
+Author: isis
 Category: Technology
 Tags: python
 

@@ -1,6 +1,6 @@
 Title: Anthropic Decision Theory
 Date: 2011-12-05 23:23
-Author: Admin
+Author: isis
 Category: Game Theory, Technology
 Tags: altruism, anthropic decision theory, artificial intelligence, cosmology, game theory, robot liberation front, swarm robotics, utilitarianism
 

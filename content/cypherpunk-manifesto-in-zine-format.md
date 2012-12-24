@@ -1,6 +1,6 @@
 Title: Cypherpunk Manifesto in Zine Format
 Date: 2011-03-23 03:17
-Author: Admin
+Author: isis
 Category: Art, Post-Anarchism, Technology
 Tags: crypto-anarchism, cryptography, cypherpunk, cypherpunk manifesto
 

@@ -1,6 +1,6 @@
 Title: Installing Tor, Polipo, and Vidalia, and Excluding Bad Exit Nodes, in Linux
 Date: 2011-06-21 20:15
-Author: Admin
+Author: isis
 Category: Technology
 Tags: .onion, anonymity, Bad Apple Attack, Excluding Bad Exit Nodes, linux, Polipo, Setting Up a Tor Relay, Tor, Tor Hidden Services, Vidalia
 

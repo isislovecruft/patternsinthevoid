@@ -1,6 +1,6 @@
 Title: Mutatus Nomen Iterum
 Date: 2011-10-08 03:35
-Author: Admin
+Author: isis
 Category: Art
 Tags: Ada Lovelace, Agorism, class war, cyborg rights, dancing, gender identity, H.P. Lovecraft, Isis Agora Lovecruft, Janelle Monae, queer, race relations
 

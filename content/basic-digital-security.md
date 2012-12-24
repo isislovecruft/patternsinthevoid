@@ -1,6 +1,6 @@
 Title: Basic Digital Security
 Date: 2011-07-28 20:33
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: activism, crypto-anarchism, cryptography, Defcon, digital security, enigmail, GnuPG, Tor
 

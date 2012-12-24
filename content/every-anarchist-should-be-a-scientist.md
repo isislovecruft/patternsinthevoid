@@ -1,6 +1,6 @@
 Title: Every Anarchist Should Be A Scientist
 Date: 2011-09-10 22:41
-Author: Admin
+Author: isis
 Category: Anarchism
 Tags: Anarchism, hacking, radicalism, science, William Gillis
 

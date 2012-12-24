@@ -1,6 +1,6 @@
 Title: Science Without Hierarchy
 Date: 2011-09-29 09:12
-Author: Admin
+Author: isis
 Category: Anarchism, Physics
 Tags: Anarchism, epistemology, post-revolution, science
 

@@ -1,6 +1,6 @@
 Title: Schizophrenic Artificial Intelligences
 Date: 2011-05-09 10:05
-Author: Admin
+Author: isis
 Category: Game Theory, Linguistic Theory, Psychology, Technology
 Tags: artificial intelligence, badredine arfi, causality, computing with words, data analysis, fuzzy logic, game theory, linguistic fuzzy logic, linguistics, neural nets, prisonner's dilemma, revolution, schizophrenia, theda skocpol
 

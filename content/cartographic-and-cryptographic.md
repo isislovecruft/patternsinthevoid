@@ -1,6 +1,6 @@
 Title: Cartographic and Cryptographic
 Date: 2011-09-22 20:37
-Author: Admin
+Author: isis
 Category: Art, Physics, Technology
 Tags: cartography, cosmic microwave background, cosmology, crypto-anarchism, cryptography, Einstein, Einstein's Field Equations, extraterrestrial, ferrofluid, Gaussian curvature, general relativity, geodesic equation, magnetic tattoo, munitions, nanotechnology, observable universe, perl, python, RSA, suicide, tattoo, voyager
 

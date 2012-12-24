@@ -1,6 +1,6 @@
 Title: Game Theory & Anarchism II: How information can smash the state
 Date: 2011-06-08 04:39
-Author: Admin
+Author: isis
 Category: Anarchism, Game Theory, Technology
 Tags: .onion, Anarchism, assassination markets, BitCoin, crypto-anarchism, cryptography, dead pool, decision making, douglas hofstader, evil corporations, game theory, guess two thirds of the average, information analysis, Jim Bell, meta-processing, Multnomah County Common Law Court, PGP, predictive markets, prisoner's dilemma, rationality, superrationality, Tor
 

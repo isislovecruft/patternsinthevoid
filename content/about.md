@@ -1,6 +1,6 @@
 Title: About
 Date: 2010-01-04 22:53
-Author: Admin
+Author: isis
 
 [![][]][]
 

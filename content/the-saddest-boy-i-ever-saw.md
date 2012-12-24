@@ -1,6 +1,6 @@
 Title: Depression Has Infinite Recursion
 Date: 2011-12-19 03:03
-Author: Admin
+Author: isis
 Category: Uncategorized
 Tags: i thought robots weren't supposed to have emotions
 

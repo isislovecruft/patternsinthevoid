@@ -1,6 +1,6 @@
 Title: Discern Neural Network
 Date: 2011-07-11 02:52
-Author: Admin
+Author: isis
 Category: Technology
 Tags: anarchist literature, artificial intelligence, cyberpunk, discern, linux, Marionette Labs, neural network, open source, tech-positive, ubuntu
 

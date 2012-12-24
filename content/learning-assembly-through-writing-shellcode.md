@@ -1,6 +1,6 @@
 Title: Learning Assembly Through Writing Shellcode
 Date: 2011-09-03 04:21
-Author: Admin
+Author: isis
 Category: Technology
 Tags: assembly, C, destruction, hacking, hex, linux, python, quantum physics, shellcode, stack randomization, syscall
 

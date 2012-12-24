@@ -1,6 +1,6 @@
 Title: Git Nowhere
 Date: 2012-04-04 20:19
-Author: Admin
+Author: isis
 Category: Technology
 Tags: anonymity, bash, geodata, git
 

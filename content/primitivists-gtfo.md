@@ -1,6 +1,6 @@
 Title: Primitivists: GTFO!
 Date: 2011-08-29 22:02
-Author: Admin
+Author: isis
 Category: Anarchism
 Tags: anarcho-transhumanism, anti-primitivism, cyberfeminism, cyborg manifesto, Donna Haraway, nanotechnology, naturalistic fallacy, primitivist theory, queer, William Godwin
 

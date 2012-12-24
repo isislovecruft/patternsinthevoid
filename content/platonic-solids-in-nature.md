@@ -1,6 +1,6 @@
 Title: Platonic Solids in Nature
 Date: 2010-08-30 23:42
-Author: Admin
+Author: isis
 Category: Art, Geometry
 Tags: aristotle, elements, empedocles, geometry, johannes kepler, plato, polyhedra, solids
 

@@ -1,6 +1,6 @@
 Title: Chlorosis!
 Date: 2011-04-20 14:49
-Author: Admin
+Author: isis
 Category: Anarchism
 Tags: albinism, albino sequoia sempervirens, bok choi, chlorosis, genetic mutations, new friend, parasitism, redwoods
 

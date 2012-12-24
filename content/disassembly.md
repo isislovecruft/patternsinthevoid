@@ -1,6 +1,6 @@
 Title: Disassembly
 Date: 2011-12-20 17:58
-Author: Admin
+Author: isis
 Category: Technology
 Tags: assembly languages, exploit development, fancy punks, hex, linux, shellcode
 

@@ -1,6 +1,6 @@
 Title: Absense
 Date: 2012-03-16 02:28
-Author: Admin
+Author: isis
 Category: Technology
 Tags: deadman's switch, obfsproxy, ooni-probe, reverse engineering, Tor
 

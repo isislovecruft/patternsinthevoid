@@ -1,6 +1,6 @@
 Title: Strive to Survive
 Date: 2011-07-04 18:28
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: Anarchism, anti-primitivism, emerging technologies, existential risk reduction, opinion, philosophy
 

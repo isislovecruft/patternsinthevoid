@@ -1,6 +1,6 @@
 Title: Anarcho-Transhumanism: The Death of Sexism
 Date: 2011-09-23 00:51
-Author: Admin
+Author: isis
 Category: Anarchism
 Tags: anarcho-transhumanism, anti-primitivism, biological essentialism, sexism
 

@@ -1,6 +1,6 @@
 Title: How To Talk To The Police, Lesson #1:
 Date: 2010-11-16 16:35
-Author: Admin
+Author: isis
 Category: Art, Linguistic Theory, Mysticism
 Tags: alchemy, anarchy, cynicism, elk information radio station
 

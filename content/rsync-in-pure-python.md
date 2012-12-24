@@ -1,6 +1,6 @@
 Title: pyrsync: A pure Python module for the rsync algorithm
 Date: 2012-01-26 00:10
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: cryptography, hacking, python, rsync
 

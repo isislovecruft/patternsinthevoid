@@ -1,6 +1,6 @@
 Title: The Internalization of the Apocalypse: Subjectivity as a Fulcrum
 Date: 2010-11-22 18:44
-Author: Admin
+Author: isis
 Category: Critical Theory, Post-Anarchism, Sexology
 Tags: gender identity, John Kucich, masochism, power structures, sadomasochism, sexuality, subjectivity, temporality
 

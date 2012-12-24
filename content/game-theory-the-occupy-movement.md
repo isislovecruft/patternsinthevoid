@@ -1,6 +1,6 @@
 Title: Game Theory & The Occupy Movement
 Date: 2011-10-22 00:54
-Author: Admin
+Author: isis
 Category: Game Theory
 Tags: bourgeois, class war, evolutionary game theory, game theory, hawk and dove, non-violence protects the state, occupy movement, war of attrition
 

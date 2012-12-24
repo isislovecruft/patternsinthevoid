@@ -1,6 +1,6 @@
 Title: Censorship Again
 Date: 2011-06-27 18:13
-Author: Admin
+Author: isis
 Category: Fascism, Technology
 Tags: Fuck You Comcast, I Hate Computers, murderdeadkill, SMTP Ports 25 and 465 Blocked, Thunderbird, Tor, User Agent
 

@@ -1,6 +1,6 @@
 Title: Censorship
 Date: 2011-04-19 02:13
-Author: Admin
+Author: isis
 Category: Technology
 
 My ISP just censored port 25 for my account, blocking all standard

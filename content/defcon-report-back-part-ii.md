@@ -1,6 +1,6 @@
 Title: Defcon Report Back, Part II
 Date: 2011-08-09 02:47
-Author: Admin
+Author: isis
 Category: Technology
 Tags: asterisk, botnet, Defcon, dual-tone multi-frequency, GreyDragon, GreyWolf, keygen, linux, moshi moshi, password cracking, RAFT, reverse engineering, sip-to-pstn, smart fuzzing, voip botnet, web fuzzing
 

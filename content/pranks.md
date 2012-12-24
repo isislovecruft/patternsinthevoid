@@ -1,6 +1,6 @@
 Title: Pranks
 Date: 2012-06-28 07:42
-Author: Admin
+Author: isis
 Category: Technology
 Tags: anubis cipher, artificial intelligence, ascii art, bash scripting, censorship detection, cryptocat, cryptography, javascript, mpOTR, python, reverse engineering, rio de janeiro, Tor
 

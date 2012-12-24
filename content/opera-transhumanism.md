@@ -1,6 +1,6 @@
 Title: Opera & Transhumanism
 Date: 2010-12-24 20:20
-Author: Admin
+Author: isis
 Category: Art, Literature
 Tags: Edgar Allen Poe, John Adams, John Donne, opera, Rachmaninoff, tape loops
 

@@ -1,6 +1,6 @@
 Title: Technology as Magic in Poetry
 Date: 2010-10-31 15:51
-Author: Admin
+Author: isis
 Category: Literature
 
 From an e.e.cummings poem:

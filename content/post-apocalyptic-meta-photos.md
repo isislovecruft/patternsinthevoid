@@ -1,6 +1,6 @@
 Title: Post-Apocalyptic Meta-Photos
 Date: 2011-09-27 00:11
-Author: Admin
+Author: isis
 Category: Anarchism, Art
 Tags: apocalypse, film, Magpie
 

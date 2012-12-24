@@ -1,6 +1,6 @@
 Title: Alchemical Bust Card
 Date: 2010-03-10 14:07
-Author: Admin
+Author: isis
 Category: Anarchism, Art, Politics
 Tags: alchemy, anarchy
 

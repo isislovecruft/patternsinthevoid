@@ -1,6 +1,6 @@
 Title: Interactive Schrödinger's Cat
 Date: 2011-06-03 18:33
-Author: Admin
+Author: isis
 Category: Physics
 Tags: app, quantum physics, schodinger's cat
 

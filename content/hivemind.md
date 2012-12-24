@@ -1,6 +1,6 @@
 Title: Hivemind
 Date: 2011-12-14 15:31
-Author: Admin
+Author: isis
 Category: Technology
 Tags: botnet, C, digital security, hacking, hivemind, IRC, python, text-based RPGs
 

@@ -1,6 +1,6 @@
 Title: Some Ideas For Darknet Implementation, Encryption, and Integration
 Date: 2011-04-05 23:19
-Author: Admin
+Author: isis
 Category: Anarchism, Technology
 Tags: algorithms, crypto-anarchism, cryptography, cyberfeminism, darknet, darknet integration, decentralized social networks, encryption, freenet, fuzzy logic, i2p, p2p, sinkstoring, small-world models
 

@@ -1,6 +1,6 @@
 Title: Cosmology
 Date: 2011-06-07 04:02
-Author: Admin
+Author: isis
 Category: Physics
 Tags: anarchist industrial music, black metal, cosmology, dark matter, darkspace, mach's holographic principle, macroevolution, nomadic war machine, primordial nucleosynthesis, prince of darkness, quantum cosmology, Satanism, social anxiety, springer tracts in modern physics, string theory, theoretical physics
 

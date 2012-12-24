@@ -1,6 +1,6 @@
 Title: Pathwork
 Date: 2010-09-26 19:25
-Author: Admin
+Author: isis
 Category: Art
 
 I wish to apologize in advance as this post really has nothing

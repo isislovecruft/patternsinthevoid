@@ -1,6 +1,6 @@
 Title: Sound
 Date: 2010-02-25 17:49
-Author: Admin
+Author: isis
 
 Elk Information Radio Station
 

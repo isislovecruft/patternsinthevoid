@@ -1,6 +1,6 @@
 Title: Progress & Problems: Tmux for Android
 Date: 2011-12-27 14:03
-Author: Admin
+Author: isis
 Category: Technology
 Tags: 28c3, android, android ndk, ARM, C, Chaos Computer Club, cyanogen, hacking, java, linux, perl, tmux, ubuntu
 

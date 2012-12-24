@@ -1,6 +1,6 @@
 Title: Opera & Transhumanism II
 Date: 2010-12-31 01:40
-Author: Admin
+Author: isis
 Category: Non-fiction, Technology
 Tags: artificial intelligence, bioinformatics, biotechnology, brain-machine interfacing, cognitive science, emergence theory, environmentalism, ethics, linguistics, nanotechnology, NBIC report, neurocomputing, quantum physics, retinal prosthesis, robotics, transhumanism
 

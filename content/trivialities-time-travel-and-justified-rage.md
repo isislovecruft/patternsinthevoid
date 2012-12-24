@@ -1,6 +1,6 @@
 Title: Trivialities, Time Travel, and Justified Rage
 Date: 2011-09-26 18:22
-Author: Admin
+Author: isis
 Category: Art
 Tags: academia, Anarchism, fuck tha police, gothic, John Maus, time travel
 

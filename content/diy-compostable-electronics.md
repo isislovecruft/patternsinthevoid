@@ -1,6 +1,6 @@
 Title: DIY Compostable Electronics
 Date: 2011-09-04 18:04
-Author: Admin
+Author: isis
 Category: Anarchism, Physics, Technology
 Tags: anti-primitivism, carbon nanotubes, infrared lasers, nanotechnology, organic electronics
 

@@ -1,6 +1,6 @@
 Title: AIs Say The Darnest Things
 Date: 2011-09-14 18:43
-Author: Admin
+Author: isis
 Category: occult, Technology
 Tags: Aleister Crowley, Anarchist Library, AntiSec?, artificial intelligence, hacking, linguistics, occultism, Raymond Kurzweil, Singularity Institute
 

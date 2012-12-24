@@ -1,6 +1,6 @@
 Title: Famous Physicists On Mysticism #1: "Scientific and Religious Truths" by Werner Heisenberg
 Date: 2010-09-11 21:52
-Author: Admin
+Author: isis
 Category: Linguistic Theory, Mysticism, Non-fiction, Physics
 Tags: linguistics, mysticism, physics, quantum physics, truth, Werner Heisenberg
 

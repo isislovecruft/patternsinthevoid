@@ -1,6 +1,6 @@
 Title: Osiris the AI
 Date: 2010-12-26 21:30
-Author: Admin
+Author: isis
 Category: Linguistic Theory, Technology
 Tags: artificial intelligence, cognitive science, Osiris, research, speech recognition, transhumanism
 

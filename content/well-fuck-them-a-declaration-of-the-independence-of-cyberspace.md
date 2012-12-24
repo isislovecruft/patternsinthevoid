@@ -1,8 +1,8 @@
 Title: Well, Fuck Them: A Declaration of the Independence of Cyberspace
 Date: 2011-06-10 01:35
-Author: Admin
-Category: Anarchism, Technology
-Tags: Anarchism, Communications Decency Act of 1996, crypto-anarchism, cyberliberation, cyberspace, Electronic Frontier Foundation, fuck them, John Perry Barlow, William Gillis
+Author: isis agora lovecruft
+Category: Technology
+Tags: anarchism, Communications Decency Act of 1996, crypto-anarchism, cyberliberation, cyberspace, Electronic Frontier Foundation, zines, fuck them, John Perry Barlow, William Gillis
 
 [![][]][]My friend [William Gillis][] made a pretty zine out of "Well,
 Fuck Them" an extract from [a letter][] that [John Perry Barlow][], of

@@ -1,6 +1,6 @@
 Title: On The Historical and Modern Convergence of Fascism and the Occult
 Date: 2010-09-22 10:27
-Author: Admin
+Author: isis
 Category: Fascism, Mysticism, Non-fiction, occult
 Tags: Abraxas Foundation, Anarchism, causality, David Ramsay Steele, fascism, Germanenorden, idealism, individualism, libertarianism, Marxism, materialism, nazism, Nietzsche, occult, Order of Nine Angles, paradigm adoption, provolution, qliphoth, Robert Nozick, Rousseau, Satanism, sephiroth, Spinoza, state-of-nature, syndicalism, Thule Society
 

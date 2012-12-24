@@ -1,6 +1,6 @@
 Title: Cute Physical Access Tricks
 Date: 2011-08-02 11:11
-Author: Admin
+Author: isis
 Category: Technology
 Tags: hacking, linux, password reset, physical access tricks, privilege escalation, root shell, windows
 

@@ -1,6 +1,6 @@
 Title: Defcon Report Back, Part III
 Date: 2011-08-10 18:45
-Author: Admin
+Author: isis
 Category: Uncategorized
 Tags: anonymity, certificate authority, cipherspace, convergence, crypto-anarchism, cryptography, darknet, Defcon, defeating cryptography, dns leakage, irongeek, Moxie Marlinspike, sql injection, vpn, Whitfield Diffie
 

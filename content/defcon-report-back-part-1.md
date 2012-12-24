@@ -1,6 +1,6 @@
 Title: Defcon Report Back, Part 1
 Date: 2011-08-08 23:59
-Author: Admin
+Author: isis
 Category: Technology
 Tags: assembly languages, Defcon, javascript, jugaad, Kernel Exploitation, las vegas, libhijack, linux thread injection, malicious pdf, mmap syscall, port scan, ptrace, python, runtime process library injection, shellcode, sptrace, strace, Umap, UPnP
 

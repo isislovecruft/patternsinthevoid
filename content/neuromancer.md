@@ -1,6 +1,6 @@
 Title: Neuromancer
 Date: 2011-05-11 21:21
-Author: Admin
+Author: isis
 Category: Art, Fiction, Linguistic Theory
 Tags: artificial intelligence, audiobook, jim blackhurst, neuromancer, speech defects, william gibson, wintermute
 

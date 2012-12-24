@@ -1,6 +1,6 @@
 Title: Post-Rev Theoretical Physics
 Date: 2011-07-28 20:17
-Author: Admin
+Author: isis
 Category: Anarchism, Physics
 Tags: anarchist societies, apocalypse, emerging technologies, future, mutual cooperation, opinion, physics, Post-Civ, post-revolution, theoretical physics
 

@@ -1,6 +1,6 @@
 Title: Famous Physicists on Mysticism #3: "Science and the Beautiful" by Werner Heisenberg
 Date: 2011-01-09 19:28
-Author: Admin
+Author: isis
 Category: Mysticism, Physics
 Tags: Ancient Greek philosophy, aristotle, beauty, Democritus, experimental music, Isaac Newton, johannes kepler, Ohioan, Parmenides, plato, Plotinus, Pythagoras, quantum physics, ryne warner, science, Werner Heisenberg
 

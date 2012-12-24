@@ -1,6 +1,6 @@
 Title: Botnets and DDoSing
 Date: 2011-09-02 15:52
-Author: Admin
+Author: isis
 Category: Technology
 Tags: botnet, cloudflare, DDoS, hacking, hailstorm, radical designs, Tor
 

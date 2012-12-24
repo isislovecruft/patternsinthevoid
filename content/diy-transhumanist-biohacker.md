@@ -1,6 +1,6 @@
 Title: DIY Transhumanist Biohacker
 Date: 2011-01-31 18:30
-Author: Admin
+Author: isis
 Category: Technology
 Tags: Cybernetics for the Masses, DIY Biohacking, Lepht Anonym, meathacking, Portland Research Club, Sensebridge, transhumanism
 

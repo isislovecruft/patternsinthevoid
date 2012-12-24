@@ -1,6 +1,6 @@
 Title: Famous Physicists on Mysticism #2: "The Debate Between Plato and Democritus" by Werner Heisenberg
 Date: 2010-09-18 15:28
-Author: Admin
+Author: isis
 Category: Linguistic Theory, Literature, Mysticism, Non-fiction, Physics
 Tags: Democritus, geometry, idealism, language, mysticism, plato, quantum physics, Socrates, Werner Heisenberg
 

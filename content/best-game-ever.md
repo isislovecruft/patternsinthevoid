@@ -1,6 +1,6 @@
 Title: Best. Game. Ever.
 Date: 2011-07-29 00:17
-Author: Admin
+Author: isis
 Category: Chaos Theory, Game Theory, Technology
 Tags: artificial intelligence, cellular automata, chess, combinatorial game theory, game complexity, game of go, game of life, game theory, gliders, golly, heuristics, John Horton Conway, Manhattan Project, neuroscience, particle physics, shannon's number, turing complete, von Neumann
 

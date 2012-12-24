@@ -1,6 +1,6 @@
 Title: Pathwork II
 Date: 2010-10-31 15:00
-Author: Admin
+Author: isis
 Category: Art
 
 Again, my humble apologies for straying off topic and off the map.

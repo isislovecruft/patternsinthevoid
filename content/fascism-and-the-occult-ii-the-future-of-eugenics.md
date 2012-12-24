@@ -1,6 +1,6 @@
 Title: Fascism and the Occult II: The Future of Eugenics
 Date: 2010-12-09 18:58
-Author: Admin
+Author: isis
 Category: Fascism, Feral Children, Non-fiction, Post-Anarchism
 Tags: aeonics, Ancient Greek philosophy, environmentalism, eugenics, fascism, individualist anarchism, morality, Nietzsche, occult, Oswald Spengler, provolution, state-of-nature, Stephen Brown, transhumanism
 

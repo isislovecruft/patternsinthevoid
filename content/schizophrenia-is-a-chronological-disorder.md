@@ -1,6 +1,6 @@
 Title: Schizophrenia is a Chronological Disorder?
 Date: 2011-10-10 23:16
-Author: Admin
+Author: isis
 Category: Physics, Psychology
 Tags: chronology, consciousness, David Dennet, dual-state vector, Godel, Multiple Drafts Model, neuroscience, pathogenesis, Penrose, perturbation theory, quantum physics, schizophrenia, theoretical physics
 
