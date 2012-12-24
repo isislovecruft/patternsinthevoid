@@ -3,7 +3,7 @@
 	Date: July 2009
 	Description: Sample layout for HTML5 and CSS3 goodness.
 	Version: 1.0
-	Author: Enrique Ramírez
+	Author: Enrique RamÃ­rez
 	Autor URI: http://enrique-ramirez.com
 */
 
@@ -11,6 +11,8 @@
 @import url("reset.css");
 @import url("pygment.css");
 @import url("typogrify.css");
+@import url("pprint.css");
+/*@import url("wide.css")*/
 /*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);*/
 
 @font-face {
@@ -24,16 +26,16 @@
   font-family: 'Garamond';
   font-style: normal;
   font-weight: normal;
-  src: local('EB Garamond'), local('EBGaramond'), url('fonts/EBGaramond-Regular.ttf') format('truetype');
+  src: local('Garamond'), local('Garamond'), url('fonts/EBGaramond-Regular.ttf') format('truetype');
     }
 
 /***** Global *****/
 /* Body */
 body {
-    background: #F5F4EF;
+    background: #FFF;
     color: #000305;
-    font-size: 87.5%; /* Base font size: 14px */
-    font-family: 'Garamond', 'Lucida Sans Unicode', Arial, sans-serif;
+    font-size: 110%;
+    font-family: 'Garamond', 'Lucida Unicode', serif;
     line-height: 1.429;
     margin: 0;
     padding: 0;
@@ -41,10 +43,10 @@ body {
 }
 
 /* Tagcloud */
-tag-0 {font-size: 4em}
-tag-1 {font-size: 3.5em}
-tag-2 {font-size: 3em}
-tag-3 {font-size: 2.5em}
+tag-0 {font-size: 3.5em}
+tag-1 {font-size: 3.0em}
+tag-2 {font-size: 2.6em}
+tag-3 {font-size: 2.3em}
 tag-4 {font-size: 2em}
 tag-5 {font-size: 1.75em}
 tag-6 {font-size: 1.429em}
@@ -62,26 +64,27 @@ h6 {font-size: 1em}		/* 14px */
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
-	line-height: 1.1;
+	line-height: 1.2;
 	margin-bottom: .8em;
-    font-family: 'Garamond', arial, serif;
+    font-family: 'Garamond';
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
 	
-hr { border: 2px solid #EEEEEE; }
+hr { border: 2px solid #de78a0; }
 
 /* Anchors */
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #666;
-	padding: 0 1px;
-	text-decoration: strikethrough;
+	color: #222;
+	padding: 0 2px;
+	text-decoration: none;
+	text-shadow: 1px 0px 0px #333
 }
 a:hover, a:active {
-	background-color: #424242;
-	color: #000;
+	background-color: #888;
+	color: #fff;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #333;
 }

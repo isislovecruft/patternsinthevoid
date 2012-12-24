@@ -19,6 +19,12 @@
           type="application/rss+xml" 
           rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
+    {% if PRETTIFY %}
+    <link href="{{ SITEURL }}/theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="{{ SITEURL }}/theme/prettify/prettify.js"></script>
+    {% endif %}
 
     <!--[if IE]>
         <script src="{{ SITEURL }}/js/html5.js">
@@ -35,7 +41,11 @@
         <![endif]-->
 </head>
 
+{% if PRETTIFY %}
+<body id="index" class="home" onload="prettyPrint()">
+{% else %}
 <body id="index" class="home">
+{% endif %}
 {% include 'github.html' %}
 <header id="banner" class="body">
     <h1>

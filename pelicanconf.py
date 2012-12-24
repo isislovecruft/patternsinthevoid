@@ -20,10 +20,12 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = 'published'
 
 # Theme settings:
-THEME = './newspaper-theme/'
-THEME_STATIC_PATHS = ['static']
+THEME = 'newspaper-theme'
+THEME_STATIC_PATHS = ['static', 'images', 'prettify']
 CSS_FILE = 'main.css' 
 TYPOGRIFY = True
+PRETTIFY = True
+PRETTIFY_CSS_FILE = 'prettify.css'
 
 # Timezones, language, and metadata:
 TIMEZONE = 'UTC'
