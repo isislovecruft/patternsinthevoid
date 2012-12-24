@@ -20,7 +20,7 @@ DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_PATH = 'published'
 
 # Theme settings:
-THEME = '{THIS_TOP_PELICAN_DIRECTORY}/newspaper-theme'
+THEME = './newspaper-theme/'
 THEME_STATIC_PATHS = ['static']
 CSS_FILE = 'main.css' 
 TYPOGRIFY = True
@@ -53,7 +53,7 @@ SUMMARY_MAX_LENGTH = 50
 
 # Blogroll
 LINKS =  (
-    {'Home', 'https://patternsinthevoid.net'),
+    ('Home', 'https://patternsinthevoid.net'),
     ('Crypto', 'https://patternsinthevoid.net/isis'),
     ('Code', 'https://code.patternsinthevoid.net'),
     ('Image', 'https://image.patternsinthevoid.net'),
