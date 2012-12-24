@@ -11,7 +11,21 @@
 @import url("reset.css");
 @import url("pygment.css");
 @import url("typogrify.css");
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
+/*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);*/
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url('fonts/DroidSansMono.ttf') format('truetype');
+    }
+
+@font-face {
+  font-family: 'Garamond';
+  font-style: normal;
+  font-weight: normal;
+  src: local('EB Garamond'), local('EBGaramond'), url('fonts/EBGaramond-Regular.ttf') format('truetype');
+    }
 
 /***** Global *****/
 /* Body */
@@ -19,7 +33,7 @@ body {
     background: #F5F4EF;
     color: #000305;
     font-size: 87.5%; /* Base font size: 14px */
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Garamond', 'Lucida Sans Unicode', Arial, sans-serif;
     line-height: 1.429;
     margin: 0;
     padding: 0;
@@ -50,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
-    font-family: 'Yanone Kaffeesatz', arial, serif;
+    font-family: 'Garamond', arial, serif;
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
@@ -61,13 +75,13 @@ hr { border: 2px solid #EEEEEE; }
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #C74350;
+	color: #666;
 	padding: 0 1px;
-	text-decoration: underline;
+	text-decoration: strikethrough;
 }
 a:hover, a:active {
-	background-color: #C74350;
-	color: #fff;
+	background-color: #424242;
+	color: #000;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #333;
 }
@@ -175,7 +189,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	}
 	#banner h1 a:hover, #banner h1 a:active {
 		background: none;
-		color: #C74350;
+		color: #FFF;
 		text-shadow: none;
 	}
 	
@@ -209,7 +223,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	}
 	#banner nav a:hover, #banner nav a:active,
 	#banner nav .active a:link, #banner nav .active a:visited {
-		background: #C74451;
+		background: #666;
 		color: #fff;
 		text-shadow: none !important;
 	}
@@ -247,10 +261,10 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 }
 #featured figure img {display: block; float: right;}
 
-#featured h2 {color: #C74451; font-size: 1.714em; margin-bottom: 0.333em;}
+#featured h2 {color: #666; font-size: 1.714em; margin-bottom: 0.333em;}
 #featured h3 {font-size: 1.429em; margin-bottom: .5em;}
 
-#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
+#featured h3 a:link, #featured h3 a:visited {color: #424242; text-decoration: none;}
 #featured h3 a:hover, #featured h3 a:active {color: #fff;}
 
 /*
@@ -276,7 +290,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 #extras ul {list-style: none; margin: 0;}
 #extras li {border-bottom: 1px solid #fff;}
 #extras h2 {
-	color: #C74350;
+	color: #424242;
 	font-size: 1.429em;
 	margin-bottom: .25em;
 	padding: 0 3px;
@@ -315,7 +329,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		/* Icons */
 		.social a[href*='delicious.com'] {background-image: url('../images/icons/delicious.png');}
 		.social a[href*='digg.com'] {background-image: url('../images/icons/digg.png');}
-		.social a[href*='facebook.com'] {background-image: url('../images/icons/facebook.png');}
 		.social a[href*='last.fm'], .social a[href*='lastfm.'] {background-image: url('../images/icons/lastfm.png');}
 		.social a[type$='atom+xml'], .social a[type$='rss+xml'] {background-image: url('../images/icons/rss.png');}
 		.social a[href*='twitter.com'] {background-image: url('../images/icons/twitter.png');}
@@ -344,7 +357,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 }
 
 #about .primary {float: left; width: 165px;}
-#about .primary strong {color: #C64350; display: block; font-size: 1.286em;}
+#about .primary strong {color: #666; display: block; font-size: 1.286em;}
 #about .photo {float: left; margin: 5px 20px;}
 
 #about .url:link, #about .url:visited {text-decoration: none;}

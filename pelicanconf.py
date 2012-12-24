@@ -11,7 +11,7 @@ AUTHOR = u'Isis Agora Lovecruft'
 SITENAME = u'Patterns in the Void'
 SITEURL = 'https://blog.patternsinthevoid.net'
 GITHUB_URL = 'https://github.com/isislovecruft'
-ARTICLE_URL = '{ SITEURL }/{ slug }'
+#ARTICLE_URL = '{ SITEURL }/{ slug }'
 DEFAULT_CATEGORY = u'/dev/random' # if no "Category: " in post, use this
 USE_FOLDER_AS_CATEGORY = True
 
