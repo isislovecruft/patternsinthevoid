@@ -7,16 +7,32 @@ sys.path.append('.')
 
 topdir = os.getcwd()
 
+# Dev settings:
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_PATH = 'output'
+
+# Publish settings:
+#DELETE_OUTPUT_DIRECTORY = False
+# Uncomment following line for absolute URLs in production:
+RELATIVE_URLS = True
+
+# Basic settings
+#################
+
 AUTHOR = u'Isis Agora Lovecruft'
 SITENAME = u'Patterns in the Void'
 SITEURL = 'https://blog.patternsinthevoid.net'
 GITHUB_URL = 'https://github.com/isislovecruft'
 TWITTER_USERNAME = "isislovecruft"
+DISQUS_SITENAME = "patternsinthevoid"
+
+# Article Settings
+###################
+
 #ARTICLE_URL = SITEURL'/{ slug }'
-DEFAULT_CATEGORY = u'hacking' # if no "Category: " in post, use this
+DEFAULT_CATEGORY = u'hacking' # if no "Category:" in post, use this
 USE_FOLDER_AS_CATEGORY = True
 NEWEST_FIRST_ARCHIVES = True
-DISQUS_SITENAME = "patternsinthevoid"
 #MENU_ITEMS = [
 #    ('Hacking', os.path.join(SITENAME, 'category/hacking.html')),
 #    ('Anarchism', os.path.join(SITENAME, 'category/anarchism.html')),
@@ -24,18 +40,17 @@ DISQUS_SITENAME = "patternsinthevoid"
 #    ('Wandering', os.path.join(SITENAME, 'category/wandering.html')),
 #    ]
 
-# Dev settings:
-DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_PATH = 'published'
+# Theme settings
+#################
 
-# Theme settings:
 THEME = 'gazette'
-THEME_STATIC_PATHS = ['static', 'images', 'prettify']
-CSS_FILE = 'main.css' 
+THEME_STATIC_PATHS = ['static']
+CSS_FILE = 'main.css'
 TYPOGRIFY = True
 PRETTIFY = True
 
-# Timezones, language, and metadata:
+# Timezones, language, and metadata
+####################################I
 TIMEZONE = 'UTC'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs' # use filesystem metadata to get the creation date
@@ -63,10 +78,11 @@ SUMMARY_MAX_LENGTH = 250
 
 # Blogroll
 LINKS =  (
-    ('main', 'https://patternsinthevoid.net'),
-    ('crypto', 'https://patternsinthevoid.net/isis.html'),
+    ('main', 'https://blog.patternsinthevoid.net'),
+    ('crypto', 'https://blog.patternsinthevoid.net/static/isis.pub.asc'),
     ('contact', 'https://blog.patternsinthevoid.net/about.html'),
-    ('projects', 'https://git.patternsinthevoid.net'),
+    ('projects', 'https://code.patternsinthevoid.net'),
+    ('calendar', 'https://blog.patternsinthevoid.net/calendar.html')
     )
 #    ('Image', 'https://image.patternsinthevoid.net'),
 #    ('Sound', 'https://sound.patternsinthevoid.net'),
