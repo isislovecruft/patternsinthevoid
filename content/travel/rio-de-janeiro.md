@@ -1,6 +1,6 @@
 Title: Rio de Janeiro
 Date: 2012-05-29 12:58
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: travel
 Tags: freebird, Guardian Project, OONI, RightsCon, Rio de Janeiro, Tor, travel
 
@@ -15,7 +15,6 @@ in this city.
 
 Shirtless men wander on the freeway, selling pele porco frita between the
 cars.
-
 Others ride 100cc dirt bikes with furniture stacked on the back.
 
 An unbridled horse eats trash in a field surrounded by favelas with

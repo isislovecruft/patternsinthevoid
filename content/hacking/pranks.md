@@ -2,7 +2,7 @@ Title: Pranks
 Date: 2012-06-28 07:42
 Author: isis agora lovecruft
 Category: hacking
-Tags: anubis cipher, artificial intelligence, ascii art, bash scripting, censorship detection, cryptocat, cryptography, javascript, mpOTR, python, reverse engineering, rio de janeiro, Tor
+Tags: censorship detection, cryptography, javascript, MPOTR, python, reverse engineering, rio de janeiro, Tor
 
 So, while I'm busy researching away, hard at work [reverse engineering
 proprietary network monitoring software][], and trying to devise methodologies
@@ -88,7 +88,7 @@ needs to IMPLEMENT MPOTR.
 
 And then I tweeted this:
 
-[](|kaepora-mean-tweet|/images/kaepora-mean-tweet.jpg)
+![kaepora-mean-tweet](|filename|../images/kaepora-mean-tweet.jpg)
 
 Which grabs the above script and puts it in the user's crontab so that
 the email goes out daily (and each day it's a different email).
@@ -364,67 +364,6 @@ class ForKaepora():
                                '--' 
     """)
         shapes.append("""
-                 _____
-              .-'     '-.
-            .'           '.
-           /               \
-          ;                 ;
-          |                 |
-          ;                 ;
-           \               /
-            '.           .'
-              '-._____.-'
-                .-'""'-.
-              .'        '.
-             /            \  
-            ;              ;
-            ;              ;
-             \            /
-              '.        .'
-                '-....-'
-                  .-""-.
-                 /      \  
-                ;        ;
-                 \      /
-                  '-..-'
-                    .--.
-                   /    \ 
-                   \    /
-                    '--'
-                      .-.
-                     (   )
-                      '-'
-    """)
-        shapes.append("""
-                       .-'''-.
-               .-'''-./       \.-'''-.
-       .-'''-./       \.-'''-./       \.-'''-.
-      /       \.-'''-./'-...-'\.-'''-./       \
-      \       /'-...-'\.-'''-./'-...-'\       /
-       '-...-'\       /'-...-'\       /'-...-'
-               '-...-'\       /'-...-'
-                       '-...-'
-    """)
-        shapes.append("""
-                __    __ 
-             __/  \__/  \__ 
-            /  \__/  \__/  \__ 
-            \__/  \__/  \__/  \__
-               \__/  \__/  \__/  \__
-             __/  \__/  \__/  \__/  \
-            /  \__/  \__/  \__/  \__/ 
-            \__/  \__/  \__/  \__/  \
-               \__/  \__/  \__/  \__/ 
-             __/  \__/  \__/  \__/  \
-            /  \__/  \__/  \__/  \__/ 
-            \__/  \__/  \__/  \__/  \
-               \__/  \__/  \__/  \__/ 
-             __/  \__/  \__/  \__/ 
-            /  \__/  \__/  \__/ 
-            \__/  \__/  \__/ 
-               \__/  \__/ 
-    """)
-        shapes.append("""
                               _
                              /\\ 
                             /  \\ 
@@ -599,7 +538,11 @@ if __name__ == "__main__":
 
 And if you do:
 
-    $ wget http://patternsinthevoid.net/kaepora;chmod +x kaepora;crontab \   -l >m&&echo "0 13 * * * exec /home/`whoami`/kaepora">>m&& \   crontab m;rm m
+<pre class="prettyprint lang-sh">
+$ wget http://patternsinthevoid.net/kaepora;chmod +x kaepora;crontab \
+  -l >m&&echo "0 13 * * * exec /home/`whoami`/kaepora">>m&& \
+  crontab m;rm m
+</pre>
 
 Then, he gets a pretty email with a geometric shape in ascii art, a
 fortune having something to do with computers, a link to some sort of
@@ -624,8 +567,6 @@ you want to get an idea of what the email looks like.
   [OTR]: http://www.cypherpunks.ca/otr/
   [on multi-party off-the-record messaging]: http://www.cypherpunks.ca/~iang/pubs/mpotr.pdf
   [this]: http://patternsinthevoid.net/kaepora.mean
-  []: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/06/kaeporameantweet.jpeg
-    "kaeporameantweet"
-  [![][]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/06/kaeporameantweet.jpeg
+  []: (/images/kaeporameantweet.jpeg)
   [1]: http://patternsinthevoid.net/kaepora
   [this ridiculous python script]: http://patternsinthevoid.net/geo-kaepora
