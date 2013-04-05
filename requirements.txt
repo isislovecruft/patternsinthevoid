@@ -1,0 +1,9 @@
+pelican==3.2.0
+typogrify>=2.0.0
+markdown>=2.2.0
+Jinja2>=2.6
+smartypants>=1.6.0.0
+six>=1.2.0
+Unidecode>=0.04.0
+Pygments>=1.6
+
