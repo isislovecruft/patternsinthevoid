@@ -48,6 +48,11 @@ CSS_FILE = 'main.css'
 TYPOGRIFY = True
 PRETTIFY = True
 
+import plugins.neighbors as neighbors
+PLUGINS = [neighbors,]
+
+FLASHPROXY = True
+
 # Timezones, language, and metadata
 ####################################I
 TIMEZONE = 'UTC'

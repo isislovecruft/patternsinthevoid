@@ -121,16 +121,15 @@
     </div><!-- /.social -->
     {% endif %}
 </section><!-- /#extras -->
-
-<footer id="contentinfo" 
-        class="body">
-    <address id="about" 
-             class="vcard body">
-        <a href="/static/isis.txt">Contact</a>
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+    {% if FLASHPROXY %}
+    {% include 'flashproxy.html' %}
+    {% endif %}
     </address><!-- /#about -->
 </footer><!-- /#contentinfo -->
-
-{% include 'piwik.html' %}
-{% include 'disqus_script.html' %}
 </body>
 </html>
