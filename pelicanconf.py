@@ -77,10 +77,10 @@ SUMMARY_MAX_LENGTH = 250
 
 # Blogroll
 LINKS =  (
-    ('main', 'https://blog.patternsinthevoid.net'),
-    ('crypto', 'https://blog.patternsinthevoid.net/static/images/isis.pub.asc'),
-    ('projects', 'https://code.patternsinthevoid.net'),
-    ('calendar', 'https://blog.patternsinthevoid.net/calendar.html')
+    ('main', 'https://fyb.patternsinthevoid.net'),
+    ('keys', 'https://blog.patternsinthevoid.net/isis.txt'),
+    ('code', 'https://code.patternsinthevoid.net'),
+    ('time', 'https://blog.patternsinthevoid.net/calendar.html')
     )
 #    ('Image', 'https://image.patternsinthevoid.net'),
 #    ('Sound', 'https://sound.patternsinthevoid.net'),
