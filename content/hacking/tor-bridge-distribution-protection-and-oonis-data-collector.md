@@ -3,6 +3,7 @@ Date: 2013-04-28 13:38
 Author: isis agora lovecruft
 Category: hacking
 Tags: China, OONI, Tor, Censorship
+Status: Draft
 
 
 Last week, I went to China, for the first -- and possibly the last --
