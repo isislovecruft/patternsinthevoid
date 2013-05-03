@@ -27,17 +27,20 @@
     {% endif %}
 
     <!--[if IE]>
-        <script src="{{ SITEURL }}/js/html5.js">
+        <script src="{{ SITEURL }}/theme/js/html5.js">
         </script>
         <![endif]-->
 
     <!--[if lte IE 7]>
-        <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie.css"/>
-        <script src="{{ SITEURL }}/js/IE8.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="{{ SITEURL }}/theme/css/ie.css"/>
+        <script src="{{ SITEURL }}/theme/js/IE8.js"
+                type="text/javascript"></script>
         <![endif]-->
 
     <!--[if lt IE 7]>
-        <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie6.css"/>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="{{ SITEURL }}/theme/css/ie6.css"/>
         <![endif]-->
 </head>
 
@@ -70,9 +73,11 @@
             {% endfor %}
             {% endif %}
             {% for cat, null in categories %}
+            {% if not cat == "etc" %}
             <li {% if cat == category %}class="active"{% endif %}>
                 <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </nav>
