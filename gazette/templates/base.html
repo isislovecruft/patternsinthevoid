@@ -123,13 +123,12 @@
 </section><!-- /#extras -->
 <footer id="contentinfo" class="body" position="relative">
     <div style="height: 100%">
-        <address id="about" class="vcard body">
-            <a href="/about.html">Contact</a>
+        <address id="about">
+        {% if FLASHPROXY %}
+        {% include 'flashproxy.html' %}
+        {% endif %}
+        </address><!-- /#about -->
     </div>
-    {% if FLASHPROXY %}
-    {% include 'flashproxy.html' %}
-    {% endif %}
-    </address><!-- /#about -->
 </footer><!-- /#contentinfo -->
 </body>
 </html>
