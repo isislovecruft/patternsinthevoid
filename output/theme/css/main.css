@@ -152,6 +152,15 @@ div.note {
    max-width: 300px;
 }
 
+#over {
+    position: relative;
+    display: block;
+    bottom: 25px;
+    left: -20px;
+    z-index: 5000;
+    background: #FFF;
+}
+
 /* Tables */
 table {margin: .5em auto 1.5em auto; width: 98%;}
 	
@@ -187,7 +196,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: 35px;
-    width: 100%;
+    //width: 100%;
 }
 img.right, figure.right {float: right; clear: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: left; clear: left; margin: 0 2em 2em 0;}
