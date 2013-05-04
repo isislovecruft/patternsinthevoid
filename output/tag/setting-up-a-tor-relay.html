@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - Setting Up a Tor Relay</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="../installing-tor-polipo-and-vidalia-and-excluding-bad-exit-nodes-in-linux.html">Installing Tor, Polipo, and Vidalia, and Excluding Bad Exit Nodes, in&nbsp;Linux</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2011-06-21T20:15:00">
+                Tuesday, 21 June 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/onion.html">.onion </a><a href="../tag/anonymity.html">anonymity </a><a href="../tag/bad-apple-attack.html">Bad Apple Attack </a><a href="../tag/excluding-bad-exit-nodes.html">Excluding Bad Exit Nodes </a><a href="../tag/linux.html">linux </a><a href="../tag/polipo.html">Polipo </a><a href="../tag/setting-up-a-tor-relay.html">Setting Up a Tor Relay </a><a href="../tag/tor.html">Tor </a><a href="../tag/tor-hidden-services.html">Tor Hidden Services </a><a href="../tag/vidalia.html">Vidalia </a></p>
+</footer><!-- /.post-info --><p><strong><span class="caps">EDITED</span> 1 September 2011:</strong> I <span class="caps">STRONGLY</span> <span class="caps">SUGGEST</span> <span class="caps">THAT</span> <span class="caps">YOU</span> <span class="caps">FOLLOW</span>
+<span class="caps">DOCUMENTATION</span> <span class="caps">ON</span> <span class="caps">THE</span> <span class="caps">TOR</span> <span class="caps">PROJECT</span>&#8217;S <span class="caps">WEBSITE</span>, <span class="caps">AND</span> <span class="caps">IF</span> <span class="caps">THAT</span> <span class="caps">DOESN</span>&#8221;T <span class="caps">WORK</span>
+<span class="caps">THEN</span> <span class="caps">ASK</span> <span class="caps">FOR</span> <span class="caps">HELP</span> <span class="caps">IN</span> #<span class="caps">TOR</span> <span class="caps">ON</span> <span class="caps">IRC</span>.<span class="caps">OFTC</span>.<span class="caps">NET</span>. I do not have time to write
+security howtos, or keep old ones up to date. My apologies,&nbsp;friends.</p>
+<p>This is a reference how-to for troubleshooting <a href="https://www.torproject.org/index.html.en">Tor</a>, <a href="http://www.pps.jussieu.fr/%7Ejch/software/polipo/">Polipo</a>, and
+<a href="https://torproject.org/projects/vidalia">Vidalia</a> installations and configurations in <a href="http://www.debian.org/">Debian</a>/<a href="http://www.ubuntu.com/">Ubuntu</a>
+based Linux. Specifically, this is for setting up a <a href="http://195.234.10.45/">Tor relay</a> and
+using the Vidalia <span class="caps">GUI</span> to configure Tor to skip known bad exit nodes.
+However, these instructions can be used to set up Tor for client
+(non-relay) use, and the instructions to skip known bad exit nodes still
+apply. I am frequently asked to help people with Tor, and so I&#8217;m putting
+this up for&nbsp;reference.</p>
+<p>~~Follow the <a href="https://www.torproject.org/docs/debian.html.en">steps at the Tor Project page</a> for Tor and Polipo
+installation. When the installation instructions tell you to move to
+step two and install Polipo, skip this part if you are using Ubuntu
+10.04 (lucid) or newer. The reason for this is that the apt-get manager
+automatically detects Polipo as a dependency and installs it for you.
+However, you will have to <a href="https://www.torproject.org/docs/tor-doc-unix.html.en#polipo">configure Polipo</a>. Take this <a href="https://gitweb.torproject.org/torbrowser.git/blob_plain/HEAD:/build-scripts/config/polipo.conf"><em>sample
+configuration file for Vidalia with Tor</em></a>, and put copy/paste it into
+your current polipo config file (usually at either /etc/polipo/config or
+\~/.polipo). Continue through steps three through five on that page to
+Torify your browser and applications, and <a href="https://www.torproject.org/docs/tor-doc-relay.html.en">set up Tor as a relay</a>.~~</p>
+<p>~~Next, you&#8217;ll want to install the Vidalia&nbsp;<span class="caps">GUI</span>.~~</p>
+<p><strong><span class="caps">UPDATE</span>, 1 September 2011:</strong> Installing Vidalia now automatically
+installs both Tor and Polipo, and configures them for you, so you only
+need the following instructions for getting Vidalia. (If you&#8217;re running
+a Tor relay, you&#8217;ll still want to head over to the Tor Project website
+and follow their current configuration instructions for Tor and&nbsp;Polipo.)</p>
+<p>Normally, I&#8217;d say fuck GUIs &#8212; they needlessly complicate matters. But
+in this case, it&#8217;s important because it makes editing the torrc (the Tor
+configuration file) easier on-the-fly. Which you&#8217;ll want to be doing to
+avoid the known bad exit nodes. And, trust me, you really want to avoid
+those nodes. I&#8217;ll explain what those are in a minute. For instance,
+there&#8217;s a node called &#8220;NSAFortMeade&#8221;. Um, yeah. Good job, guys, on not
+making it obvious.&nbsp;/facepalm</p>
+<p>Alright, to install the Vidalia <span class="caps">GUI</span>, you&#8217;ll need to add these lines to
+your repository sources file (usually located in&nbsp;/etc/apt/sources.list):</p>
+<div class="codehilite"><pre>      <span class="err">deb</span> <span class="err">http://ppa.launchpad.net/adnarim/ubuntu</span> <span class="err">gutsy</span> <span class="err">main</span>      <span class="err">deb-src</span> <span class="err">http://ppa.launchpad.net/adnarim/ubuntu</span> <span class="err">gutsy</span> <span class="err">main</span>
+</pre></div>
+
+
+<p>Then&nbsp;do:</p>
+<div class="codehilite"><pre>      <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>      <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">vidalia</span>
+</pre></div>
+
+
+<p>~~Next, you&#8217;ll want to remove Tor from the startup scripts. This is
+important because Vidalia and Tor may be working fine right now, but
+next time you restart your computer, Tor will start automatically, and
+then Vidalia will try to start another instance of Tor, which will cause
+it to&nbsp;break.~~</p>
+<p>~~To remove all Tor processes from all startup scripts, use the&nbsp;command:~~</p>
+<div class="codehilite"><pre> <span class="err">$</span> <span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="p">.</span><span class="n">d</span> <span class="o">-</span><span class="n">f</span> <span class="n">tor</span> <span class="n">remove</span>
+</pre></div>
+
+
+<p>There you go; Vidalia should now start with Alt+F2 then type &#8220;vidalia&#8221;
+in the run prompt. Vidalia should automatically start an instance of
+Tor. If it complains that Tor is already running, you&#8217;ll want to
+manually stop Tor (see the useful commands section at the bottom of this
+page), then restart&nbsp;Vidalia.</p>
+<p>Okay, now for configuring Tor <em>not to use</em> those bad exit nodes. I&#8217;m
+going to give a brief explanation of what those are and why you&#8217;ll want
+to avoid them now. For those of you who aren&#8217;t new to Tor, skip ahead a
+little&nbsp;bit.</p>
+<p>Basically, for those of you new to Tor, your traffic is going to route
+through several other computers, called nodes, in the Tor network before
+going to the destination (website, remote fileserver, etc.). Usually,
+your traffic will go through a chain of three nodes. This chain will
+change every ten minutes or so. Tor uses onion encryption, which is
+exactly like it sounds &#8212;  like an onion. The first node can &#8220;see&#8221; the
+first layer of the onion, which contains information on who you are and
+which other node to second your information to; however, it cannot see
+what information you have requested. The second node can &#8220;see&#8221; the
+second layer of the onion, which doesn&#8217;t say much of anything; the
+second node cannot see who you are, nor can it see what information you
+are requesting. The last node, called the exit node, can see what
+information has been requested, but it doesn&#8217;t know who requested it.
+The connection between the exit node and the internet is, by default,
+plaintext, unless you have requested an encrypted/secure webpage (which
+is why it is important to use <a href="https://www.eff.org/https-everywhere/"><span class="caps">HTTPS</span> Everywhere</a>). This means that, if
+the people running the exit node which your traffic is currently routed
+though are dirty, no-good, evil, malicious baddies, they can implement
+what is known as the <a href="http://search.yahoo.com/r/_ylt=A0oGdVvgRwFOiBgA6eRXNyoA;_ylu=X3oDMTByZ3RtN3J1BHNlYwNzcgRwb3MDMgRjb2xvA3NrMQR2dGlkAw--/SIG=12kk6c8up/EXP=1308728384/**https%3A//db.usenix.org/events/leet11/tech/full_papers/LeBlond.pdf">Bad Apple Attack</a> to discover your true <span class="caps">IP</span>
+address. It is also possible for the baddies running a bad exit node to
+alter your traffic, which is called <a href="http://security-freak.net/packet-injection/packet-injection.html">packet injection</a>. Those evil
+baddies can also do other things, like phish for your passwords, spoof
+webpages to steal credentials, etc. Long story short, it&#8217;s a good idea
+to avoid these&nbsp;nodes.</p>
+<p>Thankfully, there&#8217;s a <a href="http://en.wikipedia.org/wiki/.onion">.onion site</a> (that means it&#8217;s a <a href="https://www.torproject.org/docs/hidden-services.html.en">Tor Hidden
+Service</a> &#8212; a website hosted anonymously via the Tor network and only,
+or <a href="http://tor2web.org/">mostly only</a>, viewable through Tor). So, with Tor running, direct
+a new tab of your browser to <a href="http://xqz3u5drneuzhaeo.onion/users/badtornodes/">InspecTor</a>. Check the boxes for nodes
+you want to exclude, depending on your level of paranoia. I&#8217;d recommend,
+at bare minimum, checking the boxes for Known Bad Nodes, Nodes With
+Strange Exit Policies, and Nodes Running Critical Versions of Tor. I&#8217;d
+also recommend checking the box to identify nodes based on their
+fingerprint. Click the button to generate the ExcludeNodes list. A new
+page will come up with the list of nodes in a text box. Select all, and&nbsp;copy.</p>
+<p>In the Vidalia <span class="caps">GUI</span>, click the Settings button, then navigate to the
+Advanced tab. In the second box down, click the Edit Current Torrc
+button. Paste the list of nodes to exclude from InspecTor into this
+file, make sure the Apply All button is selected, and the Save Settings
+box is checked. Hit&nbsp;<span class="caps">OK</span>.</p>
+<p>There you are. If you have <a href="https://www.torproject.org/torbutton/">Torbutton</a> installed in Firefox, you can
+now surf the internet (pseudo)anonymously, without worrying about the
+<span class="caps">NSA</span> and other baddies sniffing your&nbsp;traffic.</p>
+<p>If you have questions or problems, email me at
+isis agora lovecruft(at)patternsinthevoid(dot)net, and I will do my best to help. My
+public <span class="caps">GPG</span> key can be found [here][], if you wish to send me an
+encrypted email. To head back to the Basic Security pages, <a href="http://www.patternsinthevoid.net/security.html">click
+here</a>.</p>
+<p>______________________________________________________________________________________</p>
+<p>Commands of General&nbsp;Help</p>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">lsb_release</span> <span class="o">-</span><span class="n">c</span>                 <span class="c1">//displays the codename of the running Ubuntu version$ /etc/debian_version            //displays the codename of the running Debian version$ ss -anl | grep 9050            //checks which service is running on a specific port,                                 //in this case, port:9050, the standard port for Tor$ sudo /etc/init.d/tor stop      //stops Tor$ sudo /etc/init.d/polipo stop   //stops Polipo$ sudo /etc/init.d/tor start     //starts Tor$ sudo /etc/init.d/polipo start  //starts Polipo$ sudo /etc/init.d/tor restart   //I think you get the idea$ sudo update-rc.d -f tor remove //removes all instances of Tor from the startup scripts</span>
+</pre></div>
+
+
+<p>[here]: http://www.patternsinthevoid.net/isis agora&nbsp;lovecruft_pgp_public_key.html</p>    </article>
+        <p class="paginator">
+        Page 1 / 1
+    </p>
+    </aside><!-- /#featured -->
+                                            </ol><!-- /#posts-list -->
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

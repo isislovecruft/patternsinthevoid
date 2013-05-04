@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>xqdr: A Flying Robot That Does Things</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="./theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="./theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="./theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie.css"/>
+        <script src="./theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="./">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="./category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li class="active">
+                <a href="./category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="./category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="./category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+<section id="content" class="body">
+    <article>
+        <header>
+            <h1 class="entry-title">
+                <a href="./xqdr-a-flying-robot-that-does-things.html" rel="bookmark"
+                   title="Permalink to xqdr: A Flying Robot That Does Things">xqdr: A Flying Robot That Does&nbsp;Things</a>
+            </h1>
+            <a href="http://twitter.com/share"
+   class="twitter-share-button"
+   data-count="horizontal" 
+   data-via="isislovecruft">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </header>
+        <div class="entry-content">
+            <footer class="post-info">
+        <abbr class="published" title="2011-12-07T03:57:00">
+                Wednesday, 07 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/anarchism.html">anarchism </a><a href="./tag/android.html">android </a><a href="./tag/arduino.html">arduino </a><a href="./tag/artificial-intelligence.html">artificial intelligence </a><a href="./tag/general-relativity.html">general relativity </a><a href="./tag/hacking.html">hacking </a><a href="./tag/python.html">python </a><a href="./tag/robotics.html">robotics </a><a href="./tag/xqdr.html">xqdr </a></p>
+</footer><!-- /.post-info -->            <p>I&#8217;m building a flying&nbsp;robot.</p>
+<p>More specifically, <a href="http://www.polyto.pe/">a friend</a> and I are building an electric quadrocopter
+which flies autonomously by using the accelerometer, gyroscope, and <span class="caps">GPS</span> on a
+smart phone to tell some artificial intelligence algorithms where the robot is
+and how to go where it wants to go. The robot will also be trained in image
+recognition, so that it can autonomously follow certain things, like riot cops
+at a protest, and upload a live video feed to the interwebs. That last bit is
+something I&#8217;m not really sure about yet, because I&#8217;m used to working with
+linguistic neural networks, and intelligent routing algorithms are something
+I&#8217;ve only just wet my toes in. But I think I can manage it, and it&#8217;s going to
+be super useful because the image recognition software could be used to find
+all kinds of things, like lost hikers, or injured people in trapped in&nbsp;rubble.</p>
+<p>I&#8217;m going to opensource everything I write for this except the image
+recognition stuff. I don&#8217;t want to hand the world&#8217;s governments a better way
+to monitor protesters. And the former already have a head start on using
+technology like this to hurt&nbsp;people.</p>
+<p>So far the set up for programming is an android phone, purchased bricked, then
+unbricked because doing it that way isn&#8217;t very hard and it immediately saves
+nearly two hundred dollars. It needs to be one of the phones from <a href="http://androidforums.com/android-lounge/308045-androids-gyros.html">this
+list</a>, because those have gyroscopes. However, some of those may not allow
+<span class="caps">USB</span> to serial communication, which is also necessary. I&#8217;m just going to start
+trying phones and when I find a model which works I&#8217;ll report back. The phone
+will also need to have Android Scripting Environment with Python For Android
+installed, and support <span class="caps">USB</span> host&nbsp;mode.</p>
+<p>Next, the artificial intelligences and the flight control programs on the
+phone will need to pass arguments to the arduino through serial
+communications. Here&#8217;s a little python program to do that, and it&#8217;s ultra-beta
+at this point, so don&#8217;t freak out on me if it doesn&#8217;t work&nbsp;yet.</p>
+<p>Then, that phone is directly wired to the Arduino. The phone will also use
+Amarino, which is an <span class="caps">API</span> for communications between Arduino and Android. I
+think. Amarino uses bluetooth, and I&#8217;m <em>not</em> okay with a flying robot having
+anything bluetooth enabled on it due to the potential security vulnerabilities
+of using bluetooth exploits to gain control of the robot. So there&#8217;s the
+possibilty that I&#8217;ll have to modify&nbsp;Amarino.</p>
+<p>Here&#8217;s a <a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/partslist.txt">parts list</a> for the robot. And here&#8217;s my <a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/notes.txt">notes</a> thus far.  Code
+will be up&nbsp;shortly.</p>
+<p>Here&#8217;s some pictures to entertain you while you&nbsp;wait!</p>
+<p>[caption id=&#8221;attachment_1081&#8221; align=&#8221;aligncenter&#8221; width=&#8221;614&#8221;
+caption=&#8221;Strange things accumulate on your desk&#8230;&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2679-1024x768.jpg" title="IMG_2679" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1082&#8221; align=&#8221;aligncenter&#8221; width=&#8221;614&#8221;
+caption=&#8221;&#8230;when you start building robots.&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2684-1024x768.jpg" title="IMG_2684" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1083&#8221; align=&#8221;aligncenter&#8221; width=&#8221;614&#8221;
+caption=&#8221;<span class="caps">RESIST</span>&#8230;ors.&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2690-1024x768.jpg" title="IMG_2690" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1084&#8221; align=&#8221;aligncenter&#8221; width=&#8221;614&#8221;
+caption=&#8221;I made a thing!&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2700-1024x768.jpg" title="IMG_2700" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1085&#8221; align=&#8221;aligncenter&#8221; width=&#8221;614&#8221;
+caption=&#8221;It&#8217;s amazing that the thing works, considering my terrible
+soldering skills. Seriously, look at that.&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2701-1024x768.jpg" title="IMG_2701" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1088&#8221; align=&#8221;alignleft&#8221; width=&#8221;262&#8221;
+caption=&#8221;Also, I have new tattoos.&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27021-768x1024.jpg" title="IMG_2702" />][][/caption]</p>
+<p>[caption id=&#8221;attachment_1089&#8221; align=&#8221;alignright&#8221; width=&#8221;277&#8221;
+caption=&#8221;If you can name the equations, we should be
+friends.&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27102-768x1024.jpg" title="IMG_2710" />][][/caption] </p>
+<p>Also, I&#8217;d like to add that, though I have recently been accused by several
+people of getting into hardware hacking, this is not the case.  Sure, this is
+fun. Alright, I&#8217;m learning things, and I like soldering (mainly because I
+fancy it as a sort of 20th century alchemical operation). But, may I remind
+you, I am a <em>theoretical</em> physicist. I disdain physicality. I like theory. I
+know Common Lisp and use emacs. I research and train artificial
+intelligences. This hardware hacking is a means to the end of being able to
+better test those artificial intelligences. So don&#8217;t worry &#8212; I&#8217;m not going to
+go around making goddamned <span class="caps">LED</span> pacman signs any time&nbsp;soon.</p>
+<p>And xqdr: it&#8217;s short for xaosquopter, which <a href="http://tomlowenthal.com/">my friend Tom</a> came up&nbsp;with:</p>
+<blockquote>
+<p>(11:53:45 <span class="caps">PM</span>) Tom:&nbsp;xaosquoptor</p>
+<p>(11:53:49 <span class="caps">PM</span>) Isis Lovecruft:&nbsp;:D</p>
+<p>(11:54:05 <span class="caps">PM</span>) Tom: see, it&#8217;s a portmanteau of an&nbsp;elision</p>
+<p>(11:54:34 <span class="caps">PM</span>) Tom: new word &#8220;quoptor&#8221; is an elided abbreviation of&nbsp;&#8220;quadricoptor&#8221;</p>
+<p>(11:55:00 <span class="caps">PM</span>) Tom: this is a quoptor used for chaos, which we&#8217;re
+writing with an x because <span class="caps">FUCK</span> <span class="caps">RULES</span>&nbsp;<span class="caps">AMIRITE</span></p>
+</blockquote>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2679-1024x768.jpg" title="IMG_2679" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2679.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2684-1024x768.jpg" title="IMG_2684" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2684.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2690-1024x768.jpg" title="IMG_2690" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2690.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2700-1024x768.jpg" title="IMG_2700" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2700.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2701-1024x768.jpg" title="IMG_2701" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_2701.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27021-768x1024.jpg" title="IMG_2702" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27021.jpg
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27102-768x1024.jpg" title="IMG_2710" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/IMG_27102.jpg</p>
+        </div><!-- /.entry-content -->
+                
+<hr><p>
+<a href="./anthropic-decision-theory.html">
+    <<< Anthropic Decision&nbsp;Theory</a>
+<span class="readmore">
+    <a href="./hivemind.html">
+        Hivemind >>></a>
+</span>
+</p>
+        </article>
+</section>
+<section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

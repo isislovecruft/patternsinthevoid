@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Disassembly</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="./theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="./theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="./theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie.css"/>
+        <script src="./theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="./">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="./category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li class="active">
+                <a href="./category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="./category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="./category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+<section id="content" class="body">
+    <article>
+        <header>
+            <h1 class="entry-title">
+                <a href="./disassembly.html" rel="bookmark"
+                   title="Permalink to Disassembly">Disassembly</a>
+            </h1>
+            <a href="http://twitter.com/share"
+   class="twitter-share-button"
+   data-count="horizontal" 
+   data-via="isislovecruft">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </header>
+        <div class="entry-content">
+            <footer class="post-info">
+        <abbr class="published" title="2011-12-20T17:58:00">
+                Tuesday, 20 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/assembly-languages.html">assembly languages </a><a href="./tag/exploit-development.html">exploit development </a><a href="./tag/fancy-punks.html">fancy punks </a><a href="./tag/hex.html">hex </a><a href="./tag/linux.html">linux </a><a href="./tag/shellcode.html">shellcode </a></p>
+</footer><!-- /.post-info -->            <p>Often when doing exploit development, it&#8217;s <a href="http://www.patternsinthevoid.net/blog/2011/09/learning-assembly-through-writing-shellcode/" title="Learning Assembly Through Writing Shellcode">necessary to extract hex
+opcodes</a> from an assembly or C program to generate shellcode.
+Normally, to do this, one uses <strong>objdump</strong> as in the following&nbsp;example:</p>
+<p><code>isis agora lovecruft@wintermute:~$ cat shellcode.asm</code></p>
+<p>section&nbsp;.text</p>
+<p>global&nbsp;_start</p>
+<p>_start:</p>
+<p>;; setreuid&nbsp;(0,0)</p>
+<p>xor eax, eax ;clear the eax&nbsp;registry</p>
+<p>mov al, 0x46 ;set the syscall # to decimal 70 or hex 46, one&nbsp;byte</p>
+<p>xor ebx,&nbsp;ebx</p>
+<p>xor ecx,&nbsp;ecx</p>
+<p>int 0x80 ;system interrupt to call kernel to execute&nbsp;syscall</p>
+<p>;; spawn shellcode with&nbsp;execve</p>
+<p>xor eax,&nbsp;eax</p>
+<p>push eax ;push a <span class="caps">NULL</span> value on the&nbsp;stack</p>
+<p>push 0x68732f2f ;push &#8216;//sh&#8217; onto the&nbsp;stack</p>
+<p>push 0x6369622f ;push &#8216;/bin&#8217; onto the&nbsp;stack</p>
+<p>mov ebx, esp ;esp now points to &#8216;/bin/sh&#8217;, so write to&nbsp;ebx</p>
+<p>push eax ;push another <span class="caps">NULL</span> to terminate char ** argv on&nbsp;stack</p>
+<p>push ebx ;push pointer to &#8216;/bin/sh&#8217; onto&nbsp;stack</p>
+<p>mov ecx, esp ;esp now holds the address of argv, so write to&nbsp;ecx</p>
+<p>xor edx,&nbsp;edx</p>
+<p>mov al, 0xb ;set the syscall # to decimal 11 or hex b, one&nbsp;byte</p>
+<p>int 0x80 ;sytem interrupt to call kernel to execute&nbsp;syscall</p>
+<p>isis agora lovecruft@wintermute:\~\$ nasm -f elf&nbsp;shellcode.asm</p>
+<p>isis agora lovecruft@wintermute:\~\$ ld -melf_i386 -o shellcode&nbsp;shellcode.o</p>
+<p>isis agora lovecruft@wintermute:\~\$ objdump -d&nbsp;./shellcode</p>
+<p>./shellcode: file format&nbsp;elf32-i386</p>
+<p>Disassembly of section&nbsp;.text:</p>
+<p>08048060 \&lt;_start>:</p>
+<p>8048060: 31 c0 xor&nbsp;%eax,%eax</p>
+<p>8048062: b0 46 mov&nbsp;\$0x46,%al</p>
+<p>8048064: 31 db xor&nbsp;%ebx,%ebx</p>
+<p>8048066: 31 c9 xor&nbsp;%ecx,%ecx</p>
+<p>8048068: cd 80 int&nbsp;\$0x80</p>
+<p>804806a: 31 c0 xor&nbsp;%eax,%eax</p>
+<p>804806c: 50 push&nbsp;%eax</p>
+<p>804806d: 68 2f 2f 73 68 push&nbsp;\$0x68732f2f</p>
+<p>8048072: 68 2f 62 69 63 push&nbsp;\$0x6369622f</p>
+<p>8048077: 89 e3 mov&nbsp;%esp,%ebx</p>
+<p>8048079: 50 push&nbsp;%eax</p>
+<p>804807a: 53 push&nbsp;%ebx</p>
+<p>804807b: 89 e1 mov&nbsp;%esp,%ecx</p>
+<p>804807d: 31 d2 xor&nbsp;%edx,%edx</p>
+<p>804807f: b0 0b mov&nbsp;\$0xb,%al</p>
+<p>8048081: cd 80 int&nbsp;\$0x80</p>
+<p>So, from this example, the shellcode would&nbsp;be:</p>
+<p><code>\x31\xc0\xb0\x46\x31\xdb\x31\xc9\xcd\x80\x31\xc0\x50\x68\x2f\2f\x73\</code></p>
+<p>x68\x68\x2f\x62\x69\x63\x89\xe3\x50\x53\x89\xe1\x31\xd2\xb0\x0b\xcd\x80</p>
+<p>But! What if you have some shellcode, say from a nasty <span class="caps">PDF</span> that someone
+sent you (though a malPDF&#8217;s shellcode would be in JavaScript, and so it
+would look like &#8220;%u68%u73%u2f%u2f&#8221;), and you don&#8217;t want to have to sit
+there with a hex-to-ascii chart looking everything up by hand just to
+find out what this shellcode is doing? As it turns out, there&#8217;s a handy
+little thing called <a href="http://udis86.sourceforge.net/">udis86</a> to do all that boring work for you. You
+have to download their tarball, then&nbsp;do:</p>
+<p><code>$ ./configure &amp;&amp; make &amp;&amp; make install</code></p>
+<p>To run udis86 at the commandline,&nbsp;do:</p>
+<p><code>$ udcli</code></p>
+<p>Words can&#8217;t describe how much I&#8217;m crushing on this program. Check this&nbsp;out:</p>
+<p><code>isis agora lovecruft@wintermute:~/$ udcli -x</code></p>
+<p>31 c0 b0 46 31 db 31 c9 cd 80 31 c0 50 68 2f 2f 73 68 68 2f 62 69 63 89
+e3 50 53 89 e1 31 d2 b0 0b cd&nbsp;80</p>
+<p>0000000000000000 31c0 xor eax,&nbsp;eax</p>
+<p>0000000000000002 b046 mov al,&nbsp;0x46</p>
+<p>0000000000000004 31db xor ebx,&nbsp;ebx</p>
+<p>0000000000000006 31c9 xor ecx,&nbsp;ecx</p>
+<p>0000000000000008 cd80 int&nbsp;0x80</p>
+<p>000000000000000a 31c0 xor eax,&nbsp;eax</p>
+<p>000000000000000c 50 push&nbsp;eax</p>
+<p>000000000000000d 682f2f7368 push dword&nbsp;0x68732f2f</p>
+<p>0000000000000012 682f626963 push dword&nbsp;0x6369622f</p>
+<p>0000000000000017 89e3 mov ebx,&nbsp;esp</p>
+<p>0000000000000019 50 push&nbsp;eax</p>
+<p>000000000000001a 53 push&nbsp;ebx</p>
+<p>000000000000001b 89e1 mov ecx,&nbsp;esp</p>
+<p>000000000000001d 31d2 xor edx,&nbsp;edx</p>
+<p>000000000000001f b00b mov al,&nbsp;0xb</p>
+<p>0000000000000021 cd80 int&nbsp;0x80</p>
+        </div><!-- /.entry-content -->
+                
+<hr><p>
+<a href="./automated-bandwidth-efficient-and-encrypted-backups.html">
+    <<< Automated, Bandwidth-Efficient, and Encrypted&nbsp;Backups</a>
+<span class="readmore">
+    <a href="./progress-problems-tmux-for-android.html">
+        Progress <span class="amp">&amp;</span> Problems: Tmux for&nbsp;Android >>></a>
+</span>
+</p>
+        </article>
+</section>
+<section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

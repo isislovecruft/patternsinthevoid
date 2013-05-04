@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="./theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="./theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="./theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie.css"/>
+        <script src="./theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="./">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="./category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="./category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="./category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="./category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+ 
+                <ul>
+                        <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
+                        <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                    </ul>
+        <section id="content" class="body">
+            <ol id="posts-list" class="hfeed" start="2">
+                                <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./automated-bandwidth-efficient-and-encrypted-backups.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Automated, Bandwidth-Efficient, and Encrypted Backups">Automated, Bandwidth-Efficient, and Encrypted&nbsp;Backups</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-19T19:29:00">
+                Monday, 19 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/backup.html">backup </a><a href="./tag/bash-scripting.html">bash scripting </a><a href="./tag/command-line.html">command line </a><a href="./tag/cryptography.html">cryptography </a><a href="./tag/duplicity.html">duplicity </a><a href="./tag/linux.html">linux </a></p>
+</footer><!-- /.post-info -->                            <p>I made a bash shell script to automate encrypted (remote or local) data
+backups with <a href="http://duplicity.nongnu.org/" title="Duplicity">Duplicity</a>. Duplicity uses asymmetric <span class="caps">GPG</span> <span class="caps">RSA</span> keys to
+encrypt a tarballs of specified files to be backed up, and it also
+supports incremental backups. So, after making a full backup, it is more
+efficient do to the fact that it only saves changes made to files and
+not entirely new copies of files. Duplicity also supports versioning,
+i.e. you can say &#8220;give me File A from 3 days&nbsp;ago&#8221;.</p>
+<p>Duplicity is <em>not</em> efficient in it&#8217;s cryptographic design, as my friend
+Tom wisely pointed out, in that use of asymmetric cryptographic
+algorithms is heavily intensive upon processor resources, and it would
+be better to replace this feature with something more along the lines of
+the algorithms (e.g. <span class="caps">AES</span>, Serpent, and Twofish) and read/write speed
+testing features which <a href="http://www.truecrypt.org/" title="TrueCrypt">TrueCrypt</a> supports, for&nbsp;example.</p>
+<p>This script depends on both curl and a newer version of duplicity (which
+is not yet included in the standard repositories), so to install those
+dependencies in Ubuntu&nbsp;do:</p>
+<p><code>$ sudo apt-add-repository ppa:duplicity-team/ppa</code></p>
+<p>\$ sudo apt-get&nbsp;update</p>
+<p>\$ sudo apt-get install duplicity&nbsp;curl</p>
+<p>Here&#8217;s version 0.1.2 of the backup script [(or view it on github&nbsp;here)][]:</p>
+<p>#!/bin/bash</p>
+<p>#&nbsp;_____________________</p>
+<p>#| <span class="caps">BACKUP</span>[your].<span class="caps">SH</span>[it]&nbsp;|</p>
+<p>#|&#8211;&#8211;&#8211;&#8211;&#8211;&#8211;&#8211;|</p>
+<p>#|v.0.1.2 |\ \^&nbsp;/\^</p>
+<p>#|Written by | \ / \ //&nbsp;\  </p>
+<p>#|isis agora lovecruft Lovecruft | \ |\___/| / \//&nbsp;.\  </p>
+<p>#|isis agora lovecruft@patternsinthe | \ /O O \__ / // | \ \&nbsp;*&#8211;-*</p>
+<p>#| void.net| / / \/_/ // | \ \ \&nbsp;|</p>
+<p>#|_____________________| @___@` \/_ // | \  
+\ \/\&nbsp;\  </p>
+<p># 0/0/| \/_ // | \ \ \&nbsp;\  </p>
+<p># 0/0/0/0/| \/// | \ \ |&nbsp;|</p>
+<p># 0/0/0/0/0 ...</p>
+                            <a class="readmore" href="./automated-bandwidth-efficient-and-encrypted-backups.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./depression-has-infinite-recursion.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Depression Has Infinite Recursion">Depression Has Infinite&nbsp;Recursion</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-19T03:03:00">
+                Monday, 19 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis.html">isis</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/i-thought-robots-werent-supposed-to-have-emotions.html">i thought robots weren't supposed to have emotions </a></p>
+</footer><!-- /.post-info -->                            <p><code>#!/usr/bin/env/ python</code></p>
+<p>def&nbsp;do_nothing():</p>
+<p>while depressed is&nbsp;True:</p>
+<p>do_nothing()</p>
+<p>print &#8220;you are still&nbsp;depressed&#8221;</p>
+<p>if __name__ ==&nbsp;&#8220;__main__&#8221;:</p>
+<p>depressed =&nbsp;True</p>
+<p>do_nothing()</p>
+                            <a class="readmore" href="./depression-has-infinite-recursion.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./hivemind.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Hivemind">Hivemind</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-14T15:31:00">
+                Wednesday, 14 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft-agora-lovecruft.html">isis agora lovecruft agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/botnet.html">botnet </a><a href="./tag/c.html">C </a><a href="./tag/digital-security.html">digital security </a><a href="./tag/hacking.html">hacking </a><a href="./tag/hivemind.html">hivemind </a><a href="./tag/irc.html">IRC </a><a href="./tag/python.html">python </a><a href="./tag/text-based-rpgs.html">text-based RPGs </a></p>
+</footer><!-- /.post-info -->                            <p>So I hacked together this <span class="caps">IRC</span> bot to play oldschool text-based RPGs with
+multiple people in an <span class="caps">IRC</span> channel. The <a href="http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html">RPGs are pre-written</a> and are
+run by a Z-Machine interpreter called <a href="http://frotz.sourceforge.net/">Frotz</a>, which runs on a server
+somewhere, and commands to Frotz are piped to stdin through a python
+program called <a href="http://www.noah.org/python/pexpect/">pexpect</a>.</p>
+<p>I&#8217;m not going to say which channel this thing is is, because it&#8217;s hella
+insecure (Frotz uses multiple uses of strcpy(), wtf?!), but I will say
+that while looking into pexpect I found some old 1990s botnet C&amp;C
+software when I totally wasn&#8217;t expecting it. Check out this file,
+<a href="http://patternsinthevoid.net/hive.py.txt">hive.py</a>, which comes with pexpect! So oldschool! (Don&#8217;t worry, that
+link goes to a .txt file, so nothing will run on this server nor on your
+computer. It&#8217;s safe, I&nbsp;promise.)</p>
+<p>For some reason, this made me really happy.&nbsp;\&lt;(A)3</p>
+                            <a class="readmore" href="./hivemind.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                            </ol><!-- /#posts-list -->
+                        <p class="paginator">
+                        <a href="./index4.html">&laquo;</a>
+                Page 5 / 28
+            <a href="./index6.html">&raquo;</a>
+    </p>
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

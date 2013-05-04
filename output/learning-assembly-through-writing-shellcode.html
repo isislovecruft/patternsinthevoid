@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Learning Assembly Through Writing Shellcode</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="./theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="./theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="./theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie.css"/>
+        <script src="./theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="./">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="./category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li class="active">
+                <a href="./category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="./category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="./category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+<section id="content" class="body">
+    <article>
+        <header>
+            <h1 class="entry-title">
+                <a href="./learning-assembly-through-writing-shellcode.html" rel="bookmark"
+                   title="Permalink to Learning Assembly Through Writing Shellcode">Learning Assembly Through Writing&nbsp;Shellcode</a>
+            </h1>
+            <a href="http://twitter.com/share"
+   class="twitter-share-button"
+   data-count="horizontal" 
+   data-via="isislovecruft">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </header>
+        <div class="entry-content">
+            <footer class="post-info">
+        <abbr class="published" title="2011-09-03T04:21:00">
+                Saturday, 03 September 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/assembly.html">assembly </a><a href="./tag/c.html">C </a><a href="./tag/destruction.html">destruction </a><a href="./tag/hacking.html">hacking </a><a href="./tag/hex.html">hex </a><a href="./tag/linux.html">linux </a><a href="./tag/python.html">python </a><a href="./tag/quantum-physics.html">quantum physics </a><a href="./tag/shellcode.html">shellcode </a><a href="./tag/stack-randomization.html">stack randomization </a><a href="./tag/syscall.html">syscall </a></p>
+</footer><!-- /.post-info -->            <p>Months ago, I wrote hello world in X86 Assembly, and later that same day
+I wrote hello world in Python. Python is fast, elegant, and powerful.
+But unfortunately, it doesn&#8217;t really give you an understanding of what&#8217;s
+going on inside your computer. And any good little hacker should know
+precisely what&#8217;s going on inside their&nbsp;computer.</p>
+<p>Every time I start teaching myself some complicated thing, I try to make
+the learning process enjoyable because I know that I&#8217;ll retain more
+information if I can apply it to something fun or useful. Being a
+terribly precocious kid, I taught myself quantum mechanics when I was
+fourteen. It was really difficult, and I probably wouldn&#8217;t have been
+able to pull it off if I hadn&#8217;t made it fun. And, oh, did I make it fun:
+<span class="caps">FOIA</span>&#8217;ed thermonuclear weapons manuals, ten years expired, from some
+obscure and slightly sketchy web page. I didn&#8217;t mean any harm, and I
+neither was nor am a proponent of nuclear weapons production,
+maintenance, or warfare. I wasn&#8217;t planning on starting up an Uranium-238
+enrichment program, or searching the black markets for hollow plutonium
+cores. I wanted to learn physics, and what&#8217;s more fun than learning how
+to destroy&nbsp;things?</p>
+<p>Assembly languages are cumbersome and arcane. The learning curve is
+steep, and progress is always slow compared to higher level programming
+languages. Fortunately, however, Assembly can be used to destroy things!
+Enter&nbsp;shellcode.</p>
+<p>The best introduction I found to writing shellcode was in Gray Hat
+hacking, so I&#8217;m going to quote the first few pages of the Linux
+shellcoding chapter, and then leave you to <a href="https://www.demonoid.me/files/details/2555468/0017045651472/">somehow obtain your own
+copy</a>.</p>
+<blockquote>
+<h2>Basic Linux&nbsp;Shellcode</h2>
+<p>The term &#8220;shellcode&#8221; refers to self-contained binary code that
+completes a task. The task may range from issuing a system command to
+providing a shell back to the attacker, as was the original purpose of&nbsp;shellcode.</p>
+<p>There are basically three ways to write&nbsp;shellcode:</p>
+<ul>
+<li>Directly write the hex&nbsp;opcodes.</li>
+<li>Write a program in a high level language like C, compile it, and
+    then disassemble it to obtain the assembly imstructions and hex&nbsp;opcodes.</li>
+<li>Write as assembly program, assemble the program, and then extract
+    the hex opcodes from the&nbsp;binary.</li>
+</ul>
+<p>Writing the hex opcodes directly is a little extreme. We will start
+with learning the C approach, but quickly move to writing assembly,
+then to extraction of the opcodes. In any event, you will need to
+understand low level (kernel) functions such as read, write, and
+execute. Since these system functions are performed at the kernel
+level, we will need to learn a little about how user processes
+communicate with the&nbsp;kernel.</p>
+<h2>System&nbsp;Calls</h2>
+<p>The purpose of the operating system is to serve as a bridge between
+the user (process) and the hardware. There are basically three ways to
+communicate with the operating system&nbsp;kernel:</p>
+<ul>
+<li><strong>Hardware interrupts  </strong>For example, an asynchronous signal from
+    the&nbsp;keyboard</li>
+<li><strong>Hardware traps  </strong>For example, the result of an illegal &#8220;divide
+    by zero&#8221;&nbsp;error</li>
+<li><strong>Software traps</strong>   For example, the request for a process to be
+    scheduled for&nbsp;execution</li>
+</ul>
+<p>Software traps are the most useful to [&#8230;] hackers because they
+provide a method for the user process to communicate to the kernel.
+The kernel abstracts some basic system level functions from the user
+and provides an interface through a system&nbsp;call.</p>
+<p>Definitions for system calls can be found on a Linux system in the
+following&nbsp;file:</p>
+<p><code>$ cat /usr/include/asm/unistd.h</code></p>
+<p>#ifndef&nbsp;_ASM_I386_UNISTD_H_</p>
+<p>#define&nbsp;_ASM_I386_UNISTD_H_</p>
+<p>#define __NR_exit&nbsp;1</p>
+<p>&#8230;snip&#8230;</p>
+<p>#define __NR_execve&nbsp;11</p>
+<p>&#8230;snip&#8230;</p>
+<p>#define __NR_setreuid&nbsp;70</p>
+<p>&#8230;snip&#8230;</p>
+<p>#define __NR_dup2&nbsp;99</p>
+<p>&#8230;snip&#8230;</p>
+<p>#define __NR_socketcall&nbsp;102</p>
+<p>&#8230;snip&#8230;</p>
+<p>#define __NR_exit_group&nbsp;252</p>
+<p>&#8230;snip&#8230;</p>
+<p>In the next section, we will begin the process, starting with&nbsp;C.</p>
+<h2>System Calls by&nbsp;C</h2>
+<p>At a C level, the programmer simply uses the system call interface by
+referring to the function signature and supplying the proper number of
+parameters. The simplest way to find out the function signature is to
+look up the function&#8217;s man&nbsp;page.</p>
+<p>For example, to learn more about the <strong>execve</strong> system call, you would&nbsp;type</p>
+<p><code>$ man 2 execve</code></p>
+<p>This would display the following man&nbsp;page:</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/manexecve.png" title="manexecve" />][]</p>
+<p>As the next section shows, the previous system call can be implemented
+directly with&nbsp;assembly.</p>
+<h2>System Calls by&nbsp;Assembly</h2>
+<p>At an assembly level, the following registries are loaded to make a
+system&nbsp;call:</p>
+<ul>
+<li><strong>eax</strong>   Used to load the hex value of the system call (see
+    unistd.h&nbsp;earlier)</li>
+<li><strong>ebx  </strong>Used for first parameter&#8212;<strong>ecx</strong>is used for second
+    parameter, <strong>edx</strong> for third, <strong>esi</strong> for fourth, and <strong>edi</strong>for&nbsp;fifth</li>
+</ul>
+<p>If more than five parameters are required, an array of the parameters
+must be stored in memory and the address of that array stored in
+<strong>ebx</strong>.</p>
+<p>Once the registers are loaded, an <strong>int 0x80</strong> assembly instruction is
+called to issue a software interrupt, forcing the kernel to stop what
+it is doing and handle the interrupt. The kernel first checks the
+parameters for correctness, then copies the register values to kernel
+memory space and handles the interrupt by referring to the Interrupt
+Descriptor Table&nbsp;(<span class="caps">IDT</span>).</p>
+<p>The easiest way to understand this is to see an example, as in the
+next&nbsp;section.</p>
+<h2>Exit System&nbsp;Call</h2>
+<p>The first system call we will focus on executes <strong>exit(0)</strong>. The
+signature of the <strong>exit</strong> system call is as&nbsp;follows:</p>
+<ul>
+<li><strong>eax</strong>   0x01 (from the unistd.h file&nbsp;earlier)</li>
+<li><strong>ebx</strong>   User-provided parameter (in this case&nbsp;0)</li>
+</ul>
+<p>Since this is our first attempt at writing system calls, we will start
+with&nbsp;C.</p>
+<h2>Starting with&nbsp;C</h2>
+<p>The following code will execute the function <strong>exit(0)</strong>:</p>
+<p><code>$ cat exit.c</code></p>
+<p><code>#include</code></p>
+<p><code>main(){</code></p>
+<p><code>exit(0);</code></p>
+<p>}</p>
+<p>Go ahead and compile the program. Use the <strong>-static</strong> flag to compile
+in the library call to <strong>exit</strong> as&nbsp;well.</p>
+<p><code>$ gcc -static -0 exit exit.c</code></p>
+<p>Now launch <strong>gdb</strong> in quiet mode (skip banner) with the <strong>-q</strong> flag.
+Start by setting a breakpoint at the <strong>main</strong> function; then run the
+program with <strong>r.</strong>Finally, disassemble the <strong>_exit</strong> function call
+with <strong>dissass _exit</strong>.</p>
+</blockquote>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/disemblyexit.png" title="disemblyexit" />][]</p>
+<p>[<span class="caps">NOTE</span> <span class="caps">FROM</span> isis agora lovecruft: My computer is doing weird things here, because I use a
+modern Linux kernel which supports stack randomization, like a good
+modern <span class="caps">OS</span> should. While there are ways to turn stack randomization off
+for practice purposes, I feel like it&#8217;s better to just get used to stack
+randomization because you&#8217;re going to have to deal with that
+randomization breaking your shellcode when you execute it on a system
+other than the one on which it was written. I&#8217;m going to explain what
+happened here, and leave out the silly, non-stack-randomized explanation
+in the&nbsp;book.]</p>
+<p>You can see that the function starts by loading the last user input
+(<strong>%edi</strong>) into the 64-bit registry space <strong>%rdx</strong> at line \&lt;+0>. For a
+good paper on assembly for 64-bit processors, see the attached documents
+at the end of this post. Also, to understand the hex in the above dump,
+see the attached chart at the end of this post titled &#8220;Machine Hex
+Opcodes to Assembly&#8221;. For now, you&#8217;re just going to have to take my word
+for it that this information is what I&#8217;m telling you it is. So, next,
+the program stores a bunch of index registers (<strong>0xffffffffffffff</strong>&#8230;)
+and a subtraction from those registers (&#8230;<strong>b0</strong>) into the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Delay_slot">delay
+slot</a> <strong>%r9</strong>. Then, it moves an accumulator (<strong>0xe7</strong>) to the delay
+slot <strong>%r8d</strong>, moves a return from interrupt (<strong>0x3c</strong>) to <strong>%esi</strong>, and
+then jumps to line <strong>\&lt;_exit+48></strong>. Then it moves the last user input
+(<strong>0</strong>), which was temporarily stored in <strong>%rdx</strong> to <strong>%rdi</strong>. Then,
+everything that was accumulated into the delay slot <strong>%r8d</strong> gets moved
+into the <strong>%eax</strong>&nbsp;registry.</p>
+<p>At this point, we&#8217;re exactly where we would be if stack randomization
+were turned off. Except that if it were turned off, all of this would
+have only taken two lines of assembly code without any jumps. Stack
+randomization: Is. Fucking. Hell. And it also is supposed to keep your
+computer safe from hackers, but as I said, there&#8217;s ways around it. But,
+as you can see, it does make things&nbsp;complicated.</p>
+<p>So, next, that program makes the syscall at <strong>\&lt;+54></strong>. Finally. Then
+it jumps around and copies a bunch more things into other literally
+random places, and I&#8217;m not going to go through with explaining the rest
+of it, because it&#8217;s complicated and I&#8217;m tired of typing percent signs
+all over the&nbsp;place.</p>
+<h2>Move to&nbsp;Assembly</h2>
+<p>Now for rewriting the exit() syscall in&nbsp;assembly:</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/assemblyexit.png" title="assemblyexit" />][]</p>
+<p>Alright, so this is the code the book gives. This code will not produce
+working shellcode for a system with stack randomization. As you can see,
+the assembly that my machine dumped was extremely complicated. We would
+need to rewrite that dump in assembly language to get working shellcode
+for my system, but another trouble/benefit with stack randomization is
+that, next time I call that program, it&#8217;s going to operate at some other
+place in memory. Also, if I reboot my computer, all the system calls are
+going to be at different locations in memory as well. But, let&#8217;s just
+pretend that this would work for now, so that I can show you without
+typing too much and confusing you. Back to the&nbsp;book.</p>
+<blockquote>
+<h2>Assemble, Link, and&nbsp;Test</h2>
+<p>Once we have the assembly file, we can assemble it with <strong>nasm</strong>, link
+it with<strong>ld</strong>, then execute the file as&nbsp;shown:</p>
+<p><code>$ nasm -f elf64 exit.asm</code></p>
+<p>\$ ld exit.o -o&nbsp;exit</p>
+<p>\$&nbsp;./exit</p>
+<p>Not much happened, because we simply called <strong>exit(0)</strong>, which exited
+the process politely. Luckily for us, there is another way to&nbsp;verify.</p>
+<h2>Verify with&nbsp;strace</h2>
+<p>As in our previous example, you may need to verify the execution of a
+binary to ensure the proper system calls were&nbsp;executed:</p>
+<p><code>$ strace ./exit</code></p>
+<p>0</p>
+<p>_exit(0) =&nbsp;?</p>
+<p>As we can see, the <strong>_exit(0)</strong> syscall was&nbsp;executed!</p>
+</blockquote>
+<p>I&#8217;m not going to go through the rest of the book. Obviously, the exit
+syscall is the first and most basic one. Any syscalls could be used,
+such as <strong>setreuid</strong> (which would grant user permissions), <strong>execve</strong>
+(to execute code), or <strong>bind</strong> and <strong>listen</strong> (to bind&nbsp;ports).</p>
+<p>The last step to producing shellcode is to turn the assembly program
+into a single hex string, because often only one string can be injected
+into a vulnerable program. To obtain the hex opcodes, we simply use the
+<strong>objdump</strong> tool with the <strong>-d</strong> flag for&nbsp;disassembly:</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/objdump.png" title="objdump" />][]</p>
+<p>The most important thing about this printout is to verify that no <span class="caps">NULL</span>
+characters (\x00) are present in the hex opcodes. If there are any <span class="caps">NULL</span>
+characters, the shellcode will fail when we place it into a string for
+injection during an&nbsp;exploit.</p>
+<p>So the shellcode for the <strong>exit(0)</strong> program would be
+&#8220;<strong>\x31\xc0\x31\xdb\xb0\x01\xcd\x80</strong>&#8220;.</p>
+<p>Voila, shellcode. Assembly is still&nbsp;cool.</p>
+<p>Further&nbsp;Reading:</p>
+<p><a href="http://homepage.mac.com/randyhyde/webster.cs.ucr.edu/www.artofasm.com/index.html">Here&#8217;s a few free books on Assembly programming.</a> And here&#8217;s <a href="https://news.ycombinator.com/item?id=2874483">a
+Hacker News thread with useful comments</a> on learning Assembly. You&#8217;ll
+need <a href="http://asm.sourceforge.net/syscall.html">a list of system calls</a>. And you&#8217;ll probably want to keep <a href="http://www.ascii.cl/conversion.htm">a
+conversion table from hex to decimal to binary</a> handy, unless you&#8217;re
+one of those geeks who has a binary clock on their&nbsp;desktop.</p>
+<p>You&#8217;ll also need this Intel <span class="caps">PDF</span> explaining Assembly for 64-bit
+processors: <a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/321059.pdf">Understanding and Analyzing Assembly&nbsp;Language.pdf</a></p>
+<p>And you&#8217;re going to find this <span class="caps">PDF</span> chart which translates machine hex
+opcodes into assembly very useful: <a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/Machine-Hex-Opcodes-to-Assembly.pdf">Machine Hex Opcodes to&nbsp;Assembly.pdf</a></p>
+<p><a href="http://www.vividmachines.com/shellcode/shellcode.html">And here&#8217;s a basic tutorial on shellcoding for Linux and&nbsp;Windows.</a></p>
+<p>And then you can move up to analyzing other&#8217;s shellcode, there&#8217;s <a href="http://1337day.com/shellcode">some
+here</a>.</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/manexecve.png" title="manexecve" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/manexecve.png
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/disemblyexit.png" title="disemblyexit" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/disemblyexit.png
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/assemblyexit.png" title="assemblyexit" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/assemblyexit.png
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/objdump.png" title="objdump" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/objdump.png</p>
+        </div><!-- /.entry-content -->
+                
+<hr><p>
+<a href="./robots-windsurfing-asteroids.html">
+    <<< Robots Windsurfing&nbsp;Asteroids</a>
+<span class="readmore">
+    <a href="./diy-compostable-electronics.html">
+        <span class="caps">DIY</span> Compostable&nbsp;Electronics >>></a>
+</span>
+</p>
+        </article>
+</section>
+<section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - bytebeats</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="../algorithmic-compositions.html">Algorithmic&nbsp;Compositions</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2013-04-05T17:42:00">
+                Friday, 05 April 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/python.html">python </a><a href="../tag/bytebeats.html">bytebeats </a><a href="../tag/twitter.html">twitter </a></p>
+</footer><!-- /.post-info --><p>For a long time, I couldn&#8217;t figure out what Twitter was for. I&#8217;m not sure I&#8217;ve
+figured that out yet. It seems convenient for posting links to the physics and
+cryptography whitepapers I read, and then receiving the internet standard &#8212;
+inane feedback from people I&#8217;ve never even heard&nbsp;of.</p>
+<p>At one point, because I couldn&#8217;t figure out what to do with Twitter, I decided
+to release a bytebeat album through tweets. I&#8217;ve seen people tweet links to
+their new songs or albums or whatever &#8212; that&#8217;s&nbsp;lame. </p>
+<p>So I started creating algorithmic compositions in less than 140 characters in
+python. The album, <em>fuck_your_bits</em> (hashtag=&#8217;#fyb&#8217;), is about half done,
+but my friends <a href="http://thoughtcrime.org">Moxie</a> and
+<a href="https://twitter.com/emblem__">Emblem</a> pointed out that not only would the
+search function for hashtags on twitter index only the songs in my album from
+the past three weeks, but also that tweets in my timeline were dropped from
+public view after a certain number of months, depending on some indeterminable
+number of other algorithms that calculated &#8220;tweet&nbsp;popularity&#8221;.</p>
+<p>Because people have been asking for the full album, here it is. I&#8217;ll still keep
+tweeting it though, because the only other useful thing I can think of that
+fits in less than 140 bytes is&nbsp;shellcode.</p>
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr((~t&t>>3^(((t>>((t>>11)%7+6))%15)*t))%256))for t in xrange(2**19)]'|aplay
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr(((~t>>2)*(2+(42&t*((7&t>>10)*2))<(24&t*((3&t>>14)+2))))%256))for t in xrange(2**18)]'|aplay
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr((((t*5&t>>7|t*9&t>>4|t*18&t/1024)|((t|7)>>5|(t|4)>>9)))%256))for t in xrange(2**18)]'|aplay
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr(((~t>>2)*((127&t*(7&t>>9))<(245&t*(4-(7&t>>13)))))%256))for t in xrange(2**20)]'|aplay -c 2 -r4444
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr((~t>>5>>(127&t*9&~t>>7<42&t*23^5&~t>>13)+3)%256))for t in xrange(2**18)]'|aplay -c2 -r2222
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr((((t>>(2|4)&((t%0x7369)|4|11|5))+(7|4|42)&t))%256))for t in xrange(2**18)]'|aplay -c2 -r4444
+</pre>
+
+<pre class="prettyprint lang-py">
+python -c'import sys;[sys.stdout.write(chr((((t*(t>>13|t>>8)|(t>>16)-t)-64))%256))for t in xrange(2**18)]'|aplay -r4444
+</pre>    </article>
+        <p class="paginator">
+        Page 1 / 1
+    </p>
+    </aside><!-- /#featured -->
+                                            </ol><!-- /#posts-list -->
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>

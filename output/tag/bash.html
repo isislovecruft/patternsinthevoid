@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - bash</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
+    
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="../git-nowhere.html">Git&nbsp;Nowhere</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2012-04-04T20:19:00">
+                Wednesday, 04 April 2012
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft-agora-lovecruft.html">isis agora lovecruft agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/anonymity.html">anonymity </a><a href="../tag/bash.html">bash </a><a href="../tag/geodata.html">geodata </a><a href="../tag/git.html">git </a></p>
+</footer><!-- /.post-info --><p><a href="https://twitter.com/#!/hellais">Arturo</a> and I were going through our commit logs for <a href="https://gitweb.torproject.org/ooni-probe.git">ooni-probe</a>
+this morning when he noted that git commits leak geodata through
+timezone settings. I figured git would have an easy way to set the
+timezone to <span class="caps">GMT</span>, but it turns out that it uses mktime() to get a struct
+representing the system clock time. <a href="http://www.alexpeattie.com/blog/working-with-dates-in-git/">There&#8217;s a few hacks already</a> for
+dealing with this, namely setting GIT_AUTHOR_DATE with the &#8212;date&nbsp;command:</p>
+<pre class="prettyprint lang-bash">
+$ git commit --date="Wed Feb 16 14:00 2037 +0100"
+</pre>
+
+<p>This is not only annoying, but it also doesn&#8217;t set GIT_COMMITTER_DATE,
+so if you wrote the patch and also committed it to a repo, your timezone
+still&nbsp;leaks.</p>
+<p>I thought this was all incredibly annoying, and I don&#8217;t want to change
+my system clock, so [I made a bash script][] to fix&nbsp;it:</p>
+<pre class="prettyprint lang-bash">
+#!/bin/bash
+#_____________________________________________________________________________
+# Git Nowhere
+#-----------------------------------------------------------------------------
+#
+# Use: Run as "$ . ./gitdate.sh" before "$ git commit" to manually set
+# the date to GMT in order to obscure timezone-based geodata tracking.
+#
+# If you would always like your timestamps to be obscured for a specific
+# project, then place this script in /usr/local/bin/. Next, edit
+# /your_project_path/.git/hooks/pre-commit and place in it the following two
+# lines:
+#
+# #!/bin/sh
+# exec source /usr/local/bin/gitdate.sh
+#
+# @author Isis Lovecuft, 0x2CDB8B35 isis@patternsinthevoid.net
+# @version 0.0.3
+#
+# v0.0.3: Also changes the months and years, because that would suck if your
+#         commits were accidentally made last year
+# v0.0.2: Changes the days too# v0.0.1: Changes the hours
+#_____________________________________________________________________________
+
+DAY=$(date | cut -d ' ' -f 1)
+MONTH=$(date | cut -d ' ' -f 2)
+DATE=$(date | cut -d ' ' -f 4)
+TIME=$(date | cut -d ' ' -f 5)
+TIMEZONE="+0000"YEAR=$(date | cut -d ' ' -f 7)
+HOUR=$(echo "$TIME" | cut -d ':' -f 1)
+MINUTE=$(echo "$TIME" | cut -d ':' -f 2)
+SECOND=$(echo "$TIME" | cut -d ':' -f 3)
+
+# Git uses the system time settings through mktime().  Do a "$ git log" to see
+# the timezone offset for your system.  This script assumes -0700. For
+# example, if "$ git log" says your timezone is -0500, you would change all
+# occurences in the next code block of "7" to "5" and change "17" to "19".
+
+TIMEOFFSET=7
+if [ "$HOUR" -lt "17" ]; then
+    let HOUR+=7else
+    let TILMIDNIGHT=24-HOUR
+    let FALSEDAWN=TIMEOFFSET-TILMIDNIGHT
+    let HOUR=FALSEDAWN
+fi
+
+# If the hour is one digit, prepend a zero.
+if [ "${#HOUR}" -eq "1" ]; then
+    HOUR=$(printf "%02d" $HOUR)
+fi
+
+# If it is tomorrow in UTC, make sure we increment the day.
+if [[ -n "$FALSEDAWN" ]]; then
+    if [ "$DAY" = "Mon" ]; then
+        NEXTDAY=$(echo "Tue")
+    elif [ "$DAY" = "Tue" ]; then
+        NEXTDAY=$(echo "Wed")
+    elif [ "$DAY" = "Wed" ]; then
+        NEXTDAY=$(echo "Thu")
+    elif [ "$DAY" = "Thu" ]; then
+        NEXTDAY=$(echo "Fri")
+    elif [ "$DAY" = "Fri" ]; then
+        NEXTDAY=$(echo "Sat")
+    elif [ "$DAY" = "Sat" ]; then
+        NEXTDAY=$(echo "Sun")
+    elif [ "$DAY" = "Sun" ]; then
+        NEXTDAY=$(echo "Mon")
+    fi
+
+    DAY=$NEXTDAY
+
+    if [[ "$MONTH" = "Jan" ]] || [[ "$MONTH" = "Mar" ]] || [[ "$MONTH" = "May" ]] || [[ "$MONTH" = "Jul" ]] || [[ "$MONTH" = "Aug" ]] || [[ "$MONTH" = "Oct" ]] || [[ "$MONTH" = "Dec" ]]; then
+        if [[ "$DATE" -lt "31" ]]; then
+            let DATE+=1
+        elif [[ "$DATE" -eq "31" ]]; then
+            if [[ "$MONTH" = "Jan" ]]; then
+                NEXTMONTH=$(echo "Feb")
+            elif [[ "$MONTH" = "Mar" ]]; then
+                NEXTMONTH=$(echo "Apr")
+            elif [[ "$MONTH" = "May" ]]; then
+                NEXTMONTH=$(echo "Jun")
+            elif [[ "$MONTH" = "Jul" ]]; then
+                NEXTMONTH=$(echo "Aug")
+            elif [[ "$MONTH" = "Aug" ]]; then
+                NEXTMONTH=$(echo "Sep")
+            elif [[ "$MONTH" = "Oct" ]]; then
+                NEXTMONTH=$(echo "Nov")
+            elif [[ "$MONTH" = "Dec" ]]; then
+                NEXTMONTH=$(echo "Jan")
+                let YEAR+=1
+            fi
+
+            DATE=1
+        fi
+    elif [[ "$MONTH" = "Feb" ]] && [[ "$DATE" -lt "28" ]]; then
+        let DATE+=1
+    elif [[ "$MONTH" = "Feb" ]] && [[ "$DATE" -eq "28" ]]; then
+        NEXTMONTH=$(echo "Mar")
+        DATE=1
+    elif [[ "$MONTH" = "Apr" ]] || [[ "$MONTH" = "Jun" ]] || [[ "$MONTH" = "Sep" ]] || [[ "$MONTH" = "Nov" ]]; then
+        if [[ "$DATE" -lt "30" ]]; then
+            let DATE+=1
+        elif [[ "$DATE" -eq "30" ]]; then
+            if [[ "$MONTH" = "Apr" ]]; then
+                NEXTMONTH=$(echo "May")
+            elif [[ "$MONTH" = "Jun" ]]; then
+                NEXTMONTH=$(echo "Jul")
+            elif [[ "$MONTH" = "Sep" ]]; then
+                NEXTMONTH=$(echo "Oct")
+            elif [[ "$MONTH" = "Nov" ]]; then
+                NEXTMONTH=$(echo "Dec")
+            fi
+
+            DATE=1
+        fi
+    fi
+    if [[ -n "$NEXTMONTH" ]]; then
+        MONTH=$NEXTMONTH
+    fi
+fi
+export GIT_AUTHOR_DATE=$(echo "$DAY $MONTH $DATE $HOUR:$MINUTE:$SECOND $YEAR $TIMEZONE")
+export GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE
+unset NEXTMONTH
+unset DAY
+unset MONTH
+unset DATE
+unset HOUR
+unset MINUTE
+unset SECOND
+unset YEAR
+unset TIMEZONE
+unset TILMIDNIGHT
+unset FALSEDAWN
+unset NEXTDAY
+unset TIMEOFFSET
+</pre>
+
+<p>[I made a bash script]: https://github.com/isis agora&nbsp;lovecruftlovecruft/configs/blob/master/scripts/gitdate.sh</p>    </article>
+        <p class="paginator">
+        Page 1 / 1
+    </p>
+    </aside><!-- /#featured -->
+                                            </ol><!-- /#posts-list -->
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about" class="vcard body">
+            <a href="/about.html">Contact</a>
+    </div>
+        <style type="text/css">
+div#info p {
+    border:1px solid #000;
+    background:#FFF; 
+    margin-left:15px;
+    margin-right:15px;
+    position:absolute;
+    z-index:500;
+    bottom:0;
+    padding:5px;
+    font-size:4px;
+    text-decoration:none; 
+}
+</style>
+<div id="info">
+    <p id="info" display="none">Thanks!
+        <br>You're currently helping internet users</br>
+        <br>in censored regions with FlashProxy!</br>
+    </p>
+</div>
+<iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+            frameborder="0" scrolling="no"
+            accesskey="i"
+            onmouseover="document.getElementById('info').style.display='block'"
+            onmouseout="document.getElementById('info').style.display='none'"
+            seamless>
+    </iframe>
+<!-- 
+#info p {margin-left:15px; margin-right:20px;}
+.tooltip {color:#FFF; display:none;}
+.tooltip b {color:#FFF; display:none;}
+.tooltip:hover {
+    display=block;
+    border:1px solid #000;
+    background:#333;
+    position:relative;
+    z-index:500;
+    left:25px;
+    padding:5px;}
+.tooltip:hover b {display:block; position:absolute; top:20px; padding:5px; font-weight:normal; color:#000; border:1px solid #888; background:#FFF; width:150px;}
+.tooltip:hover b em {display:block; position:absolute; left:20px; top:-6px; width:11px; height:6px; background:#fff; display:block; font-size:1px;}
+-->        </address><!-- /#about -->
+</footer><!-- /#contentinfo -->
+</body>
+</html>
