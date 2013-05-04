@@ -48,7 +48,7 @@ CSS_FILE = 'main.css'
 TYPOGRIFY = True
 PRETTIFY = True
 
-import plugins.neighbors as neighbors
+from plugins import neighbors
 PLUGINS = [neighbors,]
 
 FLASHPROXY = True
@@ -85,7 +85,8 @@ LINKS =  (
     ('main', 'https://fyb.patternsinthevoid.net'),
     ('keys', 'https://blog.patternsinthevoid.net/isis.txt'),
     ('code', 'https://code.patternsinthevoid.net'),
-    ('time', 'https://blog.patternsinthevoid.net/calendar.html')
+    ('time', 'https://blog.patternsinthevoid.net/calendar.html'),
+    ('about', 'https://blog.patternsinthevoid.net/about.html'),
     )
 #    ('Image', 'https://image.patternsinthevoid.net'),
 #    ('Sound', 'https://sound.patternsinthevoid.net'),
