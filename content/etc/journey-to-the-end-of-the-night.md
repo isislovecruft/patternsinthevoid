@@ -1,7 +1,7 @@
 Title: Journey to the End of the Night
 Date: 2012-01-04 02:55
 Author: isis agora lovecruft
-Category: anarchism
+Category: travel
 
 In Berlin, on New Year's Eve, I participated in a race through the
 streets of Berlin, called Journey to the End of the Night -- except this
@@ -17,7 +17,7 @@ minutes late (for which the organizers, my friends [from Vienna][] and
 explosives. Let me tell you: Berliners take their fireworks *very
 seriously*, and firework safety inversely so. It's not uncommon at all
 for a complete stranger to throw the equivalent of a quarter stick of
-dynamite *in your direction*. Also, I noticed that Berliners like to
+dynamite *at your face*. Also, I noticed that Berliners like to
 surprise you by throwing bottles and chairs.
 
 So, armed to the teeth with explosives, we set out running through the
@@ -28,9 +28,9 @@ race, and a few of the organizers too. Redbeard is awesome. He's a
 professional kernel hacker with a red beard down to his waist, if the
 later wasn't obviously by the name. I also had to dodge the
 aforementioned chairs, bottles, and fireworks with parkour while wearing
-a tinfoil hat. And at the end of it all, I found myself at [C-Base, a
+a tinfoil hat. And at the end of it all, I found myself at [C-Base][], a
 hackerspace built into the remains of a two-millenia-old alien spaceship
-crash][], discussing DIY soldering iron buttprobes, theoretical physics,
+crash], discussing DIY soldering iron buttprobes, theoretical physics,
 and hackers on sailboats, while drinking Chink Chank Chunk (Club Mate
 with sugar, lime, vodka).
 
@@ -40,5 +40,4 @@ Oh Berlin, how I want to live in you!
   [an Italian hacker who works on Tor]: http://hellais.wordpress.com/
   [from Vienna]: https://twitter.com/#!/fin
   [San Francisco]: https://twitter.com/#!/Rubin110
-  [C-Base, a hackerspace built into the remains of a two-millenia-old
-  alien spaceship crash]: http://c-base.org/
+  [C-Base]: http://c-base.org/
