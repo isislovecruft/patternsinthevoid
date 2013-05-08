@@ -3,7 +3,6 @@ Date: 2013-04-28 13:38
 Author: isis agora lovecruft
 Category: hacking
 Tags: China, OONI, Tor, Censorship
-Status: draft
 
 
 Last week, I went to China, for the first -- and possibly the last --
@@ -19,6 +18,8 @@ the first time I've ever worn a wire (I know, *they all say that*, right?): it
 doens't feel right. I felt the compulsion to warn people who walked up and
 started talking to me before they spoke. And even then I still felt dirty and
 creepy.
+
+![king-of-kowloon](|filename|../images/2013/04/king-of-kowloon-small.jpg)
 
 When I started officially working on things for the
 [Tor Project](https://torproject.org) last year, I'd imagined that the world
@@ -42,8 +43,8 @@ could keep you away from your home, or that an arbitrary date on a slip of
 paper could decide how long you were permitted to see someone you loved.
 
 After living in Germany and France for precisely the number of days my tourist
-visa would allow (Oops. I'd been counting, and thought I was still a week
-under. I should probably script that.), I took off for Hong Kong, where
+visa would allow, (Oops. I'd been counting, and thought I was still a week
+under. I should probably script that.) I took off for Hong Kong, where
 [OpenITP](https://openitp.org) had generously offered me a travel grant to
 attend
 [the third Censorship Circumvention Summit](http://openitp.org/?q=node/32). Jumping
