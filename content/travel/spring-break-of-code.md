@@ -8,15 +8,23 @@ One of the first times I met up with [Moxie](https://twitter.com/moxie) while tr
 bar in San Francisco's Mission District, packed with hipsters. I had nineteen years, a
 modified state ID card, and just hitchhiked into town. We sat at the bar, and both ordered well gin and tonics. 
 
+![junk](|filename|../images/2013/03/sboc/junk.png)
+
 I had a proposal, the sort of get-rich-quick scheme it seems that only 18th century pirates and lazy hacker-squatters are capable of contriving: We fly to China. Then, we spend a few grand purchasing a Chinese junk rig, and equip it with a system of pulleys so that we can man the sails from the cockpit, solo if necessary. Next, we fill the cabin with about as much potable water as we can carry and enough dried food to stave off starvation, and set a course across the northern arc of the Pacific -- avoiding the treachery of the South Seas -- for San Francisco. The choice of vessel was key, the battoned sails and flattened hull of a Chinese junk rig make it arguably one of the safest ships to make a transoceanic voyage alone, not to mention the finicial incentives: being rare in the Americas, a well-kept junk rig would go for anywhere from $50,000 to $250,000 USD -- not to mention grant you free slip fees at just about any marina from Anchorage to Punta Arenas. How could anyone turn down such a preposterous plot which included adventure on the high seas, a high mortality risk, riches and notoriety?
 
 As I recall, Moxie shook and hung his head, and smiling countered my proposition.
 
 "Ever heard of Santos Dumont?" he asked.
+
 "Nope."
+
 "So. Santos Dumont was a Brazilian hero, originally a Frenchman. This was around the late 1800s. He was the type of dude who would trek across the Amazon alone, leave for the North Pole with a party of eight and return with a party of three -- your standard gentleman-adventurer, a total madman. Sometime around the turn of the century, he returns to Paris to participate in a race to sail zeppelins from a certain point around the Eifel Tower and back. He wins, but being rich already, gives half the money to charity. The other half of the prize he puts in the care of a trust fund with the instructions that it should be awarded to anyone who can beat his time -- thirty minutes or so, from what I remember."
+
 "No one's won it yet?"
-"I'm not entirely sure, but the story appears to end there -- at least, there is no record of anyone claiming the money in the trust -- and it's been sitting there, collecting interest, for over a century now." Moxie swept the dreads out of his face, took a sip of the gin, and continued: "It should be simple to beat the time given the advantages of modern materials..."
+
+"I'm not entirely sure, but the story appears to end there -- at least, there is no record of anyone claiming the money in the trust -- and it's been sitting there, collecting interest, for over a century now." 
+
+Moxie swept the dreads out of his face, took a sip of the gin, and continued: "It should be simple to beat the time given the advantages of modern materials..."
 
 He and I have had a friendly series of bets throughout our friendship. Moxie usually wins...and I usually forget to name my stakes. I should have bet on this: If ever anyone were to be the cause for my going to the North Pole, it would be Moxie. 
 
@@ -29,9 +37,31 @@ I awoke this morning in my underwear on top of a snarled mess of sheets, with my
 
 *Qu'est-que fuck? How did I get to Yavin IV?*  
 
-I blinked, expecting the familiar snowy silence of Prenzlauerburg to replace the acerbic green foliage, the clockwork clacking of the U-Bahn across the raised tracks to replace the steady sound of waves...
+I blinked, expecting the familiar snowy silence of Prenzlauerburg to replace the acerbic green foliage, the clockwork clacking of the yellow U-Bahn cars across the raised tracks to replace the steady sound of waves...
 
 ![prenzlauerberg](|filename|../images/2013/03/sboc/eberswalderstrasse-prenzlauerberg-hinterof.jpg)
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 *Nope. Still on Yavin IV.*
 
