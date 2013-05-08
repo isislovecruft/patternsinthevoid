@@ -15,8 +15,26 @@
                 <link href="../theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="../theme/js/html5.js">
         </script>
@@ -70,20 +88,69 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../broadcast-de-auth-dos-attack-jamming-wifi-networks.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Broadcast De-auth DOS Attack: Jamming WiFi Networks">Broadcast De-auth <span class="caps">DOS</span> Attack: Jamming WiFi&nbsp;Networks</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-05-07T13:52:00">
+                Saturday, 07 May 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/dos.html">DOS </a><a href="../tag/packet-injection.html">packet injection </a><a href="../tag/wifi-jamming.html">wifi jamming </a></p>
+</footer><!-- /.post-info -->                            <p>The following may or may not be illegal to practice on networks not
+owned by the broadcaster. As such, it is purely for informational and
+educational&nbsp;purposes.</p>
+<p>I&#8217;m certainly not the first to discover this, by any means. It&#8217;s
+incredibly simple, and there&#8217;s no way to defend against it. This type of
+attack uses aireplay-ng to broadcast streaming de-authorization packets
+to any client on a given wireless network, or networks. Put simply, it
+effectively &#8220;jams&#8221; WiFi networks. If you&#8217;re within radio range of the
+network access point, you stream the de-auth packets to boot everyone
+off the network. If you keep streaming this, it becomes a Denial of
+Service attack because they can&#8217;t reconnect to the network while you&#8217;re
+jamming&nbsp;it.</p>
+<p>To do this, you need a wireless card which supports packet injection and
+monitoring, and simply the aircrack-ng suite of tools. The command for
+it&nbsp;is</p>
+<div class="codehilite"><pre><span class="n">airplay</span><span class="o">-</span><span class="n">ng</span> <span class="o">--</span><span class="n">death</span> <span class="mi">0</span> <span class="o">-</span><span class="n">a</span> <span class="p">[</span><span class="n"><span class="caps">BSSID</span></span> <span class="n">of</span> <span class="n">victim</span> <span class="n">network</span> <span class="n">access</span> <span class="n">point</span><span class="p">]</span> <span class="n">mon0</span>
+</pre></div>
+
+
+<p>There&#8217;s no way to defend against this type of attack, but the victim(s)
+could triangulate your position using the frequency strength of your
+broadcast. So, if you&#8217;re going to do this, use&nbsp;rollerskates.</p>
+                            <a class="readmore" href="../broadcast-de-auth-dos-attack-jamming-wifi-networks.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -160,38 +227,6 @@ Darknet Operations:[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-co
 <p><span class="dquo">&#8220;</span>Instead [of Stanley Milgram&#8217;s small-world model], we use a method which
 draws off the small world models ...</p>
                             <a class="readmore" href="../some-ideas-for-darknet-implementation-encryption-and-integration.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="../cypherpunk-manifesto-in-zine-format.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Cypherpunk Manifesto in Zine Format">Cypherpunk Manifesto in Zine&nbsp;Format</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-03-23T03:17:00">
-                Wednesday, 23 March 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="../category/hacking.html">hacking</a> </p>
-<p>tags: <a href="../tag/crypto-anarchism.html">crypto-anarchism </a><a href="../tag/cryptography.html">cryptography </a><a href="../tag/cypherpunk.html">cypherpunk </a><a href="../tag/cypherpunk-manifesto.html">cypherpunk manifesto </a></p>
-</footer><!-- /.post-info -->                            <p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/03/cypherpunk-cover-image-300x231.jpg" title="cypherpunk cover image" />][]I made a zine out of the cypherpunk manifesto. Anyone who
-wishes to should print and distribute&nbsp;copies.</p>
-<p><a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/03/view.pdf">view&nbsp;version</a></p>
-<p><a href="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/03/cypherpunk-manifesto-stacked-rev1_booklet.pdf">print&nbsp;version</a></p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/03/cypherpunk-cover-image-300x231.jpg" title="cypherpunk cover image" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/03/cypherpunk-cover-image.jpeg</p>
-                            <a class="readmore" href="../cypherpunk-manifesto-in-zine-format.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>

@@ -15,8 +15,26 @@
                 <link href="../theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="../theme/js/html5.js">
         </script>
@@ -70,20 +88,69 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../installing-tor-polipo-and-vidalia-and-excluding-bad-exit-nodes-in-linux.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Installing Tor, Polipo, and Vidalia, and Excluding Bad Exit Nodes, in Linux">Installing Tor, Polipo, and Vidalia, and Excluding Bad Exit Nodes, in&nbsp;Linux</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-06-21T20:15:00">
+                Tuesday, 21 June 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/onion.html">.onion </a><a href="../tag/anonymity.html">anonymity </a><a href="../tag/bad-apple-attack.html">Bad Apple Attack </a><a href="../tag/excluding-bad-exit-nodes.html">Excluding Bad Exit Nodes </a><a href="../tag/linux.html">linux </a><a href="../tag/polipo.html">Polipo </a><a href="../tag/setting-up-a-tor-relay.html">Setting Up a Tor Relay </a><a href="../tag/tor.html">Tor </a><a href="../tag/tor-hidden-services.html">Tor Hidden Services </a><a href="../tag/vidalia.html">Vidalia </a></p>
+</footer><!-- /.post-info -->                            <p><strong><span class="caps">EDITED</span> 1 September 2011:</strong> I <span class="caps">STRONGLY</span> <span class="caps">SUGGEST</span> <span class="caps">THAT</span> <span class="caps">YOU</span> <span class="caps">FOLLOW</span>
+<span class="caps">DOCUMENTATION</span> <span class="caps">ON</span> <span class="caps">THE</span> <span class="caps">TOR</span> <span class="caps">PROJECT</span>&#8217;S <span class="caps">WEBSITE</span>, <span class="caps">AND</span> <span class="caps">IF</span> <span class="caps">THAT</span> <span class="caps">DOESN</span>&#8221;T <span class="caps">WORK</span>
+<span class="caps">THEN</span> <span class="caps">ASK</span> <span class="caps">FOR</span> <span class="caps">HELP</span> <span class="caps">IN</span> #<span class="caps">TOR</span> <span class="caps">ON</span> <span class="caps">IRC</span>.<span class="caps">OFTC</span>.<span class="caps">NET</span>. I do not have time to write
+security howtos, or keep old ones up to date. My apologies,&nbsp;friends.</p>
+<p>This is a reference how-to for troubleshooting <a href="https://www.torproject.org/index.html.en">Tor</a>, <a href="http://www.pps.jussieu.fr/%7Ejch/software/polipo/">Polipo</a>, and
+<a href="https://torproject.org/projects/vidalia">Vidalia</a> installations and configurations in <a href="http://www.debian.org/">Debian</a>/<a href="http://www.ubuntu.com/">Ubuntu</a>
+based Linux. Specifically, this is for setting up a <a href="http://195.234.10.45/">Tor relay</a> and
+using the Vidalia <span class="caps">GUI</span> to configure Tor to skip known bad exit nodes.
+However, these instructions can be used to set up Tor for client
+(non-relay) use, and the instructions to skip known bad exit nodes still
+apply. I am frequently asked to help people with Tor, and so I&#8217;m putting
+this up for&nbsp;reference.</p>
+<p>~~Follow the <a href="https://www.torproject.org/docs/debian.html.en">steps at the Tor Project page</a> for Tor and Polipo
+installation. When the installation instructions tell you to move to
+step two and install Polipo, skip this part if you are using Ubuntu
+10.04 (lucid) or newer. The reason for this is that the apt-get manager
+automatically detects Polipo as a dependency and installs it for you.
+However, you will have to <a href="https://www.torproject.org/docs/tor-doc-unix.html.en#polipo">configure Polipo</a>. Take this <a href="https://gitweb.torproject.org/torbrowser.git/blob_plain/HEAD:/build-scripts/config/polipo.conf"><em>sample
+configuration file for Vidalia with Tor</em></a>, and put copy/paste it into
+your current polipo config file (usually at either /etc/polipo/config or
+\~/.polipo). Continue through steps three through five on that page to
+Torify your browser and applications, and <a href="https://www.torproject.org/docs/tor-doc-relay.html.en">set up ...</a></p>
+                            <a class="readmore" href="../installing-tor-polipo-and-vidalia-and-excluding-bad-exit-nodes-in-linux.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -151,58 +218,6 @@ the <a href="https://www.eff.org/">Electronic Frontier Foundation</a>, wrote in 
 <p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/06/fuckthem.png" title="fuckthem" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/06/fuckthem.png
   [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/06/fightthem.png" title="fightthem" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/06/fightthem.png</p>
                             <a class="readmore" href="../well-fuck-them-a-declaration-of-the-independence-of-cyberspace.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="../neuromancer.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Neuromancer">Neuromancer</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-05-11T21:21:00">
-                Wednesday, 11 May 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="../category/hacking.html">hacking</a> </p>
-<p>tags: <a href="../tag/artificial-intelligence.html">artificial intelligence </a><a href="../tag/audiobook.html">audiobook </a><a href="../tag/jim-blackhurst.html">jim blackhurst </a><a href="../tag/neuromancer.html">neuromancer </a><a href="../tag/speech-defects.html">speech defects </a><a href="../tag/william-gibson.html">william gibson </a><a href="../tag/wintermute.html">wintermute </a></p>
-</footer><!-- /.post-info -->                            <p>[caption id=&#8221;attachment_656&#8221; align=&#8221;aligncenter&#8221; width=&#8221;594&#8221;
-caption=&#8221;Tree Map Output for Neuromancer, made by Jim
-Blackhurst&#8221;][<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/05/neuromancer.png" title="neuromancer" />][][/caption]</p>
-<p>This audiobook is amazing, not simply for its content &#8212; William
-Gibson&#8217;s Neuromancer is a wonderful book regardless &#8212; but for its
-narrator. I&#8217;m not sure who the narrator is, but they have a very
-interesting voice. Specifically, they either have some strange accent, a
-sort of cross between a British and Texan accent, or they have some
-speech defect which I have never heard before. I&#8217;m going with the higher
-probability of the latter being true. They often switch vowel types, so
-that, for instance, a short &#8220;a&#8221; as in &#8220;anarchist&#8221; becomes long as in
-&#8220;awesome&#8221;. There appears to be no consistent pattern to it; they will
-switch multiple vowels within one word and then none at all in the next.
-I wish I knew who they&nbsp;were.</p>
-<p>I have listened to this book seven or eight times, and I feel like I
-know the narrator now, as if they are some part of myself, some program
-in my brain that I can access. I kind of want to upload this book to the
-world as a reality check to make sure that I&#8217;m not hearing extra voices
-reading me my favourite books, which is totally something my brain would&nbsp;do.</p>
-<p>The files are after the jump to save screen space (there&#8217;s 50 of&nbsp;them!)</p>
-<p>[William Gibson -&nbsp;Neuromancer_chunk_1][]</p>
-<p>[William Gibson -&nbsp;Neuromancer_chunk_2][]</p>
-<p>[William Gibson -&nbsp;Neuromancer_chunk_3][]</p>
-<p>[William Gibson -&nbsp;Neuromancer_chunk_4][]</p>
-<p>[William ...</p>
-                            <a class="readmore" href="../neuromancer.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>

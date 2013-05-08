@@ -15,8 +15,26 @@
                 <link href="./theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="./theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="./theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="./theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="./theme/js/html5.js">
         </script>
@@ -70,20 +88,60 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./shellcode-hex-opcodes-and-dragons.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Shellcode, Hex Opcodes, and Dragons">Shellcode, Hex Opcodes, and&nbsp;Dragons</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-08-15T02:48:00">
+                Monday, 15 August 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft-agora-lovecruft.html">isis agora lovecruft agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/assembly-languages.html">assembly languages </a><a href="./tag/fairytaleland.html">fairytaleland </a><a href="./tag/hex.html">hex </a><a href="./tag/opcodes.html">opcodes </a><a href="./tag/shellcode.html">shellcode </a><a href="./tag/syscall.html">syscall </a></p>
+</footer><!-- /.post-info -->                            <p>I just realised why directory names in *nix systems are often three
+characters. If you&#8217;re loading pathnames into a syscall in assembly
+language, you&#8217;re given four byte strings to work with. For example, to
+use the directory path of the shell “/bin/sh” as a variable within a
+syscall function, such as execve(), so that the resulting call would be
+execve(/bin/sh), you would need to push 0x68732f2f to the pre-cleared
+register (0x68732f2f is hex for “//sh” and the leading “/” doesn&#8217;t
+matter). Then push 0x6e69622f (hex for “/bin”) onto the stack. Actually,
+I&#8217;m not sure if this is why directories often have three character
+names, but it makes sense to&nbsp;me.</p>
+<p>I mean, right? The old sysadmins from yesteryear planned all this to
+deliberately make my task of writing shellcode easier? And dragons: they
+do&nbsp;exist.</p>
+                            <a class="readmore" href="./shellcode-hex-opcodes-and-dragons.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -182,58 +240,6 @@ keylogger – within five&nbsp;minutes.</p>
 <h2>VoIP&nbsp;Botnetting</h2>
 <p>The presentation which might possibly ...</p>
                             <a class="readmore" href="./defcon-report-back-part-ii.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="./defcon-report-back-part-1.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Defcon Report Back, Part 1">Defcon Report Back, Part&nbsp;1</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-08-08T23:59:00">
-                Monday, 08 August 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="./category/hacking.html">hacking</a> </p>
-<p>tags: <a href="./tag/assembly-languages.html">assembly languages </a><a href="./tag/defcon.html">Defcon </a><a href="./tag/javascript.html">javascript </a><a href="./tag/jugaad.html">jugaad </a><a href="./tag/kernel-exploitation.html">Kernel Exploitation </a><a href="./tag/las-vegas.html">las vegas </a><a href="./tag/libhijack.html">libhijack </a><a href="./tag/linux-thread-injection.html">linux thread injection </a><a href="./tag/malicious-pdf.html">malicious pdf </a><a href="./tag/mmap-syscall.html">mmap syscall </a><a href="./tag/port-scan.html">port scan </a><a href="./tag/ptrace.html">ptrace </a><a href="./tag/python.html">python </a><a href="./tag/runtime-process-library-injection.html">runtime process library injection </a><a href="./tag/shellcode.html">shellcode </a><a href="./tag/sptrace.html">sptrace </a><a href="./tag/strace.html">strace </a><a href="./tag/umap.html">Umap </a><a href="./tag/upnp.html">UPnP </a></p>
-</footer><!-- /.post-info -->                            <p>Friday 5^th^ August 2011, Defcon 19, Las&nbsp;Vegas</p>
-<h2>Analyzing Embedded Malicious Code in&nbsp;PDFs</h2>
-<p>So, the first was Mahmud Ab Rahman&#8217;s presentation <a href="www.giac.org/paper/gpen/3418/malicious-pdf-analysis/121349">on parsing and
-analyzing malacious code embedded in .pdfs</a>. I can&#8217;t guarantee that
-paper doesn&#8217;t have anything malicious embedded. But I have used a .pdf
-parser written in python by <a href="https://DidierStevens.com">Didier Stevens</a> and been very confused
-about .pdf code structure, so Ab Rahman&#8217;s Sneaky <span class="caps">PDF</span> lecture was highly
-enlightening. I can&#8217;t find video for that presentation up yet, but that
-.pdf above does contain everything said and the original slides.
-Basically, malicious .pdfs use JavaScript code obfuscation through
-spaghetti code, infinite loops, misdirected object references, code
-encryption, and media-rich embedded objects such as flash videos or
-audio files. Ab Rahman gave a few lists of tools which he used to better
-parse and de-obfuscate: tools such as <a href="https://developer.mozilla.org/en/SpiderMonkey">SpiderMonkey</a>, <a href="https://www.mozilla.org/rhino/">Rhino</a>,
-<a href="https://code.google.com/p/v8/">V8</a>, and <a href="http://jsbeautifier.org/">JSBeautifier</a> can all be used to fix spaghetti code,
-infinite loops, and misdirected object references, and tools like
-<a href="www.unixuser.org/~euske/python/pdfminer/">PDFminer</a>, <a href="https://gallus.honeynet.org.my/">Gallus</a>, <a href="http://news.wepawet.cs.ucsb.edu/">Wepawet</a>, <a href="http://aptdeezer.xecure-lab.com/">APTdeezer</a>, and <a href="http://esec-lab.sogeti.com/pages/Origami">Origami</a>
-can be used in addition to Didier Steven&#8217;s above referenced tool for
-parsing. Also, I found <a href="http://www.decalage.info/file_formats_security/pdf">an entire site on <span class="caps">PDF</span> security issues</a>, with
-lists of relevant tools and white papers which go into more detail on
-obfuscation and detection&nbsp;methods.</p>
-<h2>Linux Thread&nbsp;Injection</h2>
-<p>Aseem “@” Jakhar presented on <a href="http://null.co.in/section/atheneum/projects/">Jugaad</a>, a newly released Linux Thread
-Injection kit, which uses the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Ptrace">ptrace() function</a> in <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Gdb">gdb</a> to inject
-arbitrary code into running processes. <a href="http://good.net/dl/k4r3lj/DEFCON19/DEFCON-19-Jakhar-Jugaad-Linux-Thread-Injection.pdf">Here&#8217;s the pdf</a> of his ...</p>
-                            <a class="readmore" href="./defcon-report-back-part-1.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>

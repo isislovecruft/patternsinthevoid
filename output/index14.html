@@ -15,8 +15,26 @@
                 <link href="./theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="./theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="./theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="./theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="./theme/js/html5.js">
         </script>
@@ -70,20 +88,72 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./defcon-report-back-part-1.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Defcon Report Back, Part 1">Defcon Report Back, Part&nbsp;1</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-08-08T23:59:00">
+                Monday, 08 August 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/assembly-languages.html">assembly languages </a><a href="./tag/defcon.html">Defcon </a><a href="./tag/javascript.html">javascript </a><a href="./tag/jugaad.html">jugaad </a><a href="./tag/kernel-exploitation.html">Kernel Exploitation </a><a href="./tag/las-vegas.html">las vegas </a><a href="./tag/libhijack.html">libhijack </a><a href="./tag/linux-thread-injection.html">linux thread injection </a><a href="./tag/malicious-pdf.html">malicious pdf </a><a href="./tag/mmap-syscall.html">mmap syscall </a><a href="./tag/port-scan.html">port scan </a><a href="./tag/ptrace.html">ptrace </a><a href="./tag/python.html">python </a><a href="./tag/runtime-process-library-injection.html">runtime process library injection </a><a href="./tag/shellcode.html">shellcode </a><a href="./tag/sptrace.html">sptrace </a><a href="./tag/strace.html">strace </a><a href="./tag/umap.html">Umap </a><a href="./tag/upnp.html">UPnP </a></p>
+</footer><!-- /.post-info -->                            <p>Friday 5^th^ August 2011, Defcon 19, Las&nbsp;Vegas</p>
+<h2>Analyzing Embedded Malicious Code in&nbsp;PDFs</h2>
+<p>So, the first was Mahmud Ab Rahman&#8217;s presentation <a href="www.giac.org/paper/gpen/3418/malicious-pdf-analysis/121349">on parsing and
+analyzing malacious code embedded in .pdfs</a>. I can&#8217;t guarantee that
+paper doesn&#8217;t have anything malicious embedded. But I have used a .pdf
+parser written in python by <a href="https://DidierStevens.com">Didier Stevens</a> and been very confused
+about .pdf code structure, so Ab Rahman&#8217;s Sneaky <span class="caps">PDF</span> lecture was highly
+enlightening. I can&#8217;t find video for that presentation up yet, but that
+.pdf above does contain everything said and the original slides.
+Basically, malicious .pdfs use JavaScript code obfuscation through
+spaghetti code, infinite loops, misdirected object references, code
+encryption, and media-rich embedded objects such as flash videos or
+audio files. Ab Rahman gave a few lists of tools which he used to better
+parse and de-obfuscate: tools such as <a href="https://developer.mozilla.org/en/SpiderMonkey">SpiderMonkey</a>, <a href="https://www.mozilla.org/rhino/">Rhino</a>,
+<a href="https://code.google.com/p/v8/">V8</a>, and <a href="http://jsbeautifier.org/">JSBeautifier</a> can all be used to fix spaghetti code,
+infinite loops, and misdirected object references, and tools like
+<a href="www.unixuser.org/~euske/python/pdfminer/">PDFminer</a>, <a href="https://gallus.honeynet.org.my/">Gallus</a>, <a href="http://news.wepawet.cs.ucsb.edu/">Wepawet</a>, <a href="http://aptdeezer.xecure-lab.com/">APTdeezer</a>, and <a href="http://esec-lab.sogeti.com/pages/Origami">Origami</a>
+can be used in addition to Didier Steven&#8217;s above referenced tool for
+parsing. Also, I found <a href="http://www.decalage.info/file_formats_security/pdf">an entire site on <span class="caps">PDF</span> security issues</a>, with
+lists of relevant tools and white papers which go into more detail on
+obfuscation and detection&nbsp;methods.</p>
+<h2>Linux Thread&nbsp;Injection</h2>
+<p>Aseem “@” Jakhar presented on <a href="http://null.co.in/section/atheneum/projects/">Jugaad</a>, a newly released Linux Thread
+Injection kit, which uses the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Ptrace">ptrace() function</a> in <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Gdb">gdb</a> to inject
+arbitrary code into running processes. <a href="http://good.net/dl/k4r3lj/DEFCON19/DEFCON-19-Jakhar-Jugaad-Linux-Thread-Injection.pdf">Here&#8217;s the pdf</a> of his ...</p>
+                            <a class="readmore" href="./defcon-report-back-part-1.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -182,53 +252,6 @@ you pay for having a hipster computer.&nbsp;/snark!</p>
 such as presented in the Evil Maid or Cold Boot attacks. Duh. If they
 can physically get to your computer, especially if they can get to ...</p>
                             <a class="readmore" href="./cute-physical-access-tricks.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="./best-game-ever.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Best. Game. Ever.">Best. Game.&nbsp;Ever.</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-07-29T00:17:00">
-                Friday, 29 July 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="./category/hacking.html">hacking</a> </p>
-<p>tags: <a href="./tag/artificial-intelligence.html">artificial intelligence </a><a href="./tag/cellular-automata.html">cellular automata </a><a href="./tag/chess.html">chess </a><a href="./tag/combinatorial-game-theory.html">combinatorial game theory </a><a href="./tag/game-complexity.html">game complexity </a><a href="./tag/game-of-go.html">game of go </a><a href="./tag/game-of-life.html">game of life </a><a href="./tag/game-theory.html">game theory </a><a href="./tag/gliders.html">gliders </a><a href="./tag/golly.html">golly </a><a href="./tag/heuristics.html">heuristics </a><a href="./tag/john-horton-conway.html">John Horton Conway </a><a href="./tag/manhattan-project.html">Manhattan Project </a><a href="./tag/neuroscience.html">neuroscience </a><a href="./tag/particle-physics.html">particle physics </a><a href="./tag/shannons-number.html">shannon's number </a><a href="./tag/turing-complete.html">turing complete </a><a href="./tag/von-neumann.html">von Neumann </a></p>
-</footer><!-- /.post-info -->                            <p>I used to be really into a good &#8216;ol game of chess. I still am, I
-suppose. But it got old. There&#8217;s only so many possibilities &#8212;
-<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Shannon_number">Shannon&#8217;s number</a> gives the lower bound to be only 10^3^, to be
-precise, and <a href="http://homepages.cwi.nl/~tromp/chess/chess.html">the upper bound has been calculated</a> at less than
-2^155^, which is less than 10^46.7^. That&#8217;s factoring in all possible,
-legal moves, and factoring out invalid or illegal moves. It doesn&#8217;t
-factor in that human players are not the most logical creatures and
-their playing can quickly become predictable. I mean, if you take a look
-at game theory, in &#8220;Guess Two Thirds of the Average&#8221; as played in the
-general population,[it&#8217;s statistically shown that humans do not think
-beyond three logical iterations][]. Chess is grand, and a good match is
-always appreciated. But it just got old after a&nbsp;while.</p>
-<p>Lately, I&#8217;ve been really into playing Go. Go is amazing, and I still
-suck at it. I could probably waste my life away learning Go strategy,
-and still not master the game. To compare it with chess, the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Go_and_mathematics">maximum
-number of legal moves in Go</a> is 2.08168199382×10^170^, more than 130
-orders of magnitude higher. That&#8217;s also more than double <a href="http://www.strangehorizons.com/2001/20010402/biggest_numbers.shtml">the amount of
-particles in the universe</a>. While super chess computers, such as Deep
-Blue, can beat World Champion chess players, <a href="http://www.usgo.org/resources/whatisgo.html">young children can often
-beat even the best Go computers</a>. However, as artificial intelligence ...</p>
-                            <a class="readmore" href="./best-game-ever.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>

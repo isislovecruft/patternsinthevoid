@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Patterns in the Void</title><link href="https://blog.patternsinthevoid.net/" rel="alternate"></link><link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" rel="self"></link><id>https://blog.patternsinthevoid.net/</id><updated>2013-04-05T17:42:00+00:00</updated><entry><title>Algorithmic Compositions</title><link href="https://blog.patternsinthevoid.net/algorithmic-compositions.html" rel="alternate"></link><updated>2013-04-05T17:42:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2013-04-05:algorithmic-compositions.html</id><summary type="html">&lt;p&gt;For a long time, I couldn&amp;#8217;t figure out what Twitter was for. I&amp;#8217;m not sure I&amp;#8217;ve
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Patterns in the Void</title><link href="https://blog.patternsinthevoid.net/" rel="alternate"></link><link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" rel="self"></link><id>https://blog.patternsinthevoid.net/</id><updated>2013-04-28T13:38:00+00:00</updated><entry><title>Tor Bridge Distribution &amp; OONI’s Data Collector</title><link href="https://blog.patternsinthevoid.net/tor-bridge-distribution-oonis-data-collector.html" rel="alternate"></link><updated>2013-04-28T13:38:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2013-04-28:tor-bridge-distribution-oonis-data-collector.html</id><summary type="html">&lt;p&gt;Last week, I went to China, for the first &amp;#8212; and possibly the last &amp;#8212;&amp;nbsp;time. &lt;/p&gt;
+&lt;p&gt;Later, when I feel like complaining, I&amp;#8217;ll blog about the negative things, like
+the evidence that someone had broken into mine and another Tor developer&amp;#8217;s
+hotel room. As well as the tale of being followed by multiple plainclothes
+people through the streets of Kowloon, again with another Tor developer, down
+alleys, in and out of cabs, through electronic stores where I loudly and openly
+bought tiny audio/video devices to bug myself and the hotel room with. This is
+the first time I&amp;#8217;ve ever worn a wire (I know, &lt;em&gt;they all say that&lt;/em&gt;, right?): it
+doens&amp;#8217;t feel right. I felt the compulsion to warn people who walked up and
+started talking to me before they spoke. And even then I still felt dirty and&amp;nbsp;creepy.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="king-of-kowloon" src="https://blog.patternsinthevoid.net/static/images/2013/04/king-of-kowloon-small.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;When I started officially working on things for the
+&lt;a href="https://torproject.org"&gt;Tor Project&lt;/a&gt; last year, I&amp;#8217;d imagined that the world
+was like a map in an &lt;span class="caps"&gt;RPG&lt;/span&gt;, and that there were a lot of dark, hazy spots that
+needed filling in. I worried that if my legal name was publicly attached to Tor
+that places like China, Iran, and Syria would always remain dark spots. The
+idea that I might be prevented from seeing experiencing those cultures and
+regions firsthand, that I would not be able to see the homelands of people I
+wanted to empower, merely because a (&lt;em&gt;corrupt&lt;/em&gt; would be redundant) government
+had gotten wise to some name I don&amp;#8217;t answer to &amp;#8212; it seemed daunting, and a bit&amp;nbsp;heartbreaking.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="kowloon-1" src="https://blog.patternsinthevoid.net/static/images/2013/04/kowloon-1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been thinking a lot more about borders lately. Ashamed as I am to admit it
+(it&amp;#8217;s not like I was ever &lt;em&gt;in favour&lt;/em&gt; of having borders), until now I&amp;#8217;ve held a
+very privileged perspective on them. Sure, borders suck. Got it. Yep, people
+should be allowed to work wherever they want. Freedom of association, right?
+And yet it had never occurred to me: that an invisible line drawn in the sand
+could keep you away from your home, or that an arbitrary date on a slip of
+paper could decide how long you were permitted to see someone you&amp;nbsp;loved.&lt;/p&gt;
+&lt;p&gt;After living in Germany and France for precisely the number of days my tourist
+visa would allow, (Oops. I&amp;#8217;d been counting, and thought I was still a week
+under. I should probably script that.) I took off for Hong Kong, where
+&lt;a href="https://openitp.org"&gt;OpenITP&lt;/a&gt; had generously offered me a travel grant to
+attend
+&lt;a href="http://openitp.org/?q=node/32"&gt;the third Censorship Circumvention Summit&lt;/a&gt;. Jumping
+from France to China to somewhere-undetermined-that-is-not-Schengen definitely
+presented some interesting security challenges, since I had to take &lt;em&gt;all of the
+things&lt;/em&gt; I own with me. (It all fits in a backpack, so it&amp;#8217;s not a space/money
+issue, it&amp;#8217;s&amp;nbsp;a &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;%&amp;amp;$#@! I&amp;#8217;m carrying devices which normally have access to thousands of
+computers, including some Tor Project infrastructure and repositories, and I
+have to keep them safe from a government that is going to hate me more than
+the United States, while eating nothing but plain rice &lt;em&gt;and&lt;/em&gt; travelling
+24,671 kilometers?!&amp;#8221;
+&lt;br&gt;issue.&lt;/br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since part of this security setup involved not connecting to anything while
+inside China, I tried as best as I could to remove network capability from my
+laptop, including recompiling my kernel with most of the CONFIG_[*&lt;span class="caps"&gt;NET&lt;/span&gt;|&lt;span class="caps"&gt;IP&lt;/span&gt;*]
+settings disabled. Without internet and only &lt;span class="caps"&gt;IRL&lt;/span&gt; people to talk to, I got bored
+pretty fast (&lt;em&gt;kidding!&lt;/em&gt; ♡ ) and resorted to pen and paper technology, because I
+had some ideas on Tor bridge distribution regarding a system for having clients
+connect to a bridge Distributor, and the Distributor authenticating the clients
+or requiring a valid Proof-of-Work computation. If the authcheck or PoW doesn&amp;#8217;t
+pass, the Distributor should instruct an &lt;span class="caps"&gt;OONI&lt;/span&gt; Data Collector node to connect to
+the client, to scan for censorship events (&lt;em&gt;I wonder if we can actually get a
+network vantage point from the &lt;span class="caps"&gt;DPI&lt;/span&gt; boxes?&lt;/em&gt; :D ), else if the client check
+passes, the Distributor should instruct a Tor Bridge to connect to the&amp;nbsp;client.&lt;/p&gt;
+&lt;p&gt;Here are &lt;a href="https://blog.patternsinthevoid.net/static/images/2013/04/bdb-and-ooni.jpg"&gt;my notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Obviously, the Distributors are going to get blocked, but if we were to use
+something like David Fifield&amp;#8217;s FlashProxy, with it&amp;#8217;s Facilitator as our
+Distributor (notice how all these words are oh-so-cleverly suffixed with
+&lt;em&gt;Tor&lt;/em&gt;&amp;#8230;), to contact the Distributor through a &amp;#8220;normal&amp;#8221; browser, the client
+should still be able to compute the auth/PoW and the Bridge or &lt;span class="caps"&gt;OONI&lt;/span&gt; Collector
+connect back to them. The Proof-of-Work should be necessary for protecting the
+Facilitator/Distributor from getting blocked, as well as significantly increase
+the cost of scanning for&amp;nbsp;bridges.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="kowloon-nathan-rd" src="https://blog.patternsinthevoid.net/static/images/2013/04/kowloon-nathan-rd.jpg" /&gt;&lt;/p&gt;</summary><category term="China"></category><category term="OONI"></category><category term="Tor"></category><category term="Censorship"></category></entry><entry><title>Algorithmic Compositions</title><link href="https://blog.patternsinthevoid.net/algorithmic-compositions.html" rel="alternate"></link><updated>2013-04-05T17:42:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2013-04-05:algorithmic-compositions.html</id><summary type="html">&lt;p&gt;For a long time, I couldn&amp;#8217;t figure out what Twitter was for. I&amp;#8217;m not sure I&amp;#8217;ve
 figured that out yet. It seems convenient for posting links to the physics and
 cryptography whitepapers I read, and then receiving the internet standard &amp;#8212;
 inane feedback from people I&amp;#8217;ve never even heard&amp;nbsp;of.&lt;/p&gt;
@@ -46,20 +113,44 @@ python -c'import sys;[sys.stdout.write(chr((((t*(t&gt;&gt;13|t&gt;&gt;8)|(t&gt;&
 &lt;/pre&gt;</summary><category term="python"></category><category term="bytebeats"></category><category term="twitter"></category></entry><entry><title>Zeppelins, Chinese Junk Rigs, and Surfboards</title><link href="https://blog.patternsinthevoid.net/zeppelins-chinese-junk-rigs-and-surfboards.html" rel="alternate"></link><updated>2013-03-25T13:38:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2013-03-25:zeppelins-chinese-junk-rigs-and-surfboards.html</id><summary type="html">&lt;p&gt;One of the first times I met up with &lt;a href="https://twitter.com/moxie"&gt;Moxie&lt;/a&gt; while travelling, we met at a dive
 bar in San Francisco&amp;#8217;s Mission District, packed with hipsters. I had nineteen years, a
 modified state &lt;span class="caps"&gt;ID&lt;/span&gt; card, and just hitchhiked into town. We sat at the bar, and both ordered well gin and&amp;nbsp;tonics. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="junk" src="https://blog.patternsinthevoid.net/static/images/2013/03/sboc/junk.png" /&gt;&lt;/p&gt;
 &lt;p&gt;I had a proposal, the sort of get-rich-quick scheme it seems that only 18th century pirates and lazy hacker-squatters are capable of contriving: We fly to China. Then, we spend a few grand purchasing a Chinese junk rig, and equip it with a system of pulleys so that we can man the sails from the cockpit, solo if necessary. Next, we fill the cabin with about as much potable water as we can carry and enough dried food to stave off starvation, and set a course across the northern arc of the Pacific &amp;#8212; avoiding the treachery of the South Seas &amp;#8212; for San Francisco. The choice of vessel was key, the battoned sails and flattened hull of a Chinese junk rig make it arguably one of the safest ships to make a transoceanic voyage alone, not to mention the finicial incentives: being rare in the Americas, a well-kept junk rig would go for anywhere from $50,000 to $250,000 &lt;span class="caps"&gt;USD&lt;/span&gt; &amp;#8212; not to mention grant you free slip fees at just about any marina from Anchorage to Punta Arenas. How could anyone turn down such a preposterous plot which included adventure on the high seas, a high mortality risk, riches and&amp;nbsp;notoriety?&lt;/p&gt;
 &lt;p&gt;As I recall, Moxie shook and hung his head, and smiling countered my&amp;nbsp;proposition.&lt;/p&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Ever heard of Santos Dumont?&amp;#8221; he asked.
-&amp;#8220;Nope.&amp;#8221;
-&amp;#8220;So. Santos Dumont was a Brazilian hero, originally a Frenchman. This was around the late 1800s. He was the type of dude who would trek across the Amazon alone, leave for the North Pole with a party of eight and return with a party of three &amp;#8212; your standard gentleman-adventurer, a total madman. Sometime around the turn of the century, he returns to Paris to participate in a race to sail zeppelins from a certain point around the Eifel Tower and back. He wins, but being rich already, gives half the money to charity. The other half of the prize he puts in the care of a trust fund with the instructions that it should be awarded to anyone who can beat his time &amp;#8212; thirty minutes or so, from what I remember.&amp;#8221;
-&amp;#8220;No one&amp;#8217;s won it yet?&amp;#8221;
-&amp;#8220;I&amp;#8217;m not entirely sure, but the story appears to end there &amp;#8212; at least, there is no record of anyone claiming the money in the trust &amp;#8212; and it&amp;#8217;s been sitting there, collecting interest, for over a century now.&amp;#8221; Moxie swept the dreads out of his face, took a sip of the gin, and continued: &amp;#8220;It should be simple to beat the time given the advantages of modern&amp;nbsp;materials&amp;#8230;&amp;#8221;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Ever heard of Santos Dumont?&amp;#8221; he&amp;nbsp;asked.&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Nope.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;So. Santos Dumont was a Brazilian hero, originally a Frenchman. This was around the late 1800s. He was the type of dude who would trek across the Amazon alone, leave for the North Pole with a party of eight and return with a party of three &amp;#8212; your standard gentleman-adventurer, a total madman. Sometime around the turn of the century, he returns to Paris to participate in a race to sail zeppelins from a certain point around the Eifel Tower and back. He wins, but being rich already, gives half the money to charity. The other half of the prize he puts in the care of a trust fund with the instructions that it should be awarded to anyone who can beat his time &amp;#8212; thirty minutes or so, from what I&amp;nbsp;remember.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;No one&amp;#8217;s won it&amp;nbsp;yet?&amp;#8221;&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;I&amp;#8217;m not entirely sure, but the story appears to end there &amp;#8212; at least, there is no record of anyone claiming the money in the trust &amp;#8212; and it&amp;#8217;s been sitting there, collecting interest, for over a century&amp;nbsp;now.&amp;#8221; &lt;/p&gt;
+&lt;p&gt;Moxie swept the dreads out of his face, took a sip of the gin, and continued: &amp;#8220;It should be simple to beat the time given the advantages of modern&amp;nbsp;materials&amp;#8230;&amp;#8221;&lt;/p&gt;
 &lt;p&gt;He and I have had a friendly series of bets throughout our friendship. Moxie usually wins&amp;#8230;and I usually forget to name my stakes. I should have bet on this: If ever anyone were to be the cause for my going to the North Pole, it would be&amp;nbsp;Moxie. &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;I awoke this morning in my underwear on top of a snarled mess of sheets, with my head rather uncomfortably hanging off the edge of the bed, two laptops and three android android phones¹ piled on top of and around me. The rhythmic pink-noise crash of surf was drafting in on sticky air through an open window above my face. I opened my eyes. Knots of lime-coloured vines hung from a tamarind tree with dark beanpods of fruit half a meter&amp;nbsp;long. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="tamarind" src="https://blog.patternsinthevoid.net/static/images/2013/03/sboc/tamarind.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Qu&amp;#8217;est-que fuck? How did I get to Yavin&amp;nbsp;&lt;span class="caps"&gt;IV&lt;/span&gt;?&lt;/em&gt;  &lt;/p&gt;
-&lt;p&gt;I blinked, expecting the familiar snowy silence of Prenzlauerburg to replace the acerbic green foliage, the clockwork clacking of the U-Bahn across the raised tracks to replace the steady sound of&amp;nbsp;waves&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="prenzlauerberg" src="https://blog.patternsinthevoid.net/static/images/2013/03/sboc/eberswalderstrasse-prenzlauerberg-hinterof.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I blinked, expecting the familiar snowy silence of Prenzlauerburg to replace the acerbic green foliage, the clockwork clacking of the yellow U-Bahn cars across the raised tracks to replace the steady sound of&amp;nbsp;waves&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="prenzlauerberg" src="https://blog.patternsinthevoid.net/static/images/2013/03/sboc/eberswalderstrasse-prenzlauerberg-hinterof.jpg" /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Nope. Still on Yavin&amp;nbsp;&lt;span class="caps"&gt;IV&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Then I remembered the dark curls hanging over noetic eyes and »à plus« on a trainstation platform in the French Alps, the two-hour search and interrogation by &lt;span class="caps"&gt;US&lt;/span&gt; customs agents in the basement of the Montrèal airport, talking all night with expat Iranian dissident-hackers and deciphering the pyobfsproxy stacktraces and kanji showing up in my terminal at the Tor developer meeting at Harvard, and then the series of flights which brought me to the longitudinal apogee of my starting point five days ago. The shortest path of return is straight down; the fastest takes me &lt;a href="http://www.distance.to/Honolulu_Berlin"&gt;directly over the North Pole&lt;/a&gt;. Damnit, should&amp;#8217;ve made that&amp;nbsp;bet&amp;#8230;&lt;/p&gt;
 &lt;p&gt;One of the bets I lost years ago &amp;#8212; I think this one was the cost of my hubristic belief that I could pick a lock faster than Moxie &amp;#8212; had the stakes &amp;#8220;loser has to go surfing naked&amp;#8221;. I still haven&amp;#8217;t paid that debt, but, having been on a surf team as a kid, I bet that, wetsuit or otherwise, I could surf better than he could. I think I forgot to name my stakes again, but it doesn&amp;#8217;t matter because I had to let Moxie off the hook this time, due to the painful complications of his recent knee surgery. Though, while waiting for the others to arrive, Christine, Moxie, and I did get a chance to to test out the small surf in our front&amp;nbsp;yard.&lt;/p&gt;
@@ -831,7 +922,7 @@ minutes late (for which the organizers, my friends &lt;a href="https://twitter.c
 explosives. Let me tell you: Berliners take their fireworks &lt;em&gt;very
 seriously&lt;/em&gt;, and firework safety inversely so. It&amp;#8217;s not uncommon at all
 for a complete stranger to throw the equivalent of a quarter stick of
-dynamite &lt;em&gt;in your direction&lt;/em&gt;. Also, I noticed that Berliners like to
+dynamite &lt;em&gt;at your face&lt;/em&gt;. Also, I noticed that Berliners like to
 surprise you by throwing bottles and&amp;nbsp;chairs.&lt;/p&gt;
 &lt;p&gt;So, armed to the teeth with explosives, we set out running through the
 streets with others chasing us. Because there was a joke rule that my
@@ -841,14 +932,12 @@ race, and a few of the organizers too. Redbeard is awesome. He&amp;#8217;s a
 professional kernel hacker with a red beard down to his waist, if the
 later wasn&amp;#8217;t obviously by the name. I also had to dodge the
 aforementioned chairs, bottles, and fireworks with parkour while wearing
-a tinfoil hat. And at the end of it all, I found myself at [C-Base, a
+a tinfoil hat. And at the end of it all, I found myself at &lt;a href="http://c-base.org/"&gt;C-Base&lt;/a&gt;, a
 hackerspace built into the remains of a two-millenia-old alien spaceship
-crash][], discussing &lt;span class="caps"&gt;DIY&lt;/span&gt; soldering iron buttprobes, theoretical physics,
+crash], discussing &lt;span class="caps"&gt;DIY&lt;/span&gt; soldering iron buttprobes, theoretical physics,
 and hackers on sailboats, while drinking Chink Chank Chunk (Club Mate
 with sugar, lime,&amp;nbsp;vodka).&lt;/p&gt;
-&lt;p&gt;Oh Berlin, how I want to live in&amp;nbsp;you!&lt;/p&gt;
-&lt;p&gt;[C-Base, a hackerspace built into the remains of a two-millenia-old
-  alien spaceship crash]:&amp;nbsp;http://c-base.org/&lt;/p&gt;</summary></entry><entry><title>28c3 &amp; Kontakt Informationen</title><link href="https://blog.patternsinthevoid.net/28c3-kontakt-informationen.html" rel="alternate"></link><updated>2011-12-27T14:36:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2011-12-27:28c3-kontakt-informationen.html</id><summary type="html">&lt;p&gt;I&amp;#8217;m going to be traveling abroad for about six weeks, so anyone who is
+&lt;p&gt;Oh Berlin, how I want to live in&amp;nbsp;you!&lt;/p&gt;</summary></entry><entry><title>28c3 &amp; Kontakt Informationen</title><link href="https://blog.patternsinthevoid.net/28c3-kontakt-informationen.html" rel="alternate"></link><updated>2011-12-27T14:36:00+00:00</updated><author><name>isis agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2011-12-27:28c3-kontakt-informationen.html</id><summary type="html">&lt;p&gt;I&amp;#8217;m going to be traveling abroad for about six weeks, so anyone who is
 trying to contact me during this period should know that it may take a
 while to get back to you. I&amp;#8217;m going to the &lt;a href="http://events.ccc.de/congress/2011/wiki/Welcome"&gt;Chaos Computer Club&amp;#8217;s
 28c3&lt;/a&gt;, so I&amp;#8217;ll post updates on things that I learn there. I also
@@ -1184,16 +1273,4 @@ should be&amp;nbsp;utilised.&lt;/p&gt;
 &lt;p&gt;print &amp;#8220;you are still&amp;nbsp;depressed&amp;#8221;&lt;/p&gt;
 &lt;p&gt;if __name__ ==&amp;nbsp;&amp;#8220;__main__&amp;#8221;:&lt;/p&gt;
 &lt;p&gt;depressed =&amp;nbsp;True&lt;/p&gt;
-&lt;p&gt;do_nothing()&lt;/p&gt;</summary><category term="i thought robots weren't supposed to have emotions"></category></entry><entry><title>Hivemind</title><link href="https://blog.patternsinthevoid.net/hivemind.html" rel="alternate"></link><updated>2011-12-14T15:31:00+00:00</updated><author><name>isis agora lovecruft agora lovecruft</name></author><id>tag:https://blog.patternsinthevoid.net,2011-12-14:hivemind.html</id><summary type="html">&lt;p&gt;So I hacked together this &lt;span class="caps"&gt;IRC&lt;/span&gt; bot to play oldschool text-based RPGs with
-multiple people in an &lt;span class="caps"&gt;IRC&lt;/span&gt; channel. The &lt;a href="http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html"&gt;RPGs are pre-written&lt;/a&gt; and are
-run by a Z-Machine interpreter called &lt;a href="http://frotz.sourceforge.net/"&gt;Frotz&lt;/a&gt;, which runs on a server
-somewhere, and commands to Frotz are piped to stdin through a python
-program called &lt;a href="http://www.noah.org/python/pexpect/"&gt;pexpect&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m not going to say which channel this thing is is, because it&amp;#8217;s hella
-insecure (Frotz uses multiple uses of strcpy(), wtf?!), but I will say
-that while looking into pexpect I found some old 1990s botnet C&amp;amp;C
-software when I totally wasn&amp;#8217;t expecting it. Check out this file,
-&lt;a href="http://patternsinthevoid.net/hive.py.txt"&gt;hive.py&lt;/a&gt;, which comes with pexpect! So oldschool! (Don&amp;#8217;t worry, that
-link goes to a .txt file, so nothing will run on this server nor on your
-computer. It&amp;#8217;s safe, I&amp;nbsp;promise.)&lt;/p&gt;
-&lt;p&gt;For some reason, this made me really happy.&amp;nbsp;\&amp;lt;(A)3&lt;/p&gt;</summary><category term="botnet"></category><category term="C"></category><category term="digital security"></category><category term="hacking"></category><category term="hivemind"></category><category term="IRC"></category><category term="python"></category><category term="text-based RPGs"></category></entry></feed>
+&lt;p&gt;do_nothing()&lt;/p&gt;</summary><category term="i thought robots weren't supposed to have emotions"></category></entry></feed>

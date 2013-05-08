@@ -15,8 +15,26 @@
                 <link href="../theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="../theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="../theme/js/html5.js">
         </script>
@@ -70,8 +88,104 @@
 
 <aside id="featured" class="body">
     <article>
-        <h1 class="entry-title"><a href="../pranks.html">Pranks</a></h1> 
+        <h1 class="entry-title"><a href="../tor-bridge-distribution-oonis-data-collector.html">Tor Bridge Distribution <span class="amp">&amp;</span> <span class="caps">OONI</span>&#8217;s Data&nbsp;Collector</a></h1> 
         <footer class="post-info">
+        <abbr class="published" title="2013-04-28T13:38:00">
+                Sunday, 28 April 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/china.html">China </a><a href="../tag/ooni.html">OONI </a><a href="../tag/tor.html">Tor </a><a href="../tag/censorship.html">Censorship </a></p>
+</footer><!-- /.post-info --><p>Last week, I went to China, for the first &#8212; and possibly the last &#8212;&nbsp;time. </p>
+<p>Later, when I feel like complaining, I&#8217;ll blog about the negative things, like
+the evidence that someone had broken into mine and another Tor developer&#8217;s
+hotel room. As well as the tale of being followed by multiple plainclothes
+people through the streets of Kowloon, again with another Tor developer, down
+alleys, in and out of cabs, through electronic stores where I loudly and openly
+bought tiny audio/video devices to bug myself and the hotel room with. This is
+the first time I&#8217;ve ever worn a wire (I know, <em>they all say that</em>, right?): it
+doens&#8217;t feel right. I felt the compulsion to warn people who walked up and
+started talking to me before they spoke. And even then I still felt dirty and&nbsp;creepy.</p>
+<p><img alt="king-of-kowloon" src="../static/images/2013/04/king-of-kowloon-small.jpg" /></p>
+<p>When I started officially working on things for the
+<a href="https://torproject.org">Tor Project</a> last year, I&#8217;d imagined that the world
+was like a map in an <span class="caps">RPG</span>, and that there were a lot of dark, hazy spots that
+needed filling in. I worried that if my legal name was publicly attached to Tor
+that places like China, Iran, and Syria would always remain dark spots. The
+idea that I might be prevented from seeing experiencing those cultures and
+regions firsthand, that I would not be able to see the homelands of people I
+wanted to empower, merely because a (<em>corrupt</em> would be redundant) government
+had gotten wise to some name I don&#8217;t answer to &#8212; it seemed daunting, and a bit&nbsp;heartbreaking.</p>
+<p><img alt="kowloon-1" src="../static/images/2013/04/kowloon-1.jpg" /></p>
+<p>I&#8217;ve been thinking a lot more about borders lately. Ashamed as I am to admit it
+(it&#8217;s not like I was ever <em>in favour</em> of having borders), until now I&#8217;ve held a
+very privileged perspective on them. Sure, borders suck. Got it. Yep, people
+should be allowed to work wherever they want. Freedom of association, right?
+And yet it had never occurred to me: that an invisible line drawn in the sand
+could keep you away from your home, or that an arbitrary date on a slip of
+paper could decide how long you were permitted to see someone you&nbsp;loved.</p>
+<p>After living in Germany and France for precisely the number of days my tourist
+visa would allow, (Oops. I&#8217;d been counting, and thought I was still a week
+under. I should probably script that.) I took off for Hong Kong, where
+<a href="https://openitp.org">OpenITP</a> had generously offered me a travel grant to
+attend
+<a href="http://openitp.org/?q=node/32">the third Censorship Circumvention Summit</a>. Jumping
+from France to China to somewhere-undetermined-that-is-not-Schengen definitely
+presented some interesting security challenges, since I had to take <em>all of the
+things</em> I own with me. (It all fits in a backpack, so it&#8217;s not a space/money
+issue, it&#8217;s&nbsp;a </p>
+<blockquote>
+<p><span class="dquo">&#8220;</span>%&amp;$#@! I&#8217;m carrying devices which normally have access to thousands of
+computers, including some Tor Project infrastructure and repositories, and I
+have to keep them safe from a government that is going to hate me more than
+the United States, while eating nothing but plain rice <em>and</em> travelling
+24,671 kilometers?!&#8221;
+<br>issue.</br></p>
+</blockquote>
+<p>Since part of this security setup involved not connecting to anything while
+inside China, I tried as best as I could to remove network capability from my
+laptop, including recompiling my kernel with most of the CONFIG_[*<span class="caps">NET</span>|<span class="caps">IP</span>*]
+settings disabled. Without internet and only <span class="caps">IRL</span> people to talk to, I got bored
+pretty fast (<em>kidding!</em> ♡ ) and resorted to pen and paper technology, because I
+had some ideas on Tor bridge distribution regarding a system for having clients
+connect to a bridge Distributor, and the Distributor authenticating the clients
+or requiring a valid Proof-of-Work computation. If the authcheck or PoW doesn&#8217;t
+pass, the Distributor should instruct an <span class="caps">OONI</span> Data Collector node to connect to
+the client, to scan for censorship events (<em>I wonder if we can actually get a
+network vantage point from the <span class="caps">DPI</span> boxes?</em> :D ), else if the client check
+passes, the Distributor should instruct a Tor Bridge to connect to the&nbsp;client.</p>
+<p>Here are <a href="../static/images/2013/04/bdb-and-ooni.jpg">my notes</a>.</p>
+<p>Obviously, the Distributors are going to get blocked, but if we were to use
+something like David Fifield&#8217;s FlashProxy, with it&#8217;s Facilitator as our
+Distributor (notice how all these words are oh-so-cleverly suffixed with
+<em>Tor</em>&#8230;), to contact the Distributor through a &#8220;normal&#8221; browser, the client
+should still be able to compute the auth/PoW and the Bridge or <span class="caps">OONI</span> Collector
+connect back to them. The Proof-of-Work should be necessary for protecting the
+Facilitator/Distributor from getting blocked, as well as significantly increase
+the cost of scanning for&nbsp;bridges.</p>
+<p><img alt="kowloon-nathan-rd" src="../static/images/2013/04/kowloon-nathan-rd.jpg" /></p>    </article>
+    </aside><!-- /#featured -->
+<section id="content" class="body">
+    <h1>Other articles</h1>
+    <hr />
+    <ol id="posts-list" class="hfeed">
+                                                        
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../pranks.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Pranks">Pranks</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
         <abbr class="published" title="2012-06-28T07:42:00">
                 Thursday, 28 June 2012
         </abbr>
@@ -81,7 +195,7 @@
         </address>
         <p>In <a href="../category/hacking.html">hacking</a> </p>
 <p>tags: <a href="../tag/censorship-detection.html">censorship detection </a><a href="../tag/cryptography.html">cryptography </a><a href="../tag/javascript.html">javascript </a><a href="../tag/mpotr.html">MPOTR </a><a href="../tag/python.html">python </a><a href="../tag/reverse-engineering.html">reverse engineering </a><a href="../tag/rio-de-janeiro.html">rio de janeiro </a><a href="../tag/tor.html">Tor </a></p>
-</footer><!-- /.post-info --><p>So, while I&#8217;m busy researching away, hard at work <a href="https://trac.torproject.org/projects/tor/ticket/6184">reverse engineering
+</footer><!-- /.post-info -->                            <p>So, while I&#8217;m busy researching away, hard at work <a href="https://trac.torproject.org/projects/tor/ticket/6184">reverse engineering
 proprietary network monitoring software</a>, and trying to devise methodologies
 <a href="https://ooni.nu">for detecting all</a> the various and newly-emerging means for technological
 censorship that the world&#8217;s government seem to be
@@ -102,521 +216,12 @@ was necessary given that the each chat was already an in-browser&nbsp;session.</
 <p>(Cryptonerd tangent: I argue that the static keypair is still necessary due to
 Alice and Bob still needing to authenticate to each other with new ephemeral
 keypairs when Charlie joins the chat session. Calculation of the session <span class="caps">ID</span>
-<em>sid</em>(i), and thus the group key <em>gk</em>(i) for participants <em>P</em>(i) depends on
-the ephemeral public key {E(Y,i) | Y ∈ <em>P</em>(i)} of each participant, ergo to
-add to or remove from <em>P</em>(i) a new <em>sid</em>(i) must be derived, and one should
-never reuse E(i). Second, if a user wants to have multiple sids at the same
-time, or exit one chat and then join another, assuming that Cryptocat allows
-that and that it is done all in the same browser tab, then obviously for the
-same reason as before they will need both static and ephemeral&nbsp;keypairs.)</p>
-<p>So, myself and some other people involved with Tor, and stuff and crypto
-and stuff, took to sending messages to Nadim in all sorts of fanciful
-and prankish ways, just to say &#8220;<span class="caps">IMPLEMENT</span> <span class="caps">MPOTR</span>.&#8221; Notes under the hotel
-room door in Brazil; late night phone calls; sharpie on his face after
-diving over a conference room table to tackle him. That sort of&nbsp;thing.</p>
-<p>Then! I got bored doing some thing where I do something that involves a
-computer. And I wrote <a href="http://patternsinthevoid.net/kaepora.mean">this</a>:</p>
-<pre class="prettyprint lang-sh">
-#!/bin/bash
-###############################################################
-# kaepora
-# -------
-# Sends an email to @kaepora about implementing MPOTR.
-# Requires 'dict' and 'fortune-mod', mutt as your configured
-# mail client, and some sort of MTA.
-#
-# @author isis agora lovecruft Agora Lovecruft, 0x2cdb8b35
-# @date 11 June 2012
-###############################################################
-
-. ~/.bashrc
-
-TO="nadim@nadim.cc"
-FUTURE=`/usr/games/fortune`
-FUTURE_FIRST=${FUTURE:0:1}
-FUTURE_LAST=${FUTURE:1}
-FUTURE="${FUTURE_FIRST,,}$FUTURE_LAST"
-FUTURE=${FUTURE%%?[-][-]*}
-
-set -- junk $FUTURE; shift
-
-if [[ "$#" -gt "10" ]] ; then
-    SUBJECT="When you implement mpOTR, "`/bin/echo ${@:1:10}`"..."
-    shift 10
-    BODY="...""$@"
-else
-    SUBJECT="When you implement mpOTR, $@"
-fi
-BODY="$BODY"`/usr/bin/whoami`"@"`/bin/hostname`":~$ dict implement
-"`/usr/bin/dict implement`"
-"`/usr/bin/whoami`"@"`/bin/hostname`":~$ dict mpOTR
-"`/usr/bin/dict mpOTR 2>&1`""
-
-echo "${BODY}" | mutt -s "${SUBJECT}" ${TO}
-</pre>
-
-<p>Which, short explanation, sends a fancy email to Nadim about how he
-needs to <span class="caps">IMPLEMENT</span>&nbsp;<span class="caps">MPOTR</span>.</p>
-<p>And then I tweeted&nbsp;this:</p>
-<p><img alt="kaepora-mean-tweet" src="../static/images/kaepora-mean-tweet.jpg" /></p>
-<p>Which grabs the above script and puts it in the user&#8217;s crontab so that
-the email goes out daily (and each day it&#8217;s a different&nbsp;email).</p>
-<p>I don&#8217;t actually know how many people crontabbed it. I&#8217;m hoping not many,
-because I didn&#8217;t really program any undo button on the little botnet. I
-dunno. Twitter. I just wasn&#8217;t expecting people to read my feed, let alone
-click&nbsp;links.</p>
-<p>But now, Nadim&#8217;s just about done <span class="caps">IMPLEMENTING</span> <span class="caps">MPOTR</span>, so I feel bad. Now
-there&#8217;s <a href="http://patternsinthevoid.net/kaepora">this</a>:</p>
-<pre class="prettyprint lang-sh">
-#!/bin/bash
-###############################################################
-# kaepora (nice version)
-# ----------------------
-# Sends an email to @kaepora to say thanks for implementing 
-# MPOTR.  Requires 'fortune-mod', mutt as your configured mail 
-# client, a default install of python>=2.5 and some sort of MTA.
-#
-# @author isis agora lovecruft Agora Lovecruft, 0x2cdb8b35
-# @date 28 June 2012
-###############################################################
-
-. $HOME/.bashrc
-
-TO="nadim@nadim.cc"
-ALSO="isis agora lovecruft@patternsinthevoid.net"
-FUTURE=`/usr/games/fortune -e science computers`
-FUTURE_FIRST=${FUTURE:0:1}
-FUTURE_LAST=${FUTURE:1}
-FUTURE="${FUTURE_FIRST,,}$FUTURE_LAST"
-FUTURE=${FUTURE%%?[-][-]*}
-
-set -- junk $FUTURE; shift
-
-if [[ "$#" -gt "10" ]] ; then
-    SUBJECT="Because you implemented mpOTR, "`/bin/echo ${@:1:10}`"..."
-    shift 10
-    BODY="...""$@"
-else
-    SUBJECT="Because you implemented mpOTR, $@"
-fi
-
-BODY_SCRIPT=$HOME/scripts/geo-kaepora
-
-if [[ -z $BODY_SCRIPT ]] ; then
-    if [[ -z $HOME/.geo-kaepora ]] ; then
-        wget -O $HOME/.geo-kaepora http://www.patternsinthevoid.net/geo-kaepora
-        chmod +x $HOME/.geo-kaepora
-    fi
-
-    BODY_SCRIPT=$HOME/.geo-kaepora
-fi
-
-BODY="$BODY"`$BODY_SCRIPT`""
-echo "${BODY}" | mutt -s "${SUBJECT}" ${TO}
-
-## Just to be fair this time...
-echo "${BODY}" | mutt -s "${SUBJECT}" ${ALSO}
-</pre>
-
-<p>Which downloads and calls <a href="http://patternsinthevoid.net/geo-kaepora">this ridiculous python script</a>:</p>
-<pre class="prettyprint lang-py">
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#################################################################################
-# geo-kaepora
-# -----------------------
-# Prints a random abstract geometrical shape as ascii art!
-# Makes a pretty!
-# Tells a story written by an AI!
-#
-# @author Isis Agora Lovecruft, 0x2cdb8b35
-# @version 0.0.1
-# @date 28 June 2012
-#________________________________________________________________________________
-# Changelog:
-# ----------
-# v0.0.1: For kaepora! <(A)3
-#         Thanks for being awesome and implementing mpOTR!
-#################################################################################
-
-from os import path
-from random import choice
-from simplejson import loads
-from urllib2 import urlopen
-from urlparse import urlparse, urlunparse
-
-import socket
-
-class InvalidURL(Exception):
-    pass
-
-class SafemnAPI():
-    def __init__(self):
-        self.URL_SHORTEN = "http://safe.mn/api/?url=%s&format=json"
-
-    def shorten(self, url):
-        try:
-            url = urlunparse(urlparse(url))
-            response = urlopen(self.URL_SHORTEN % url)
-            json = response.read()
-            json_decode = loads(json)
-            url = json_decode.get('url', None)
-            if url is None:
-                raise InvalidURL
-            return url
-        except Exception, e:
-            raise e
-
-class ForKaepora():
-
-    def __init__(self):
-        pass
-
-    @staticmethod
-    def print_a_shape(self):
-        shapes = []
-        shapes.append("""
-                                    ,_-=(!7(7/zs_.
-                                 .='  ' .`/,/!(=)Zm.
-                   .._,,._..  ,-`- `,\ ` -` -`\\7//WW.
-              ,v=~/.-,-\- -!|V-s.)iT-|s|\-.'   `///mK%.
-            v!`i!-.e]-g`bT/i(/[=.Z/m)K(YNYi..   /-]i44M.
-          v`/,`|v]-DvLcfZ/eV/iDLN\D/ZK@%8W[Z..   `/d!Z8m
-         //,c\(2(X/NYNY8]ZZ/bZd\()/\7WY%WKKW)   -'|(][%4.
-       ,\\i\c(e)WX@WKKZKDKWMZ8(b5/ZK8]Z7%ffVM,   -.Y!bNMi
-       /-iit5N)KWG%%8%%%%W8%ZWM(8YZvD)XN(@.  [   \]!/GXW[
-      / ))G8\NMN%W%%%%%%%%%%8KK@WZKYK*ZG5KMi,-   vi[NZGM[
-     i\!(44Y8K%8%%%**~YZYZ@%%%%%4KWZ/PKN)ZDZ7   c=//WZK%!
-    ,\y\YtMZW8W%%f`,`.t/bNZZK%%W%%ZXb*K(K5DZ   -c\\/KM48
-    -|c5PbM4DDW%f  v./c\[tMY8W%PMW%D@KW)Gbf   -/(=ZZKM8[
-    2(N8YXWK85@K   -'c|K4/KKK%@  V%@@WD8e~  .//ct)8ZK%8`
-    =)b%]Nd)@KM[  !'\cG!iWYK%%|   !M@KZf    -c\))ZDKW%`
-    YYKWZGNM4/Pb  '-VscP4]b@W%     'Mf`   -L\///KM(%W!
-    !KKW4ZK/W7)Z. '/cttbY)DKW%     -`  .',\y)K(5KW%%f
-    'W)KWKZZg)Z2/,!/L(-DYYb54%  ,,`, -\-/y(((KK5WW%f
-     \M4NDDKZZ(e!/\7vNTtZd)8\Mi!\-,-/i-v((tKNGN%W%%
-     'M8M88(Zd))///((|D\tDY\\KK-`/-i(=)KtNNN@W%%%@%[
-      !8%@KW5KKN4///s(\Pd!ROBY8/=2(/4ZdzKD%K%%%M8@%%
-       '%%%W%dGNtPK(c\/2\[Z(ttNYZ2NZW8W8K%%%%YKM%M%%.
-         *%%W%GW5@/%!e]_tZdY()v)ZXMZW%W%%%*5Y]K%ZK%8[
-          '*%%%%8%8WK\)[/ZmZ/Zi]!/M%%%%@f\ \Y/NNMK%%!
-            'VM%%%%W%WN5Z/Gt5/b)((cV@f`  - |cZbMKW%%|
-               'V*M%%%WZ/ZG\+5((+)L'-,,/  -)X(NWW%%%
-                    `~`MZ/DZGNZG5(((\,    ,t\\Z)KW%@
-                       'M8K%8GN8\5(5///]i!v\K)85W%%f
-                         YWWKKKKWZ8G54X/GGMeK@WM8%@
-                          !M8%8%48WG@KWYbW%WWW%%%@
-                            VM%WKWK%8K%%8WWWW%%%@`
-                              ~*%%%%%%W%%%%%%%@~
-                                 ~*MM%%%%%%@f`
-                                     '''''
-
-    """)
-        shapes.append("""
-                     _______
-                    / _____ \
-              _____/ /     \ \_____
-             / _____/  311  \_____ \
-       _____/ /     \       /     \ \_____
-      / _____/  221  \_____/  412  \_____ \
-     / /     \       /     \       /     \ \
-    / /  131  \_____/  322  \_____/  513  \ \
-    \ \       /     \       /     \       / /
-     \ \_____/  232  \_____/  423  \_____/ /
-     / /     \       /     \       /     \ \
-    / /  142  \_____/  333  \_____/  524  \ \
-    \ \       /     \       /     \       / /
-     \ \_____/  243  \_____/  434  \_____/ /
-     / /     \       /     \       /     \ \
-    / /  153  \_____/  344  \_____/  535  \ \
-    \ \       /     \       /     \       / /
-     \ \_____/  254  \_____/  445  \_____/ /
-      \_____ \       /     \       / _____/
-            \ \_____/  355  \_____/ /
-             \_____ \       / _____/
-                   \ \_____/ /
-                    \_______/
-
-    """)
-        shapes.append("""
-    +------+.      +------+       +------+       +------+      .+------+
-    |`.    | `.    |\     |\      |      |      /|     /|    .' |    .'|
-    |  `+--+---+   | +----+-+     +------+     +-+----+ |   +---+--+'  |
-    |   |  |   |   | |    | |     |      |     | |    | |   |   |  |   |
-    +---+--+.  |   +-+----+ |     +------+     | +----+-+   |  .+--+---+
-     `. |    `.|    \|     \|     |      |     |/     |/    |.'    | .'
-       `+------+     +------+     +------+     +------+     +------+'
-
-       .+------+     +------+     +------+     +------+     +------+.
-     .' |    .'|    /|     /|     |      |     |\     |\    |`.    | `.
-    +---+--+'  |   +-+----+ |     +------+     | +----+-+   |  `+--+---+
-    |   |  |   |   | |    | |     |      |     | |    | |   |   |  |   |
-    |  ,+--+---+   | +----+-+     +------+     +-+----+ |   +---+--+   |
-    |.'    | .'    |/     |/      |      |      \|     \|    `. |   `. |
-    +------+'      +------+       +------+       +------+      `+------+
-
-       .+------+     +------+     +------+     +------+     +------+.
-     .' |      |    /|      |     |      |     |      |\    |      | `.
-    +   |      |   + |      |     +      +     |      | +   |      |   +
-    |   |      |   | |      |     |      |     |      | |   |      |   |
-    |  .+------+   | +------+     +------+     +------+ |   +------+.  |
-    |.'      .'    |/      /      |      |      \      \|    `.      `.|
-    +------+'      +------+       +------+       +------+      `+------+
-    """)
-        shapes.append("""
-      _______________________________
-     /\                              \ 
-    /++\    __________________________\ 
-    \+++\   \ ************************/
-     \+++\   \___________________ ***/
-      \+++\   \             /+++/***/
-       \+++\   \           /+++/***/
-        \+++\   \         /+++/***/
-         \+++\   \       /+++/***/
-          \+++\   \     /+++/***/
-           \+++\   \   /+++/***/
-            \+++\   \ /+++/***/
-             \+++\   /+++/***/
-              \+++\ /+++/***/
-               \+++++++/***/
-                \+++++/***/
-                 \+++/***/
-                  \+/___/
-
-    """)
-        shapes.append("""
-              +_____A_____+
-             /:`          :\ 
-           D/ : `         : B
-           /  :  `        :  \ 
-          /   :   +-----A-----+
-         +______A_|__,    :   :
-         :`   *___|_A_\___+   :
-         : `  `   C  : B   \  :
-         :  `  `  |  :  \   B :
-         :   +--`-|--A---+   \:
-         :   |   `+____A______+
-         *__ |__A____+   :   ,
-         `   |        \  :  ,
-          `  C         B : ,
-           ` |          \:,
-            `+_____A_____+
-
-          Tessaract like wut!
-
-    """)
-        shapes.append("""
-                               .--. 
-                               \  / 
-                            .--.\/.--.  
-                       .--.|    \\    |.--. 
-                       \  / '--'/\'--' \  / 
-                    .--.\/.--. /  \ .--.\/.--. 
-               .--.|    \\    |:--:|    \\    |.--. 
-               \  / '--'/\'--' \  / '--'/\'--' \  / 
-            .--.\/.--. /  \ .--.\/.--. /  \ .--.\/.--.  
-           |    \\    |:--:|    \\    |:--:|    \\    | 
-            '--'/\'--' \  / '--'/\'--' \  / '--'/\'--'
-               /  \ .--.\/.--. /  \ .--.\/.--. /  \ 
-               '--'|    \\    |:--:|    \\    |'--' 
-                    '--'/\'--' \  / '--'/\'--' 
-                       /  \ .--.\/.--. /  \ 
-                       '--'|    \\    |'--' 
-                            '--'/\'--' 
-                               /  \ 
-                               '--' 
-    """)
-        shapes.append("""
-                              _
-                             /\\ 
-                            /  \\ 
-                           / /\ \\ 
-                          / // \ \\ 
-                          \ \\ / // 
-                        _  \ \/ //  _ 
-                       /\\  \ \//  /\\ 
-                      /  \\ /\ \\ /  \\ 
-                     / /\ \/ /\ \/ /\ \\ 
-                    / // \/ // \/ // \ \\ 
-                    \ \\ / /\\ / /\\ / // 
-                  _  \ \/ /\ \/ /\ \/ //  _
-                 /\\  \ \// \ \// \ \//  /\\  
-                /  \\ /\ \\ /\ \\ /\ \\ /  \\ 
-               / /\ \/ /\ \/ /\ \/ /\ \/ /\ \\ 
-              / // \/ // \/ // \/ // \/ // \ \\ 
-              \ \\ / /\\ / /\\ / /\\ / /\\ / //
-            _  \ \/ /\ \/ /\ \/ /\ \/ /\ \/ //  _
-           /\\  \ \// \ \// \ \// \ \// \ \//  /\\ 
-          /  \\ /\ \\ /\ \\ /\ \\ /\ \\ /\ \\ /  \\ 
-         / /\ \/ /\ \/ /\ \/ /\ \/ /\ \/ /\ \/ /\ \\ 
-        / // \/ // \/ // \/ // \/ // \/ // \/ // \ \\ 
-        \ \\ / /\\ / /\\ / /\\ / /\\ / /\\ / /\\ / //
-         \ \/ /\ \/ /\ \/ /\ \/ /\ \/ /\ \/ /\ \/ //
-          \  // \ \// \ \// \ \// \ \// \ \// \  //
-           \//  /\ \\ /\ \\ /\ \\ /\ \\ /\ \\  \//
-               / /\ \/ /\ \/ /\ \/ /\ \/ /\ \\ 
-              / // \/ // \/ // \/ // \/ // \ \\ 
-              \ \\ / /\\ / /\\ / /\\ / /\\ / // 
-               \ \/ /\ \/ /\ \/ /\ \/ /\ \/ // 
-                \  // \ \// \ \// \ \// \  // 
-                 \//  /\ \\ /\ \\ /\ \\  \// 
-                     / /\ \/ /\ \/ /\ \\ 
-                    / // \/ // \/ // \ \\ 
-                    \ \\ / /\\ / /\\ / // 
-                     \ \/ /\ \/ /\ \/ // 
-                      \  // \ \// \  // 
-                       \//  /\ \\  \// 
-                           / /\ \\ 
-                          / // \ \\ 
-                          \ \\ / // 
-                           \ \/ // 
-                            \  // 
-                             \// 
-    """)
-        #ascii_art = choice(shapes)
-        #ascii_art_fixed = r'%s' % ascii_art
-        #print ascii_art_fixed
-
-        return shapes
-
-    @staticmethod
-    def make_a_pretty():
-        pretty = ['http://www.brianpiana.com/wp-content/uploads/2011/08/landscape1.png',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m46s1kMGx31qzt4vjo1_r1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m436mzp63k1qzt4vjo1_r7_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m39qj6mK6v1qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m2qw2jzPkJ1qzt4vjo1_r1_500.gif',
-                  'http://davidope.com/tmblr/120305_xxl.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m0ch5i6PWe1qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_lztyt60lS91qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_lz9c7jeS3b1qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_lxkgfkEHxn1qzt4vjo1_500.gif',
-                  'http://davidope.com/tmblr/the_same.png',
-                  'http://www.wayfarergallery.net/hot-images/wp-content/uploads/2010/08/Grid-Works2000-bw-4.gif',
-                  'http://www.wayfarergallery.net/hot-images/wp-content/uploads/2010/08/Grid-Works2000-bw-3.gif',
-                  'http://www.wayfarergallery.net/hot-images/wp-content/uploads/2010/08/Grid-Works2000-bw-21.gif',
-                  'http://www.wayfarergallery.net/hot-images/wp-content/uploads/2010/08/Grid-Works2000-bw-1.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_lvabjmK8Ab1qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_luda3yYxzm1qzt4vjo1_500.gif',
-                  'http://dearcomputer.nl/priwrid/',
-                  'http://www.alwaysloading.com/',
-                  'http://www.master-list2000.com/abillmiller/pages/imagePages/gridworks2000-blogdrawings-collage18.html',
-                  'http://www.master-list2000.com/abillmiller/pages/imagePages/gridworks2000-blogdrawings-collage-4.html',
-                  'http://www.master-list2000.com/abillmiller/pages/imagePages/gridworks2000-anim09.html',
-                  'http://place3.elnafrederick.computersclub.org/',
-                  'http://www.todayandtomorrow.net/wp-content/uploads/2009/12/gate_to_night_gate_to_day.gif',
-                  'http://www.todayandtomorrow.net/wp-content/uploads/2009/12/revolving_door.gif',
-                  'http://www.innerdoubts.com/',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m64wdyXg4a1qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m618fya1Me1qzt4vjo1_r1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m5sbvyRME11qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m5ew7vyBE71qzt4vjo1_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m51woeJu3w1qzt4vjo1_r4_500.gif',
-                  'https://s3.amazonaws.com/data.tumblr.com/tumblr_m4znrlTlEy1qzt4vjo1_r2_500.gif']
-
-        picture = choice(pretty)
-        safemn = SafemnAPI()
-        short = safemn.shorten(picture)
-
-        msg = "And we thought you'd find this pretty:\n" + short + "\n"
-        return msg
-
-    @staticmethod
-    def pick_a_story(self):
-        dt = socket.getdefaulttimeout=4
-        base_url = 'http://dearcomputer.nl/extras/story/readstory.php?id='
-        text_urls = []
-
-        for x in range(1, 498):
-            story_url = (base_url + str(x))
-            text_only = ('http://html2text.theinfo.org/?url=' + story_url) 
-            text_urls.append(text_only)
-
-        story = choice(text_urls)
-
-        try:
-            story_opened = urlopen(story, timeout=dt)
-        except Exception:
-            return
-
-        if story_opened:
-            story_text = urlopen(story).read()
-
-            # Law of Demeter, my ass!
-            raw_title = story_text.split('*', 2)[2].split('*', 1)[0]
-            raw_story = story_text.split('* * *', 1)[1].strip()
-
-            nice = '***  ' + raw_title + '  ***\n'
-            nicer = raw_story.replace('\n\n\n', '\n')
-            nicer_again = nicer.replace('\n\n', '\n')
-
-            first_line = len(nice)
-            line = '*' * first_line
-
-            nicest = line + '\n' + nice + line + '\n' + nicer_again 
-            return nicest
-        else:
-            return " "
-
-    def store_a_story(self):
-        separator = "!!!!!!!!!"
-        stories = path.join(path.abspath(path.curdir), 
-                            '.ai_generated_stories')
-
-        with open(stories, "a+") as seen:
-            total = seen.read()
-            have = total.split(separator)
-
-            count = len(have)
-
-            if count > 150:
-                ai_story = choice(have)
-            else:
-                ai_story = self.pick_a_story()
-                store = str(ai_story) + separator
-
-                if have.count(str(ai_story)) == 0:
-                    seen.write(store)
-
-            return ai_story
-
-if __name__ == "__main__":
-    for_kaepora = ForKaepora()
-
-    derp = for_kaepora.print_a_shape()
-    broken = choice(derp)
-    fixed = r'%s' % broken
-    print fixed
-
-    for_kaepora.make_a_pretty()
-
-    glitch = "****\n****\n****\n"
-    story = glitch
-
-    while story == glitch:
-        story = for_kaepora.store_a_story()
-    print story
-</pre>
-
-<p>And if you&nbsp;do:</p>
-<pre class="prettyprint lang-sh">
-$ wget http://patternsinthevoid.net/kaepora;chmod +x kaepora;crontab \
-  -l >m&&echo "0 13 * * * exec /home/`whoami`/kaepora">>m&& \
-  crontab m;rm m
-</pre>
-
-<p>Then, he gets a pretty email with a geometric shape in ascii art, a
-fortune having something to do with computers, a link to some sort of
-neat .gif that&#8217;d be neater if your brain was wonky, and a short story
-written by an artificial intelligence. You can run the python script if
-you want to get an idea of what the email looks&nbsp;like.</p>
-<p>&lt;(A)3</p>    </article>
-    </aside><!-- /#featured -->
-<section id="content" class="body">
-    <h1>Other articles</h1>
-    <hr />
-    <ol id="posts-list" class="hfeed">
-                                                        
+<em>sid</em>(i), and thus the group key <em>gk</em>(i) for participants <em>P</em>(i) depends on ...</p>
+                            <a class="readmore" href="../pranks.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
 
  
                         <li>
@@ -665,60 +270,6 @@ my Portuguese vocabulary is three: sim, não, <span class="amp">&amp;</span>&nbs
 raising arms and face to the cloudless azure sky. Fleets of teal, red, and
 ochre sailboats scatter on the lagoon ...</p>
                             <a class="readmore" href="../rio-de-janeiro.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="../italia.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Italia">Italia</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2012-01-09T23:14:00">
-                Monday, 09 January 2012
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="../category/travel.html">travel</a> </p>
-<p>tags: <a href="../tag/hackers.html">hackers </a><a href="../tag/italia.html">italia </a><a href="../tag/tor.html">Tor </a><a href="../tag/travel.html">travel </a></p>
-</footer><!-- /.post-info -->                            <p>I&#8217;m sitting in a cottage in the Italian countryside outside Florence,
-eating a breakfast of cafe brewed in an antique mocha, fette biscottate
-con riso with vegan hazelnutella and arance amare, a spread of bitter
-oranges. Outside the lead-paned window with iron fittings, I can see
-hills covered with vineyards, and a haze of clouds below covers a snowy
-valley with forested mountains in the distance. The floors and roof are
-both constucted of bricks and timbers, and a castlemonte woodstove
-creaks and crackles behind&nbsp;me.</p>
-<p>Last night I shared a sleeping compartment on a night train from Munich
-with four noisy Estonians and a cute Italian hacker boy, who cuddled
-next to me reading white papers on homomorphic cryptography. He works on
-Tor, and also writes screenplays and acted in an Italian television&nbsp;series.</p>
-<p>We hiked through the countryside, through olive orchards, practicing
-mentalist magic on kachi trees with rotten fruits, daring them to drop
-to the ground. We marched through the keep of a fortress older than the
-country I was born&nbsp;in.</p>
-<p>I don&#8217;t want to go home. Or rather, I&#8217;ve rediscovered that my home is a
-terrible&nbsp;place.</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome2-1024x768.jpg" title="arturorome2" />][]</p>
-<p>[\&lt;3][] <a href="http://www.youtube.com/watch?v=VJKX9Z86WuY">\&lt;3</a> <a href="http://www.youtube.com/watch?v=hVHjwAwZdNk&amp;feature=BFp&amp;list=PL17D01C49099D0F12">\&lt;3</a></p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome11-1024x768.jpg" title="arturorome11" />][]</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome10-1024x768.jpg" title="arturorome10" />][]</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/rome8-1024x768.jpg" title="rome8" />][]</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome2-1024x768.jpg" title="arturorome2" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome2.jpg
-  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome11-1024x768.jpg" title="arturorome11" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome11.jpg
-  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome10-1024x768.jpg" title="arturorome10" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/arturorome10.jpg
-  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/rome8-1024x768.jpg" title="rome8" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/01/rome8.jpg</p>
-                            <a class="readmore" href="../italia.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>

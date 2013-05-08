@@ -15,8 +15,26 @@
                 <link href="./theme/prettify/prettify.css"
           type="text/css"
           rel="stylesheet" />
-    <script type="text/javascript" src="./theme/prettify/prettify.js"></script>
-    
+    <script type="text/javascript" 
+            src="./theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="./theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="./theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
     <!--[if IE]>
         <script src="./theme/js/html5.js">
         </script>
@@ -70,20 +88,83 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./disassembly.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Disassembly">Disassembly</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-20T17:58:00">
+                Tuesday, 20 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/assembly-languages.html">assembly languages </a><a href="./tag/exploit-development.html">exploit development </a><a href="./tag/fancy-punks.html">fancy punks </a><a href="./tag/hex.html">hex </a><a href="./tag/linux.html">linux </a><a href="./tag/shellcode.html">shellcode </a></p>
+</footer><!-- /.post-info -->                            <p>Often when doing exploit development, it&#8217;s <a href="http://www.patternsinthevoid.net/blog/2011/09/learning-assembly-through-writing-shellcode/" title="Learning Assembly Through Writing Shellcode">necessary to extract hex
+opcodes</a> from an assembly or C program to generate shellcode.
+Normally, to do this, one uses <strong>objdump</strong> as in the following&nbsp;example:</p>
+<p><code>isis agora lovecruft@wintermute:~$ cat shellcode.asm</code></p>
+<p>section&nbsp;.text</p>
+<p>global&nbsp;_start</p>
+<p>_start:</p>
+<p>;; setreuid&nbsp;(0,0)</p>
+<p>xor eax, eax ;clear the eax&nbsp;registry</p>
+<p>mov al, 0x46 ;set the syscall # to decimal 70 or hex 46, one&nbsp;byte</p>
+<p>xor ebx,&nbsp;ebx</p>
+<p>xor ecx,&nbsp;ecx</p>
+<p>int 0x80 ;system interrupt to call kernel to execute&nbsp;syscall</p>
+<p>;; spawn shellcode with&nbsp;execve</p>
+<p>xor eax,&nbsp;eax</p>
+<p>push eax ;push a <span class="caps">NULL</span> value on the&nbsp;stack</p>
+<p>push 0x68732f2f ;push &#8216;//sh&#8217; onto the&nbsp;stack</p>
+<p>push 0x6369622f ;push &#8216;/bin&#8217; onto the&nbsp;stack</p>
+<p>mov ebx, esp ;esp now points to &#8216;/bin/sh&#8217;, so write to&nbsp;ebx</p>
+<p>push eax ;push another <span class="caps">NULL</span> to terminate char ** argv on&nbsp;stack</p>
+<p>push ebx ;push pointer to &#8216;/bin/sh&#8217; onto&nbsp;stack</p>
+<p>mov ecx, esp ;esp now holds the address of argv, so write to&nbsp;ecx</p>
+<p>xor edx,&nbsp;edx</p>
+<p>mov al, 0xb ;set the syscall # to decimal 11 or hex b, one&nbsp;byte</p>
+<p>int 0x80 ;sytem interrupt to call kernel to execute&nbsp;syscall</p>
+<p>isis agora lovecruft@wintermute:\~\$ nasm -f elf&nbsp;shellcode.asm</p>
+<p>isis agora lovecruft@wintermute:\~\$ ld -melf_i386 -o shellcode&nbsp;shellcode.o</p>
+<p>isis agora lovecruft@wintermute:\~\$ objdump -d&nbsp;./shellcode</p>
+<p>./shellcode: file format&nbsp;elf32-i386</p>
+<p>Disassembly of section&nbsp;.text:</p>
+<p>08048060 \&lt;_start>:</p>
+<p>8048060: 31 c0 xor&nbsp;%eax,%eax</p>
+<p>8048062: b0 46 mov&nbsp;\$0x46,%al</p>
+<p>8048064: 31 db xor&nbsp;%ebx,%ebx</p>
+<p>8048066: 31 c9 xor&nbsp;%ecx,%ecx</p>
+<p>8048068 ...</p>
+                            <a class="readmore" href="./disassembly.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -173,46 +254,6 @@ dependencies in Ubuntu&nbsp;do:</p>
 <p>depressed =&nbsp;True</p>
 <p>do_nothing()</p>
                             <a class="readmore" href="./depression-has-infinite-recursion.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="./hivemind.html" 
-                                   rel="bookmark"
-                                   title="Permalink to Hivemind">Hivemind</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-12-14T15:31:00">
-                Wednesday, 14 December 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="./author/isis-agora-lovecruft-agora-lovecruft.html">isis agora lovecruft agora lovecruft</a>
-        </address>
-        <p>In <a href="./category/hacking.html">hacking</a> </p>
-<p>tags: <a href="./tag/botnet.html">botnet </a><a href="./tag/c.html">C </a><a href="./tag/digital-security.html">digital security </a><a href="./tag/hacking.html">hacking </a><a href="./tag/hivemind.html">hivemind </a><a href="./tag/irc.html">IRC </a><a href="./tag/python.html">python </a><a href="./tag/text-based-rpgs.html">text-based RPGs </a></p>
-</footer><!-- /.post-info -->                            <p>So I hacked together this <span class="caps">IRC</span> bot to play oldschool text-based RPGs with
-multiple people in an <span class="caps">IRC</span> channel. The <a href="http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html">RPGs are pre-written</a> and are
-run by a Z-Machine interpreter called <a href="http://frotz.sourceforge.net/">Frotz</a>, which runs on a server
-somewhere, and commands to Frotz are piped to stdin through a python
-program called <a href="http://www.noah.org/python/pexpect/">pexpect</a>.</p>
-<p>I&#8217;m not going to say which channel this thing is is, because it&#8217;s hella
-insecure (Frotz uses multiple uses of strcpy(), wtf?!), but I will say
-that while looking into pexpect I found some old 1990s botnet C&amp;C
-software when I totally wasn&#8217;t expecting it. Check out this file,
-<a href="http://patternsinthevoid.net/hive.py.txt">hive.py</a>, which comes with pexpect! So oldschool! (Don&#8217;t worry, that
-link goes to a .txt file, so nothing will run on this server nor on your
-computer. It&#8217;s safe, I&nbsp;promise.)</p>
-<p>For some reason, this made me really happy.&nbsp;\&lt;(A)3</p>
-                            <a class="readmore" href="./hivemind.html">read more</a>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>
