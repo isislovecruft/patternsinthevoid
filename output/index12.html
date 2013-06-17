@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="./theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="./theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="./theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="./theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="./theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="./theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie.css"/>
+        <script src="./theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="./theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="./">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="./category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="./category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="./category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="./category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+ 
+                <ul>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
+                        <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
+                        <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
+                    </ul>
+        <section id="content" class="body">
+            <ol id="posts-list" class="hfeed" start="2">
+                                <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./botnets-and-ddosing.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Botnets and DDoSing">Botnets and&nbsp;DDoSing</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-09-02T15:52:00">
+                Friday, 02 September 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/botnet.html">botnet </a><a href="./tag/cloudflare.html">cloudflare </a><a href="./tag/ddos.html">DDoS </a><a href="./tag/hacking.html">hacking </a><a href="./tag/hailstorm.html">hailstorm </a><a href="./tag/radical-designs.html">radical designs </a><a href="./tag/tor.html">Tor </a></p>
+</footer><!-- /.post-info -->                            <p>I was recently the Distributed Denial of Service (DDoS) target of a
+known Chinese botnet. Why some random Chinese botmaster decided to
+target me, I have no clue. Fortunately, the attack didn&#8217;t really do any
+damage because I use <a href="https://www.cloudflare.com/">CloudFlare</a>. Which is awesome (and free!). It
+made it slightly more difficult for me to update my blog, and I ended
+having to go into Wordpress though the frontend after tunneling to the
+server over the <a href="https://torproject.org/">Tor</a> network. But, due to CloudFlare, my sight stayed
+up throughout the entire attack, which lasted several days. Take that,
+Chinese&nbsp;hackers!</p>
+<p>I mostly wanted to say that I just tested a new web server stress
+analyzer, called <a href="http://hailstorm.radicaldesigns.org/">Hailstorm</a>, made by some of my friends over at
+<a href="http://radicaldesigns.org/">Radical Designs</a>. It&#8217;s basically a website (with a pretty <span class="caps">UI</span>!) that
+you tell to go to your website, and it attempts to DDoS your website,
+and then gives you a bunch of pretty graphs and charts on what happened.
+I set the concurrent threads to their highest setting at 1000, and the
+maximum requests to the highest setting at 5000. I gave Hailstorm the
+highest bandwidth requests I could muster, like some of my music files
+and artwork. My site didn&#8217;t flinch. Not one bit. I even Hailstormed this
+site several times within a period of a few minutes.&nbsp;Nothing.</p>
+<p>So, Hailstorm, you didn&#8217;t really tell me anything. You should allow your
+maximum requests and concurrent thread settings to go <em>way</em> higher. I
+guess ...</p>
+                            <a class="readmore" href="./botnets-and-ddosing.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./primitivists-gtfo.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Primitivists: GTFO!">Primitivists:&nbsp;<span class="caps">GTFO</span>!</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-08-29T22:02:00">
+                Monday, 29 August 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/anarchism.html">anarchism</a> </p>
+
+</footer><!-- /.post-info -->                            <p>The coupling of anarchism and primitivism within modern radical
+discourse needs to be entirely deconstructed. First, I would like to
+point out the obvious and inherent logical fallacies in this coalescence
+of, on the one hand, an array of social movements whose sole unifying
+ideological standpoint is an opposition to unequal power dynamics, and
+on the other hand, a socio-cultural movement which openly advocates
+biological essentialism, which translates to <a href="http://veganideal.org/content/lierre-keith-case-study-anti-trans-hatred">insubstantiation of fluid
+gender identities</a> and other such destructions of personal freedom,
+and the abolition of human creativity and inquiry through the &#8220;moral
+obligation&#8221; for humans to &#8220;fill their niche&#8221; within a biosphere. This is
+not even mentioning other troublesome logic within the primitivist
+discourse, which I won&#8217;t touch upon here, but will simply say, &#8220;Yo,
+dudes, ever heard of this thing called the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Naturalistic_fallacy">naturalistic fallacy</a>?
+It&#8217;s closely tied to other problematic and illogical argument forms like
+<a href="https://secure.wikimedia.org/wikipedia/en/wiki/Appeal_to_nature#Rational_argument">appeal to nature</a> and <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Appeal_to_tradition">appeal to tradition</a>&#8230;wait, were you
+calling yourselves anarchists? Anarchists making <em>appeals to tradition</em>.
+Yeah. Okay.&#8221; Get the fuck out of my&nbsp;movement.</p>
+<p>I&#8217;m concerned with freedom, not anthropocentrically, but f<a href="http://plato.stanford.edu/entries/godwin/">reedom in a
+broader sense of a maximization of informed agency</a>, which includes
+taking into context the environment we all share. That&#8217;s right, I said
+it. I care about the trees; I care about the non-human and human
+animals; I care about the cyborgs and the robots and the AIs. To quote
+<a href="https://queersingularity.wordpress.com/2011/06/26/transhumanism-and-the-radical-left-anarchist-skillshare-2011/"><em>Queering the Singularity</em></a>: &#8220;Outside of hierarchy, a diversity of
+legitimate life arrangements exist ...</p>
+                            <a class="readmore" href="./primitivists-gtfo.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="./its-still-love.html" 
+                                   rel="bookmark"
+                                   title="Permalink to It’s Still Love">It&#8217;s Still&nbsp;Love</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-08-26T17:05:00">
+                Friday, 26 August 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="./category/hacking.html">hacking</a> </p>
+<p>tags: <a href="./tag/python.html">python </a></p>
+</footer><!-- /.post-info -->                            <p>Python is still amazing. I&#8217;m still in love with&nbsp;it.</p>
+<p>Here are the books I&#8217;ve been going through to teach myself Python, if
+anyone else is interested, which you damn well should be. I was going
+through <em>Learn Python The Hard Way</em> at first, but that book is written
+more for people who are new to programming, and if you&#8217;re new to
+programming then a high-level language like Python probably shouldn&#8217;t be
+your first. Er, maybe it should be, but (in my opinion) going with Lisp
+first is better. But maybe I&#8217;m baised. I&#8217;m a theoretical physicist,
+after all, and Lisp is&nbsp;pretty.</p>
+<p>Instead, and at the recommendation of my friend <a href="http://kyleterry.com/">Kyle</a>, I started
+reading <a href="http://diveintopython.org/">Dive Into Python</a>, which is aimed at more experienced&nbsp;coders.</p>
+<p>And, if you&#8217;re looking for practice, <a href="http://www.pythonchallenge.com">Python Challenge</a> has a series
+of puzzles aimed at people interested in cryptography and Python. While
+working on the puzzles, my desktop looked like&nbsp;this:</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1-1024x640.png" title="snapshot1" />][]</p>
+<p>Cipherpunk, like woah! And yes, I use emacs. I already said I was a
+Lisper, don&#8217;t&nbsp;hate.</p>
+<p>Python Challenge is like <a href="http://www.hackthissite.org/pages/index/index.php">Hack This Site</a> all over again! Fuck yeah!
+So&nbsp;good!</p>
+<p>\&lt;(A)3</p>
+<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1-1024x640.png" title="snapshot1" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1.png</p>
+                            <a class="readmore" href="./its-still-love.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                            </ol><!-- /#posts-list -->
+                        <p class="paginator">
+                        <a href="./index11.html">&laquo;</a>
+                Page 12 / 28
+            <a href="./index13.html">&raquo;</a>
+    </p>
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+</footer><!-- /#contentinfo -->
+</body>
+</html>

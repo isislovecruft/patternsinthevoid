@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - darknet integration</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="../some-ideas-for-darknet-implementation-encryption-and-integration.html">Some Ideas For Darknet Implementation, Encryption, and&nbsp;Integration</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2011-04-05T23:19:00">
+                Tuesday, 05 April 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/algorithms.html">algorithms </a><a href="../tag/crypto-anarchism.html">crypto-anarchism </a><a href="../tag/cryptography.html">cryptography </a><a href="../tag/cyberfeminism.html">cyberfeminism </a><a href="../tag/darknet.html">darknet </a><a href="../tag/darknet-integration.html">darknet integration </a><a href="../tag/decentralized-social-networks.html">decentralized social networks </a><a href="../tag/encryption.html">encryption </a><a href="../tag/freenet.html">freenet </a><a href="../tag/fuzzy-logic.html">fuzzy logic </a><a href="../tag/i2p.html">i2p </a><a href="../tag/p2p.html">p2p </a><a href="../tag/sinkstoring.html">sinkstoring </a><a href="../tag/small-world-models.html">small-world models </a></p>
+</footer><!-- /.post-info --><p>Notes on Reading [Private Communication Through a Network of Trusted
+Connections: The Dark Freenet][] (click for&nbsp;.pdf)</p>
+<p>I learned that data encryption within a Freenet (not necessarily dark)
+is often restricted to two types: CHKs and SSKs (6). As a basic measure
+against profiling and traffic analysis, documents are relegated to set
+sizes &#8212; 32kb for CHKs (Content Hash Key, a type of symmetric
+cryptographic key generation in which the data includes the means of
+generating the key) and 1kb for SSKs (Signed Subspace Key, i.e. ain
+information publisher has an asymmetric key-pair used to sign documents
+within a free(/dark)net subspace. Any larger documents are split up into
+smaller ones to maintain this size imperative. Also, as anyone who has
+used any type of <span class="caps">P2P</span> net has experienced, search functions within the
+network are limited, but I just learned the reason why: directories
+aren&#8217;t plaintext, but are (usually) <span class="caps">MD5</span> hashes of locations. So, unless
+you know the precise location of the document or information you&#8217;re
+trying to access, and thus can generate the matching <span class="caps">MD5</span> hash, you can&#8217;t
+even discover that the directory is there. Kind of like how you can&#8217;t
+access an .onion site unless you already know the address. This was
+making my brain itch a little bit, but I&#8217;m good&nbsp;now.</p>
+<p>Fuzzy Logic Operations within Computerized Social Networks applied to
+Darknet Operations:[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg" title="darknet 2" />][]</p>
+<p><span class="dquo">&#8220;</span>Instead [of Stanley Milgram&#8217;s small-world model], we use a method which
+draws off the small world models of Jon Kleinberg. The routing we
+perform is purely greedy: at each step, the desirability of the
+neighbors is ordered by the proximity of their identities to the route
+key K (seen as floating point number between 0 and 1 with periodic
+boundary). The question then becomes one of trying affect the randomized
+assignment of identities such that this becomes an efficient way of
+routing. For routing to be efficient Kleinberg’s results show that
+certain relation between the frequency of connections of different
+lengths (with respect to the identities) must be present, so our goal is
+to, to the degree that it is possible, assign identities so that this
+holds. The method we have chosen for doing this is a development of that
+described in [&#8220;Distributed routing in small-world networks&#8221; by O.
+Sandberg].&#8221;&nbsp;(7)</p>
+<p>Basically, the propinquity of your friend Miss X to her friend Sir Y&#8217;s
+node which contains the data you&#8217;re attempting to access, this proximity
+is systematized via a fuzzy logic operator which outputs between a range
+of [0,1], 0 representing no connections to the desired node, and 1
+representing the desired node. Thus, an informational subgraph is
+overlayed onto the subgraph of the world&#8217;s social network which contains
+the portion of your social network connected to the&nbsp;darknet.</p>
+<p>[caption id=&#8221;&#8221; align=&#8221;alignleft&#8221; width=&#8221;450&#8221; caption=&#8221;Fuzzy Logic
+Explained!&#8221;][<img alt="" src="http://imgs.xkcd.com/comics/cat_proximity.png" title="http://xkcd.com/231/" />][][/caption]</p>
+<p>Sorry for the fuzzy logic geek out&#8230;I thought it was a cool application
+in informational network&nbsp;analysis.</p>
+<p><span class="dquo">&#8220;</span>In our implementation nodes start upon joining the network with
+randomly selected identities seen as numbers between 0 and 1. These
+identities are then switched between the nodes using the simulated
+annealing like method first explored in [29], which causes nodes that
+are in some sense close in the network topology to also have nearby
+identities. (It is only when this property holds that greedy routing
+makes sense in anything but the final step.) The use of random
+positions, rather than fixed points in a grid, makes our model slightly
+different than the Kleinberg model that is the basis of previous
+analysis of this method, but similar continuum models have been
+previously studied in [15] and [14]. Nodes at a constant rate initiate
+random walks, which terminate after a fixed number of steps (current
+six, which simulation indicates is enough even in a large network). When
+the walk terminates, the node at which it was started and that at which
+it ended attempt to switch identities, which will happen with a
+probability specified by the algorithm. Ideally, one would hope to be
+able to assign the identities so that every step in a route for K brings
+us to a node whose identity is closer to K than the last, until we have
+found the best node on the network. In practice, this may not always be
+possible, but we still use this as heuristic to show us when to
+terminate a route. Currently the route continues until it has reached a
+maximal Hops-To-Live (<span class="caps">HTL</span>), which is motivated by attempting to balance
+a thorough search while limiting resource usage.&#8221;&nbsp;(7-8)</p>
+<p><span class="dquo">&#8220;</span>Several enhancements to the basic algorithm described in [29] which
+could lead to better results have been suggested. Knowing the identity
+of ones neighbors’ neighbors is known to improve the performance of
+routing in Kleinberg type networks [24] by allowing nodes to route to
+the neighbor whose neighbors identities best match the query. Knowing
+the identities of neighbor’s neighbors reveals something about the
+surrounding network, but does not tell one who they are, so the basic
+principle of only revealing oneself to trusted peers remains. Another
+performance enhancement that we use is for nodes to be aware of which
+documents are present in their neighbor’s cache, by for instance
+neighbors passing Bloom filters [4] summarizing the contents of their
+cache to each other. A combination of both these techniques can greatly
+increase the number of successful searches and decrease the query
+length.&#8221;&nbsp;(8)</p>
+<p>One enhancement to this system which I can conceive of would be the
+application of hash tags to identities. For instance, when searching on
+the darknet for a document, e.g. Kropotkin&#8217;s Conquest of Bread, your
+node would analyze the hash tags of your friends&#8217; friends identities
+according to the likelihood of them having the document. So, for
+instance, you&#8217;re searching for Conquest of Bread, and you route on the
+darknet to your friend Miss X&#8217;s node. Miss X has two friends on the
+darknet, whose identities are invisible to you, but the hash tag
+descriptions of them are not. One of these friends has a tag identifying
+them as a Democrat, meaning the likelihood of their node containing the
+Conquest of Bread is low, say a 5% chance, and so they have an assigned
+value of .05 . Miss X&#8217;s other friend is an Anarchist, and so their
+likelihood is high, say 80%, and so they have a value of .80. Now I
+realise that the data stored on your node is not directly determined by
+you, but by what information is most commonly accessed on the darknet.
+However, there should still be some way to either 1) control what data
+is stored, or 2) apply hash tags for the type of data which has been
+pseudo-randomly stored. I&#8217;m not in a position to be creating a darknet
+right now, so anyone wanting to use this idea (if it&#8217;s even at all
+feasible) should feel welcome to do&nbsp;so.</p>
+<p>Alright, I read further and realized I&#8217;m behind on the times. A very
+similar idea has already been implemented, called sinkstoring: &#8220;&#8230;each
+node keeps two seperate caches of data. One is a short term cache where
+all data that the node transfers is stored temporarily until it pushed
+out by other data. The other is meant to keep data longer by storing
+only inserted data that matches the nodes identity. The strategy used to
+populate this second cache, which we have dubbed sinkstore, is this: A
+node will attempt to place the document corresponding to a key K in its
+store if it is better located at the node, given its identity, than to
+that of any of its neighbors. For example, in the configuration shown in
+Figure 1, the node with identity 0.49 is a sink for K = 0.50: its
+current identity is closer to that value than any of its neighbors
+identities - if the query was an insert, the node with current identity
+0.49 would store it.&#8221;&nbsp;(8)</p>
+<p>One of the problems with darknets is the availabilty of trusted peers to
+new users. If each new user only knew one person already connected to
+the darknet, the resulting network would take on a tree formation, and
+the routing process would fail entirely. A possible solution to this
+could be integration of darknets with emerging decentralized social
+networking platforms, such as Appleseed and Diaspora, so that when users
+sign up for an account on the social network they are automatically
+integrated with a darknet system. If this were applied, new users
+shouldn&#8217;t have trouble connecting to multiple trusted peers. Again,
+someone please steal my ideas &#8212; that&#8217;s what they&#8217;re&nbsp;for.</p>
+<p>Plus points to the authors of &#8220;Private Communication Through a Network
+of Trusted Connections: The Dark Freenet&#8221; for their excellent gender
+politics in using &#8220;she&#8221; wherever third person gender neutral pronouns
+would have been syntactically ambiguous.&nbsp;\&lt;3</p>
+<p>[Private Communication Through a Network of Trusted Connections: The
+  Dark Freenet]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/Private-Communication-Through-a-Network-of-Trusted-Connections-The-Dark-Freenet.pdf
+  [<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg" title="darknet 2" />]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg
+  [<img alt="" src="http://imgs.xkcd.com/comics/cat_proximity.png" title="http://xkcd.com/231/" />]:&nbsp;http://xkcd.com/231/</p>    </article>
+        <p class="paginator">
+        Page 1 / 1
+    </p>
+    </aside><!-- /#featured -->
+                                            </ol><!-- /#posts-list -->
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+</footer><!-- /#contentinfo -->
+</body>
+</html>

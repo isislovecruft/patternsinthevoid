@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TypeTypedammit</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li class="active">
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+<section id="content" class="body">
+    <article>
+        <header>
+            <h1 class="entry-title">
+                <a href="../typetypedammit.html" rel="bookmark"
+                   title="Permalink to TypeTypedammit">TypeTypedammit</a>
+            </h1>
+            <a href="http://twitter.com/share"
+   class="twitter-share-button"
+   data-count="horizontal" 
+   data-via="isislovecruft">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        </header>
+        <div class="entry-content">
+            <footer class="post-info">
+        <abbr class="published" title="2013-05-18T06:42:00">
+                Saturday, 18 May 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/python.html">python </a></p>
+</footer><!-- /.post-info -->            <p>I frequently find myself ranting at people that the god of Python is TypeType,
+and what an erratically vicious god he&nbsp;is.</p>
+<p>This rarely seems to be coherent to&nbsp;anyone.</p>
+<p>New strategy, inspired by finding another oddity during today&#8217;s hacking: I&#8217;m
+going to catalogue, as I remember or find them, all of the
+oh-my-god-why-would-a-language-allow-you-to-do-that things in&nbsp;Python.</p>
+<pre class="prettyprint lang-py">
+#!/usr/bin/python2.7
+#-*- coding: utf-8 -*-
+#
+# wtf001.py
+# ---------
+# Call a bound method of a class without initialising the class.
+#
+
+import types
+
+class C:
+    """This only works on old-style classes.
+
+    Classic classes or "old-style" classes should have never existed 
+    to begin with.
+    """
+    def __init__(s):
+        print "C.__init__() called."
+    def p(s, t):
+        print "C.p() called."
+        print t
+
+if __name__ == "__main__":
+    wtf = types.InstanceType(C)
+    msg = "I am a bound method, called without calling my initialisation"
+    msg += " function C.__init__() first."
+    wtf.p(msg)
+</pre>
+
+<p>which results&nbsp;in:</p>
+<pre class="prettyprint lang-sh">
+∃!isisⒶwintermute:~/scripts/wtf ∴ ./wtf001.py
+C.p() called.
+I am a bound method, called without calling my initialisation function C.__init__() first.
+</pre>
+        </div><!-- /.entry-content -->
+                
+        </article>
+</section>
+<section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+</footer><!-- /#contentinfo -->
+</body>
+</html>

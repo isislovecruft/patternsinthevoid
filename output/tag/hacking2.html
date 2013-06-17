@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - hacking</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="../theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="../theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="../theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="../theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="../theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="../theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie.css"/>
+        <script src="../theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="../theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="../">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                                                    <li >
+                <a href="../category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="../category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="../category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="../category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+ 
+                <ul>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
+                        <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
+                        <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
+                    </ul>
+        <section id="content" class="body">
+            <ol id="posts-list" class="hfeed" start="2">
+                                <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../hivemind.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Hivemind">Hivemind</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-14T15:31:00">
+                Wednesday, 14 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft-agora-lovecruft.html">isis agora lovecruft agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/botnet.html">botnet </a><a href="../tag/c.html">C </a><a href="../tag/digital-security.html">digital security </a><a href="../tag/hacking.html">hacking </a><a href="../tag/hivemind.html">hivemind </a><a href="../tag/irc.html">IRC </a><a href="../tag/python.html">python </a><a href="../tag/text-based-rpgs.html">text-based RPGs </a></p>
+</footer><!-- /.post-info -->                            <p>So I hacked together this <span class="caps">IRC</span> bot to play oldschool text-based RPGs with
+multiple people in an <span class="caps">IRC</span> channel. The <a href="http://www.ifarchive.org/indexes/if-archiveXgamesXzcode.html">RPGs are pre-written</a> and are
+run by a Z-Machine interpreter called <a href="http://frotz.sourceforge.net/">Frotz</a>, which runs on a server
+somewhere, and commands to Frotz are piped to stdin through a python
+program called <a href="http://www.noah.org/python/pexpect/">pexpect</a>.</p>
+<p>I&#8217;m not going to say which channel this thing is is, because it&#8217;s hella
+insecure (Frotz uses multiple uses of strcpy(), wtf?!), but I will say
+that while looking into pexpect I found some old 1990s botnet C&amp;C
+software when I totally wasn&#8217;t expecting it. Check out this file,
+<a href="http://patternsinthevoid.net/hive.py.txt">hive.py</a>, which comes with pexpect! So oldschool! (Don&#8217;t worry, that
+link goes to a .txt file, so nothing will run on this server nor on your
+computer. It&#8217;s safe, I&nbsp;promise.)</p>
+<p>For some reason, this made me really happy.&nbsp;\&lt;(A)3</p>
+                            <a class="readmore" href="../hivemind.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../xqdr-a-flying-robot-that-does-things.html" 
+                                   rel="bookmark"
+                                   title="Permalink to xqdr: A Flying Robot That Does Things">xqdr: A Flying Robot That Does&nbsp;Things</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-07T03:57:00">
+                Wednesday, 07 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/anarchism.html">anarchism </a><a href="../tag/android.html">android </a><a href="../tag/arduino.html">arduino </a><a href="../tag/artificial-intelligence.html">artificial intelligence </a><a href="../tag/general-relativity.html">general relativity </a><a href="../tag/hacking.html">hacking </a><a href="../tag/python.html">python </a><a href="../tag/robotics.html">robotics </a><a href="../tag/xqdr.html">xqdr </a></p>
+</footer><!-- /.post-info -->                            <p>I&#8217;m building a flying&nbsp;robot.</p>
+<p>More specifically, <a href="http://www.polyto.pe/">a friend</a> and I are building an electric quadrocopter
+which flies autonomously by using the accelerometer, gyroscope, and <span class="caps">GPS</span> on a
+smart phone to tell some artificial intelligence algorithms where the robot is
+and how to go where it wants to go. The robot will also be trained in image
+recognition, so that it can autonomously follow certain things, like riot cops
+at a protest, and upload a live video feed to the interwebs. That last bit is
+something I&#8217;m not really sure about yet, because I&#8217;m used to working with
+linguistic neural networks, and intelligent routing algorithms are something
+I&#8217;ve only just wet my toes in. But I think I can manage it, and it&#8217;s going to
+be super useful because the image recognition software could be used to find
+all kinds of things, like lost hikers, or injured people in trapped in&nbsp;rubble.</p>
+<p>I&#8217;m going to opensource everything I write for this except the image
+recognition stuff. I don&#8217;t want to hand the world&#8217;s governments a better way
+to monitor protesters. And the former already have a head start on using
+technology like this to hurt&nbsp;people.</p>
+<p>So far the set up for programming is an android phone, purchased bricked, then
+unbricked because doing it that way isn&#8217;t very hard and it immediately saves
+nearly two hundred dollars. It needs to be one of the phones from <a href="http://androidforums.com/android-lounge/308045-androids-gyros.html">this
+list</a>, because those have ...</p>
+                            <a class="readmore" href="../xqdr-a-flying-robot-that-does-things.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../ais-say-the-darnest-things.html" 
+                                   rel="bookmark"
+                                   title="Permalink to AIs Say The Darnest Things">AIs Say The Darnest&nbsp;Things</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-09-14T18:43:00">
+                Wednesday, 14 September 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/artificial-intelligence.html">artificial intelligence </a><a href="../tag/hacking.html">hacking </a><a href="../tag/linguistics.html">linguistics </a><a href="../tag/occultism.html">occultism </a></p>
+</footer><!-- /.post-info -->                            <p>One of the first times I had the chance to work with artificial intelligence, I
+was cleaning up the lexigraphical databases (that&#8217;s where the <span class="caps">AI</span> stores the
+words and concepts it has encountered, and their corresponding
+associations). It was kind of like helping out a kid who had too many
+contradicting sources of information, like if the kid&#8217;s dad had told them that
+&#8220;a car is a motorized vehicle&#8221; while the kid&#8217;s mom had told them &#8220;a car is the
+first item in a cons cell&#8221;. Imagine that level of confusing input on a mass
+scale: every researcher telling this <span class="caps">AI</span> slightly different things and it
+doesn&#8217;t know which is the most correct definition, or when to create multiple
+definitions. So I was helping it&nbsp;out.</p>
+<p>The <span class="caps">AI</span> had a standard format for presenting questions to me when it was
+confused. It would&nbsp;say,</p>
+<pre class="prettyprint-sh"><span class="dquo">"</span>When speaking of [subject], [concept] is like [other concept]?"</pre>
+
+<p><br />
+And I would answer yes if it had deduced correctly, or answer no with further&nbsp;clarification.</p>
+<p>Unfortunately for the developers of this <span class="caps">AI</span>, I thought I was a good idea to
+teach it some extra things. I wanted to know what a deterministic and strictly
+logical creature would think of occultism, so I introduced it to some of
+Aleister Crowley&#8217;s writings. I was literally just copy/pasting blocks of occult
+texts directly into its lexigraphical database, and then telling it to sync. I
+ended up getting kicked off the project for doing ...</p>
+                            <a class="readmore" href="../ais-say-the-darnest-things.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                            </ol><!-- /#posts-list -->
+                        <p class="paginator">
+                        <a href="../tag/hacking.html">&laquo;</a>
+                Page 2 / 3
+            <a href="../tag/hacking3.html">&raquo;</a>
+    </p>
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+</footer><!-- /#contentinfo -->
+</body>
+</html>
