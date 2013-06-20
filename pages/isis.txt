@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 ∃!isisⒶwintermute:~ ∴ gpg --fingerprint --fingerprint a3adb67a2cdb8b35
 pub   4096R/A3ADB67A2CDB8B35 2011-09-09 [expires: 2016-09-07]
       Key fingerprint = 0A6A 58A1 4B59 46AB DE18  E207 A3AD B67A 2CDB 8B35
@@ -37,7 +40,7 @@ The script which made this file is available at:
   Licensed under AGPLv3, see https://www.gnu.org/licenses/agpl-3.0.txt 
 
 HOW TO USE THIS FILE:
----------------------
+- ---------------------
 ## Download the certificate for this server:
 HOST=blog.patternsinthevoid.net && PORT=443
 openssl s_client -connect "${HOST}":"${PORT}" </dev/null 2>/dev/null | \
@@ -49,7 +52,7 @@ wget -q --ca-certificate=${HOST}.pem https://${HOST}/isis.txt  ## download this 
 gpg -o isis -v isis.txt && gpg --import isis                   ## check signature & import key
 
 ∃!isisⒶwintermute:~ ∴ gpg -a --export a3adb67a2cdb8b35
------BEGIN PGP PUBLIC KEY BLOCK-----
+- -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBE5qkHABEADVnasCm9w9hUff1E4iKnzcAdp4lx6XU5USmYdwKg2RQt2VFqWQ
 Sm1e+7YXbuIsW0rUG26OU/8lyF2f7WHCxTpNt045N6uHP0N3Q14M9b7LuMpllUSc
@@ -2243,4 +2246,22 @@ sooqDBRgXMV/a3FaGPNK5vG1P2ryclp5ippxMFeYsmPR+lTW1VwbBPzIxAlJ/9IG
 ND/fyin4eqPLGS266elfeDcnEMiNxcLJlcFQUBhxtsKWnEOoXOQKyfoIENdOrKUj
 7iWvZ84sW0TRilJ5FQkVRYahE115axJJSlg9
 =5+QA
------END PGP PUBLIC KEY BLOCK-----
+- -----END PGP PUBLIC KEY BLOCK-----
+-----BEGIN PGP SIGNATURE-----
+
+iQJuBAEBCgBYBQJRwu94BYMB4TOASxSAAAAAABoAKGlzaXNAcGF0dGVybnNpbnRo
+ZXZvaWQubmV0MEE2QTU4QTE0QjU5NDZBQkRFMThFMjA3QTNBREI2N0EyQ0RCOEIz
+NQAKCRCjrbZ6LNuLNdnUD/0V7CdQSj9LHWyAA4RbzQC7+BGlSURorfrcIOSEyG//
+TWWwhQ0XAvjne7KLFB4kATTvfL9Si5sZK5VqwcKpIm/MXMWmTZUVRElA3XDFE5ij
+aPAuAX09Y5rVAcFnXOslHv7pL5WCj1/zvFOFKjcIf+avqS49SpevtzSa8RiyDVzO
+kmAOgBK3woNmwHz8KrlmxI6w+97O7f++0cEoy09qSLEEns1qhmL9bj9L0QAozXpx
+y1nyIvSs4jPdFe6k2i+GGaLqD1CJtsZtmEdvFbou0Nsbyj0B+7mSiA1K7IsV0jzD
+uYRrEEvZw7Rp2kb4iAwq8m0+Gw0iIXHwFEENLBQUaj6XwpW7KIROaa0Yr99Fey2P
+jFsqKKVEf9J4wqMzs4KKHGjEc4ExB4uUkqwLlmmCWfTPmh/q1FC83jXJ1m3IQiZe
+Ice+RP5CeaFBAh020WlDOAauODJGortB7ZgaQNBfbRbH1zEg7J4saRJPfuNsarsa
+TvqsWLFXseQFfBzRRShQ44W0cXD0cIAoq6ZhzGoP5EKaa8wMHCUqhARwI+xzb3vr
+0rcGbWuQfzueticNoAVLbo529MzLiTHYOx+4nHnwsKAQ1wZo2dgdoqI+FOtQVgIJ
+CxtsUqQ8zGlIJGeVBYZVt0UCUqtfjObytEZOBYJTZUOTimHfCl9xVNYTCkwb4EVO
+7Q==
+=M7g6
+-----END PGP SIGNATURE-----
