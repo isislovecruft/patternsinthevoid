@@ -1,6 +1,6 @@
 ; patternsinthevoid.net [434901]
 $TTL 86400
-@	IN	SOA	ns1.linode.com. admin.patternsinthevoid.net. 2013070702 14400 14400 1209600 86400
+@	IN	SOA	ns1.linode.com. admin.patternsinthevoid.net. 2013070703 14400 14400 1209600 86400
 @		NS	ns1.linode.com.
 @		NS	ns2.linode.com.
 @		NS	ns3.linode.com.
@@ -8,7 +8,7 @@ $TTL 86400
 @		NS	ns5.linode.com.
 @		3600	MX	30	abulafia.patternsinthevoid.net.
 @		300	MX	0	patternsinthevoid.net.
-isis._pka		14400	TXT	"isis._pka.patternsinthevoid.net.    300 IN  TXT v=pka1;fpr=0A6A58A14B5946ABDE18E207A3ADB67A2CDB8B35;uri=http://blog.patternsinthevoid.net/isis.txt"
+isis._pka		14400	TXT	"isis._pka.patternsinthevoid.net.    300 IN  TXT v=pka1;fpr=0A6A58A14B5946ABDE18E207A3ADB67A2CDB8B35;uri=http://blog.patternsinthevoid.net/A3ADB67A2CDB8B35.txt"
 @		3600	A	66.147.244.158
 abulafia		14400	A	149.154.159.149
 blog		14400	A	106.187.37.158
