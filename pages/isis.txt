@@ -14,7 +14,9 @@ sub   4096R/50C98D87B401100F 2011-09-09 [expires: 2013-09-07]
       Key fingerprint = A6DA 4A68 76AE 9355 EAFD  43F6 50C9 8D87 B401 100F
 
 ∃!isisⒶwintermute:~ ∴ cat IRC-OTR-fingerprints
-  OFTC:        isis@37lnq2veifl4kar7.onion 
+  OFTC:        isis@irc.oftc.net
+               9266D529 1140CB82 B3BE858C B26AB213 7390E269
+  OFTC.onion:  isis@37lnq2veifl4kar7.onion 
                993602EF 1C90AC48 07E00A75 7A8EA596 D567D609
   Indymedia:   isis@h7gf2ha3hefoj5ls.onion
                892A996F 6E916E85 083F88FC 1CF7F77D FB769E3C
@@ -26,18 +28,20 @@ sub   4096R/50C98D87B401100F 2011-09-09 [expires: 2013-09-07]
                isis@riseup.net
   The OTR fingerprint for both accounts is: 
                f9b81df4 ba310806 b1513680 246598a0 6fc08cdb
-  * WARNING: I rarely use XMPP. The fastest way to reach me
-    is IRC, and your second best bet is email.
+
+  *WARNING*: I rarely use XMPP. The fastest way to reach me is IRC, and your
+             second best bet is email.
 
 ∃!isisⒶwintermute:~ ∴ cat server-fingerprints
 The SSL fingerprint for this server is:
 SHA1 Fingerprint=87:DE:47:97:5D:E5:FB:58:5B:1F:3D:12:F3:7D:30:12:97:B1:B5:A3
+SHA256 Fingerprint=73:1D:6A:A6:98:EF:F1:2C:44:B8:0F:E0:80:6B:DC:78:04:65:82:47:50:36:24:88:3F:CA:EC:E7:56:B1:85:04
 
 ∃!isisⒶwintermute:~ ∴ cat message
 The script which made this file is available at:
   https://code.patternsinthevoid.net/publish-keys
-  Copyleft ɔ⃝ 2012-2013 Isis Agora Lovecruft
-  Licensed under AGPLv3, see https://www.gnu.org/licenses/agpl-3.0.txt 
+  Copyleft ©2012-2013 Isis Agora Lovecruft
+  Licensed AGPLv3, see https://www.gnu.org/licenses/agpl-3.0.txt 
 
 HOW TO USE THIS FILE:
 - ---------------------
@@ -46,10 +50,16 @@ HOST=blog.patternsinthevoid.net && PORT=443
 openssl s_client -connect "${HOST}":"${PORT}" </dev/null 2>/dev/null | \
     sed -nr '/(-){5}(BEGIN CERTIFICATE){1}(-){5}/,/(-){5}(END CERTIFICATE){1}(-){5}/p' | \
     cat > ${HOME}/${HOST}.pem
-## Check the SSL certificate fingerprint (it should match the one given in this file):
+
+## Check the SSL certificate fingerprint (it should match the ones given in this file):
 cat ${HOME}/${HOST}.pem | openssl x509 -fingerprint -noout -in /dev/stdin
-wget -q --ca-certificate=${HOST}.pem https://${HOST}/isis.txt  ## download this file
-gpg -o isis -v isis.txt && gpg --import isis                   ## check signature & import key
+
+## Download this file (https://blog.patternsinthevoid.net/isis.txt):
+wget -q --ca-certificate=${HOST}.pem https://${HOST}/isis.txt
+
+## Check signature and import key:
+gpg -o isis -v isis.txt && gpg --import isis
+
 
 ∃!isisⒶwintermute:~ ∴ gpg -a --export a3adb67a2cdb8b35
 - -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -2249,19 +2259,19 @@ ND/fyin4eqPLGS266elfeDcnEMiNxcLJlcFQUBhxtsKWnEOoXOQKyfoIENdOrKUj
 - -----END PGP PUBLIC KEY BLOCK-----
 -----BEGIN PGP SIGNATURE-----
 
-iQJuBAEBCgBYBQJRwu94BYMB4TOASxSAAAAAABoAKGlzaXNAcGF0dGVybnNpbnRo
+iQJuBAEBCgBYBQJR5Id+BYMB4TOASxSAAAAAABoAKGlzaXNAcGF0dGVybnNpbnRo
 ZXZvaWQubmV0MEE2QTU4QTE0QjU5NDZBQkRFMThFMjA3QTNBREI2N0EyQ0RCOEIz
-NQAKCRCjrbZ6LNuLNdnUD/0V7CdQSj9LHWyAA4RbzQC7+BGlSURorfrcIOSEyG//
-TWWwhQ0XAvjne7KLFB4kATTvfL9Si5sZK5VqwcKpIm/MXMWmTZUVRElA3XDFE5ij
-aPAuAX09Y5rVAcFnXOslHv7pL5WCj1/zvFOFKjcIf+avqS49SpevtzSa8RiyDVzO
-kmAOgBK3woNmwHz8KrlmxI6w+97O7f++0cEoy09qSLEEns1qhmL9bj9L0QAozXpx
-y1nyIvSs4jPdFe6k2i+GGaLqD1CJtsZtmEdvFbou0Nsbyj0B+7mSiA1K7IsV0jzD
-uYRrEEvZw7Rp2kb4iAwq8m0+Gw0iIXHwFEENLBQUaj6XwpW7KIROaa0Yr99Fey2P
-jFsqKKVEf9J4wqMzs4KKHGjEc4ExB4uUkqwLlmmCWfTPmh/q1FC83jXJ1m3IQiZe
-Ice+RP5CeaFBAh020WlDOAauODJGortB7ZgaQNBfbRbH1zEg7J4saRJPfuNsarsa
-TvqsWLFXseQFfBzRRShQ44W0cXD0cIAoq6ZhzGoP5EKaa8wMHCUqhARwI+xzb3vr
-0rcGbWuQfzueticNoAVLbo529MzLiTHYOx+4nHnwsKAQ1wZo2dgdoqI+FOtQVgIJ
-CxtsUqQ8zGlIJGeVBYZVt0UCUqtfjObytEZOBYJTZUOTimHfCl9xVNYTCkwb4EVO
-7Q==
-=M7g6
+NQAKCRCjrbZ6LNuLNayhEACR34UoUG1LH4dyI0j1YZnjSrJkpHeGnuwM/Pdw4Foh
+l6Han9JVEJO8P6PsL5dEyTnjWN03VNIjPM+DaZd0ltq0YSspQxgGqI6FLk7a+ksb
+KntuOt9A8UGLaOWgKZiCL8rSKubKszWMRuG6Eap92izfoBW7VektaijzjcAtWZTB
+KpJ5frsKKKfUlaCs1Qmwx814zpS+Hb11hNr18glIoPeBrnm1C6gq1PGjaoLowTz9
+FJBRJ0lJaemw+LoVVjOnM0nr9a8Mzq1uvF7nN6RYxAsNVFtJ/p06fmODb+5EcMeu
+gurpzW4j7ItkF3exDOYsH8BHSnr4/fS2HqHWR3MSd/fBwfva0GJyVOjz4BoYIuqN
+Vd72iVASZLaT/fHmL0rwEGyP5BvPf+vz0gPLsWBLz+dh3JWwe5mBlxhqCVH1YdrG
+tT68CwXlH6in9EuYAqXDvXSzmdCrrVDz3AQ2enJule/ZFWIIe1glzgL785PnELAt
+cHwCihQNRd+kBFKlKnPpyvGS5O4/77AXYT6A2aRD/UZLNUJRwoRmLkcOyY0mmHAp
+GuJxtCHr3CCIAforZyn5ymQXUtzWc4WufL9b+hnaRnWtxX785Cqs9cQSHZpSdtv6
+/BdCYuDvuCrJxSr6dtOOkCC7RZevbo1J6zlQG87o7KkvDra75z7Xeu9HXf3TJoMf
+zQ==
+=wGq7
 -----END PGP SIGNATURE-----
