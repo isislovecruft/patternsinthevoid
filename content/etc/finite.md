@@ -3,7 +3,7 @@ Date: 2013-05-25 05:50
 Author: isis agora lovecruft
 Category: etc
 Tags: depression
-
+status: draft
 
 I'm sorry I've been quieter than usual lately. And hard to get a hold of. Ten
 months ago, one of my family members was diagnosed with cancer. I thought that
