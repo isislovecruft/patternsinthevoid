@@ -22,6 +22,7 @@ RELATIVE_URLS = True
 AUTHOR = u'Isis Agora Lovecruft'
 SITENAME = u'Patterns in the Void'
 SITEURL = 'https://blog.patternsinthevoid.net'
+FEED_DOMAIN = 'https://blog.patternsinthevoid.net'
 GITHUB_URL = 'https://github.com/isislovecruft'
 TWITTER_USERNAME = "isislovecruft"
 

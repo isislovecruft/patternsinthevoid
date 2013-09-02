@@ -11,7 +11,7 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=greyarea
+SSH_HOST=greyarea.patternsinthevoid.net
 SSH_PORT=22
 SSH_USER=isis
 SSH_TARGET_DIR=~/published
