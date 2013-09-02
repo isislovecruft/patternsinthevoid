@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patterns in the Void - Tor</title>
+    <meta charset="utf-8" />
+    <meta name="robots" 
+          content="noindex, nofollow">
+    <link rel="stylesheet" 
+          href="https://blog.patternsinthevoid.net/theme/css/main.css" 
+          type="text/css" />
+        <link href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+          type="application/atom+xml" 
+          rel="alternate" 
+          title="Patterns in the Void Atom Feed" />
+                <link href="https://blog.patternsinthevoid.net/theme/prettify/prettify.css"
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript" 
+            src="https://blog.patternsinthevoid.net/theme/prettify/prettify.js"></script>
+        <noscript>
+        <div style="width:80%;">
+        <p style="line-height:90%;margin:10px 10px 0px 10px;text-align:justify;text-indent:25px;">
+            <small>
+            <br>Hey, kudos! You don't run arbitrary scripts either!<br />
+            <br>My apologies for the javascript on this page...it's 
+            prettify.js for the syntax highlighting in code blocks. 
+            I added
+            <a href="https://blog.patternsinthevoid.net/theme/prettify/nope.css">one line of CSS</a>
+            for you; the rest of this site should work fine.<br />
+            <br>&#x24B6;&#38;&#x2665; isis<br /></small>
+        </p>
+        </div>
+        <link href="https://blog.patternsinthevoid.net/theme/prettify/nope.css"
+              type="text/css"
+              rel="stylesheet" />
+    </noscript>
+
+    <!--[if IE]>
+        <script src="https://blog.patternsinthevoid.net/theme/js/html5.js">
+        </script>
+        <![endif]-->
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://blog.patternsinthevoid.net/theme/css/ie.css"/>
+        <script src="https://blog.patternsinthevoid.net/theme/js/IE8.js"
+                type="text/javascript"></script>
+        <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://blog.patternsinthevoid.net/theme/css/ie6.css"/>
+        <![endif]-->
+</head>
+
+<body id="index" class="home" onload="prettyPrint()">
+<a href="https://github.com/isislovecruft">
+        <img style="position: absolute; top: 0; right: 0; border: 0; max-width: 48px;"
+         src="https://blog.patternsinthevoid.net/theme/images/icons/github-tentacle-icon.png"
+         alt="code." />
+</a>
+<header id="banner" class="body">
+    <h1>
+        <a href="https://blog.patternsinthevoid.net/">Patterns in the Void 
+                    </a>
+    </h1>
+    <nav>
+        <ul>
+                                                            <li >
+                <a href="https://blog.patternsinthevoid.net/category/anarchism.html">anarchism</a>
+            </li>
+                                                                        <li >
+                <a href="https://blog.patternsinthevoid.net/category/hacking.html">hacking</a>
+            </li>
+                                                <li >
+                <a href="https://blog.patternsinthevoid.net/category/physics.html">physics</a>
+            </li>
+                                                <li >
+                <a href="https://blog.patternsinthevoid.net/category/travel.html">travel</a>
+            </li>
+                                </ul>
+    </nav>
+</header>
+
+<!-- /#banner -->
+        
+        
+
+<aside id="featured" class="body">
+    <article>
+        <h1 class="entry-title"><a href="https://blog.patternsinthevoid.net/tor-bridge-distribution-oonis-data-collector.html">Tor Bridge Distribution <span class="amp">&amp;</span> <span class="caps">OONI</span>&#8217;s Data&nbsp;Collector</a></h1> 
+        <footer class="post-info">
+        <abbr class="published" title="2013-04-28T13:38:00">
+                Sunday, 28 April 2013
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="https://blog.patternsinthevoid.net/author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="https://blog.patternsinthevoid.net/category/hacking.html">hacking</a> </p>
+<p>tags: <a href="https://blog.patternsinthevoid.net/tag/china.html">China </a><a href="https://blog.patternsinthevoid.net/tag/ooni.html">OONI </a><a href="https://blog.patternsinthevoid.net/tag/tor.html">Tor </a><a href="https://blog.patternsinthevoid.net/tag/censorship.html">Censorship </a></p>
+</footer><!-- /.post-info --><p>Last week, I went to China, for the first &#8212; and possibly the last &#8212;&nbsp;time. </p>
+<p>Later, when I feel like complaining, I&#8217;ll blog about the negative things, like
+the evidence that someone had broken into mine and another Tor developer&#8217;s
+hotel room. As well as the tale of being followed by multiple plainclothes
+people through the streets of Kowloon, again with another Tor developer, down
+alleys, in and out of cabs, through electronic stores where I loudly and openly
+bought tiny audio/video devices to bug myself and the hotel room with. This is
+the first time I&#8217;ve ever worn a wire (I know, <em>they all say that</em>, right?): it
+doens&#8217;t feel right. I felt the compulsion to warn people who walked up and
+started talking to me before they spoke. And even then I still felt dirty and&nbsp;creepy.</p>
+<p><img alt="king-of-kowloon" src="https://blog.patternsinthevoid.net/static/images/2013/04/king-of-kowloon-small.jpg" /></p>
+<p>When I started officially working on things for the
+<a href="https://torproject.org">Tor Project</a> last year, I&#8217;d imagined that the world
+was like a map in an <span class="caps">RPG</span>, and that there were a lot of dark, hazy spots that
+needed filling in. I worried that if my legal name was publicly attached to Tor
+that places like China, Iran, and Syria would always remain dark spots. The
+idea that I might be prevented from seeing experiencing those cultures and
+regions firsthand, that I would not be able to see the homelands of people I
+wanted to empower, merely because a (<em>corrupt</em> would be redundant) government
+had gotten wise to some name I don&#8217;t answer to &#8212; it seemed daunting, and a bit&nbsp;heartbreaking.</p>
+<p><img alt="kowloon-1" src="https://blog.patternsinthevoid.net/static/images/2013/04/kowloon-1.jpg" /></p>
+<p>I&#8217;ve been thinking a lot more about borders lately. Ashamed as I am to admit it
+(it&#8217;s not like I was ever <em>in favour</em> of having borders), until now I&#8217;ve held a
+very privileged perspective on them. Sure, borders suck. Got it. Yep, people
+should be allowed to work wherever they want. Freedom of association, right?
+And yet it had never occurred to me: that an invisible line drawn in the sand
+could keep you away from your home, or that an arbitrary date on a slip of
+paper could decide how long you were permitted to see someone you&nbsp;loved.</p>
+<p>After living in Germany and France for precisely the number of days my tourist
+visa would allow, (Oops. I&#8217;d been counting, and thought I was still a week
+under. I should probably script that.) I took off for Hong Kong, where
+<a href="https://openitp.org">OpenITP</a> had generously offered me a travel grant to
+attend
+<a href="http://openitp.org/?q=node/32">the third Censorship Circumvention Summit</a>. Jumping
+from France to China to somewhere-undetermined-that-is-not-Schengen definitely
+presented some interesting security challenges, since I had to take <em>all of the
+things</em> I own with me. (It all fits in a backpack, so it&#8217;s not a space/money
+issue, it&#8217;s&nbsp;a </p>
+<blockquote>
+<p><span class="dquo">&#8220;</span>%&amp;$#@! I&#8217;m carrying devices which normally have access to thousands of
+computers, including some Tor Project infrastructure and repositories, and I
+have to keep them safe from a government that is going to hate me more than
+the United States, while eating nothing but plain rice <em>and</em> travelling
+24,671 kilometers?!&#8221;
+<br>issue.</br></p>
+</blockquote>
+<p>Since part of this security setup involved not connecting to anything while
+inside China, I tried as best as I could to remove network capability from my
+laptop, including recompiling my kernel with most of the CONFIG_[*<span class="caps">NET</span>|<span class="caps">IP</span>*]
+settings disabled. Without internet and only <span class="caps">IRL</span> people to talk to, I got bored
+pretty fast (<em>kidding!</em> ♡ ) and resorted to pen and paper technology, because I
+had some ideas on Tor bridge distribution regarding a system for having clients
+connect to a bridge Distributor, and the Distributor authenticating the clients
+or requiring a valid Proof-of-Work computation. If the authcheck or PoW doesn&#8217;t
+pass, the Distributor should instruct an <span class="caps">OONI</span> Data Collector node to connect to
+the client, to scan for censorship events (<em>I wonder if we can actually get a
+network vantage point from the <span class="caps">DPI</span> boxes?</em> :D ), else if the client check
+passes, the Distributor should instruct a Tor Bridge to connect to the&nbsp;client.</p>
+<p>Here are <a href="https://blog.patternsinthevoid.net/static/images/2013/04/bdb-and-ooni.jpg">my notes</a>.</p>
+<p>Obviously, the Distributors are going to get blocked, but if we were to use
+something like David Fifield&#8217;s FlashProxy, with it&#8217;s Facilitator as our
+Distributor (notice how all these words are oh-so-cleverly suffixed with
+<em>Tor</em>&#8230;), to contact the Distributor through a &#8220;normal&#8221; browser, the client
+should still be able to compute the auth/PoW and the Bridge or <span class="caps">OONI</span> Collector
+connect back to them. The Proof-of-Work should be necessary for protecting the
+Facilitator/Distributor from getting blocked, as well as significantly increase
+the cost of scanning for&nbsp;bridges.</p>
+<p><img alt="kowloon-nathan-rd" src="https://blog.patternsinthevoid.net/static/images/2013/04/kowloon-nathan-rd.jpg" /></p>    </article>
+    </aside><!-- /#featured -->
+<section id="content" class="body">
+    <h1>Other articles</h1>
+    <hr />
+    <ol id="posts-list" class="hfeed">
+                                                        
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="https://blog.patternsinthevoid.net/pranks.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Pranks">Pranks</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2012-06-28T07:42:00">
+                Thursday, 28 June 2012
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="https://blog.patternsinthevoid.net/author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="https://blog.patternsinthevoid.net/category/hacking.html">hacking</a> </p>
+<p>tags: <a href="https://blog.patternsinthevoid.net/tag/censorship-detection.html">censorship detection </a><a href="https://blog.patternsinthevoid.net/tag/cryptography.html">cryptography </a><a href="https://blog.patternsinthevoid.net/tag/javascript.html">javascript </a><a href="https://blog.patternsinthevoid.net/tag/mpotr.html">MPOTR </a><a href="https://blog.patternsinthevoid.net/tag/python.html">python </a><a href="https://blog.patternsinthevoid.net/tag/reverse-engineering.html">reverse engineering </a><a href="https://blog.patternsinthevoid.net/tag/rio-de-janeiro.html">rio de janeiro </a><a href="https://blog.patternsinthevoid.net/tag/tor.html">Tor </a></p>
+</footer><!-- /.post-info -->                            <p>So, while I&#8217;m busy researching away, hard at work <a href="https://trac.torproject.org/projects/tor/ticket/6184">reverse engineering
+proprietary network monitoring software</a>, and trying to devise methodologies
+<a href="https://ooni.nu">for detecting all</a> the various and newly-emerging means for technological
+censorship that the world&#8217;s government seem to be
+<a href="http://www.maannews.net/eng/viewdetails.aspx?id=478726">oh</a>-<a href="http://www.scmagazine.com.au/News/306441,telstra-tracks-users-to-build-web-filter.aspx">so</a>-<a href="http://arstechnica.com/tech-policy/2012/06/chinese-online-censorship-targets-collective-action-posts/">peachy</a>-<a href="https://www.google.com/transparencyreport/removals/government/">keen</a> on developing (the <a href="http://youtu.be/C9-LjX8wk60?t=1m1s">State Department
+recently mentioned our research</a> in their daily briefing), my friend
+<a href="https://twitter.com/kaepora">Nadim</a> gets to sit around, playing with crypto, doing things like
+implementing the <a href="http://www.larc.usp.br/~pbarreto/AnubisPage.html">Anubis cipher</a> <a href="https://jslibs.googlecode.com/svn/trunk/src/jscrypt/cipher.cpp">for Javascript</a> and inventing <a href="https://potion.io">music
+sharing services with 80s-retro aesthetics</a>.</p>
+<p>And then, he invents <a href="https://crypto.cat">Cryptocat</a>. Some of you might have heard of it.  It&#8217;s
+<a href="http://www.cypherpunks.ca/otr/"><span class="caps">OTR</span></a>, in your browser, as client-side Javascript, and we&#8217;re hoping to build
+it into the Tor Browser Bundle someday. But&#8230;that <span class="caps">OTR</span> business&#8230;I don&#8217;t
+know. It&#8217;s so <em>nineties</em>. And Ian Goldberg recently published a new paper <a href="http://www.cypherpunks.ca/~iang/pubs/mpotr.pdf">on
+multi-party off-the-record messaging</a>, but it hasn&#8217;t been implemented
+anywhere yet. Cryptocat is supposed to have multi-party encrypted messaging
+support soon, and Nadim was going back and forth on the spec &#8212; there were
+some open questions, for example, whether or not the static asymmetric keypair
+was necessary given that the each chat was already an in-browser&nbsp;session.</p>
+<p>(Cryptonerd tangent: I argue that the static keypair is still necessary due to
+Alice and Bob still needing to authenticate to each other with new ephemeral
+keypairs when Charlie joins the chat session. Calculation of the session <span class="caps">ID</span>
+<em>sid</em>(i), and thus the group key <em>gk</em>(i) for participants <em>P</em>(i) depends on ...</p>
+                            <a class="readmore" href="https://blog.patternsinthevoid.net/pranks.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="https://blog.patternsinthevoid.net/rio-de-janeiro.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Rio de Janeiro">Rio de&nbsp;Janeiro</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2012-05-29T12:58:00">
+                Tuesday, 29 May 2012
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="https://blog.patternsinthevoid.net/author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="https://blog.patternsinthevoid.net/category/travel.html">travel</a> </p>
+<p>tags: <a href="https://blog.patternsinthevoid.net/tag/freebird.html">freebird </a><a href="https://blog.patternsinthevoid.net/tag/guardian-project.html">Guardian Project </a><a href="https://blog.patternsinthevoid.net/tag/ooni.html">OONI </a><a href="https://blog.patternsinthevoid.net/tag/rightscon.html">RightsCon </a><a href="https://blog.patternsinthevoid.net/tag/rio-de-janeiro.html">Rio de Janeiro </a><a href="https://blog.patternsinthevoid.net/tag/tor.html">Tor </a><a href="https://blog.patternsinthevoid.net/tag/travel.html">travel </a></p>
+</footer><!-- /.post-info -->                            <p>I&#8217;m in Rio de Janeiro,&nbsp;Brazil.</p>
+<p>A fourteen year old boy tries to sell me a ride in his cab for twice the
+price. I take another&nbsp;cab.</p>
+<p>Most of the federal police are smaller than I, but a group of them size me up
+with amusement in their eyes. Last year, they killed thirteen hundred people
+in this&nbsp;city.</p>
+<p>Shirtless men wander on the freeway, selling pele porco frita between the
+cars.
+Others ride 100cc dirt bikes with furniture stacked on the&nbsp;back.</p>
+<p>An unbridled horse eats trash in a field surrounded by favelas with
+sun-bleached coloured sheets for&nbsp;roofs.</p>
+<p>There is a white cathedral on a distant hill, and vultures circling over an
+open crude oil&nbsp;pit.</p>
+<p>That infamous captain of zeppelins, Santos-Dumont, built an enchanted house
+somehwere in those&nbsp;hills.</p>
+<p>The cab breaks down. The driver pulls over and <em>cranks the engine</em>,&nbsp;cursing.</p>
+<p>Impossible black crags rise above the visible heat waves from the distant
+jungle. I feel stupid: twenty hours in a flying sardine can, and now the
+humidity &#8212; I can&#8217;t give the species name for any of the plants in sight, and
+my Portuguese vocabulary is three: sim, não, <span class="amp">&amp;</span>&nbsp;obrigarda.</p>
+<p>It&#8217;s the dead of winter here, but you&#8217;d never know&nbsp;it.</p>
+<p>Ah wait, that&#8217;s a&nbsp;jacaranda.</p>
+<p>There appears to be a statue on a distant mountain: a robed white figure
+raising arms and face to the cloudless azure sky. Fleets of teal, red, and
+ochre sailboats scatter on the lagoon ...</p>
+                            <a class="readmore" href="https://blog.patternsinthevoid.net/rio-de-janeiro.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
+                                            </ol><!-- /#posts-list -->
+                        <p class="paginator">
+        Page 1 / 3
+            <a href="https://blog.patternsinthevoid.net/tag/tor2.html">&raquo;</a>
+    </p>
+                    </section><!-- /#content -->
+                                <section id="extras" 
+         class="body">
+        <div class="blogroll">
+        <h2>blogroll</h2>
+        <ul>
+                        <li><a href="https://fyb.patternsinthevoid.net">pelagus</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">clavium apertum</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">codii et codicilli</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">horologii</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/about-the-author.html">elogii biothanatum</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/libris.html">libris atricoloris</a></li>
+                        <li><a href="https://image.patternsinthevoid.net">imaginis</a></li>
+                        <li><a href="https://sound.patternsinthevoid.net">strepitus</a></li>
+                    </ul>
+    </div>
+    <!-- /.blogroll -->
+            <div class="social">
+        <h2>social</h2>
+        <ul>
+            <li><a href="https://blog.patternsinthevoid.net/feeds/all.atom.xml" 
+                   type="application/atom+xml" 
+                   rel="alternate">atom feed</a>
+            </li>
+                        
+                        <li><a href="https://twitter.com/#!/isislovecruft">twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">github</a></li>
+                        <li><a href="https://gs.torproject.org/user/isis">#tor-status</a></li>
+                    </ul>
+    </div><!-- /.social -->
+    </section><!-- /#extras -->
+<footer id="contentinfo" class="body" position="relative">
+    <div style="height: 100%">
+        <address id="about">
+                <iframe src="//crypto.stanford.edu/flashproxy/embed.html" 
+        width="80" height="15"
+        frameborder="0" scrolling="no"
+        accesskey="i"
+        display="none"
+        groove>
+</iframe>
+<div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
+    </div>
+        <div style="font-size: 6px; text-align: center; position: right; padding: 2px 1px">
+<table style="width: 15%;">
+    <tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB"><img style="border-width:0" src="../theme/images/icons/cc-by-nc-sa.png" /></a>
+<span property="dct:title" rel="dct:type"><a href="https://code.patternsinthevoid.net/">Patterns in the Void</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://blog.patternsinthevoid.net" property="cc:attributionName" rel="cc:attributionURL">Isis Agora Lovecruft</a> is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB">CC-BY-NC-SA</a>.</td></tr>
+</table>
+</div>    </footer><!-- /#contentinfo -->
+</body>
+</html>
