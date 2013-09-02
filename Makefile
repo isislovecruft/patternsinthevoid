@@ -18,6 +18,8 @@ SSH_TARGET_DIR=~/published
 
 DROPBOX_DIR=~/Dropbox/Public/
 
+GITHUB_REMOTE_NAME=isislovecruft
+
 help:
 	@echo 'Makefile for a pelican Web site                                        '
 	@echo '                                                                       '
@@ -71,6 +73,6 @@ ftp_upload: publish
 
 github: publish
 	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
+	git push $(GITHUB_REMOTE_NAME) gh-pages
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload github
