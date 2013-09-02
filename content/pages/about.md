@@ -1,4 +1,4 @@
-Title: About
+Title: About the author
 Date: 2010-01-04 22:53
 Author: isis agora lovecruft
 
@@ -50,21 +50,26 @@ collaboration! Though, please keep in mind that I'm doing *all of the things*,
 so, if you're dangling from a burning rope over a shark tank, then I *might*
 not be the best person to call.
 
-∃!isisⒶwintermute:~ ∴ gpg --fingerprint isis@patternsinthevoid.net
-pub   4096R/2CDB8B35 2011-09-09 [expires: 2016-09-07]
+      ∃!isisⒶwintermute:~ ∴ gpg --fingerprint --fingerprint isis@patternsinthevoid.net
+      pub   4096R/A3ADB67A2CDB8B35 2011-09-09 [expires: 2016-09-07]
       Key fingerprint = 0A6A 58A1 4B59 46AB DE18  E207 A3AD B67A 2CDB 8B35
-uid                  Isis! <isis@patternsinthevoid.net>
-uid                  Isis <isis@torproject.org>
-uid                  Isis <isis@leap.se>
-uid                  Isis! <isis@riseup.net>
-sub   4096R/B401100F 2011-09-09 [expires: 2016-09-07]
+      uid               Isis! <isis@patternsinthevoid.net>
+      uid               Isis <isis@torproject.org>
+      uid               Isis <isis@leap.se>
+      uid               Isis! <isis@riseup.net>
+      sub   4096R/50C98D87B401100F 2011-09-09 [expires: 2013-09-07]
+      Key fingerprint = A6DA 4A68 76AE 9355 EAFD  43F6 50C9 8D87 B401 100F
+      sub   4096R/36DB24500B30EE69 2013-04-24 [expires: 2014-09-07]
+      Key fingerprint = 9A89 F0C7 7C5E 82B1 4537  C8EA 36DB 2450 0B30 EE69
+       
+       
+<br />
 
-A signed, timestamped copy of
-[my public GPG key is here](https://blog.patternsinthevoid.net/isis.txt), the
-signature for that file is [here](https://blog.patternsinthevoid.net/isis.sig).
-That text file also includes my public IRC handles and their current OTR keys,
-my Jabber/XMPP accounts and their OTR keys (warning: I almost never log in),
-and in the future will include signed notices of any key updates I decide to
-make. 
+A signed, timestamped copy of my public GPG key is
+[here](https://blog.patternsinthevoid.net/isis.txt).  That text file also
+includes my public IRC handles and their current OTR keys, my Jabber/XMPP
+accounts and their OTR keys, and in the future will include signed notices of
+any key updates I decide to make.
 
-\<(A)3
+    <(A)3 isis
+
