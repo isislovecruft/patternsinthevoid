@@ -48,10 +48,16 @@ CSS_FILE = 'main.css'
 TYPOGRIFY = True
 PRETTIFY = True
 
+FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),
+                 ('extra/favicon.ico', 'favicon.ico'),)
+
 from plugins import neighbors
 from plugins import pelican_bibtex as bibtex
 PLUGINS = [neighbors, bibtex]
-DIRECT_TEMPLATES = ('libris',)
+
+DIRECT_TEMPLATES = ('index', 'libris', 'tags', 'categories', 'archives', 'sitemap')
+PAGINATED_DIRECT_TEMPLATES = ('index',)
+SITEMAP_SAVE_AS = 'sitemap.xml'
 
 ## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
