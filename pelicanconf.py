@@ -51,6 +51,7 @@ PRETTIFY = True
 from plugins import neighbors
 from plugins import pelican_bibtex as bibtex
 PLUGINS = [neighbors, bibtex]
+DIRECT_TEMPLATES = ('libris',)
 
 ## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
