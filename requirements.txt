@@ -12,3 +12,4 @@ six==1.2.0
 smartypants==1.6.0.3
 typogrify==2.0.0
 wsgiref==0.1.2
+pybtex==0.16

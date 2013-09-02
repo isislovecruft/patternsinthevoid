@@ -11,7 +11,7 @@
 @import url("reset.css");
 @import url("pygment.css");
 @import url("typogrify.css");
-@import url("pprint.css");
+/*@import url("pprint.css");*/
 /*@import url("wide.css")*/
 
 @font-face {
@@ -36,7 +36,7 @@ body {
     font-size: 110%;
     font-family: 'Garamond', 'Lucida Unicode', serif;
     line-height: 1.329;
-    margin: 0;
+    margin: auto;
     padding: 0;
     text-align: left;
 }
@@ -54,8 +54,8 @@ tag-8 {font-size: 1.143em}
 tag-9 {font-size: 1em}
 
 /* Headings */
-h1 {font-size: 1.429em }
-h2 {font-size: 1.429em}	/* 22px */
+h1 {font-size: 1.398em }
+h2 {font-size: 1.398em}	/* 22px */
 h3 {font-size: 1.327em}	/* 20px */
 h4 {font-size: 1.286em}	/* 18px */
 h5 {font-size: 1.143em}	/* 16px */

@@ -49,17 +49,28 @@ TYPOGRIFY = True
 PRETTIFY = True
 
 from plugins import neighbors
-PLUGINS = [neighbors,]
+from plugins import pelican_bibtex as bibtex
+PLUGINS = [neighbors, bibtex]
 
+## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
+DISPLAY_CC = True
+
+## These show up as 'http(s)://<SITE_URL>/static/libris/'
+STATIC_PATHS = ['images', 'pages', 'libris']
+## The following disables showing "About the author" on the menu
+DISPLAY_PAGES_ON_MENU = False
+
+# BIBTEX PUBLICATIONS
+####################################
+PUBLICATIONS_SRC = 'content/libris/atricoloris.bib'
 
 # Timezones, language, and metadata
-####################################I
+####################################
 TIMEZONE = 'UTC'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs' # use filesystem metadata to get the creation date
 DEFAULT_DATE_FORMAT = '%A, %d %B %Y'
-# On Unix/Linux
 DATE_FORMATS = {'en': ('en_US','%A, %d %B %Y'),}
 
 #FEED_DOMAIN = SITEURL
@@ -82,17 +93,17 @@ SUMMARY_MAX_LENGTH = 250
 
 # Blogroll
 LINKS =  (
-    ('main', 'https://fyb.patternsinthevoid.net'),
-    ('keys', 'https://blog.patternsinthevoid.net/isis.txt'),
-    ('code', 'https://code.patternsinthevoid.net'),
-    ('time', 'https://blog.patternsinthevoid.net/calendar.html'),
-    ('about', 'https://blog.patternsinthevoid.net/about.html'),
+    ('pelagus', 'https://fyb.patternsinthevoid.net'),
+    ('clavium apertum', 'https://blog.patternsinthevoid.net/isis.txt'),
+    ('codii et codicilli', 'https://code.patternsinthevoid.net'),
+    ('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
+    ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about-the-author.html'),
+    ('libris atricoloris', 'https://blog.patternsinthevoid.net/pages/libris.html'),
+    ('imaginis', 'https://image.patternsinthevoid.net'),
+    ('strepitus', 'https://sound.patternsinthevoid.net')
     )
-#    ('Image', 'https://image.patternsinthevoid.net'),
-#    ('Sound', 'https://sound.patternsinthevoid.net'),
-
-# Social widget
 SOCIAL = (
-    ('Twitter', 'https://twitter.com/#!/isislovecruft'),
-    ('Github', 'https://github.com/isislovecruft'),
+    ('twitter', 'https://twitter.com/#!/isislovecruft'),
+    ('github', 'https://github.com/isislovecruft'),
+    ('#tor-status', 'https://gs.torproject.org/user/isis')
     )
