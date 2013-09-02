@@ -49,12 +49,17 @@ TYPOGRIFY = True
 PRETTIFY = True
 
 from plugins import neighbors
-PLUGINS = [neighbors,]
+from plugins import pelican_bibtex as bibtex
+PLUGINS = [neighbors, bibtex]
 
 ## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
 DISPLAY_CC = True
 
+## These show up as 'http(s)://<SITE_URL>/static/libris/'
+STATIC_PATHS = ['images', 'pages', 'libris']
+## The following disables showing "About the author" on the menu
+DISPLAY_PAGES_ON_MENU = False
 
 # Timezones, language, and metadata
 ####################################I
