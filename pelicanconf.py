@@ -61,6 +61,10 @@ STATIC_PATHS = ['images', 'pages', 'libris']
 ## The following disables showing "About the author" on the menu
 DISPLAY_PAGES_ON_MENU = False
 
+# BIBTEX PUBLICATIONS
+####################################
+PUBLICATIONS_SRC = 'content/libris/atricoloris.bib'
+
 # Timezones, language, and metadata
 ####################################I
 TIMEZONE = 'UTC'
