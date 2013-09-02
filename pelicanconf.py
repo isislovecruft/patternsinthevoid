@@ -51,7 +51,10 @@ PRETTIFY = True
 from plugins import neighbors
 PLUGINS = [neighbors,]
 
+## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
+DISPLAY_CC = True
+
 
 # Timezones, language, and metadata
 ####################################I

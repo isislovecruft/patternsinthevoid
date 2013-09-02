@@ -147,6 +147,9 @@
         {% endif %}
         </address><!-- /#about -->
     </div>
+    {% if DISPLAY_CC %}
+    {% include 'cc.html' %}
+    {% endif %}
 </footer><!-- /#contentinfo -->
 </body>
 </html>
