@@ -66,7 +66,7 @@
     </h1>
     <nav>
         <ul>
-                                                                                    <li >
+                                                            <li >
                 <a href="../category/anarchism.html">anarchism</a>
             </li>
                                                                         <li >
@@ -88,52 +88,20 @@
 
  
                 <ul>
-                        <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
-                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
-                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
                         <li class="tag-1"><a href="/tag/artificial intelligence/">artificial intelligence</a></li>
-                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
-                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
-                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
                         <li class="tag-1"><a href="/tag/hacking/">hacking</a></li>
+                        <li class="tag-2"><a href="/tag/crypto-anarchism/">crypto-anarchism</a></li>
+                        <li class="tag-1"><a href="/tag/cryptography/">cryptography</a></li>
+                        <li class="tag-3"><a href="/tag/anarchism/">anarchism</a></li>
                         <li class="tag-1"><a href="/tag/python/">python</a></li>
+                        <li class="tag-1"><a href="/tag/Tor/">Tor</a></li>
+                        <li class="tag-2"><a href="/tag/quantum physics/">quantum physics</a></li>
+                        <li class="tag-2"><a href="/tag/linux/">linux</a></li>
+                        <li class="tag-3"><a href="/tag/Defcon/">Defcon</a></li>
                     </ul>
         <section id="content" class="body">
             <ol id="posts-list" class="hfeed" start="2">
                                 <li>
-                    <article class="hentry">    
-                        <header>
-                            <h1>
-                                <a href="../anarchism-and-magiccards.html" 
-                                   rel="bookmark"
-                                   title="Permalink to anarchism and Magic…cards">anarchism and&nbsp;Magic&#8230;cards</a></h1>
-                        </header>
-                
-                        <div class="entry-content">
-                            <footer class="post-info">
-        <abbr class="published" title="2011-05-26T03:26:00">
-                Thursday, 26 May 2011
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
-        </address>
-        <p>In <a href="../category/anarchism.html">anarchism</a> </p>
-
-</footer><!-- /.post-info -->                            <p>When I was a kid, there was a period in which I answered the query,
-&#8220;What do you want to be when you grow up?&#8221; with &#8220;I want to write flavor
-text or make illustrations for magic&nbsp;cards.&#8221;</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/05/IMG_2369.jpg" title="Anarchist" />][]</p>
-<p>[<img alt="" src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/05/IMG_2369.jpg" title="Anarchist" />]:&nbsp;http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/05/IMG_2369.jpg</p>
-                            <a class="readmore" href="../anarchism-and-magiccards.html">read more</a>
-                                                    </div><!-- /.entry-content -->
-                </article>
-                </li>
-                                                
-
- 
-                        <li>
                     <article class="hentry">    
                         <header>
                             <h1>
@@ -223,10 +191,71 @@ utility, acting as if ...</p>
                                                     </div><!-- /.entry-content -->
                 </article>
                 </li>
+                                                
+
+ 
+                        <li>
+                    <article class="hentry">    
+                        <header>
+                            <h1>
+                                <a href="../automated-bandwidth-efficient-and-encrypted-backups.html" 
+                                   rel="bookmark"
+                                   title="Permalink to Automated, Bandwidth-Efficient, and Encrypted Backups">Automated, Bandwidth-Efficient, and Encrypted&nbsp;Backups</a></h1>
+                        </header>
+                
+                        <div class="entry-content">
+                            <footer class="post-info">
+        <abbr class="published" title="2011-12-19T19:29:00">
+                Monday, 19 December 2011
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/isis-agora-lovecruft.html">isis agora lovecruft</a>
+        </address>
+        <p>In <a href="../category/hacking.html">hacking</a> </p>
+<p>tags: <a href="../tag/backup.html">backup </a><a href="../tag/bash-scripting.html">bash scripting </a><a href="../tag/command-line.html">command line </a><a href="../tag/cryptography.html">cryptography </a><a href="../tag/duplicity.html">duplicity </a><a href="../tag/linux.html">linux </a></p>
+</footer><!-- /.post-info -->                            <p>I made a bash shell script to automate encrypted (remote or local) data
+backups with <a href="http://duplicity.nongnu.org/" title="Duplicity">Duplicity</a>. Duplicity uses asymmetric <span class="caps">GPG</span> <span class="caps">RSA</span> keys to
+encrypt a tarballs of specified files to be backed up, and it also
+supports incremental backups. So, after making a full backup, it is more
+efficient do to the fact that it only saves changes made to files and
+not entirely new copies of files. Duplicity also supports versioning,
+i.e. you can say &#8220;give me File A from 3 days&nbsp;ago&#8221;.</p>
+<p>Duplicity is <em>not</em> efficient in it&#8217;s cryptographic design, as my friend
+Tom wisely pointed out, in that use of asymmetric cryptographic
+algorithms is heavily intensive upon processor resources, and it would
+be better to replace this feature with something more along the lines of
+the algorithms (e.g. <span class="caps">AES</span>, Serpent, and Twofish) and read/write speed
+testing features which <a href="http://www.truecrypt.org/" title="TrueCrypt">TrueCrypt</a> supports, for&nbsp;example.</p>
+<p>This script depends on both curl and a newer version of duplicity (which
+is not yet included in the standard repositories), so to install those
+dependencies in Ubuntu&nbsp;do:</p>
+<p><code>$ sudo apt-add-repository ppa:duplicity-team/ppa</code></p>
+<p>\$ sudo apt-get&nbsp;update</p>
+<p>\$ sudo apt-get install duplicity&nbsp;curl</p>
+<p>Here&#8217;s version 0.1.2 of the backup script [(or view it on github&nbsp;here)][]:</p>
+<p>#!/bin/bash</p>
+<p>#&nbsp;_____________________</p>
+<p>#| <span class="caps">BACKUP</span>[your].<span class="caps">SH</span>[it]&nbsp;|</p>
+<p>#|&#8211;&#8211;&#8211;&#8211;&#8211;&#8211;&#8211;|</p>
+<p>#|v.0.1.2 |\ \^&nbsp;/\^</p>
+<p>#|Written by | \ / \ //&nbsp;\  </p>
+<p>#|isis agora lovecruft Lovecruft | \ |\___/| / \//&nbsp;.\  </p>
+<p>#|isis agora lovecruft@patternsinthe | \ /O O \__ / // | \ \&nbsp;*&#8211;-*</p>
+<p>#| void.net| / / \/_/ // | \ \ \&nbsp;|</p>
+<p>#|_____________________| @___@` \/_ // | \  
+\ \/\&nbsp;\  </p>
+<p># 0/0/| \/_ // | \ \ \&nbsp;\  </p>
+<p># 0/0/0/0/| \/// | \ \ |&nbsp;|</p>
+<p># 0/0/0/0/0 ...</p>
+                            <a class="readmore" href="../automated-bandwidth-efficient-and-encrypted-backups.html">read more</a>
+                                                    </div><!-- /.entry-content -->
+                </article>
+                </li>
                                             </ol><!-- /#posts-list -->
                         <p class="paginator">
                         <a href="../author/isis-agora-lovecruft2.html">&laquo;</a>
-                Page 3 / 24
+                Page 3 / 23
             <a href="../author/isis-agora-lovecruft4.html">&raquo;</a>
     </p>
                     </section><!-- /#content -->
@@ -235,11 +264,14 @@ utility, acting as if ...</p>
         <div class="blogroll">
         <h2>blogroll</h2>
         <ul>
-                        <li><a href="https://fyb.patternsinthevoid.net">main</a></li>
-                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">keys</a></li>
-                        <li><a href="https://code.patternsinthevoid.net">code</a></li>
-                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">time</a></li>
-                        <li><a href="https://blog.patternsinthevoid.net/about.html">about</a></li>
+                        <li><a href="https://fyb.patternsinthevoid.net">pelagus</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/isis.txt">clavium apertum</a></li>
+                        <li><a href="https://code.patternsinthevoid.net">codii et codicilli</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/calendar.html">horologii</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/about-the-author.html">elogii biothanatum</a></li>
+                        <li><a href="https://blog.patternsinthevoid.net/pages/libris.html">libris atricoloris</a></li>
+                        <li><a href="https://image.patternsinthevoid.net">imaginis</a></li>
+                        <li><a href="https://sound.patternsinthevoid.net">strepitus</a></li>
                     </ul>
     </div>
     <!-- /.blogroll -->
@@ -251,8 +283,9 @@ utility, acting as if ...</p>
                    rel="alternate">atom feed</a>
             </li>
                         
-                        <li><a href="https://twitter.com/#!/isislovecruft">Twitter</a></li>
-                        <li><a href="https://github.com/isislovecruft">Github</a></li>
+                        <li><a href="https://twitter.com/#!/isislovecruft">twitter</a></li>
+                        <li><a href="https://github.com/isislovecruft">github</a></li>
+                        <li><a href="https://gs.torproject.org/user/isis">#tor-status</a></li>
                     </ul>
     </div><!-- /.social -->
     </section><!-- /#extras -->
@@ -268,6 +301,11 @@ utility, acting as if ...</p>
 </iframe>
 <div id="over">You're currently helping people in censored regions with <a href="https://crypto.stanford.edu/flashproxy/options.html">FlashProxy</a>. Thanks!</div>                </address><!-- /#about -->
     </div>
-</footer><!-- /#contentinfo -->
+        <div style="font-size: 6px; text-align: center; position: right; padding: 2px 1px">
+<table style="width: 15%;">
+    <tr><td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB"><img style="border-width:0" src="../theme/images/icons/cc-by-nc-sa.png" /></a>
+<span property="dct:title" rel="dct:type"><a href="https://code.patternsinthevoid.net/">Patterns in the Void</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://blog.patternsinthevoid.net" property="cc:attributionName" rel="cc:attributionURL">Isis Agora Lovecruft</a> is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB">CC-BY-NC-SA</a>.</td></tr>
+</table>
+</div>    </footer><!-- /#contentinfo -->
 </body>
 </html>
