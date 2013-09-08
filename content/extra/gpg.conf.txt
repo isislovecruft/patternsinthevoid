@@ -1,0 +1,348 @@
+##
+## Options for GnuPG
+##
+## :author: isis <isis@patternsinthevoid.net>
+## :license: WTFPL
+
+## Shut the fuck up:
+no-greeting
+no-emit-version
+charset utf-8
+display-charset utf-8
+utf8-strings
+
+## How to display keyids?:
+keyid-format long
+
+## If you have more than 1 secret key in your keyring, you may want to
+## uncomment the following option and set your preferred keyid.
+#default-key A3ADB67A2CDB8B35
+
+## if you've got an offline key, use this to trust it:
+trusted-key A3ADB67A2CDB8B35
+
+## If you do not pass a recipient to gpg, it will ask for one.  Using
+## this option you can encrypt to a default key.  Key validation will
+## not be done in this case.  The second form uses the default key as
+## default recipient.
+# default-recipient some-user-id
+#default-recipient-self
+
+## Use --encrypt-to to add the specified key as a recipient to all
+## messages.  This is useful, for example, when sending mail through a
+## mail client that does not automatically encrypt mail to your key.
+## In the example, this option allows you to read your local copy of
+## encrypted mail that you've sent to others.
+
+#encrypt-to A3ADB67A2CDB8B35
+
+## The first one breaks Emacs EasyPG + ORG mode if you have more than one
+## secret key.
+hidden-encrypt-to A3ADB67A2CDB8B35
+## Though this one can be used, as '--try-secret-key' to limit attempts to
+## decrypt anonymously encrypted data to only using this key:
+#try-secret-key A3ADB67A2CDB8B35
+
+## Viewing Certifications & Keys
+##-------------------------------
+
+# When outputting certificates, view user IDs distinctly from keys:
+fixed-list-mode
+
+## You should always know at a glance which User IDs gpg thinks are
+## legitimately bound to the keys in your keyring (show-uid-validity):
+##
+## The various 'show-notations' options display comments embedded in
+## signatures and certifications.
+
+verify-options no-show-photos show-uid-validity show-notations show-user-notations show-policy-urls show-keyserver-urls pka-lookups pka-trust-increase
+
+## 1) no photographs (fuck libpng)
+## 2) show me my trustdb calculation for the key
+## 3) show expired/revoked uids (i might still want to use expired ones)
+## 4) show expired/revoked subkeys
+## 5-6) show all notations, include IETF standard ones, and user defined ones
+## 7-8) show certification policy info and preferred keyserver urls
+## 9) show signature expiration dates, if any
+## 10) if used with --list-colons, show all signature subpackets
+list-options no-show-photos show-uid-validity no-show-unusable-uids no-show-unusable-subkeys show-notations show-user-notations show-policy-urls show-keyserver-urls show-sig-expire show-sig-subpackets
+
+## don't export photograph UIDs, so that we don't pass along this crap to
+## others:
+export-options no-export-attributes
+
+# Because some mailers change lines starting with "From " to ">From "
+# it is good to handle such lines in a special way when creating
+# cleartext signatures; all other PGP versions do it this way too.
+#no-escape-from-lines
+
+## holy crap there's 17 of us at least...
+##          erinn      andrea     sebastian  karsten    runa      damian     kaner      jake       andrew     linus      arturo     roger      aaron      george     karen      nick
+group tpo = 0x63fee659 0x6bfef7ce 0xdf3dcee6 0xf7c11265 0x792fb13 0x9abbeec6 0x26ad1460 0x4193a197 0x6b4d6475 0x23291265 0x150fe210 0x19f78451 0xd876c9f6 0x15f271d9 0x14e9ce10 0x165733ea
+
+## ooni = aagbsn isis ioerror hellais
+group ooni = 0x2C4B239DD876C9F6 0xA3ADB67A2CDB8B35 0xCF9A6F914193A197 0xE3A21297150FE210
+
+##     KEYSERVERS
+##-----------------------
+## Regular URL syntax applies, and you can set an alternate port
+## through the usual method:
+##      hkp://keyserver.example.net:22742
+##
+## Most users just set the name and type of their preferred keyserver.  Note
+## that most servers (with the notable exception of ldap://keyserver.pgp.com)
+## synchronize changes with each other.  Note also that a single server name
+## may actually point to multiple servers via DNS round-robin.
+## hkp://keys.gnupg.net is an example of such a "server", which spreads the
+## load over a number of physical servers.  To see the IP address of the
+## server actually used, you may use the "--keyserver-options debug".
+##
+## The last line in this file which starts with "keyserver" will specify the
+## default keyserver to use.
+##
+## You need gnupg 1.4.10+ and gnupg-curl to use the SSL version of a keyserver.
+##
+## If you use an HKPS server, you'll need to tell gnupg/gnupg-curl where the
+## CAcert is.  Under debian, you just have to add:
+##    keyserver-options ca-cert-file=/etc/ssl/certs/ca-certificate.crt
+##
+## If you're running another (UNIX) OS, download the cacert certificate205
+## (Class 1 PKI, PEM format should work), and add the line:
+##    keyserver-options ca-cert-file=/path/where/you/downloaded/cacert/cert.pem
+##
+##-----------------------------------------------------------------------------
+
+## Normal keyservers:
+##--------------------
+keyserver hkp://keys.gnupg.net
+keyserver hkp://subkeys.pgp.net
+keyserver mailto:pgp-public-keys@keys.pgp.net
+#keysever ldap://keyserver.pgp.com
+keyserver pgp.mit.edu
+
+## Indymedia Keyservers:
+##----------------------
+keyserver hkps://2eghzlv2wwcq7u7y.onion
+keyserver hkp://2eghzlv2wwcq7u7y.onion
+keyserver hkps://keys.indymedia.org
+keyserver hkp://keys.indymedia.org
+keyserver https://keys.indymedia.org
+keyserver http://keys.indymedia.org
+keyserver https://qtt2yl5jocgrk7nu.onion
+keyserver http://qtt2yl5jocgrk7nu.onion
+keyserver-options ca-cert-file=~/scripts/certs/keys.indymedia.org
+
+keyserver hkps://keys.mayfirst.org
+keyserver hkp://keys.mayfirst.org
+
+## Common options for keyserver functions:
+##----------------------------------------
+## include-disabled : when searching, include keys marked as "disabled" on the
+##                    keyserver (not all keyservers support this).
+## no-include-revoked : when searching, do not include keys marked as "revoked"
+##                      on the keyserver.
+## verbose : show more information as the keys are fetched.  Can be used more
+##           than once to increase the amount of information shown.
+## use-temp-files : use temporary files instead of a pipe to talk to the
+##                  keyserver.  Some platforms (Win32 for one) always have this
+##                  on.
+## keep-temp-files : do not delete temporary files after using them (really
+##                   only useful for debugging)
+## http-proxy="proxy" : set the proxy to use for HTTP and HKP keyservers.  This
+##                      overrides the "http_proxy" environment variable, if
+##                      any.
+## auto-key-retrieve : automatically fetch keys as needed from the keyserver
+##                     when verifying signatures or when importing keys that
+##                     have been revoked by a revocation key that is not
+##                     present on the keyring.
+## no-include-attributes : do not include attribute IDs (aka "photo IDs") when
+##                         sending keys to the keyserver.
+
+keyserver-options verbose verbose verbose no-include-revoked no-include-disabled no-auto-key-retrieve no-honor-keyserver-url no-honor-pka-record include-subkeys no-include-attributes
+
+## for use with parcimonie:
+#keyserver-options http-proxy=socks://127.0.0.1:59050
+
+# Use this program to display photo user IDs
+#
+# %i is expanded to a temporary file that contains the photo.
+# %I is the same as %i, but the file isn't deleted afterwards by GnuPG.
+# %k is expanded to the key ID of the key.
+# %K is expanded to the long OpenPGP key ID of the key.
+# %t is expanded to the extension of the image (e.g. "jpg").
+# %T is expanded to the MIME type of the image (e.g. "image/jpeg").
+# %f is expanded to the fingerprint of the key.
+# %% is %, of course.
+#
+# If %i or %I are not present, then the photo is supplied to the
+# viewer on standard input.  If your platform supports it, standard
+# input is the best way to do this as it avoids the time and effort in
+# generating and then cleaning up a secure temp file.
+#
+# If no photo-viewer is provided, GnuPG will look for xloadimage, eog,
+# or display (ImageMagick).  On Mac OS X and Windows, the default is
+# to use your regular JPEG image viewer.
+#
+# Some other viewers:
+# photo-viewer "qiv %i"
+# photo-viewer "ee %i"
+#
+# This one saves a copy of the photo ID in your home directory:
+# photo-viewer "cat > ~/photoid-for-key-%k.%t"
+#
+# Use your MIME handler to view photos:
+# photo-viewer "metamail -q -d -b -c %T -s 'KeyID 0x%k' -f GnuPG"
+
+photo-viewer "cat > ~/photoid-for-key-%f.%t"
+
+# Passphrase agent
+#
+# We support the old experimental passphrase agent protocol as well as
+# the new Assuan based one (currently available in the "newpg" package
+# at ftp.gnupg.org/gcrypt/alpha/aegypten/).  To make use of the agent,
+# you have to run an agent as daemon and use the option
+#
+# For Ubuntu we now use-agent by default to support more automatic
+# use of GPG and S/MIME encryption by GUI programs.  Depending on the
+# program, users may still have to manually decide to install gnupg-agent.
+
+use-agent
+
+# which tries to use the agent but will fallback to the regular mode
+# if there is a problem connecting to the agent.  The normal way to
+# locate the agent is by looking at the environment variable
+# GPG_AGENT_INFO which should have been set during gpg-agent startup.
+# In certain situations the use of this variable is not possible, thus
+# the option
+#
+# --gpg-agent-info=<path>:<pid>:1
+#
+# may be used to override it.
+
+# Automatic key location
+#
+# GnuPG can automatically locate and retrieve keys as needed using the
+# auto-key-locate option.  This happens when encrypting to an email
+# address (in the "user@example.com" form), and there are no
+# user@example.com keys on the local keyring.  This option takes the
+# following arguments, in the order they are to be tried:
+#
+# cert = locate a key using DNS CERT, as specified in RFC-4398.
+#        GnuPG can handle both the PGP (key) and IPGP (URL + fingerprint)
+#        CERT methods.
+#
+# pka = locate a key using DNS PKA.
+#
+# ldap = locate a key using the PGP Universal method of checking
+#        "ldap://keys.(thedomain)".  For example, encrypting to
+#        user@example.com will check ldap://keys.example.com.
+#
+# keyserver = locate a key using whatever keyserver is defined using
+#             the keyserver option.
+#
+# You may also list arbitrary keyservers here by URL.
+#
+# Try CERT, then PKA, then LDAP, then hkp://subkeys.net:
+#auto-key-locate keyserver cert pka hkp://subkeys.pgp.net
+
+## we know what we're doing, thanks.
+expert
+
+## let us have uids less than 5 characters
+allow-freeform-uid
+
+## Digest preferences
+##---------------------
+
+## for creating certification signatures on others' keys
+cert-digest-algo SHA512
+digest-algo SHA512
+
+## Certifications sigs I make on other people's keys should expire after two
+## years:
+default-cert-expire 2y
+ask-cert-expire
+ask-cert-level
+
+## Signatures I make on data files are good for one year:
+default-sig-expire 1y
+no-ask-sig-expire
+
+## gpg>=2.1.0 doesn't like BZIP2
+##
+#default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 CAMELLIA256 TWOFISH CAMELLIA192 BZIP2 ZLIB ZIP Uncompressed
+#personal-compress-preferences BZIP2 ZLIB ZIP
+#bzip2-compress-level 9
+
+default-preference-list SHA512 SHA384 SHA256 SHA224 CAMELLIA256 AES256 TWOFISH CAMELLIA192 AES192 ZLIB ZIP Uncompressed
+personal-cipher-preferences CAMELLIA256 AES256 TWOFISH CAMELLIA192 AES192
+personal-digest-preferences SHA512 SHA384 SHA256 SHA224
+personal-compress-preferences ZLIB ZIP
+compress-level 9
+
+## Passphrase storing
+##-----------------------
+
+## algorithm to protect the key in memory:
+s2k-cipher-algo AES256
+
+## use this one to mangle the passphrases:
+s2k-digest-algo SHA512
+
+## passphrase mangling mode:
+## 0=plaintest
+## 1=salt
+## 3=salt+iteration
+s2k-mode 3
+
+## how mangly should we mangle it? 1024 < mangle < 65011712
+##
+## try "python -c'import random;a=random.randint(32505856, 65011712);print a'
+s2k-count xxxxxx
+
+## Don't run if we can't secure mempages
+require-secmem
+
+## Check the back sig on subkey which has made a signature
+require-cross-certification
+
+## The notation on certifications we make:
+## see http://thread.gmane.org/gmane.mail.notmuch.general/3721/focus=7234
+sig-notation isis@patternsinthevoid.net=%g
+cert-notation isis@patternsinthevoid.net=%g
+cert-notation verified@patternsinthevoid.net=%f
+
+set-policy-url https://blog.patternsinthevoid.net/policy.txt
+
+## If 'gpg --sign [...]' is called with:
+##
+## ∃!isisⒶwintermute:(master *$)~ ∴ gpg -a --clearsign \
+##   -N "sig.count@patternsinthevoid.net=$(( `cat ~/.gnupg/sigs-0xA3ADB67A2CDB8B35/sig-count` + 1 ))" \
+##   email.txt && \
+##   { 
+##     ns=$(( `cat ~/.gnupg/sigs-0xA3ADB67A2CDB8B35/sig-count` + 1 )) ;
+##     echo -n "$ns" |& tee > ~/.gnupg/sigs-0xA3ADB67A2CDB8B35/sig-count ;
+##   } && \
+##   { 
+##     d=`date +"%s"`;
+##     cd ~/.gnupg/sigs-0xA3ADB67A2CDB8B35 && \
+##         {
+##           git add ~/.gnupg/sigs-0xA3ADB67A2CDB8B35/sig-count && \
+##           git commit -q -S -m "$d $ns" </dev/null ;
+##         } && \
+##         git push origin master ;
+##   };
+##
+## then the '-N' will set a new signature notation for the signature being
+## created on the 'email.txt' file. This added signature notation which will
+## include the signature counter stored in the file '~/.gnupg/sig-count',
+## incremented by one. If the creation of this signature is successful, the
+## increased counter is then written to '~/.gnupg/sig-count'. Then, the
+## sig-count file is add to a commit which has an UE timestamp and the current
+## signature count in the commit message, and this commit is signed with
+## another gpg signature, and pushed to a remote server.
+##
+## Then, we can set the signature keyserver:
+sig-keyserver-url https://code.patternsinthevoid.net/?p=sigs-0xA3ADB67A2CDB8B35.git;a=blob_plain;f=sigs;hb=HEAD
+
+default-keyserver-url https://blog.patternsinthevoid.net/0xA3ADB67A2CDB8B35.asc
