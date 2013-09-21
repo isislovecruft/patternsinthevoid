@@ -113,5 +113,5 @@ LINKS =  (
 SOCIAL = (
     ('twitter', 'https://twitter.com/#!/isislovecruft'),
     ('github', 'https://github.com/isislovecruft'),
-    ('#tor-status', 'https://gs.torproject.org/user/isis')
+    ('#tor-status', 'https://gs.torproject.org/person/isis')
     )
