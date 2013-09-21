@@ -75,9 +75,9 @@ Onwards. I removed the ethernet cable and rebooted TAILS, (zomg
 [make sure you never boot a Thinkpad with an ethernet cable attached to it]()),
 thus the machine *should*, provided the hardware modification work, not be
 able to communicate with any other devices. Then with
-[this gpg.conf](|filename|/gpg.conf.txt) (commenting out and replacing things
-that had to do with my normal key) I generated the certification only key,
-choosing <pre>RSA-only (set your own capabilities)</pre>. Then
+[this gpg.conf](https://blog.patternsinthevoid.net/gpg.conf.txt) (commenting
+out and replacing things which have to do with my normal key) I generated the
+certification only key, choosing `RSA-only (set your own capabilities)`. Then
 
 <pre class="prettyprint lang-bash">
 $ gpg --edit-key […]
@@ -100,8 +100,8 @@ So let's say A now has access to a git repository on B.
 The Poor Man's signature count, without a smartcard (which in my case doesn't
 actually do me much good, but it could be useful for normal people signing
 emails and things, or developers who sign all their git commits), goes like
-this: instead of signing things with <pre>"$ gpg -s --clearsign
-email.txt"</pre>, you do this mess:
+this: instead of signing things with `"$ gpg -s --clearsign email.txt"`, you
+do this mess:
 
 <pre class="prettyprint lang-bash">
 ∃!isisⒶwintermute:(master *$)~ ∴ gpg -a --clearsign \
@@ -115,16 +115,18 @@ email.txt"</pre>, you do this mess:
          git push origin master ;};
 </pre>
 
-The '-N' will set a new signature notation for the signature being
-created on the 'email.txt' file. This added signature notation which will
-include the signature counter stored in the file '~/.gnupg/sig-count',
-incremented by one. If the creation of this signature is successful, the
-increased counter is then written to '~/.gnupg/sig-count'. Then, the sig-count
-file is add to a commit which has an UE timestamp and the current signature
-count in the commit message, and this commit is signed with another gpg
-signature, and pushed to a remote server.
+The '-N' will set a new signature notation for the signature being created on
+the 'email.txt' file. This added signature notation which will include the
+signature counter stored in the file
+'~/.gnupg/sigs-0xA3ADB67A2CDB8B35/sig-count', incremented by one. If the
+creation of this signature is successful, the increased counter is then
+written to that same file. Then, the sig-count file is add to a commit which
+has an UE timestamp and the current signature count in the commit message, and
+this commit is signed with another gpg signature, and pushed to a remote git
+server.
 
 You can also set the keyserver URL as a data packet in the GPG key, if you put
+something like
 
     sig-keyserver-url https://code.patternsinthevoid.net/?p=sigs-0xA3ADB67A2CDB8B35.git;a=blob_plain;f=sigs;hb=HEAD
 
@@ -133,3 +135,154 @@ it.
 
 Also, so that you don't have to type that above crazy bash nonsense, there is
 [a script which will do all of this for you](https://code.patternsinthevoid.net/?p=scripts.git;a=blob;f=gpg-sig-counter).
+
+</pre class="prettyprint lang-bash">
+#!/bin/bash
+#-----------------------------------------------------------------------------
+# gpg-sig-counter
+# ----------------
+
+# This is a script which can be used to keep track of the number of signatures
+# for a GPG signing key. It is not meant for certifications
+# (a.k.a. signatures) on others' keys. To use it, put it somewhere on your
+# $PATH and create a repo somewhere for keeping a record of signatures. At the
+# top of this script, fill out the variables $SIG_REPO, $REMOTE, $BRANCH for
+# the local directory containing the repo for storing signature data, the name
+# of the remote to push to, and the name of the branch, respectively.
+#
+# This script can be called like this, assuming you want to sign the file
+# 'email.txt':
+#
+# ∃!isisⒶwintermute:(master *$)~ ∴ gpg-sig-counter -f email.txt \
+# …    -h patternsinthevoid.net
+#
+# Where the domain after the '-d' flag should be the domain name of your
+# default GPG key which you are signing with. If you want you can put the
+# locations of your signature repo in your signatures too, to do this put:
+#
+#    sig-keyserver-url https://where.your.repo.is/
+#
+# into your gpg.conf. This script embeds the filename which you are signing,
+# as well as the current count of signatures made by your key as notation data
+# in each signature you make using this script. For example, looking at the
+# following packet dump of the signature for 'email.txt', these would be the
+# first two subpackets which start with 'Hashed Sub: notation data':
+#
+# ∃!isisⒶwintermute:(master *$)~ ∴ pgpdump -p email.txt.asc
+# Old: Signature Packet(tag 2)(870 bytes)
+#         Ver 4 - new
+#         Sig type - Signature of a canonical text document(0x01).
+#         Pub alg - RSA Encrypt or Sign(pub 1)
+#         Hash alg - SHA512(hash 10)
+#         Hashed Sub: signature creation time(sub 2)(4 bytes)
+#                 Time - Sat Sep  7 18:04:11 UTC 2013
+#         Hashed Sub: signature expiration time(sub 3)(critical)(4 bytes)
+#                 Time - Sun Sep  7 18:04:11 UTC 2014
+#         Hashed Sub: notation data(sub 20)(41 bytes)
+#                 Flag - Human-readable
+#                 Name - sig.count@patternsinthevoid.net
+#                 Value - 19
+#         Hashed Sub: notation data(sub 20)(61 bytes)
+#                 Flag - Human-readable
+#                 Name - signed.data@patternsinthevoid.net
+#                 Value - /home/isis/email.txt
+#         Hashed Sub: notation data(sub 20)(74 bytes)
+#                 Flag - Human-readable
+#                 Name - isis@patternsinthevoid.net
+#                 Value - 0A6A58A14B5946ABDE18E207A3ADB67A2CDB8B35
+#         Hashed Sub: policy URL(sub 26)(45 bytes)
+#                 URL - https://blog.patternsinthevoid.net/policy.txt
+#         Hashed Sub: preferred key server(sub 24)(93 bytes)
+#                 URL - https://code.patternsinthevoid.net/?p=sigs-0xA3ADB67A2CDB8B35.git;a=blob_plain;f=sigs;hb=HEAD
+#         Sub: issuer key ID(sub 16)(8 bytes)
+#                 Key ID - 0xA3ADB67A2CDB8B35
+#         Hash left 2 bytes - d2 27
+#         RSA m^d mod n(4094 bits) - ...
+#                 -> PKCS-1
+#
+# which show that this signature was the 19th one I made with this script, and
+# the file I signed was 'email.txt'.
+#
+# So, what this script does:
+# --------------------------
+#   1. It embeds the above extra notation data into the signature packets.
+#
+#   2. Then it commits the file containing the signature count, with a commit
+#      message containing a timestamp and the signature count.
+#
+#   3. Next, *it signs the commit*, meaning that for every signature count
+#      *two* signatures are actually being made, but I only cared to keep
+#      trach of the first ones, so deal with it.
+#
+#   4. Then it tries to push to whatever remote you've configured.
+#
+# :authors: Isis Agora Lovecruft, 0xa3adb67a2cdb8b35
+# :license: AGPLv3, see https://www.gnu.org/licenses/agpl-3.0.txt for text
+# :version: 0.0.1
+#-----------------------------------------------------------------------------
+
+## SIG_REPO should be set to the local directory your signature count repo is
+## located at:
+SIG_REPO=~/.gnupg/sigs-0xA3ADB67A2CDB8B35
+
+## REMOTE should be set to the name of the remote you wish to push to, if any:
+REMOTE=origin
+
+## BRANCH should be set the the name of the branch to push, if any:
+BRANCH=master
+
+## Don't touch anything else, unless you've found a bug and are patching it.
+## ----------------------------------------------------------------------------
+
+NAME=${0%%/}
+
+function usage () {
+    printf "Usage: %s -f FILE -d DOMAIN [other gpg options]\n\n" $NAME
+    printf "Options:\n"
+    printf " -f FILE\tThe file to create a signature for\n"
+    printf " -d DOMAIN\tThe domain of the email address on your GPG key\n"
+    printf " -h\t\tThis cruft\n"
+    exit 1
+}
+
+## check that we have at least some arguments
+if test "$#" -lt 1 ; then usage ; fi
+
+while getopts f:d:h x; do
+    case $x in
+        f)
+            file=$OPTARG;
+            if test -n "${file}" -a -n "${domain}" ; then
+                break
+            fi ;;
+        d)
+            domain=$OPTARG;
+            if test -n "${file}" -a -n "${domain}" ; then
+                break
+            fi ;;
+        h) usage;;
+        *) break;;
+    esac
+done
+shift $((OPTIND - 1))
+gpgopts=$*
+
+if test -z "$gpgopts" ; then
+    gpgopts='-a --clearsign'
+fi
+
+scf="${SIG_REPO}"/sig-count
+printf "Using signature count file %s" $scf
+
+gpg -s $gpgopts \
+    --sig-notation signed.data@"$domain"="$file" \
+    --sig-notation sig.count@"$domain"=$(( `cat $scf` + 1 )) $file && \
+    { ns=$(( `cat $scf` + 1 )) ;
+      echo -n "$ns" |& tee > "$scf" ; } && \
+          { d=`date +"%s"`;
+            cd $SIG_REPO && \
+                { git add $scf && \
+                  git commit -q -S -m "$d $ns" </dev/null ;} && \
+                { git push $REMOTE $BRANCH && \
+                  git log --format=format:"%CredCommit hash:%Cgreen %>(2)%H %n%CredCommit message:%Cgreen %>(2)%s %n%CredSigned commit verification:%n%C(auto)%GG%n" HEAD^.. ;}; }
+</pre>
