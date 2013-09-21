@@ -11,10 +11,11 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=greyarea.patternsinthevoid.net
+SSH_HOST=106.187.37.158
 SSH_PORT=22
 SSH_USER=isis
 SSH_TARGET_DIR=~/published
+EXTRAS_DIR=$(BASEDIR)/content/extra/
 
 DROPBOX_DIR=~/Dropbox/Public/
 
@@ -63,7 +64,9 @@ ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	ssh $(SSH_USER)@$(SSH_HOST) mkdir -p ~/published
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --exclude '*~' --delete $(OUTPUTDIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --exclude '*~' $(EXTRAS_DIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
