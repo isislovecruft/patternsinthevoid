@@ -1,0 +1,13 @@
+How to verify this file and the server it lives on:
+---------------------------------------------------
+# Download the certificate for this server:
+HOST=blog.patternsinthevoid.net && PORT=443
+openssl s_client -connect "${HOST}":"${PORT}" </dev/null 2>/dev/null | \
+    sed -nr '/(-){5}(BEGIN CERTIFICATE){1}(-){5}/,/(-){5}(END CERTIFICATE){1}(-){5}/p' | \
+    cat > ${HOME}/${HOST}.pem
+# Check the SSL certificate fingerprint (it should match the ones given in this file):
+cat ${HOME}/${HOST}.pem | openssl x509 -fingerprint -noout -in /dev/stdin
+# Download this file (https://blog.patternsinthevoid.net/isis.txt):
+wget -q --ca-certificate=${HOST}.pem https://${HOST}/isis.txt
+# Check signature and import key:
+gpg -o isis -v isis.txt && gpg --import isis
