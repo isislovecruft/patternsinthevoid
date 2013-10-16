@@ -21,9 +21,9 @@ sub   4096R/5C17776E27F7E84D 2013-09-24 [expires: 2014-09-07]
 
 ∃!isisⒶwintermute:~ ∴ cat otr-fingerprints
 Server                 Account                     Fingerprint
-irc.oftc.net           isis@irc.oftc.net           9266D529 1140CB82 B3BE858C B26AB213 7390E269
-irc.oftc.onion         isis@37lnq2veifl4kar7.onion 993602EF 1C90AC48 07E00A75 7A8EA596 D567D609
-irc.indymedia.org      isis@h7gf2ha3hefoj5ls.onion 892A996F 6E916E85 083F88FC 1CF7F77D FB769E3C
+irc.oftc.net           isis@irc.oftc.net           7267FDAF B23C8D86 C311AACC 7F16575A F57A7D3F
+irc.oftc.onion         isis@37lnq2veifl4kar7.onion 7267FDAF B23C8D86 C311AACC 7F16575A F57A7D3F
+irc.indymedia.org      isis@h7gf2ha3hefoj5ls.onion 7267FDAF B23C8D86 C311AACC 7F16575A F57A7D3F
 jabber.ccc.de          isislovecruft@jabber.ccc.de F9B81DF4 BA310806 B1513680 246598A0 6FC08CDB
 okj7xc6j2szr2y75.onion isislovecruft@jabber.ccc.de F9B81DF4 BA310806 B1513680 246598A0 6FC08CDB
 chat.riseup.net        isis@riseup.net             F9B81DF4 BA310806 B1513680 246598A0 6FC08CDB
@@ -51,7 +51,7 @@ https://blog.patternsinthevoid.net/isis
 and it should be clearsigned at or around:
 
 ∃!isisⒶwintermute:~ ∴ date
-Sun 29 Sep 21:04:12 UTC 2013
+Wed 16 Oct 21:41:07 UTC 2013
 
 ∃!isisⒶwintermute:~ ∴ gpg -a --export a3adb67a2cdb8b35
 - -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -2787,20 +2787,22 @@ wget -q --ca-certificate=${HOST}.pem https://${HOST}/isis.txt
 gpg -o isis -v isis.txt && gpg --import isis
 -----BEGIN PGP SIGNATURE-----
 
-iQLGBAEBCgCwBQJSSJZEBYMB4TOASxSAAAAAABoAKGlzaXNAcGF0dGVybnNpbnRo
-ZXZvaWQubmV0RkM2M0FBNUNEMTkzODY5QzMyMzcxNDVBNUMxNzc3NkUyN0Y3RTg0
-RC4aaHR0cHM6Ly9ibG9nLnBhdHRlcm5zaW50aGV2b2lkLm5ldC9wb2xpY3kudHh0
-KBhodHRwczovL2NvZGUucGF0dGVybnNpbnRoZXZvaWQubmV0L3NpZ3MACgkQXBd3
-bif36E2hWg/9G3dNzRPQu1h+C4pUXwFBYVR7welZqcGXpQOPZ1ImwRuRyh/FZxNK
-0xWykVoe2YE6ymjK3NaT3tMHiH5RbEehYN8crvMC3MA0klc3r346KG5O+H8mpWW2
-RnOtna0tDCWObMR3v6YDLYUU7DffeFaWCo4cDxLc1sAJx1waIMNofZxNADsLR+9B
-HUpkVZpDN4u6HahvuAamah13+bicn+/kcv+RhZ4JV9HcMyAg/Q7RkeGEcDL/K3Zo
-593F/mPykAlldsL5nAfc+xGqqM6NbdQqPOPelo59aDmKcgjZP30sZ6tQ7vPDwMaH
-/nfxn2lDs+hsPxVUB28RvAfpwEyAiIJDCJo9xBtKvQ1Xce1Zm1rmgmpZXvawyeLY
-Z/c9pfoniNBLAfhNzQKTqCeJMklYO5LVVxdxZWCsuWciO32v3Ku6BlBgZ/mecZf1
-SUDx6200XIYe+TEEyz05HoLUlhpAt+hCtXEbSHzNdmIBW3PAQpnFNl4kYheS3/Lu
-aCao78YAR39iLoVG4NjSaDzcf5qg8x91+O1W4x1+G4DodcksSFeekEBeZlvD8GwJ
-s6KAN5h4KLl4ylUlZZpvN2FzgoncT3rE5hoHmUdAMIburQ4V37ikjCPl8V2KVnrC
-joerQuJMItvULLy3hOLBR6iJDpJgMBHyXKOXK4Pvit/sEiW+E6IkMSE=
-=DSnG
+iQMhBAEBCgELBQJSXwgDBYMB4TOAVhSAAAAAACUAKGlzaXMrc2lnbnN1YmtleUBw
+YXR0ZXJuc2ludGhldm9pZC5uZXRGQzYzQUE1Q0QxOTM4NjlDMzIzNzE0NUE1QzE3
+Nzc2RTI3RjdFODRESxSAAAAAABoAKGlzaXNAcGF0dGVybnNpbnRoZXZvaWQubmV0
+MEE2QTU4QTE0QjU5NDZBQkRFMThFMjA3QTNBREI2N0EyQ0RCOEIzNS4aaHR0cHM6
+Ly9ibG9nLnBhdHRlcm5zaW50aGV2b2lkLm5ldC9wb2xpY3kudHh0LJhodHRwczov
+L2Jsb2cucGF0dGVybnNpbnRoZXZvaWQubmV0L2lzaXMudHh0AAoJEFwXd24n9+hN
+PYAP/jdcuDksItnW0zpc4dgGGhcUr1/HHcdaw6C2VlDiTyBXzBTNYQYflOCw7qlA
+PF+gZe0ir/Cv592+sGdU3PHYqqRSOdyLif6WxAT7B9bk8yd+ZKQ8OgbjumOsiZPk
+Q8WPN6Da8aScEixO6SDWp8w6n6gzzzATBdCTlI/jY8CzP1vXf0I0b8pKHsCvzRX/
+Ee6HpDIjRf6j2VOB/tiY0vTU2GHPWFJaYveGc6SOoIkvyWvtAuQ/oxl6s8qE+2ys
+jFz500UjPRGdiYBxjQDRCORrOTuerXkg7Zb/ieipnO2qeqgKPbtxAyG4U88gToh9
+Lq/AzojqMgZEL9E7xZ2hVoxqeng3R9jXzYysDds8tlBpnKb6OHJbqpfmtLR2rcMO
++wazRinyrTWWmIUS6dLxlJfbyUTcMPcfL4iFvcOw6dQVIjOyWQZ2Sp2BK7vAU03z
+iYVkgWGMTvRimXqdfwP1Lbl8zziNLsTIvzV7/bIyf+w5NwPAgcUT8trSWVO1Rnl7
+lvH2UuLBojWy3VOKHrUg1hVLubEmRl6QcThTu63jMpK+IXYCrcVZspIffF8Zu5LG
+E2oZvzNxKifyZfaQ7a8yg6ZBpxFgH0AvQGPF7kz6oNPvjOyLHYMspPLeWqoquTPr
+X93h3IV8YTJaJZDMlO2fATMhZ2cRQ5qUGGAskBux8BATnJH4
+=npI0
 -----END PGP SIGNATURE-----
