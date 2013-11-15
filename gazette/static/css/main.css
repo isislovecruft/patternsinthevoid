@@ -17,6 +17,7 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: normal;
+  font-size: 90%;
   src: local('Droid Sans Mono'), local('DroidSansMono'), url('fonts/DroidSansMono.ttf') format('truetype');
     }
 
@@ -24,6 +25,7 @@
   font-family: 'Garamond';
   font-style: normal;
   font-weight: normal;
+  font-size: 110%;
   src: local('Garamond'), local('Garamond'), url('fonts/EBGaramond-Regular.ttf') format('truetype');
     }
 
@@ -31,8 +33,8 @@
 /* Body */
 body {
     background: #FFF;
-    color: #000305;
-    font-size: 110%;
+    color: rgb(5, 10, 5);
+    font-size: 105%;
     font-family: 'Garamond', 'Lucida Unicode', serif;
     line-height: 1.329;
     margin: auto;
@@ -65,12 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 	margin-bottom: .8em;
     font-family: 'Garamond';
-    text-shadow: 1px 1px 1px #444;
+	text-shadow: 1px 0px 0.5px rgb(50, 50, 50);
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
 	
-hr { border: 1px solid #1a1a1a; }
+hr { border: 1px solid rgb(120, 120, 120); }
 
 /* Anchors */
 a {
@@ -80,23 +82,23 @@ a {
 
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #222;
-	padding: 0 2px;
+	color: rgb(0, 3, 5);
+	padding: 0 1px;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px #222;
+	text-shadow: 0px 0px 1px rgb(40, 40, 40);
 }
 a:hover, a:active {
-	background-color: #888;
+	background-color: rgb(140, 140, 140);
 	color: #fff;
 	text-decoration: none;
-	text-shadow: 1px 1px 1px #222;
+	text-shadow: 1px 0px 0.5px rgb(15, 15, 15);
 }
 
 h1 a:hover {
     background-color: transparent;
-    color: #000305;
-    text-shadow: 1px 1px 1px #444;
+    color: rgb(0, 3, 5);
     text-decoration: none;
+	text-shadow: 1px 0px 0.5px rgb(40, 40, 40);
 } 
 	
 /* Paragraphs */
@@ -153,7 +155,7 @@ div.note {
 #over {
     position: relative;
     display: block;
-    bottom: 25px;
+    bottom: 20px;
     left: -20px;
     z-index: 5000;
     background: #FFF;
@@ -406,7 +408,7 @@ img.left, figure.left {float: left; clear: left; margin: 0 2em 2em 0;}
 li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #content > .hentry {padding: 1em 0;}
 .hentry img{display : none ;}
-.entry-title {font-size: 3em; margin-bottom: 10px; margin-top: 0;}
+.entry-title {font-size: 2.5em; margin-bottom: 10px; margin-top: 0;}
 .entry-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
 .entry-title a:visited {background-color: #fff;}
 
