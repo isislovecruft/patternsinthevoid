@@ -121,17 +121,27 @@
     <div class="social">
         <h2>social</h2>
         <ul>
+            {% if FLATTR %}
+            <!-- <li>{% include 'flattr.html' %}</li> -->
+            <li><a href="https://flattr.com/submit/auto?user_id=isislovecruft&url=https%3A%2F%2Fblog.patternsinthevoid.net%2Findex.html"
+                   target="_blank"><img src="theme/images/icons/flattr-badge-large.png"
+                                        alt="Flattr this"
+                                        title="Flattr this"
+                                        border="0"></a></li>
+            {% endif %}
+
             <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" 
                    type="application/atom+xml" 
                    rel="alternate">atom feed</a>
             </li>
+
             {% if FEED_ALL_RSS %}
             <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" 
                    type="application/rss+xml" 
                    rel="alternate">rss feed</a>
             </li>
             {% endif %}
-            
+
             {% for name, link in SOCIAL %}
             <li><a href="{{ link }}">{{ name }}</a></li>
             {% endfor %}
