@@ -98,7 +98,7 @@ TAG_CLOUD_MAX_ITEMS = 10
 DEFAULT_ORPHANS = 2
 # max per page (not including orphans):
 DEFAULT_PAGINATION = 3
-SUMMARY_MAX_LENGTH = 250
+SUMMARY_MAX_LENGTH = 300
 
 # Blogroll
 LINKS =  (
@@ -114,5 +114,6 @@ LINKS =  (
 SOCIAL = (
     ('twitter', 'https://twitter.com/#!/isislovecruft'),
     ('github', 'https://github.com/isislovecruft'),
-    ('#tor-status', 'https://gs.torproject.org/person/isis')
-    )
+    ('flattr this!', 'https://flattr.com/submit/auto?user_id=isislovecruft&url=https://blog.patternsinthevoid.net/index.html'),
+    ('#tor-status', 'https://gs.torproject.org/person/isis'),
+)
