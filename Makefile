@@ -60,19 +60,19 @@ devserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+#ssh_upload: publish
+#	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 rsync_upload: publish
 	ssh $(SSH_USER)@$(SSH_HOST) mkdir -p ~/published
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --exclude '*~' --delete $(OUTPUTDIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --exclude '*~' $(EXTRAS_DIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
-dropbox_upload: publish
-	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
-
-ftp_upload: publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+#dropbox_upload: publish
+#	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
+#
+#ftp_upload: publish
+#	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
 github: publish
 	ghp-import $(OUTPUTDIR)
