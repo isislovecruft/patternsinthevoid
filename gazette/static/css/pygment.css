@@ -1,33 +1,34 @@
 /* Pretty printing styles. Used with prettify.js. */
-/* Vim sunburst theme by David Leibovic */
 
-pre .str, code .str { color: #65B042; } /* string  - green */
-pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
-pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
-pre .typ, code .typ { color: #89bdff; } /* type - light blue */
-pre .lit, code .lit { color: #3387CC; } /* literal - blue */
-pre .pun, code .pun { color: #fff; } /* punctuation - white */
-pre .pln, code .pln { color: #fff; } /* plaintext - white */
-pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
-pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
-pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
-pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+pre .str, code .str { color: #aad498; } /* string  - green */
+pre .kwd, code .kwd { color: #71bebe; } /* keyword - light cyan */
+pre .com, code .com { color: #c42003; } /* comment - dark red */
+pre .typ, code .typ { color: #418179; } /* type - dark cyan */
+pre .lit, code .lit { color: #963c59; } /* literal - dark pink */
+pre .pun, code .pun { color: #fefefe; } /* punctuation - white */
+pre .pln, code .pln { color: #fcfcee; } /* plaintext - white */
+pre .tag, code .tag { color: #968a38; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #E28964; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #c5f779; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #963c59; } /* decimal - blue */
 
 pre.prettyprint, code.prettyprint {
-        background-color: #000;
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        -o-border-radius: 8px;
-        -ms-border-radius: 8px;
-        -khtml-border-radius: 8px;
-        border-radius: 8px;
+        background-color: rgb(5, 5, 5);
+        font-size: 85%;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -o-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        border-radius: 15px;
 }
 
 pre.prettyprint {
-        width: 95%;
+        width: relative;
         margin: 1em auto;
-        padding: 1em;
+        padding: 5px 10px 5px;
         white-space: pre-wrap;
+        line-height: 1.25em;
 }
 
 
