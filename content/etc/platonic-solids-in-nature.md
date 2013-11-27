@@ -1,8 +1,8 @@
 Title: Platonic Solids in Nature
 Date: 2010-08-30 23:42
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: etc
-Tags: aristotle, empedocles, geometry, johannes kepler, plato, polyhedra, solids
+Tags: philosophy, geometry
 
 ![][]Platonic solids, or regular convex polyhedra, are named after the Greek
 philosopher Plato who theorized that the five classical elements (Empedocles'

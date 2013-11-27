@@ -1,15 +1,16 @@
 Title: Git Nowhere
 Date: 2012-04-04 20:19
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: hacking
-Tags: anonymity, bash, geodata, git
+Tags: anonymity, bash, git
 
-[Arturo][] and I were going through our commit logs for [ooni-probe][]
-this morning when he noted that git commits leak geodata through
-timezone settings. I figured git would have an easy way to set the
-timezone to GMT, but it turns out that it uses mktime() to get a struct
-representing the system clock time. [There's a few hacks already][] for
-dealing with this, namely setting GIT\_AUTHOR\_DATE with the --date
+[Arturo][https://twitter.com/#!/hellais] and I were going through our commit
+logs for [ooni-probe][https://gitweb.torproject.org/ooni-probe.git] this
+morning when he noted that git commits leak geodata through timezone
+settings. I figured git would have an easy way to set the timezone to GMT, but
+it turns out that it uses mktime() to get a struct representing the system
+clock time. [There's a few hacks already][http://www.alexpeattie.com/blog/working-with-dates-in-git/]
+for dealing with this, namely setting GIT\_AUTHOR\_DATE with the --date
 command:
 
 <pre class="prettyprint lang-bash">
@@ -21,7 +22,7 @@ so if you wrote the patch and also committed it to a repo, your timezone
 still leaks.
 
 I thought this was all incredibly annoying, and I don't want to change
-my system clock, so [I made a bash script][] to fix it:
+my system clock, so [I made a bash script][https://github.com/isislovecruft/configs/blob/master/scripts/gitdate.sh] to fix it:
 
 <pre class="prettyprint lang-bash">
 #!/bin/bash
@@ -160,8 +161,3 @@ unset FALSEDAWN
 unset NEXTDAY
 unset TIMEOFFSET
 </pre>
-
-  [Arturo]: https://twitter.com/#!/hellais
-  [ooni-probe]: https://gitweb.torproject.org/ooni-probe.git
-  [There's a few hacks already]: http://www.alexpeattie.com/blog/working-with-dates-in-git/
-  [I made a bash script]: https://github.com/isis agora lovecruftlovecruft/configs/blob/master/scripts/gitdate.sh

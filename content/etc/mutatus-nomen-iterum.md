@@ -1,14 +1,13 @@
 Title: Mutatus Nomen Iterum
 Date: 2011-10-08 03:35
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: etc
-Tags: Ada Lovelace, Agorism, class war, cyborg rights, dancing, gender identity, H.P. Lovecraft, isis agora lovecruft Agora Lovecruft, Janelle Monae, queer, race relations
+Tags: cyborg rights
 
 Since I believe in changing my name whenever I feel like it, I'm doing so
-again. From here until I decide to do so yet again, my name is isis agora lovecruft Agora
-Lovecruft in order to pay homage to H.P. Lovecraft, Ada Lovelace, Agorism, and
+again. From here until I decide to do so yet again, my name is isis agora lovecruft in order to pay homage to H.P. Lovecraft, Ada Lovelace, Agorism, and
 the really deep-down OCD-ish satisfaction that I get from syllable
-repetition. Oh, and ["cruft" is jargon][] for "extraneous bullshit".
+repetition. Oh, and "cruft" is [h4x0r jargon][http://www.catb.org/jargon/html/C/cruft.html] for "extraneous bullshit".
 
 Also, because I'm not really writing about anything that matters, and I
 haven't gotten a chance to say this yet: Janelle Monae is my hero. I don't
@@ -20,5 +19,3 @@ not to mention, hotter feet than Michael Jackson on speed. Oh, and, as if this
 video weren't awesome already, Janelle also included gender bending (check out
 that handsome tux), nods to classic science fiction, and the theme of
 android/cyborg rights. Fuck yeah!
-
-  ["cruft" is hacker-speak]: http://www.catb.org/jargon/html/C/cruft.html

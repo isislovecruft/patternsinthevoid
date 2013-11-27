@@ -1,8 +1,8 @@
 Title: Fascism and the Occult II: The Future of Eugenics
 Date: 2010-12-09 18:58
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: anarchism
-Tags: aeonics, Ancient Greek philosophy, environmentalism, eugenics, fascism, individualist anarchism, morality, Nietzsche, occult, Oswald Spengler, provolution, state-of-nature, Stephen Brown, transhumanism
+Tags: philosophy, environmentalism, eugenics, fascism, individualist anarchism, occult, transhumanism
 
 In my continuing research on fascism within the occult, I have come
 across a very well-written treatise advocating such views. The Order of

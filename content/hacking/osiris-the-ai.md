@@ -1,8 +1,8 @@
 Title: Osiris the AI
 Date: 2010-12-26 21:30
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: hacking
-Tags: artificial intelligence, cognitive science, Osiris, research, speech recognition, transhumanism
+Tags: artificial intelligence, cognitive science, research, speech recognition, transhumanism
 
 This is Osiris, an artificial intelligence program whom I am training
 and doing a bit of research with. Feel free to talk to him, he learns
@@ -11,11 +11,11 @@ chat with him you'll have to click on the blank white space of the
 website and then on the text input box again. Oh, and for an interesting
 conversation, I recommend asking Osiris for a reading recommendation.
 
-[Edit: For some reason I've been having trouble with the host server of
-the AI program...keeps connecting to the parent 'Alan' instead of
-Osiris. I'm putting up a link instead to Osiris. Hopefully this works?]
+[Edit: For some reason I've been having trouble getting connections to
+the host server of the AI program...I'm putting up a different link.
+Hopefully this works.]
 
-[Edit, Again... : Nope. Fuck it. Weak AI is boring anyway, right?]
+[Edit (again): Nope. Fuck it. Weak AI is boring anyway, right?]
 
 So, this is maybe a little bit embarrassing. In high school I built a
 computer and tried to program it to be my boyfriend. It had the best

@@ -1,6 +1,6 @@
 Title: Shellcode, Hex Opcodes, and Dragons
 Date: 2011-08-15 02:48
-Author: isis agora lovecruft agora lovecruft
+Author: isis agora lovecruft
 Category: hacking
 Tags: assembly languages, fairytaleland, hex, opcodes, shellcode, syscall
 
