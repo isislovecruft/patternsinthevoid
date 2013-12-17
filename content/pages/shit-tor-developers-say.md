@@ -56,3 +56,15 @@ Author: isis agora lovecruft
 ---
     <kaepora> Everyone knows I am a crypto god because I have Verisign Extended EV
         -- 2013-05-21 private query, irc.oftc.net
+
+---
+    <hellais> i circuit bent my furby as a kid.
+    <isis> so basically, you did neurosurgery on your furby.
+    <hellais> ah, no, it was more like 'ass surgery'...all the chips are in
+              the ass.
+---
+
+    <infinity0> it's just 3 proxies  man
+    <infinity0> even more simple than 4chan
+        -- 2013-12-16 #tor-dev
+---
