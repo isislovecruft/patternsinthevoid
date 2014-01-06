@@ -27,14 +27,16 @@ soon as possible, if that server and its signing key have been compromised.
 
 So, you create an offline, certification-only keypair. To do this, I booted
 into [TAILS](https://tails.boum.org) on a modified Thinkpad running
-[Coreboot](http://www.coreboot.org/Welcome_to_coreboot). (The modifications
+[Coreboot](http://www.coreboot.org/Welcome_to_coreboot). The modifications
 removed the microphone and wifi card, and removed/replaced hardware pertaining
 to VGA, PCI, Firewire, SD card reader, and boot flash EEPROM SPI, *much*
-thanks to my friends at Coreboot, who will hopefully be publishing their
+thanks to my friends at Coreboot, <del>who will hopefully be publishing their
 research soon. Sorry to keep secrets, but I would like to respect their
-request to allow them time to publish. Coreboot, by the way, whether you're
-running on modified hardware or not, is fucking awesome.) Then I attached an
-RJ45 cable and did:
+request to allow them time to publish.</del> **UPDATE [2013-12-30]**: Peter
+Stuge presented this research at 30c3 in his talk,
+["Hardening Hardware & Choosing a #goodBIOS"](http://media.ccc.de/browse/congress/2013/30C3_-_5529_-_en_-_saal_2_-_201312271830_-_hardening_hardware_and_choosing_a_goodbios_-_peter_stuge.html).
+Coreboot, by the way, whether you're running on modified hardware or not, is
+fucking awesome. Then I attached an RJ45 cable and did:
 
 <pre class="prettyprint lang-bash">
 amnesia@amnesia: ~$ sudo apt-get update && sudo apt-get install pcscd gpgsm dpkg-repack
@@ -71,8 +73,7 @@ want to have to spend €20 everytime they rotate keys, but for me, I think
 cryptography should be a tool for the masses -- not just for overpaid,
 overfed, white-hatty white dudes who expense the charge.
 
-Onwards. I removed the ethernet cable and rebooted TAILS, (zomg
-[make sure you never boot a Thinkpad with an ethernet cable attached to it]()),
+Onwards. I removed the ethernet cable and rebooted TAILS, ([make sure you never boot a Thinkpad with an ethernet cable attached to it](http://media.ccc.de/browse/congress/2013/30C3_-_5380_-_en_-_saal_2_-_201312291830_-_persistent_stealthy_remote-controlled_dedicated_hardware_malware_-_patrick_stewin.html)),
 thus the machine *should*, provided the hardware modification work, not be
 able to communicate with any other devices. Then with
 [this gpg.conf](https://blog.patternsinthevoid.net/gpg.conf.txt) (commenting
