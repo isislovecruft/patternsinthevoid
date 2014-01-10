@@ -135,8 +135,8 @@ signatures).
 
 ** disabling the ethernet embedded controller
 
-Looking for R422 resistor which can be modified to disable ethernet imbedded
-controller. See schematics image:
+Looking for R422 resistor which can be modified to disable the onboard
+ethernet controller. See schematics image:
 30c3-hardening__hardware_and__choosing_a__goodbios-photos/schematic/06-gbe_disable.png.
 It is possible (but not tested nor known) that if the -GBE__DISABLE were to be
 disconnected, and LAN__POWER__GOOD be connected to ground, that doing so would
