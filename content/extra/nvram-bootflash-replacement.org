@@ -1,0 +1,149 @@
+# -*- mode: org; coding: utf-8 -*-
+
+Replacing a Thinkpad X60 bootflash chip: Using CoreBoot to directly initialise
+a Linux kernel payload
+
+* how do i find the correct NVRAM chip to pull?
+
+It is located on the mainboard, on an SPI bus to the some Lenovo chip called
+a U72 PMH7, which is an embedded ASIC power management controller and is the
+largest chip in the area near the two adjacent USB hubs.
+
+* how do i pull the NVRAM bootflash chip?
+
+The simplest way to pull the factory chip is to cut the pins, as close to the
+packaging as possible, then desolder the 8 pin stubs and use a desoldering
+wick to cleanup the remaining mess.
+
+* is there a size limit to the new chip? can i just use a 64MB chip?
+
+Yes, the size of the bootflash chip is limited by the SPI protocol. The
+largest chip which can be used is 16MB.
+
+* how do i flash a kernel or initramfs to the new, larger chip?
+
+** compiling a kernel
+
+Compile a linux kernel, preferably monolithic (all modules compiled in, and
+module support disabled). Try to strip the kernel down as small as possible
+(i.e. by removing drivers and support for hardware/devices which don't exist
+in your machine). You will need a bzipped copy of the compiled
+kernel. Additionally, while compiling the kernel, there is an option to
+specify a .bz image of an initramfs which will be compiled into the kernel.
+
+TODO: My current, statically-linked, tor-0.2.4.20 binary is 8MB, with ``strip
+--strip-all /path/to/tor-0.2.4.20`` I can get it down to 1.8MB. It would be
+nice to see if we can get a working kernel for a Thinkpad X60, with an
+initramfs which includes tor, xmpp-client, gpg, and perhaps ssh for basic
+communicational functionality compiled in. The entire thing will need to be
+under 16MB.
+
+** compiling the kernel into a CoreBoot ROM
+
+Then compile the kernel into a CoreBoot ROM. There isn't much documentation of
+this process yet, but my understanding from looking over the CoreBoot source
+tree would be to use the PAYLOAD__LINUX option in the included Kconfig file [0]
+to specify the path to the .bz image of your compiled kernel.
+
+** obtaining a good bootflash chip
+
+Any 8MB or 16MB chip should do. However, in many chips, the write-protect bit
+is volatile and is reset (to unprotected) at power off.
+
+** flashing the chip
+
+Remove mainboard and power adapter from chassis.
+
+Obtain any SPI-compatible programming interface chip. Peter was using a
+'TF4232H Mini Module' with a handy 8 pin clamp (a Pomono5250 8-pin clamp) to
+connect to the bootflash chip while it sits on the board.
+
+Use the 'flashrom' package in most Debian-based distros. See photo
+30c3-hardeninghardware_and_choosing_agoodbios-photos/photos/154-dsc_4293.jpg
+
+The top bit in the status register (SR) is the write-protect bit, if you're
+willing to modify the `flashrom` program to try to set the write-protect bit
+from firmware. In Peter's output:
+
+30c3-hardeninghardware_and_choosing_agoodbios-photos/photos/157-dsc__4297.jpg 
+
+the ``b{1,2,3,4}.SR=0x8{0,2}`` is the reading of the SR at different access
+times. This means very little to me; if it makes sense to you and you've got
+more info, let me know and I'll add it here.
+
+The VCC pin doesn't need to be connected to the SPI programmer when flashing
+(for a Thinkpad X60) because the 3.3 volts required to power the bootflash
+chip is sourced from the power supply on the mainboard. When a battery or a
+power supply is connected to the power adapter on the mainboard, the bootflash
+chip is powered and on. Therefore, only 5 pins need to be connected to the SPI
+programmer.
+
+See picture
+30c3-hardening_hardware_and__choosing_a_goodbios-photos/photos/151-dsc__4287.jpg
+for the clip on the flash chip during reflashing.
+
+Flash the chip by specifying the correct chip from the ones listed during
+automatic detection by ``flashrom``, followed by the location of the binary
+CoreBoot ROM:
+
+    flashrom -c MX25L1605D/MX25L1608D -r factory.bin
+
+If you get output which reads "No EEPROM/flash device found", then check the
+connection on the clamp pins and make sure you've specified the chip number as
+is written on the top of the chip.
+
+* how can i sign the kernel which gets flashed to the new chip?
+
+This needs to be researched further. The kernel itself (as of 3.11 or so)
+supports module signing, though this is neither sufficient nor necessary given
+the benefits of a monolithic kernel in this context. It could be possible to
+get a TPM chip (see the tpm-tis kernel module) to keep keys required for
+checking a kernel signature. It's also likely that someone else has already
+worked on this.
+
+* how can i write protect the bootflash chip?
+
+Solder a bridge between pins 3 and 4.
+
+* how reversible is this process?
+
+You should take a backup of the original blob on the original bootflash chip
+before playing with it, of course. If a chip is flashed with a disfunctional
+ROM, the simplest (and least likely to damage the mainboard) method for
+replacing the chip is to cut the pins again (as above), desolder the remaining
+stubs, and use a desoldering wick again to clean up the mess. Provided you've
+got a backup of the original blob, just flash that to a new chip, resolder,
+and you should be back where you started.
+
+
+* references
+
+[0]: http://review.coreboot.org/gitweb?p=coreboot.git;a=blob;f=src/Kconfig;h=1c80b8c194ecfb994b60f0be5c72b3460ec3b60f;hb=9bf05de5ab2842fc83cea8da5e9058417fc4bc24#l543
+
+* notes
+
+** building a kernel with an initramfs which checks the signature on a Tails live USB
+
+If someone were to build a kernel for a CoreBoot compatible laptop which
+loaded an initramfs which checked a signature on a Tails live USB and then
+call kexec on the signed kernel within the Tails stick. Because the Tails .iso
+is signed, but not the individual components once they are installed to a USB
+stick, ideally, this small initramfs should support signing with keys which
+aren't necessarily the Tails Signing Key (though that could be used as well,
+if the Tails developers would like to provide a way to obtain these additional
+signatures).
+
+** disabling the ethernet embedded controller
+
+Looking for R422 resistor which can be modified to disable ethernet imbedded
+controller. See schematics image:
+30c3-hardening__hardware_and__choosing_a__goodbios-photos/schematic/06-gbe_disable.png.
+It is possible (but not tested nor known) that if the -GBE__DISABLE were to be
+disconnected, and LAN__POWER__GOOD be connected to ground, that doing so would
+disable the embedded ethernet controller.
+
+** initramfs with live linux distributions
+
+An initramfs can also be injected into the vmlinuz of a live system as a
+CoreBoot payload. [1]
+[1]: http://www.coreboot.org/Initramfs
