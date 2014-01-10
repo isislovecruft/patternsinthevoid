@@ -54,11 +54,12 @@ is volatile and is reset (to unprotected) at power off.
 
 Remove mainboard and power adapter from chassis.
 
-Obtain any SPI-compatible programming interface chip. Peter was using a
-'TF4232H Mini Module' with a handy 8 pin clamp (a Pomono5250 8-pin clamp) to
-connect to the bootflash chip while it sits on the board.
+Obtain any SPI-compatible programming interface module. Peter was using a
+'FT4232H Mini Module' [1] with this handy looking 8-pin clamp (a Pomono 5250
+8-pin test clamp) [2] to connect to the bootflash chip while it sits on the
+mainboard.
 
-Use the 'flashrom' package in most Debian-based distros. See photo
+Use the ``flashrom`` package in most Debian-based distros. See photo
 30c3-hardeninghardware_and_choosing_agoodbios-photos/photos/154-dsc_4293.jpg
 
 The top bit in the status register (SR) is the write-protect bit, if you're
@@ -74,9 +75,9 @@ more info, let me know and I'll add it here.
 The VCC pin doesn't need to be connected to the SPI programmer when flashing
 (for a Thinkpad X60) because the 3.3 volts required to power the bootflash
 chip is sourced from the power supply on the mainboard. When a battery or a
-power supply is connected to the power adapter on the mainboard, the bootflash
-chip is powered and on. Therefore, only 5 pins need to be connected to the SPI
-programmer.
+power supply is connected to the power adapter -- which should be connected to
+the mainboard, the bootflash chip is powered and on. Therefore, only 5 pins
+need to be connected to the SPI programming module.
 
 See picture
 30c3-hardening_hardware_and__choosing_a_goodbios-photos/photos/151-dsc__4287.jpg
@@ -119,6 +120,8 @@ and you should be back where you started.
 * references
 
 [0]: http://review.coreboot.org/gitweb?p=coreboot.git;a=blob;f=src/Kconfig;h=1c80b8c194ecfb994b60f0be5c72b3460ec3b60f;hb=9bf05de5ab2842fc83cea8da5e9058417fc4bc24#l543
+[1]: http://enterpoint.co.uk/products/modules/ft4232-module/
+[2]: http://www.hmcelectronics.com/product/Pomona/5250
 
 * notes
 
