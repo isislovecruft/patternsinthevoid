@@ -29,14 +29,19 @@ chat.riseup.net        isis@riseup.net             F9B81DF4 BA310806 B1513680 24
 ztmc4p37hvues222.onion isis@riseup.net             F9B81DF4 BA310806 B1513680 246598A0 6FC08CDB
 
 ∃!isisⒶwintermute:~ ∴ cat server-fingerprints
-The SSL fingerprint for this server is:
-SHA1 Fingerprint=87:DE:47:97:5D:E5:FB:58:5B:1F:3D:12:F3:7D:30:12:97:B1:B5:A3
-SHA256 Fingerprint=73:1D:6A:A6:98:EF:F1:2C:44:B8:0F:E0:80:6B:DC:78:04:65:82:47:50:36:24:88:3F:CA:EC:E7:56:B1:85:04
+The SSL fingerprints for *.patternsinthevoid.net are:
+MD5 Fingerprint=C7:FB:61:B9:AE:84:70:15:37:C5:B4:15:2A:C4:F3:06
+SHA1 Fingerprint=8D:42:4E:AC:C7:CE:5B:F2:39:0C:FD:40:63:54:B7:13:FA:51:B7:C7
+SHA256 Fingerprint=09:95:E8:36:BB:36:32:56:B3:E7:BE:78:8E:20:33:19:A3:AB:76:5C:F5:6B:99:CC:35:E5:7B:8E:19:48:3D:01
 
 ∃!isisⒶwintermute:~ ∴ cat message
+I use pond: https://pond.imperialviolet.org/ To obtain a shared secret, you
+must meet me, in person. If we have already verified each other's keys, in
+person, I'll accept passing the shared secret through that channel.
+
 The script which made this file is available at:
   https://code.patternsinthevoid.net/publish-keys
-  Copyleft ©2012-2013 Isis Agora Lovecruft
+  Copyleft ©2012-2014 Isis Agora Lovecruft
   Licensed AGPLv3, see https://www.gnu.org/licenses/agpl-3.0.txt 
 
 For a plain copy of my key, please see:
@@ -46,11 +51,11 @@ For a detached signature of the above file, please see:
 https://blog.patternsinthevoid.net/0xA3ADB67A2CDB8B35.sig
 
 This file is available at:
-https://blog.patternsinthevoid.net/isis
+https://blog.patternsinthevoid.net/isis.txt
 and it should be clearsigned at or around:
 
 ∃!isisⒶwintermute:~ ∴ date
-Wed 25 Dec 03:13:38 UTC 2013
+Sun 12 Jan 23:40:38 UTC 2013
 
 ∃!isisⒶwintermute:~ ∴ gpg -a --export a3adb67a2cdb8b35
 -----BEGIN PGP PUBLIC KEY BLOCK-----
