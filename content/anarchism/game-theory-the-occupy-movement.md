@@ -18,15 +18,67 @@ escalation to physical violence, will turn heel and run away.
 
 Here is the payoff matrix for the Hawk / Dove game:
 
-[![][]][]So, War of Attrition -- cool name, right? War of Attrition is
-identical to the Hawk and Dove scenario, albeit that the resource is
-*deemed unsharable*. So in the above scenario where either two Hawks or
-two Doves vie, the desired resource is divided in accordance with the
-payoff matrix. But in War of Attrition, this sharing or splitting of
-resources is no longer an option, and so the violently aggressive
-behaviours associated with the Hawk / Dove game are no longer effective
-strategies. Instead, in War of Attrition, two new strategies, known as
-Bluffer and Bourgeois emerge:
+<table id="Payoff" style="background:white; float: right; clear:right;
+text-align:center;" align="right" cellpadding="8" cellspacing="0" width="225">
+<tbody><tr>
+<td style="width:33%;"></td>
+<td style="width:33%; border-bottom: solid black 1px;">Hawk</td>
+<td style="width:33%; border-bottom: solid black 1px;">Dove</td>
+</tr>
+<tr>
+<td style="border-right: solid black 1px; text-align: right;">Hawk</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;"><small><span class="nowrap">(V−C)/2,
+(V−C)/2</span></small></td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;"><small>V, 0</small></td>
+</tr>
+<tr>
+<td style="border-right: solid black 1px; text-align: right;">Dove</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;"><small>0, V</small></td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;"><small><span class="nowrap">V/2,
+V/2</span></small></td>
+</tr>
+<tr>
+<td style="font-size: 90%;" colspan="3"><i>Fig. 1: Hawk-Dove game</i></td>
+</tr>
+</tbody></table>
+<table id="Payoff_matrix" style="background:white; float: right; clear:right;
+text-align:center;" align="right" cellpadding="8" cellspacing="0" width="225">
+<tbody><tr>
+<td style="width:33%;"></td>
+<td style="width:33%; border-bottom: solid black 1px;">Hawk</td>
+<td style="width:33%; border-bottom: solid black 1px;">Dove</td>
+</tr>
+<tr>
+<td style="border-right: solid black 1px; text-align: right;">Hawk</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;">X, X</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;">W, L</td>
+</tr>
+<tr>
+<td style="border-right: solid black 1px; text-align: right;">Dove</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;">L, W</td>
+<td style="border-right: solid black 1px; border-bottom: solid black 1px;
+background:white; font-size:120%;">T, T</td>
+</tr>
+<tr>
+<td style="font-size: 90%;" colspan="3"><i>Fig. 2: General Hawk-Dove game
+(where W > T > X > L )</i>
+</table>
+
+So, War of Attrition -- cool name, right? War of Attrition is identical to the
+Hawk and Dove scenario, albeit that the resource is *deemed unsharable*. So in
+the above scenario where either two Hawks or two Doves vie, the desired
+resource is divided in accordance with the payoff matrix. But in War of
+Attrition, this sharing or splitting of resources is no longer an option, and
+so the violently aggressive behaviours associated with the Hawk / Dove game
+are no longer effective strategies. Instead, in War of Attrition, two new
+strategies, known as Bluffer and Bourgeois emerge:
 
 > A safer strategy of display, bluffing and waiting to win, then becomes
 > viable – a Bluffer strategy. The game then becomes one of accumulating
@@ -52,38 +104,31 @@ Bluffer and Bourgeois emerge:
 > possession of the resource, but to display then retreat if not in
 > possession.
 
-If one takes a look at the [Collusive and Nash Equilibriums for the War
-of Attrition][], it is clear that costs are exorbitantly high to both
-players involved. However, payoff in terms of resources in this game is
-*always* maximized for the Collusive Equilibrium.
+If one takes a look at the
+[Collusive and Nash Equilibriums for the War of Attrition](http://web.mit.edu/rpindyck/www/Courses/GT_05a.pdf),
+it is clear that costs are exorbitantly high to both players
+involved. However, payoff in terms of resources in this game is *always*
+maximized for the Collusive Equilibrium.
 
-I realise that last paragraph might be gobbledegook to some. Basically,
-what this means is that if both people stand around bluffing for a long
-time, or, even worse, if one just sits on an unshared resource and the
-other one randomly runs up and puts on a show of dissent or aggression,
-nothing's going to get done. There will be high costs to both parties in
-the long run. It would be better for the two parties to collude and thus
-share the "unsharable" resource.
+I realise that last paragraph might be gobbledegook to some. Basically, what
+this means is that if both people stand around bluffing for a long time, or,
+even worse, if one just sits on an unshared resource and the other one
+randomly runs up and puts on a show of dissent or aggression, nothing's going
+to get done. There will be high costs to both parties in the long run. It
+would be better for the two parties to collude and thus share the "unsharable"
+resource.
 
-As for the Occupy Movement, I think you understand where I'm going. We
-have a class of bourgeois dining on balconies and drinking champagne,
-while staring down at a bunch of rabble-rousing protesters with tents on
-Wall St. We have one group who is sitting smugly on a pile of ill-used
-resources, and another group who is quite literally putting on a show of
-aggression for the former. Now, the occupation is non-violent, we all
-know this. And thus, the former group knows that this show is a bluff.
-Nothing will happen. They can sit there drinking their champagne all
-day, and nothing is going to change.
+As for the Occupy Movement, I think you understand where I'm going. We have a
+class of bourgeois dining on balconies and drinking champagne, while staring
+down at a bunch of rabble-rousing protesters with tents on Wall St. We have
+one group who is sitting smugly on a pile of ill-used resources, and another
+group who is quite literally putting on a show of aggression for the
+former. Now, the occupation is non-violent, we all know this. And thus, the
+former group knows that this show is a bluff.  Nothing will happen. They can
+sit there drinking their champagne all day, and nothing is going to change.
 
 Hey, Occupiers! *Guess what?*
 -----------------------------
 
 Bluffing is not an effective strategy.
 --------------------------------------
-
- 
-
-  []: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/10/hawkdove.jpeg
-    "hawkdove"
-  [![][]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/10/hawkdove.jpeg
-  [Collusive and Nash Equilibriums for the War of Attrition]: http://web.mit.edu/rpindyck/www/Courses/GT_05a.pdf
