@@ -25,6 +25,7 @@ SITEURL = 'https://blog.patternsinthevoid.net'
 FEED_DOMAIN = 'https://blog.patternsinthevoid.net'
 GITHUB_URL = 'https://github.com/isislovecruft'
 TWITTER_USERNAME = "isislovecruft"
+ALLOW_TWITTER_SHARE = False
 FLATTR = True
 
 # Article Settings
