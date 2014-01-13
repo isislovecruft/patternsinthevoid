@@ -10,7 +10,12 @@ Author: isis agora lovecruft
 The idea behind this is to build on top of the Thinkpad hardware modifications
 which I mentioned in one of my last posts, and which were discussed by Peter
 Stuge in his recent 30c3 talk,
-["Hardening Hardware & Choosing a #goodBIOS"](http://media.ccc.de/browse/congress/2013/30C3_-_5529_-_en_-_saal_2_-_201312271830_-_hardening_hardware_and_choosing_a_goodbios_-_peter_stuge.html).
+["Hardening Hardware & Choosing a #goodBIOS"](http://media.ccc.de/browse/congress/2013/30C3_-_5529_-_en_-_saal_2_-_201312271830_-_hardening_hardware_and_choosing_a_goodbios_-_peter_stuge.html). Pretty
+much all of this post is the result of shouldersurfing Peter, asking way too
+many questions, and writing down everything which seemed like I'd forget it
+and wished I knew it later when doing these modifications on my own. Peter
+also took the photos used in this post; all credit, praise, hoorays, BTC,
+dogecoin, and whatever else should go to Peter for his work.
 
 Rather than relying on a
 [Coreboot](http://www.coreboot.org/Welcome_to_coreboot) image which sits in
