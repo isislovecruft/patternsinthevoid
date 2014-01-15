@@ -5,7 +5,9 @@ Category: hacking
 Author: isis agora lovecruft
 
 
-# Using Coreboot to directly initialise a Linux kernel payload
+# Using coreboot to directly initialise a Linux kernel payload
+
+**UPDATED:** (2014-01-13) To include corrections and additional comments from Peter.
 
 The idea behind this is to build on top of the Thinkpad hardware modifications
 which I mentioned in one of my last posts, and which were discussed by Peter
@@ -18,14 +20,14 @@ also took the photos used in this post; all credit, praise, hoorays, BTC,
 dogecoin, and whatever else should go to Peter for his work.
 
 Rather than relying on a
-[Coreboot](http://www.coreboot.org/Welcome_to_coreboot) image which sits in
+[coreboot](http://www.coreboot.org/Welcome_to_coreboot) image which sits in
 the onboard bootflash chip -- the default chip sadly has a volatile
 write-protect pin that is reset to an unprotected write state on poweroff --
 we can replace this chip with a larger one.  In most laptops, the bootflash
 chip is anywhere from 1MB to 4MB.  Newer UEFI-enabled machines are beginning
 to push this limit, often requiring 8MB chips, but this is still far from
 ubiquitous in the marketplace.  If we pull the bootflash chip from the
-mainboard and replace it with a larger one, we can flash it with a Coreboot
+mainboard and replace it with a larger one, we can flash it with a coreboot
 image which contains a Linux kernel payload and initramfs, then set
 write-protect though "software" (more like mediumware, if you ask me) via the
 UART interface and/or through hardware by soldering a bridge between two of
@@ -96,6 +98,7 @@ Unix-beardos back in the Epoch days designed the SPI protocol couldn't foresee
 anyone ever wanting anything larger.  (Futureproofing, assholes.  It's a
 thing.)
 
+
 ## How do I flash a Linux kernel and initramfs to the new, larger chip?
 -----------------------------------------------------------------------
 
@@ -117,7 +120,7 @@ you with this step.  I remember finding
 [helpful](http://web.archive.org/web/20120606074417/http://www.ericrswanson.info/Wordpress/building-the-linux-kernel-on-debian-based-systems/).
 You also can have a look at
 [my kernel build scripts](https://code.patternsinthevoid.net/?p=scripts.git;a=blob;f=build_kernel;hb=HEAD)
-(beware, I've not used that script to build a kernel image for a Coreboot ROM
+(beware, I've not used that script to build a kernel image for a coreboot ROM
 yet); perhaps it will help.
 
 You'll want to strip down your kernel *as small as possible* (i.e. by removing
@@ -153,7 +156,7 @@ kernel config, e.g. when you do `make-menuconfig` or `make-config`):
 
 There is a decent
 [Gentoo wiki page on the directory layout requirements for building a custom initramfs](http://wiki.gentoo.org/wiki/Custom_Initramfs).
-Keeping in mind, of course, that your whole Coreboot + kernel + initramfs will
+Keeping in mind, of course, that your whole coreboot + kernel + initramfs will
 need to be small enough to flash onto the chip later.
 
 **TODO:** My current, statically-linked, tor-0.2.4.20 binary is 8MB, and
@@ -167,6 +170,7 @@ security and communications software such as
 [xmpp-client](https://github.com/agl/xmpp-client),
 [gnupg](http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=summary), and,
 most likely, ssh, cryptsetup, and a busybox as well.
+
 
 ### Compiling the kernel into a CoreBoot ROM
 
@@ -196,8 +200,9 @@ It's also likely that someone else has already worked on this.
 I'll briefly cover the prior modifications.  Peter was nice enough to drop me
 a
 [tarball of all the images from the slides in his talk](|filename|../images/2013/12/30c3-hardening_hardware_and_choosing_a_goodbios-photos.tar.bz2),
-which is fortunate because whoever took those photos is a *much* better
-photographer than I.
+which is fortunate because my camera and I are currently not exactly on
+speaking terms.
+
 
 ### STEP 1:
 
