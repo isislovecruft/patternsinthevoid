@@ -62,13 +62,14 @@ Macronix and Winbond.
 
 ### How do I find the correct chip to pull?
 
-In a Thinkpad X60, the bootflash chip, also called a Firmware Hub (FWH) is an
-SPI chip located on the mainboard, on an LPC bus connected to the
-southbridge. It should be labelled something like `MX25L1605D`, and it's
-directly adjacent to some Lenovo chip called a U72 PMH-7, the latter of which
-is an embedded ASIC power management controller, the largest chip in the area
-and not important for our purposes, however useful for locating the bootflash
-chip. Both are near the two adjacent USB hubs:
+In a Thinkpad X60, the bootflash chip, <strike>also called a Firmware Hub
+(FWH),</strike> is an SPI chip located on the mainboard, on an LPC bus
+connected to the southbridge. It should be labelled something like
+`MX25L1605D`, and it's directly adjacent to some Lenovo chip called a
+<strike>U72</strike> PMH-7, the latter of which is an embedded ASIC power
+management controller, the largest chip in the area and not important for our
+purposes, however useful for locating the bootflash chip. Both are near the
+two adjacent USB hubs:
 
 ![x60-bootflash-location](|filename|../images/2013/12/x60-bootflash-location-small.jpg)
 
@@ -77,6 +78,33 @@ The chipnames from the labels in the above photo can also be seen in
 and
 [here's a closeup](|filename|../images/2013/12/30c3-hhacagb/schematic/02-closeup.jpg)
 of the section from that diagram pertaining to that LPC bus.
+
+Peter responded with the following explanation of SPI versus FWH:
+
+> How to access the boot flash has changed over time; originally it was all
+> paralell on an ISA bus, then came LPC, a 4-bit wide serial bus designed
+> by intel, with two different and incompatible commands (yay!) for reading
+> memory at a 32-bit address, one called "memory read", the other called
+> "firmware memory read".
+>
+> Intel made chipsets which required the latter and flash chips which responded
+> to the latter, and called such flash chips a "firmware hub". Other chipset and
+> flash chip makers instead used the "memory read" command and didn't invent any
+> particular names for their flash chips. They're generally called LPC flash,
+> although that's technically accurate for an FWH chip as well.
+>
+> Then came SPI, the 1-bit wide serial interconnect mostly used today to save
+> on PCB traces. To be fair, SPI was originally designed by motorola for
+> interconnecting microcontroller peripherals. "Serial Peripheral Interconnect"
+> the same is probably true for the memory access protocol used in PCs now.
+>
+> So SPI and FWH are mutually exclusive. The X60 schematic and PCB is from
+> a time just before SPI became the norm so it was designed to use either
+> SPI or FWH, but in practice I've only seen SPI used.
+>
+> U72 is the identifier in the schematic for the PMH-7 chip.
+> (U means it's some sort of integrated circuit and 72 means it's the 72nd IC)
+> I'd just refer to the lenovo chip as PMH-7.
 
 ### How do I pull the chip?
 
