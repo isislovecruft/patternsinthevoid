@@ -163,11 +163,12 @@ added into
 [tree](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=ea0b6dcf71d216dc11733ac19b26df0f5d0fd6c2)
 [during the 3.7 release](http://kernelnewbies.org/Linux_3.7#head-a04c2b7827323d26a659b3b7cdf759747bb400d2).
 
-You will need a `.bz` image of the compiled kernel.  While the Debian kernel
-building resourses I linked to above use `make-kpkg` to create a `.deb` kernel
-image package, this is *not* what you need for Coreboot.  However, using the
-Makefiles in the main Linux kernel tree, by doing simply `make` or
-`make-[ARCH]`, will spit out a `.bz` image.
+Peter wrote:
+
+> The kernel file needed is called bzImage, that's the actual filename. After
+> running `make` it's in `arch/x86/boot/bzImage` in the kernel source tree and
+> it is the file bootloaders normally use, grub as well as lilo.
+
 
 ### Adding an initramfs into the kernel
 
@@ -206,10 +207,18 @@ Then compile the kernel into a CoreBoot ROM.  There isn't much documentation
 of this process yet, but my understanding from looking over the CoreBoot
 source tree would be to use the `PAYLOAD_LINUX` option in
 [the included Kconfig file](http://review.coreboot.org/gitweb?p=coreboot.git;a=blob;f=src/Kconfig;h=1c80b8c194ecfb994b60f0be5c72b3460ec3b60f;hb=9bf05de5ab2842fc83cea8da5e9058417fc4bc24#l543)
-to specify the path to the `.bz` image of your compiled kernel.  If you try
-this before I get a chance to, it would be great if you could document the
-steps involved and [send them to me](mailto:isis@torproject.org) and I'll add
-them here.
+to specify the path to the `bzImage` of your compiled kernel.  If you try this
+before I get a chance to, it would be great if you could document the steps
+involved and [send them to me](mailto:isis@torproject.org) and I'll add them
+here.
+
+Peter added:
+
+> Indeed making coreboot use a kernel as payload is done during coreboot
+> 'make menuconfig' (or make config if you prefer) by entering the Payload
+> submenu, selecting "A Linux payload" and specifying the path to the bzImage
+> file in the kernel source tree.
+
 
 ### How can I sign the kernel which gets flashed to the new chip?
 
