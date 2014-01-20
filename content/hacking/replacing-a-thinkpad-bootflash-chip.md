@@ -230,6 +230,18 @@ be possible to get a TPM chip (see the `tpm_tis` kernel module) to keep keys
 required for checking a kernel signature, though I know very little about TPM.
 It's also likely that someone else has already worked on this.
 
+> The kernel and initramfs in boot flash don't strictly need to be signed
+> because the flash chip is made read-only in hardware once they have been
+> written to it. That hardware write protection is the root of trust. If
+> someone has access to the hardware long enough to tamper with the flash chip
+> then game over anyway.
+>
+> One further step is possible: adding TPM support to coreboot, having
+> coreboot measure itself and then using the TPM to unseal an encrypted
+> kernel+initramfs. I'm not sure if that would actually have any
+> advantages. However - the initramfs used with the kernel could, and should,
+> check signatures of whatever it starts. That still needs to be designed. --
+> Peter
 
 ## Prior modifications
 ----------------------
