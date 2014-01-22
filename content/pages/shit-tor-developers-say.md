@@ -56,19 +56,16 @@ Author: isis agora lovecruft
 ---
     <kaepora> Everyone knows I am a crypto god because I have Verisign Extended EV
         -- 2013-05-21 private query, irc.oftc.net
-
 ---
     <hellais> i circuit bent my furby as a kid.
     <isis> so basically, you did neurosurgery on your furby.
     <hellais> ah, no, it was more like 'ass surgery'...all the chips are in
               the ass.
 ---
-
-    <infinity0> it's just 3 proxies  man
+    <infinity0> it's just 3 proxies man
     <infinity0> even more simple than 4chan
         -- 2013-12-16 #tor-dev
 ---
-
     <isis>    The Adventures of SUPERHELIX #4: The wonders of drugs!
     <isis>    In this episode, our hero, SUPERHELIX, fights the nasty BERLIN DEATH FLU with the help of her sidekicks MODERN MEDICINE and CASHEWS
     <helix>   isis: haha I am fighting my broken tailbone ;)
@@ -91,5 +88,13 @@ Author: isis agora lovecruft
     <isis>    the MAD SURGEON tries, like some übersketchoid, to sneak up on SUPERHELIX, but her superpower of BUTT ECHOLOCATION thwarts his maniacal plan
     <isis>    rising to her feet, SUPERHELIX sends an uppercut straight to the MAD SURGEON's big fat honking nose
     <isis>    KAAAAABLONK!!
-
+---
+    <mikeperry> I am god at this whole think once commit twice thing
+    <mikeperry> or wait, I think I may have that backwards
+    <mikeperry> that must be my problem
+        -- 2014-01-16 #tor-dev
+---
+    <skruffy> oftc killed me
+    <infinity0> have you tried haskell?
+        -- 2014-01-20 #tor-dev
 ---
