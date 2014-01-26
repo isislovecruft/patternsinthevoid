@@ -321,17 +321,27 @@ id="step5" style="float:left; clear:left; width:65%; padding:0.2em;"><tbody>
 </tbody></table>
 <p><br /></p>
 <h3>STEP 5:</h3>
-<p>Disable the Rico chip in order to disable the cardbus, firewire, and sdcard
+<p>Disable the Ricoh chip in order to disable the cardbus, firewire, and sdcard
 reader.</p>
-<p>To do this, flip the mainboard over, and lift the plastic protector
-near the corner which has two USB ports on it. Remove resistor
-<code>R461</code>, which is responsible for controlling powerdown signal for
-the <a
-href="http://www.hktdc.com/manufacturers-suppliers/Rico-Ind-l-Co/en/1X00202Y/">Rico
+<p>To do this, lift the clear, sticky plastic protector, the one on the top of
+the mainboard underneath the wifi + 3g cards, near the corner which has two
+USB ports on it. Remove resistor <code>R461</code>, which is responsible for
+controlling powerdown signal for the <a
+href="http://www.hktdc.com/manufacturers-suppliers/Rico-Ind-l-Co/en/1X00202Y/">Ricoh
 chip</a>. Connect pin <code>2</code> of <code>R461</code> (the one closest to
 the USB ports) to pin <code>1</code> of <code>R348</code>, which is just above
-<code>R461</code> kind of by itself. When you're done, drop the protective
-plastic back down over it:</p>
+<code>R461</code> kind of by itself.</p>
+<blockquote><p>The lone brown component north of R461 is a capacitor,
+unfortunately its identifier can't be seen in the photos because this
+particular PCB uses a much larger font size than most other boards I've seen,
+so the identifiers don't fit next to their components. (There's an AA
+reference north-northwest of R461 and there will be an AA legend somewhere
+else on that board, but that doesn't help us much. It's unfortunate but that's
+the only board I had available when taking the photos. :\) The identifiers can
+still be used as reference points though, as long as they aren't mistaken for
+the actual identifiers for the components to be removed or modified. -- Peter
+</p></blockquote>
+<p>When you're done, drop the protective plastic back down over it:</p>
 <p><img alt="remove-R461" src="./static/images/2013/12/112-130.remove-R461_small.gif"></img></p>
 </p></span>
 
