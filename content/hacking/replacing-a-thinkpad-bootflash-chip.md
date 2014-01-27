@@ -347,10 +347,12 @@ the actual identifiers for the components to be removed or modified. -- Peter
 
 ### STEP 6:
 
-Remove the microphone. Flip the board back over. The microphone is a small,
-round, silver thing -- mostly likely underneath a sheet of opaque, black,
-protective plastic. Cut it and then desolder the pads, or just desolder it
-while pulling it out with a pair of pliers, whichever works for you.
+Remove the microphone.
+
+The microphone is a small, round, silver thing -- mostly likely underneath a
+sheet of opaque, black, protective plastic on the topside of the mainboard,
+between the firewire and USB connectors. Desolder it from the bottom of the
+board while pulling it out from the top with a pair of pliers.
 
 ![remove-microphone](|filename|../images/2013/12/131-147.remove-microphone_small.gif)
 
