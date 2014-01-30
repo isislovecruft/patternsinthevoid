@@ -399,6 +399,14 @@ then check the connection between the test clamp and the bootflash pins, and
 make sure you've specified the chip number as is written on the top of the
 chip.
 
+> Flashing: `flashrom -r` means read the current contents, ie. save a backup
+> of the factory BIOS, for future reference. Note that ThinkPad BIOSes are
+> tied to the particular mainboard so save yours, because no other ThinkPad
+> BIOS works on your mainboard.  if you lose it and coreboot doesn't work then
+> you have to get another mainboard.
+>
+> The flashrom -w command is the one that actually writes to the chip. -- Peter
+
 ### How can I set write-protect on the bootflash chip from hardware?
 
 Solder a bridge between pins 3 and 4 on the bootflash chip (`MX25L1605D`). My
@@ -410,6 +418,28 @@ notes say:
 I think perhaps I meant *write-protect*, because read protect doesn't make
 much sense to me. But that is what I wrote, in case my current second guessing
 turns out to be wrong.
+
+> pin 3 on the flash chip is indeed write-protect rather than read-protect.
+>
+> Write-protecting the chip is a little complicated: The status register (SR)
+> in the flash chip has a few block protect bits which say whether parts of
+> the flash chip, or all of it, is write protected or not. The block protect
+> bits can be changed by software as long as SR itself can be written. SR is
+> easily written by software by sending the right command over SPI. flashrom
+> already does this.
+>
+> The top bit 0x80 in SR controls writes to SR, but software writing to SR is
+> only completely disabled if *both* the 0x80 bit is set *and* pin 3 is
+> connected to ground.
+>
+> On Macronix and Winbond that SR 0x80 bit is non-volatile, ie. once it has been
+> set it stays set until it is cleared by software. If pin 3 has been connected
+> to pin 4 ground then software can't clear the bit. On SST the SR 0x80 bit is
+> volatile and is always 0 on reset. A workaround would be to have coreboot or
+> possibly a program in the initramfs, but preferably coreboot, set it on boot,
+> but this requires a bit of development.
+>
+>   -- Peter
 
 ### How can I set the write-protect bit from firmware?
 
