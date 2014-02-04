@@ -98,3 +98,8 @@ Author: isis agora lovecruft
     <infinity0> have you tried haskell?
         -- 2014-01-20 #tor-dev
 ---
+    <skruffy> gitian create wormholes
+    <skruffy> via time and space
+    <helix> einstein-rosen bridgedb
+        -- 2014-01-23 #nottor
+---
