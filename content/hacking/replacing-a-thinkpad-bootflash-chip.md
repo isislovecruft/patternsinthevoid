@@ -487,7 +487,6 @@ small initramfs should support signing with keys which aren't necessarily the
 Tails Signing Key (though that could be used as well, if the Tails developers
 would like to provide a way to obtain these additional signatures).
 
-### Disabling the ethernet embedded controller
 > For coreboot machines, it would work to put the signed .iso on the USB stick
 > and have the initramfs mount it and start kernel+initrd from within after
 > having checked the signature of the .iso. The tails-0.20 kernel+initrd would
@@ -495,6 +494,8 @@ would like to provide a way to obtain these additional signatures).
 > if the Tails kernel+initrd has any self-check of the root filesystem
 > however. -- Peter
 
+
+### Disabling the onboard ethernet controller
 
 <img src="./static/images/2013/12/30c3-hhacagb/schematic/06-gbe_disable.jpg"
 alt="R422" width="40%">
@@ -504,7 +505,6 @@ mainboard, labelled `R422`, which can be seen in the upper left of
 [the schematic](|filename|../images/2013/12/30c3-hhacagb/schematic/06-gbe_disable.jpg)
 to the left.
 
-It's possible (but currently untested) that this resistor could be used to
-disable the onboard ethernet controller, if the `-GBE_DISABLE` connector on
-this resistor were to be disconnected, and `LAN_POWER_GOOD` connector be
-connected to ground.
+It's possible (but currently untested) that the `R422` resistor could be used
+to disable the onboard ethernet controller, if `R422` were removed, and then
+the `-GBE_DISABLE` side connected to ground. (Similar to R461 above.)
