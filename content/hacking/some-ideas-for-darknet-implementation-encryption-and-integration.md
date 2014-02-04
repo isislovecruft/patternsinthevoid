@@ -2,10 +2,10 @@ Title: Some Ideas For Darknet Implementation, Encryption, and Integration
 Date: 2011-04-05 23:19
 Author: isis agora lovecruft
 Category: hacking
-Tags: algorithms, crypto-anarchism, cryptography, cyberfeminism, darknet, darknet integration, decentralized social networks, encryption, freenet, fuzzy logic, i2p, p2p, sinkstoring, small-world models
+Tags: algorithms, cryptography, freenet, i2p, darknet
 
 Notes on Reading [Private Communication Through a Network of Trusted
-Connections: The Dark Freenet][] (click for .pdf)
+Connections: The Dark Freenet](http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/Private-Communication-Through-a-Network-of-Trusted-Connections-The-Dark-Freenet.pdf) (click for pdf)
 
 I learned that data encryption within a Freenet (not necessarily dark)
 is often restricted to two types: CHKs and SSKs (6). As a basic measure
@@ -25,8 +25,10 @@ even discover that the directory is there. Kind of like how you can't
 access an .onion site unless you already know the address. This was
 making my brain itch a little bit, but I'm good now.
 
+<img src="http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg"></img>
+
 Fuzzy Logic Operations within Computerized Social Networks applied to
-Darknet Operations:[![][]][]
+Darknet Operations:
 
 "Instead [of Stanley Milgram's small-world model], we use a method which
 draws off the small world models of Jon Kleinberg. The routing we
@@ -52,7 +54,8 @@ overlayed onto the subgraph of the world's social network which contains
 the portion of your social network connected to the darknet.
 
 [caption id="" align="alignleft" width="450" caption="Fuzzy Logic
-Explained!"][![][1]][][/caption]
+Explained!"](http://imgs.xkcd.com/comics/cat_proximity.png)[/caption]
+[](http://xkcd.com/231/)
 
 Sorry for the fuzzy logic geek out...I thought it was a cool application
 in informational network analysis.
@@ -147,12 +150,3 @@ Plus points to the authors of "Private Communication Through a Network
 of Trusted Connections: The Dark Freenet" for their excellent gender
 politics in using "she" wherever third person gender neutral pronouns
 would have been syntactically ambiguous. \<3
-
-  [Private Communication Through a Network of Trusted Connections: The
-  Dark Freenet]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/Private-Communication-Through-a-Network-of-Trusted-Connections-The-Dark-Freenet.pdf
-  []: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg
-    "darknet 2"
-  [![][]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/04/darknet-2.jpg
-  [1]: http://imgs.xkcd.com/comics/cat_proximity.png
-    "http://xkcd.com/231/"
-  [![][1]]: http://xkcd.com/231/
