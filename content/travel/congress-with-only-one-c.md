@@ -8,7 +8,7 @@ Author: isis agora lovecruft
 One of Tor's funders convinced me to visit the Hill. I explained that this was
 a terrible, no-good, very-bad idea. I think they thought it would be funny.
 
-This one pickled tampon of a woman, what's her name...Shanna Winters. Chief
+This one pickled tampon of a woman, what's her name… Shanna Winters. Chief
 Counsel to the Subcommittee on The Courts, Internet and Intellectual Property,
 chaired by Congressman Howard Berman. There were five of us developers,
 introducing ourselves, like five minutes into the meeting, and I said,
@@ -18,12 +18,14 @@ introducing ourselves, like five minutes into the meeting, and I said,
 > the results of which will be published as open data."
 
 So many friendly buzzwords. How could she possibly be against *all of the
-buzzwords*? Immediately, Winters says, *"And what about porn?"* I thought that
+buzzwords*? Immediately, Winters asks, *"And what about porn?"* I thought that
 she'd misheard me, so I said, *"I'm sorry?"*
 
 > "What about porn?"
 
-> "Uh… I'm afraid I don't understand the context. What *about* porn?"
+> "Uh… I'm afraid I don't understand the context. What **about** porn?"
+
+I refrained from asking what kind of porn she was into.
 
 > "Does your tool provide people a way to get around blocks?"
 
@@ -33,10 +35,9 @@ she'd misheard me, so I said, *"I'm sorry?"*
 
 > "But you agree that porn should be blocked?"
 
-I stared at her. And then I stared at her some more. Then I refrained from
-asking what kind of porn she was into. And then I was just speechless, because
-I couldn't tell if she was trolling. I just stared at her. I don't think I
-blinked.
+I stared at her. Then I stared at her some more. And then I was just
+speechless, because I couldn't tell if she was trolling. I just stared at
+her. I don't think I blinked.
 
 I continue to stare for another full minute, running through a checklist of
 strategies and calculating probability distributions for items including:
@@ -47,14 +48,14 @@ strategies and calculating probability distributions for items including:
   - Can I explain that there are two Pareto suboptimal outcomes to the game
     they are playing?
   - Do they understand networking?
-  - Do understand catastrophe theory?
+  - Do they understand catastrophe theory?
   - Can I explain state transformation matrices and unstable states?
   - Wait, *do they understand math*?!?
   - If they don't understand math, how do I explain anything to them?
   - Wait, *how* do they *know* anything?
   - *Do* they know anything?
 
-I must have stared at her for a solid minute trying to assess if I should
+I must have stared at her¹ for a solid minute trying to assess if I should
 attempt to explain to her that censorship is an unstable arms race with two
 Pareto suboptimal outcomes:
 
@@ -85,7 +86,10 @@ think. But you're not. Because the one thing you won't ever censor, you won't
 ever build a prison for, you won't inhibit is ingenuity. As I said, two Pareto
 suboptimal outcomes.
 
+---
+<p style="font-size:80%;"> ¹ Is it permissible to use gendered words when you
+<i>do</i> mean to disrespect a fascist bitch?</p>
 
- ¹ I'd add "human" "rights", but I really don't want to digress into semantics.
- ² Is it permissible to use gendered words when you *do* mean to disrespect a
-fascist bitch?
+<p style="font-size:80%;"> ² I'd add "human" "rights", but I really don't want
+to digress into semantics.</p>
+
