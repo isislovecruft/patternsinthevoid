@@ -1,8 +1,10 @@
 Title: Algorithmic Compositions
-Date: 2013-04-05 17:42
+Date: 2013-12-29 17:42
 Author: isis agora lovecruft
 Category: hacking
 Tags: python, bytebeats, twitter
+
+**UPDATED**: 23 June, 2014 (*originally published on 5 April, 2013*)
 
 For a long time, I couldn't figure out what Twitter was for. I'm not sure I've
 figured that out yet. It seems convenient for posting links to the physics and
@@ -40,5 +42,9 @@ python -c'import sys;[sys.stdout.write(chr((~t>>5>>(127&t*9&~t>>7<42&t*23^5&~t>>
 python -c'import sys;[sys.stdout.write(chr((((t>>(2|4)&((t%0x7369)|4|11|5))+(7|4|42)&t))%256))for t in xrange(2**18)]'|aplay -c2 -r4444
 
 python -c'import sys;[sys.stdout.write(chr((((t*(t>>13|t>>8)|(t>>16)-t)-64))%256))for t in xrange(2**18)]'|aplay -r4444
+
+python -c"import sys;[sys.stdout.write(chr(((0x7BB3+t>>11|(t>>(2|5)^(1515|42))|~t)|(2*t)>>6)%256))for t in xrange(2**20)]"|aplay -c2
+
+x="if(t%2)else";python3 -c"[print(t>>15&(t>>(2$x 4))%(3+(t>>(8$x 11))%4)+(t>>10)|42&t>>7&t<<9,end='')for t in range(2**20)]"|aplay -c2 -r4
 </pre>
 
