@@ -98,19 +98,19 @@ TAG_CLOUD_MAX_ITEMS = 0
 # min articles on last page:
 DEFAULT_ORPHANS = 2
 # max per page (not including orphans):
-DEFAULT_PAGINATION = 3
-SUMMARY_MAX_LENGTH = 300
+DEFAULT_PAGINATION = 5
+SUMMARY_MAX_LENGTH = 500
 
 # Blogroll
 LINKS =  (
     ('pelagus', 'https://fyb.patternsinthevoid.net'),
     ('clavium apertum', 'https://blog.patternsinthevoid.net/isis.txt'),
     ('codii et codicilli', 'https://code.patternsinthevoid.net'),
-    ('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
+    #('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
     ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about-the-author.html'),
     ('libris atricoloris', 'https://blog.patternsinthevoid.net/pages/libris.html'),
-    ('imaginis', 'https://image.patternsinthevoid.net'),
-    ('strepitus', 'https://sound.patternsinthevoid.net')
+    ('imaginis', 'https://blog.patternsinthevoid.net/static/images'),
+    #('strepitus', 'https://sound.patternsinthevoid.net')
     )
 SOCIAL = (
     ('twitter', 'https://twitter.com/#!/isislovecruft'),
