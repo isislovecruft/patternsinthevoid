@@ -2,27 +2,34 @@ Title: Pranks
 Date: 2012-06-28 07:42
 Author: isis agora lovecruft
 Category: hacking
-Tags: censorship detection, cryptography, javascript, MPOTR, python, reverse engineering, rio de janeiro, Tor
+Tags: censorship, JS, MPOTR, python, reverse engineering
 
-So, while I'm busy researching away, hard at work [reverse engineering
-proprietary network monitoring software][], and trying to devise methodologies
-[for detecting all][] the various and newly-emerging means for technological
-censorship that the world's government seem to be
-[oh][]-[so][]-[peachy][]-[keen][] on developing (the [State Department
-recently mentioned our research][] in their daily briefing), my friend
-[Nadim][] gets to sit around, playing with crypto, doing things like
-implementing the [Anubis cipher][] [for Javascript][] and inventing [music
-sharing services with 80s-retro aesthetics][].
+So, while I'm busy researching away, hard at work
+[reverse engineering proprietary network monitoring software](https://trac.torproject.org/projects/tor/ticket/6184),
+and trying to devise methodologies [for detecting all](https://ooni.nu) the
+various and newly-emerging means for technological censorship that the world's
+government seem to be
+[oh](http://www.maannews.net/eng/viewdetails.aspx?id=478726)-[so](http://www.scmagazine.com.au/News/306441,telstra-tracks-users-to-build-web-filter.aspx)-[peachy](http://arstechnica.com/tech-policy/2012/06/chinese-online-censorship-targets-collective-action-posts/)-[keen](https://www.google.com/transparencyreport/removals/government/)
+on developing (the
+[State Department recently mentioned our research](http://youtu.be/C9-LjX8wk60?t=1m1s)
+in their daily briefing), my friend [Nadim](https://twitter.com/kaepora) gets
+to sit around, playing with crypto, doing things like implementing the
+[Anubis cipher](http://www.larc.usp.br/~pbarreto/AnubisPage.html)
+[for Javascript](https://jslibs.googlecode.com/svn/trunk/src/jscrypt/cipher.cpp)
+and inventing
+[music sharing services with 80s-retro aesthetics](https://potion.io).
 
-And then, he invents [Cryptocat][]. Some of you might have heard of it.  It's
-[OTR][], in your browser, as client-side Javascript, and we're hoping to build
-it into the Tor Browser Bundle someday. But...that OTR business...I don't
-know. It's so *nineties*. And Ian Goldberg recently published a new paper [on
-multi-party off-the-record messaging][], but it hasn't been implemented
-anywhere yet. Cryptocat is supposed to have multi-party encrypted messaging
-support soon, and Nadim was going back and forth on the spec -- there were
-some open questions, for example, whether or not the static asymmetric keypair
-was necessary given that the each chat was already an in-browser session.
+And then, he invents [Cryptocat](https://crypto.cat). Some of you might have
+heard of it.  It's [OTR](http://www.cypherpunks.ca/otr/), in your browser, as
+client-side Javascript, and we're hoping to build it into the Tor Browser
+Bundle someday. But...that OTR business...I don't know. It's so
+*nineties*. And Ian Goldberg recently published a new paper
+[on multi-party off-the-record messaging](http://www.cypherpunks.ca/~iang/pubs/mpotr.pdf),
+but it hasn't been implemented anywhere yet. Cryptocat is supposed to have
+multi-party encrypted messaging support soon, and Nadim was going back and
+forth on the spec -- there were some open questions, for example, whether or
+not the static asymmetric keypair was necessary given that the each chat was
+already an in-browser session.
 
 (Cryptonerd tangent: I argue that the static keypair is still necessary due to
 Alice and Bob still needing to authenticate to each other with new ephemeral
@@ -42,7 +49,7 @@ room door in Brazil; late night phone calls; sharpie on his face after
 diving over a conference room table to tackle him. That sort of thing.
 
 Then! I got bored doing some thing where I do something that involves a
-computer. And I wrote [this][]:
+computer. And I wrote [this](http://patternsinthevoid.net/kaepora.mean):
 
 <pre class="prettyprint lang-sh">
 #!/bin/bash
@@ -88,7 +95,9 @@ needs to IMPLEMENT MPOTR.
 
 And then I tweeted this:
 
-![kaepora-mean-tweet](|filename|../images/kaepora-mean-tweet.jpg)
+<span>
+<img src="./static/images/2012/pranks/kaepora-mean-tweet.jpg" width="50%">
+</span>
 
 Which grabs the above script and puts it in the user's crontab so that
 the email goes out daily (and each day it's a different email).
@@ -99,7 +108,7 @@ dunno. Twitter. I just wasn't expecting people to read my feed, let alone
 click links.
 
 But now, Nadim's just about done IMPLEMENTING MPOTR, so I feel bad. Now
-there's [this][1]:
+there's [this](http://patternsinthevoid.net/kaepora):
 
 <pre class="prettyprint lang-sh">
 #!/bin/bash
@@ -110,7 +119,7 @@ there's [this][1]:
 # MPOTR.  Requires 'fortune-mod', mutt as your configured mail 
 # client, a default install of python>=2.5 and some sort of MTA.
 #
-# @author isis agora lovecruft Agora Lovecruft, 0x2cdb8b35
+# @author Isis Agora Lovecruft, 0x2cdb8b35
 # @date 28 June 2012
 ###############################################################
 
@@ -152,7 +161,8 @@ echo "${BODY}" | mutt -s "${SUBJECT}" ${TO}
 echo "${BODY}" | mutt -s "${SUBJECT}" ${ALSO}
 </pre>
 
-Which downloads and calls [this ridiculous python script][]:
+Which downloads and calls
+[this ridiculous python script](http://patternsinthevoid.net/geo-kaepora):
 
 <pre class="prettyprint lang-py">
 #!/usr/bin/env python
@@ -550,23 +560,4 @@ neat .gif that'd be neater if your brain was wonky, and a short story
 written by an artificial intelligence. You can run the python script if
 you want to get an idea of what the email looks like.
 
-<(A)3
-
-  [reverse engineering proprietary network monitoring software]: https://trac.torproject.org/projects/tor/ticket/6184
-  [for detecting all]: https://ooni.nu
-  [oh]: http://www.maannews.net/eng/viewdetails.aspx?id=478726
-  [so]: http://www.scmagazine.com.au/News/306441,telstra-tracks-users-to-build-web-filter.aspx
-  [peachy]: http://arstechnica.com/tech-policy/2012/06/chinese-online-censorship-targets-collective-action-posts/
-  [keen]: https://www.google.com/transparencyreport/removals/government/
-  [State Department recently mentioned our research]: http://youtu.be/C9-LjX8wk60?t=1m1s
-  [Nadim]: https://twitter.com/kaepora
-  [Anubis cipher]: http://www.larc.usp.br/~pbarreto/AnubisPage.html
-  [for Javascript]: https://jslibs.googlecode.com/svn/trunk/src/jscrypt/cipher.cpp
-  [music sharing services with 80s-retro aesthetics]: https://potion.io
-  [Cryptocat]: https://crypto.cat
-  [OTR]: http://www.cypherpunks.ca/otr/
-  [on multi-party off-the-record messaging]: http://www.cypherpunks.ca/~iang/pubs/mpotr.pdf
-  [this]: http://patternsinthevoid.net/kaepora.mean
-  []: (/images/kaeporameantweet.jpeg)
-  [1]: http://patternsinthevoid.net/kaepora
-  [this ridiculous python script]: http://patternsinthevoid.net/geo-kaepora
+ ♥Ⓐ
