@@ -2,7 +2,7 @@ Title: Defcon Report Back, Intro
 Date: 2011-08-08 15:28
 Author: isis agora lovecruft
 Category: hacking
-Tags: black hat con, certificate authority, convergenge, Defcon, dr. zoz, fuck them, gender identity, hacking, las vegas, security
+Tags: hacking
 
 I'm sitting in McCarren Internation Airport in [Las Vegas, Nevada][],
 killing the next two hours over a slow 3G connection. This was my first
