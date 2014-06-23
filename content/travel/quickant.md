@@ -1,6 +1,7 @@
 Title: QUICKANT: On International, Permanent Houselessness
 Date: 2013-08-16 02:28
 Authors: isis agora lovecruft
+Status: draft
 
 >XXXXX transcribed 12K bytes:
 >
