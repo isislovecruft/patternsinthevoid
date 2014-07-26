@@ -273,13 +273,13 @@ id="step2" style="float:right; clear:right; width:65%; padding:0.2em;"><tbody>
 </tbody></table>
 <p><br /></p>
 <h3>STEP 2:</h3>
-<p>Next, disconnect pins <code>4</code>, <code>26</code>, <code>31</code>,
+<p>Next, disconnect pins <code>4</code>, <code>18</code>, <code>20</code>,
+<code>26</code>, <code>29</code>, <code>31</code>,
 <code>33</code>, <code>37</code>, <code>39</code>, <code>41</code>,
 <code>42</code> on a chip labelled <code>PC87382</code>, which forwards bus
-communications through two LPC buses from an external dock. <strike>To disconnect
-them, simply get a scalpel and cut them from the chip's packaging, leaving the
-severed pins soldered into the pads on the mainboard.</strike></p>
-<p>Oops. I was wrong!</p>
+communications through two LPC buses from an external dock. To disconnect
+them, simply get a scalpel and carefully  cut them from the chip's packaging, and then desolder
+the severed pins from the pads on the mainboard.</p>
 <blockquote><p>Photo 041 shows severed pins soldered into the pads. I strongly
 recommend to remove the pins, as I try to show in photos 043-044, to end up
 with a result such as in photo 045 without any pins left. This step matters
