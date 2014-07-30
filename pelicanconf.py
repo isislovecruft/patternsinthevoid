@@ -81,7 +81,7 @@ TIMEZONE = 'UTC'
 DEFAULT_LANG = u'en'
 DEFAULT_DATE = 'fs' # use filesystem metadata to get the creation date
 DEFAULT_DATE_FORMAT = '%A, %d %B %Y'
-DATE_FORMATS = {'en': ('en_US','%A, %d %B %Y'),}
+DATE_FORMATS = {'en_US': ('en_US','%A, %d %B %Y'),}
 
 #FEED_DOMAIN = SITEURL
 FEED_RSS = u'feed.rss.xml'
