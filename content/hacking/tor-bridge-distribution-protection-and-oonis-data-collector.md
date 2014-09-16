@@ -22,15 +22,15 @@ creepy.
 ![king-of-kowloon](|filename|../images/2013/04/king-of-kowloon-small.jpg)
 
 When I started officially working on things for the
-[Tor Project](https://torproject.org) last year, I'd imagined that the world
-was like a map in an RPG, and that there were a lot of dark, hazy spots that
-needed filling in. I worried that if my legal name was publicly attached to Tor
-that places like China, Iran, and Syria would always remain dark spots. The
-idea that I might be prevented from seeing experiencing those cultures and
-regions firsthand, that I would not be able to see the homelands of people I
-wanted to empower, merely because a (*corrupt* would be redundant) government
-had gotten wise to some name I don't answer to -- it seemed daunting, and a bit
-heartbreaking.
+[Tor Project](https://torproject.org) a couple years ago, I'd imagined that
+the world was like a map in an RPG, and that there were a lot of dark, hazy
+spots that needed filling in. I worried that, if my legal name was publicly
+attached to Tor, that places like China, Iran, and Syria would always remain
+dark spots. The idea that I might be prevented from seeing and experiencing
+those cultures and regions firsthand, that I would not be able to see the
+homelands of people I wanted to empower, merely because a (*corrupt* would be
+redundant) government had gotten wise to some name I don't answer to -- it
+seemed daunting, and a bit heartbreaking.
 
 ![kowloon-1](|filename|../images/2013/04/kowloon-1.jpg)
 
