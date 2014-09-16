@@ -26,7 +26,7 @@ number of other algorithms that calculated "tweet popularity".
 
 Because people have been asking for the full album, here it is. I'll still keep
 tweeting it though, because the only other useful thing I can think of that
-fits in less than 140 bytes is shellcode.
+impressively fits in less than 140 bytes is shellcode.
 
 <pre style="font-size: 60%" class="prettyprint lang-py">
 python -c'import sys;[sys.stdout.write(chr((~t&t>>3^(((t>>((t>>11)%7+6))%15)*t))%256))for t in xrange(2**19)]'|aplay
