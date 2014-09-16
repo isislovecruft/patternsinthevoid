@@ -5,6 +5,42 @@ Category: travel
 Author: isis agora lovecruft
 
 
+**UPDATE**: [16 September, 2014] This post was originally written just after
+these events occurred, in July of 2012. However, I self-censored and
+[did not post this article until nearly two years later](https://twitter.com/puellavulnerata/status/481098460540993536),
+in June 2014,
+[as shown by the git commits for this blog](https://github.com/isislovecruft/patternsinthevoid/commit/81e49252707a81a662a2e7a25d411e82ad55561d),
+due to fear of what people whose voices count far more than mine would say to
+Tor's funders, and the consequences which this might have had for myself and
+my colleagues.
+
+Just before putting this post online and sharing it for the first time, I
+received an encrypted email from one of the organisers who works for said
+funder. It pointed me to an
+[article](http://thehill.com/policy/technology/311281-mpaa-hires-dem-staffer-winters-for-global-policy)
+stating that Shanna Winters, after all these years, lost their job as a
+Congressional aide, and went to go work for the Motion Picture Association of
+America (MPAA), which is the largest driving force worldwide behind using
+Intellectual Property law and the DMCA to justify internet censorship.
+
+In addition to not wishing to anger Tor's funders, I self-censored due to a
+nauseating feeling of what some might call "a sense of professional respect"
+for the Congressional staffer I was virulently ranting against. While it is
+true that I despise this person, their profession, a good chunk of the
+population of Washington D.C., and even the very idea behind the majoritarian
+insult-to-freedom that Capitol Hill represents, I was unwilling to post this
+article because I worried that it could be contrued as a politically-fueled
+*argumentum ad hominem* against a particularly trollish Congressional staffer,
+rather than what I meant, underneath my geeky humour and snide remarks, it to
+be: an attack *against the idea* that a world in which censorship takes place
+could ever be considered stable.
+
+The rest of this article is my uncensored account, as I recorded it then, of
+visiting Congress for the first time.
+
+<p style="text-align: center; font-weight: bold;">&middot &middot &middot</p>
+
+
 One of Tor's funders convinced me to visit the Hill. I explained that this was
 a terrible, no-good, very-bad idea. I think they thought it would be funny.
 
