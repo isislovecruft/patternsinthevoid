@@ -32,9 +32,9 @@ They seemed utterly shocked.
 
 > "Well then, good luck with your talks, miss, and you're free to go."
 
-they said, both forgetting to pat down the remainder of me, and to put the
-baby blue latex gloves into the machine that purportedly checks for chemical
-compounds used in explosives.
+they said, forgetting to pat down the remainder of me, swab the baby blue
+latex gloves, and put the swab into the machine that purportedly checks for
+chemical compounds used in explosives.
 
 I coolly walked away, holding my nose up in the air, as if I believed I had
 every right in the world to not be humiliatingly groped, holding all my
@@ -42,7 +42,7 @@ snickering giddiness inside until I got around the corner of a head-high
 dividing wall. Then I shook my head, shocked at myself and feeling somewhat
 bad and for the multiple lies² that had just fallen out of my mouth before I
 could even think about them, and I laughed out loud, wondering how long it
-would take for that person to realise they still had their gloves on.
+would take for that person to realise they still hadn't checked their gloves.
 
 <p style="text-align: center; font-weight: bold;">&middot &middot &middot</p>
 
