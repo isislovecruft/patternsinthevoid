@@ -240,7 +240,7 @@ We started looking over the code, a mixture of Python, Django templates, and
 Javascript. I pointed out a bunch of little things as I spotted them, like
 moving to a more recent version of Django to better avoid
 [some of the then-recent CSRF, XSS, and DoS vulnerabilities](http://www.cvedetails.com/vulnerability-list/vendor_id-10199/product_id-18211/year-2011/Djangoproject-Django.html). I
-complemented him on his clean use of Javascript scopes and avoidance of global
+complimented him on his clean use of Javascript scopes and avoidance of global
 variable manipulation, pointed out some places where perhaps the Python code
 could be more functionalised to avoid code duplication, and suggested adding a
 bit more developer documentation and recommended trying
