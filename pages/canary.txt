@@ -1,21 +1,27 @@
-As of the date below, I have never received:
+As of the date below, I have never received any:
 
-  * Any type of National Security Letter, for any purpose,
-  * Personal requests from any law enforcement agency worldwide or corporate entity
-    for backdoors in any software and/or hardware projects to which I currently am an
-    active contributor, nor am I aware of other developers in these projects having
-    received such a request,
-  * Any type of Foreign Intelligence Surveillance Court order,
-  * Subpoenas and/or search warrants accompanied by a gag order pursuant to the
-    Electronic Communications Privacy Act, nor
-  * Any of the above, with respect to any and all machines I operate, maintain,
-    and/or develop on within the Tor network, or for other members of the Tor
-    community.
+  * National Security Letter, of any type, for any purpose,
+  * Personal requests from any law enforcement agency worldwide or
+    corporate entity for backdoors in any software and/or hardware
+    projects to which I currently am an active contributor, nor am I
+    aware of other contributors to these projects having received such a
+    request,
+  * Foreign Intelligence Surveillance Court orders of any type,
+  * Subpoenas and/or search warrants accompanied by a gag order pursuant
+    to the Electronic Communications Privacy Act,
 
-This statement will continue to be updated bi-annually.  For more information
-regarding the inspiration this statement, please see https://www.canarywatch.org/.
-The plaintext, signed version of this statement can be found at
-https://blog.patternsinthevoid.net/canary.asc.
+Nor have I received, nor am I aware of, occurences of any of the above,
+with respect to any and all machines I operate, maintain, and/or develop
+on within the Tor network, or for other members of the Tor community.
+
+This statement will continue to be updated bi-annually.  It was inspired
+by https://www.canarywatch.org/, and a plaintext version can be found at
+https://fyb.patternsinthevoid.net/canary.asc.
+
+The OpenPGP signature on this warrant canary has a pre-determined
+expiration date that coincides with the date on which this canary will
+die.  Effectively, this means that if you can verify the validity of the
+signature below, then this warrant canary is still going strong.
 
   12 June 2015
   ♥Ⓐ isis agora lovecruft
