@@ -43,6 +43,17 @@
                 
                         <div class="entry-content">
                             {% include 'article_infos.html' %}
+                            <!-- representative_image plugin -->
+                            {% if article.featured_image %}
+                                <p>
+                                  <a href="{{ SITEURL }}/{{ article.url }}">
+                                    <img style="width: 450px; float: right; display: block;"
+                                         src="{{ article.featured_image }}" />
+                                  </a>
+                                  <br />
+                                </p>
+                            {% endif %}
+                            <!-- end representative_image plugin -->
                             {{ article.summary }}
                             <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
                             {% include 'comments.html' %}

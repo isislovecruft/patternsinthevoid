@@ -56,11 +56,24 @@ FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),
 
 from plugins import neighbors
 from plugins import pelican_bibtex as bibtex
-PLUGINS = [neighbors, bibtex]
+from plugins import summary
+from plugins import clean_summary
+from plugins import representative_image
+
+PLUGINS = [
+    neighbors,
+    bibtex,
+    summary,
+    clean_summary,
+    representative_image,
+]
 
 DIRECT_TEMPLATES = ('index', 'libris', 'tags', 'categories', 'archives', 'sitemap')
 PAGINATED_DIRECT_TEMPLATES = ('index',)
 SITEMAP_SAVE_AS = 'sitemap.xml'
+
+CLEAN_SUMMARY_MAXIMUM = 3
+CLEAN_SUMMARY_MINIMUM_ONE = True
 
 ## Whether to include a flashproxy and CC license in the footer:
 FLASHPROXY = True
