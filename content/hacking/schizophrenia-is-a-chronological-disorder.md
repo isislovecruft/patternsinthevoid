@@ -2,7 +2,9 @@ Title: Schizophrenia is a Chronological Disorder?
 Date: 2011-10-10 23:16
 Author: isis agora lovecruft
 Category: hacking
-Tags: chronology, consciousness, David Dennet, dual-state vector, Godel, Multiple Drafts Model, neuroscience, pathogenesis, Penrose, perturbation theory, quantum physics, schizophrenia, theoretical physics
+Tags: neuroscience, perturbation theory, schizophrenia, theoretical physics
+
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 First, I would like to state -- as a theoretical physicist who is
 partners with another theoretical physicist -- that the blog I took this
@@ -50,6 +52,8 @@ wrote:
 > the time order wrong, so you believe somebody else is talking) and
 > they’re doing some studies on that.
 
+<!-- PELICAN_END_SUMMARY -->
+
 As someone who is intensely interested in the theoretics of time travel,
 and also has been effected by schizophrenia (well, technically, my
 doctors are calling it schizoaffective disorder, which is
@@ -76,7 +80,8 @@ Many physicists throughout recent decades have postulated theories of
 Reduction theory][], which he rather curiously arrived at via Godel's
 Incompleteness Theorem. That theory is controversial. However, recently
 [some neurological processes have been shown to have quantum effects on
-the macroscopic scale][]. Many other neurological processes are likely
+the macroscopic scale](http://www.wired.com/wiredscience/2011/01/quantum-birds/).
+Many other neurological processes are likely
 relegated to the realm of classical mechanics. I would like to delve a
 little deeper into this idea that schizophrenia is a result of a
 chronological disconnection (dare I say, time out of joint?) from the
@@ -84,7 +89,8 @@ perspective of a physicist.
 
 Before I go on, I would like to briefly summarize the concept of a
 dual-state vector. For those not familiar, [here's a paper from Arxiv
-which covers the dual-state vector formalism][]. It's only six pages,
+which covers the dual-state vector formalism](http://arxiv.org/abs/0706.1347).
+It's only six pages,
 but if you're thinking, "tl;dr", then the abstract explains the idea
 quite concisely: *"The Two-State Vector Formalism describes a quantum
 system at a particular time by two quantum states: the usual one,
@@ -117,7 +123,8 @@ rectified in his [Multiple Drafts Model of consciousness][]:
 > > in memory criterial for consciousness: that is *what it is* for the
 > > "given" to be "taken" ... There is no reality of conscious
 > > experience independent of the effects of various vehicles of content
-> > on subsequent action (and hence, of course, on memory).^[[1]][]^
+> > on subsequent action (and hence, of course, on
+> > memory).^[[1](https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_drafts_model#cite_note-dennett1-0)]^
 >
 > Dennett's thesis is that our modern understanding of consciousness is
 > unduly influenced by the ideas of [René Descartes][]. To show why, he
@@ -224,14 +231,15 @@ implications for free will, which, as we shall see, arise from a linear
 understanding of time and dependence upon linear causality. Phrased
 succinctly, [the physics of classical mechanics as applied to
 neurophysiology supply no basis for a person's ability to alter their
-stream of consciousness][]through mental effort; the mechanistic
+stream of consciousness](https://encrypted.google.com/url?sa=t&rct=j&q=neuro%20processes%20quantum%20mechanics&source=web&cd=1&ved=0CCIQFjAA&url=http%3A%2F%2Fwww-physics.lbl.gov%2F~stapp%2FPTRS.pdf&ei=uyyFTrfdIqHmiAKJ7LSbDA&usg=AFQjCNGYreeVYdfUlBAhZmFKqPAZZeM_HA&cad=rja)
+through mental effort; the mechanistic
 determinism of classical physics rules out the possibility of free will.
 Hypotheses which can be classified as Orwellian or Stalinesque not only
 depend hopelessly upon linear causality, but also imply that there is no
 mechanism for concerted alteration of consciousness, maintaining the
 impossibility of free will -- [something which modern studies in
-neurophysiology have shown is not the case][], i.e. self-directed
-neuroplasticity.
+neurophysiology have shown is not the case](http://serendip.brynmawr.edu/exchange/node/549),
+i.e. self-directed neuroplasticity.
 
 If we were to view certain neurological processes (and again, I do not
 know which ones, nor do I think anyone else knows yet) as wavefronts
@@ -246,7 +254,8 @@ boat? And, in addition to these problems, we have yet another temporal
 problem in light of Dennet's Multiple Drafts model: If consciousness is
 the cause and effect of consciousness, this nearly raises it to godlike
 status; consciousness becomes a sort of prime mover in the sense of
-[Aristotle's *primum movens*][] and St. Thomas Aquinas' dreadfully
+[Aristotle's *primum movens*](https://secure.wikimedia.org/wikipedia/en/wiki/Primum_movens#Aristotle.27s_ontology)
+and St. Thomas Aquinas' dreadfully
 ignorant [Cosmological Arguments][]. (Hey, dude, I don't care if your
 confusion earned you sainthood, but there's this thing called
 Perturbation Theory in quantum mechanics, and [it explains][] that
@@ -312,10 +321,6 @@ things which I am trying to see and define. It's tortuously frustrating.
   [their post]: http://backreaction.blogspot.com/2011/09/from-my-notepad.html
   [FQXi Conference]: http://fqxi.org/conference/2011
   [Roger Penrose's Orchestrated Objective Reduction theory]: https://secure.wikimedia.org/wikipedia/en/wiki/Quantum_mind#Roger_Penrose_and_Stuart_Hameroff
-  [some neurological processes have been shown to have quantum effects
-  on the macroscopic scale]: http://www.wired.com/wiredscience/2011/01/quantum-birds/
-  [here's a paper from Arxiv which covers the dual-state vector
-  formalism]: http://arxiv.org/abs/0706.1347
   [Multiple Drafts Model of consciousness]: https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_drafts_model
   [Daniel Dennett]: https://secure.wikimedia.org/wikipedia/en/wiki/Daniel_Dennett
     "Daniel Dennett"
@@ -333,7 +338,6 @@ things which I am trying to see and define. It's tortuously frustrating.
     "Strong AI"
   [operationalism]: https://secure.wikimedia.org/wikipedia/en/wiki/Operationalism
     "Operationalism"
-  [[1]]: https://secure.wikimedia.org/wikipedia/en/wiki/Multiple_drafts_model#cite_note-dennett1-0
   [René Descartes]: https://secure.wikimedia.org/wikipedia/en/wiki/Ren%C3%A9_Descartes
     "René Descartes"
   [phi illusion]: https://secure.wikimedia.org/wikipedia/en/wiki/Phi_phenomenon
@@ -354,12 +358,6 @@ things which I am trying to see and define. It's tortuously frustrating.
     "Intentional stance"
   [heterophenomenology]: https://secure.wikimedia.org/wikipedia/en/wiki/Heterophenomenology
     "Heterophenomenology"
-  [the physics of classical mechanics as applied to neurophysiology
-  supply no basis for a person's ability to alter their stream of
-  consciousness]: https://encrypted.google.com/url?sa=t&rct=j&q=neuro%20processes%20quantum%20mechanics&source=web&cd=1&ved=0CCIQFjAA&url=http%3A%2F%2Fwww-physics.lbl.gov%2F~stapp%2FPTRS.pdf&ei=uyyFTrfdIqHmiAKJ7LSbDA&usg=AFQjCNGYreeVYdfUlBAhZmFKqPAZZeM_HA&cad=rja
-  [something which modern studies in neurophysiology have shown is not
-  the case]: http://serendip.brynmawr.edu/exchange/node/549
-  [Aristotle's *primum movens*]: https://secure.wikimedia.org/wikipedia/en/wiki/Primum_movens#Aristotle.27s_ontology
   [Cosmological Arguments]: https://secure.wikimedia.org/wikipedia/en/wiki/Cosmological_argument
   [it explains]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/06/08-Chapter-8-Structure-Formation-in-the-Opaque-Universe.pdf
   [other theorists have attempted]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/09/Quantum_Physics_in_Neuroscience_and_Psychology.pdf
