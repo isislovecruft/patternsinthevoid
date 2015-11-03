@@ -4,12 +4,14 @@ Author: isis agora lovecruft
 Category: hacking
 Tags: anonymity, bash, git
 
-[Arturo][https://twitter.com/#!/hellais] and I were going through our commit
-logs for [ooni-probe][https://gitweb.torproject.org/ooni-probe.git] this
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+[Arturo](https://twitter.com/#!/hellais) and I were going through our commit
+logs for [ooni-probe](https://gitweb.torproject.org/ooni-probe.git) this
 morning when he noted that git commits leak geodata through timezone
 settings. I figured git would have an easy way to set the timezone to GMT, but
 it turns out that it uses mktime() to get a struct representing the system
-clock time. [There's a few hacks already][http://www.alexpeattie.com/blog/working-with-dates-in-git/]
+clock time. [There's a few hacks already](http://www.alexpeattie.com/blog/working-with-dates-in-git/)
 for dealing with this, namely setting GIT\_AUTHOR\_DATE with the --date
 command:
 
@@ -21,8 +23,10 @@ This is not only annoying, but it also doesn't set GIT\_COMMITTER\_DATE,
 so if you wrote the patch and also committed it to a repo, your timezone
 still leaks.
 
+<!-- PELICAN_END_SUMMARY -->
+
 I thought this was all incredibly annoying, and I don't want to change
-my system clock, so [I made a bash script][https://github.com/isislovecruft/configs/blob/master/scripts/gitdate.sh] to fix it:
+my system clock, so [I made a bash script](https://github.com/isislovecruft/configs/blob/master/scripts/gitdate.sh) to fix it:
 
 <pre class="prettyprint lang-bash">
 #!/bin/bash
