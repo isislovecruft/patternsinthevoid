@@ -3,6 +3,7 @@ Date: 2011-08-26 17:05
 Author: isis agora lovecruft
 Category: hacking
 Tags: python
+Status: draft
 
 Python is still amazing. I'm still in love with it.
 
@@ -22,7 +23,7 @@ And, if you're looking for practice, [Python Challenge][] has a series
 of puzzles aimed at people interested in cryptography and Python. While
 working on the puzzles, my desktop looked like this:
 
-[![][]][]
+![](http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1-1024x640.png)
 
 Cipherpunk, like woah! And yes, I use emacs. I already said I was a
 Lisper, don't hate.
@@ -30,12 +31,9 @@ Lisper, don't hate.
 Python Challenge is like [Hack This Site][] all over again! Fuck yeah!
 So good!
 
-\<(A)3
+&lt;(A)3
 
   [Kyle]: http://kyleterry.com/
   [Dive Into Python]: http://diveintopython.org/
   [Python Challenge]: http://www.pythonchallenge.com
-  []: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1-1024x640.png
-    "snapshot1"
-  [![][]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/08/snapshot1.png
   [Hack This Site]: http://www.hackthissite.org/pages/index/index.php
