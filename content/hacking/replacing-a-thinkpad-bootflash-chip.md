@@ -3,6 +3,7 @@ Date: 2014-01-10 15:29
 Tags: coreboot, hardware, security
 Category: hacking
 Author: isis agora lovecruft
+Image: /static/images/2013/12/131-147.remove-microphone_small.gif
 
 
 # Using coreboot to directly initialise a Linux kernel payload
