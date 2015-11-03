@@ -2,9 +2,9 @@ Title: Anthropic Decision Theory
 Date: 2011-12-05 23:23
 Author: isis agora lovecruft
 Category: etc
-Tags: altruism, anthropic decision theory, artificial intelligence, cosmology, game theory, robot liberation front, swarm robotics, utilitarianism
+Tags: altruism, anthropic decision theory, ML, cosmology, game theory, utilitarianism
 
-[![From Super Happy Anarcho Fun Pages, by Magpie
+![From Super Happy Anarcho Fun Pages, by Magpie
 http://www.tangledwilderness.org/pdfs/shafp2-letter.pdf](http://www.tangledwilderness.org/pdfs/shafp2-letter.pdf)
 
 In cosmology, a branch of physics which seeks to understand the genesis,
@@ -25,7 +25,8 @@ the values and underlying uncertainties relevant to a given decision; it is
 closely related to game theory in regards to antagonistic agents whose
 decisions are correlated) a new field called Anthropic Decision
 Theory. Tranhumanist philosopher Nick Bostrom is paving the way for research
-into the new field, and his [most recent paper on arxiv][] gives the
+into the new field, and his [most recent paper on arxiv](http://arxiv.org/abs/1110.6437)
+gives the
 definition, "Anthropic Decision Theory. An Agent should first find all the
 decisions correlated with their own.  Then they should maximize expected
 utility, acting as if they simultaneously controlled the outcome of all
@@ -37,7 +38,8 @@ intelligence and swarm robotics, which are micro- and nano- robots that
 collectively display emergent intelligence greater than that of the individual
 algorithms controlling each single robot. Interestingly enough, artificial
 swarm intelligence algorithms are frequently modeled after natural or
-biological systems, with names like [Artificial Bee Colony Algorithm][],
+biological systems, with names like
+[Artificial Bee Colony Algorithm](http://mf.erciyes.edu.tr/abc/index.htm),
 Cuckoo Search, Gravitational Search Algorithm, and Intelligent Water Drops.
 
 On the one hand, I'm really excited about the formal development of Anthropic
@@ -49,15 +51,7 @@ On the other hand, I just want to point out that we just handed the robots a
 formal logic structure for why they should create a Robot Liberation Front and
 recycle us humans for parts.
 
-![From Super Happy Anarcho Fun Pages, by Magpie
-][1]
+![Various electrical devices of the world, unite! You have nothing to lose but your cords!](http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/nothingtolosebutyourcords.jpeg)
 
-  [From Super Happy Anarcho Fun Pages, by Magpie
-  http://www.tangledwilderness.org/pdfs/shafp2-letter.pdf]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/wedontneedthehumans.jpeg
-    "wedontneedthehumans"
-  [![From Super Happy Anarcho Fun Pages, by Magpie
-  http://www.tangledwilderness.org/pdfs/shafp2-letter.pdf][]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/wedontneedthehumans.jpeg
-  [most recent paper on arxiv]: http://arxiv.org/abs/1110.6437
-  [Artificial Bee Colony Algorithm]: http://mf.erciyes.edu.tr/abc/index.htm
-  [1]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2011/12/nothingtolosebutyourcords.jpeg
-    "nothingtolosebutyourcords"
+Image from
+[Super Happy Anarcho Fun Pages](http://www.tangledwilderness.org/pdfs/shafp2-letter.pdf), by Magpie.
