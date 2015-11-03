@@ -72,7 +72,9 @@ DIRECT_TEMPLATES = ('index', 'libris', 'tags', 'categories', 'archives', 'sitema
 PAGINATED_DIRECT_TEMPLATES = ('index',)
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
+## Maximum number of images to include in an article summary:
 CLEAN_SUMMARY_MAXIMUM = 3
+## If True, try to include at least one image in each article summary:
 CLEAN_SUMMARY_MINIMUM_ONE = True
 
 ## Whether to include a flashproxy and CC license in the footer:
