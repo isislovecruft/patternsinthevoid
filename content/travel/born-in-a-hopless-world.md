@@ -5,6 +5,8 @@ Category: travel
 Slug: born-in-a-hopless-world
 Author: isis
 
+<!-- PELICAN_BEGIN_SUMMARY -->
+
 Sometimes life is a bit strange.
 
 A dear friend of mine, from France was recently denied their visa into the
@@ -44,6 +46,8 @@ déjeuner"*.  On it was a sealed vial of some transparent reddish liquid,
 labelled with chemical numbers and in French with some Latin, a three
 centimeter hypodermic needle and a syringe, both wrapped in plastic autoclave
 packaging, and an alcohol swab.
+
+<!-- PELICAN_END_SUMMARY -->
 
 > "I don't know why the French do not believe in B12. Perhaps because there are
 > no vegans here." he said.
