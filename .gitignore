@@ -5,3 +5,5 @@
 \#*.*\#
 *.pid
 update.log
+output
+output-hs
