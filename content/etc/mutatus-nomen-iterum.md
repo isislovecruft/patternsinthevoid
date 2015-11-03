@@ -2,12 +2,18 @@ Title: Mutatus Nomen Iterum
 Date: 2011-10-08 03:35
 Author: isis agora lovecruft
 Category: etc
-Tags: cyborg rights
+Tags: anonymity
+
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 Since I believe in changing my name whenever I feel like it, I'm doing so
-again. From here until I decide to do so yet again, my name is isis agora lovecruft in order to pay homage to H.P. Lovecraft, Ada Lovelace, Agorism, and
+again. From here until I decide to do so yet again, my name is isis agora lovecruft.
+(In order to pay homage to H.P. Lovecraft, Ada Lovelace, Agorism, and
 the really deep-down OCD-ish satisfaction that I get from syllable
-repetition. Oh, and "cruft" is [h4x0r jargon][http://www.catb.org/jargon/html/C/cruft.html] for "extraneous bullshit".
+repetition.) Oh, and "cruft" is
+[h4x0r jargon](http://www.catb.org/jargon/html/C/cruft.html) for "extraneous bullshit".
+
+<!-- PELICAN_END_SUMMARY -->
 
 Also, because I'm not really writing about anything that matters, and I
 haven't gotten a chance to say this yet: Janelle Monae is my hero. I don't
