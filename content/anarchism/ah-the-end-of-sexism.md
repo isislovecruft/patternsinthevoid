@@ -1,7 +1,8 @@
 Title: Anarcho-Transhumanism: The Death of Sexism
 Date: 2011-09-23 00:51
 Author: isis agora lovecruft
-Category: anarchism, feminism
+Category: anarchism
+Tags: feminism
 
 Anarcho-transhumanism. Is much better than being a sexist, biological
 essentialist.
