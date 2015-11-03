@@ -2,7 +2,9 @@ Title: Rio de Janeiro
 Date: 2012-05-29 12:58
 Author: isis agora lovecruft
 Category: travel
-Tags: freebird, Guardian Project, OONI, RightsCon, Rio de Janeiro, Tor, travel
+Tags: OONI, Rio de Janeiro, Tor
+
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 I'm in Rio de Janeiro, Brazil.
 
@@ -12,6 +14,8 @@ price. I take another cab.
 Most of the federal police are smaller than I, but a group of them size me up
 with amusement in their eyes. Last year, they killed thirteen hundred people
 in this city.
+
+<!-- PELICAN_END_SUMMARY -->
 
 Shirtless men wander on the freeway, selling pele porco frita between the
 cars.
@@ -42,16 +46,12 @@ raising arms and face to the cloudless azure sky. Fleets of teal, red, and
 ochre sailboats scatter on the lagoon beneath a cablecar dangling between two
 cliffs rising out of the sea.
 
-[![1]][]
+![](|filename|../blog/wp-content/uploads/2012/05/favela.jpg)
 
-I've just arrived for [RightsCon][] and [Freebird][], and also to meet with
-two friends to discuss how we'll spend the the rest of this year working on
-[OONI][]. I'm going to go explore now.
+I've just arrived for [RightsCon](https://www.rightscon.org/rio/) and
+[Freebird](https://guardianproject.info/freebird/), and also to meet with two
+friends to discuss how we'll spend the the rest of this year working on
+[OONI](http://ooni.nu/). I'm going to go explore now.
 
-  []: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/05/favela.jpg
-  [1]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/05/christ-the-redeemer11.jpg
-    "statue"
-  [![1]]: http://www.patternsinthevoid.net/blog/wp-content/uploads/2012/05/christ-the-redeemer11.jpg
-  [RightsCon]: https://www.rightscon.org/rio/
-  [Freebird]: https://guardianproject.info/freebird/
-  [OONI]: http://ooni.nu/
+![](|filename|../blog/wp-content/uploads/2012/05/christ-the-redeemer11.jpg)
+
