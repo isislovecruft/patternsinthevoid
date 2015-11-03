@@ -3,6 +3,26 @@ Date: 2015-03-19 15:29
 Tags: photography, travel, architecture, spain
 Category: travel
 Author: isis agora lovecruft
+Image: /static/images/2015/03/valencia/2015-03-19-P3030025.png
+
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+<p style="color: #FFFFFF">
+
+This is some text to get the table of images to appear only after the jump.
+Hackity hack.
+This is some text to get the table of images to appear only after the jump.
+Hackity hack.
+This is some text to get the table of images to appear only after the jump.
+Hackity hack.
+This is some text to get the table of images to appear only after the jump.
+Hackity hack.
+This is some text to get the table of images to appear only after the jump.
+Hackity hack.
+
+</p>
+
+<!-- PELICAN_END_SUMMARY -->
 
 </p><span style="align:left; float:left; width:100%;">
   <table style="float:left; clear:left; width:85%; padding:0.2em;">
@@ -82,4 +102,4 @@ Author: isis agora lovecruft
     </tbody>
   </table>
 </span>
-</p><br /><p>
+</p><br />
