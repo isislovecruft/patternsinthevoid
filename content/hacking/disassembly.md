@@ -7,7 +7,7 @@ Tags: ASM, shellcode
 <!-- PELICAN_BEGIN_SUMMARY -->
 
 Often when doing exploit development, it's [necessary to extract hex
-opcodes](|filename|../learning-assembly-through-writing-shellcode.html)
+opcodes]({filename}/learning-assembly-through-writing-shellcode.html)
 from an assembly or C program to generate shellcode.
 Normally, to do this, one uses **objdump** as in the following example:
 
