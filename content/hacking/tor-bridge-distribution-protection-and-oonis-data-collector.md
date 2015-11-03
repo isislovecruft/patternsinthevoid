@@ -3,7 +3,9 @@ Date: 2013-04-28 13:38
 Author: isis agora lovecruft
 Category: hacking
 Tags: China, OONI, Tor, Censorship
+Image: /static/images/2013/04/king-of-kowloon-small.jpg
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 Last week, I went to China, for the first -- and possibly the last --
 time. 
@@ -15,8 +17,8 @@ people through the streets of Kowloon, again with another Tor developer, down
 alleys, in and out of cabs, through electronic stores where I loudly and openly
 bought tiny audio/video devices to bug myself and the hotel room with. This is
 the first time I've ever worn a wire (I know, *they all say that*, right?): it
-doens't feel right. I felt the compulsion to warn people who walked up and
-started talking to me before they spoke. And even then I still felt dirty and
+doesn't feel right. I felt the compulsion to warn people who walked up and
+started talking to me, before they spoke. And even then I still felt dirty and
 creepy.
 
 ![king-of-kowloon](|filename|../images/2013/04/king-of-kowloon-small.jpg)
@@ -41,6 +43,8 @@ should be allowed to work wherever they want. Freedom of association, right?
 And yet it had never occurred to me: that an invisible line drawn in the sand
 could keep you away from your home, or that an arbitrary date on a slip of
 paper could decide how long you were permitted to see someone you loved.
+
+<!-- PELICAN_END_SUMMARY -->
 
 After living in Germany and France for precisely the number of days my tourist
 visa would allow, (Oops. I'd been counting, and thought I was still a week
