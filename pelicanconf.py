@@ -128,6 +128,6 @@ LINKS =  (
 SOCIAL = (
     ('twitter', 'https://twitter.com/#!/isislovecruft'),
     ('github', 'https://github.com/isislovecruft'),
-    ('flattr this!', 'https://flattr.com/submit/auto?user_id=isislovecruft&url=https://blog.patternsinthevoid.net/index.html'),
-    ('#tor-status', 'https://gs.torproject.org/person/isis'),
+    #('flattr this!', 'https://flattr.com/submit/auto?user_id=isislovecruft&url=https://blog.patternsinthevoid.net/index.html'),
+    #('#tor-status', 'https://gs.torproject.org/person/isis'),
 )
