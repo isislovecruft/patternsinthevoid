@@ -2,7 +2,7 @@ Title: Shellcode, Hex Opcodes, and Dragons
 Date: 2011-08-15 02:48
 Author: isis agora lovecruft
 Category: hacking
-Tags: assembly languages, fairytaleland, hex, opcodes, shellcode, syscall
+Tags: asm, shellcode
 
 I just realised why directory names in \*nix systems are often three
 characters. If you're loading pathnames into a syscall in assembly
