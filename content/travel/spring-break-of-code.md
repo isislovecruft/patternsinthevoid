@@ -3,6 +3,9 @@ Date: 2013-03-25 13:38
 Author: isis agora lovecruft
 Category: travel
 Tags: Spring Break of Code, Whispersys
+Image: /static/images/2013/03/sboc/eberswalderstrasse-prenzlauerberg-hinterof.jpg
+
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 One of the first times I met up with [Moxie](https://twitter.com/moxie) while travelling, we met at a dive
 bar in San Francisco's Mission District, packed with hipsters. I had nineteen years, a
@@ -25,6 +28,8 @@ As I recall, Moxie shook and hung his head, and smiling countered my proposition
 "I'm not entirely sure, but the story appears to end there -- at least, there is no record of anyone claiming the money in the trust -- and it's been sitting there, collecting interest, for over a century now." 
 
 Moxie swept the dreads out of his face, took a sip of the gin, and continued: "It should be simple to beat the time given the advantages of modern materials..."
+
+<!-- PELICAN_END_SUMMARY -->
 
 He and I have had a friendly series of bets throughout our friendship. Moxie usually wins...and I usually forget to name my stakes. I should have bet on this: If ever anyone were to be the cause for my going to the North Pole, it would be Moxie. 
 
