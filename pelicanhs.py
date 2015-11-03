@@ -78,7 +78,7 @@ CLEAN_SUMMARY_MAXIMUM = 3
 CLEAN_SUMMARY_MINIMUM_ONE = True
 
 ## Whether to include a flashproxy and CC license in the footer:
-FLASHPROXY = True
+FLASHPROXY = False
 DISPLAY_CC = True
 
 ## These show up as 'http(s)://<SITE_URL>/static/libris/'
