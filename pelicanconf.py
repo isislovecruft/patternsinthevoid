@@ -113,7 +113,7 @@ TAG_CLOUD_MAX_ITEMS = 0
 # min articles on last page:
 DEFAULT_ORPHANS = 2
 # max per page (not including orphans):
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 3
 SUMMARY_MAX_LENGTH = 500
 
 # Blogroll
