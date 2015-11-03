@@ -4,6 +4,7 @@ Tags: fuck them
 Category: travel
 Author: isis agora lovecruft
 
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 **UPDATE**: [16 September, 2014] This post was originally written just after
 these events occurred, in July of 2012. However, I self-censored and
@@ -37,6 +38,8 @@ could ever be considered stable.
 
 The rest of this article is my uncensored account, as I recorded it then, of
 visiting Congress for the first time.
+
+<!-- PELICAN_END_SUMMARY -->
 
 <p style="text-align: center; font-weight: bold;">&middot &middot &middot</p>
 
