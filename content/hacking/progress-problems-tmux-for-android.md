@@ -2,7 +2,9 @@ Title: Progress & Problems: Tmux for Android
 Date: 2011-12-27 14:03
 Author: isis agora lovecruft
 Category: hacking
-Tags: 28c3, android, android ndk, ARM, C, Chaos Computer Club, cyanogen, hacking, java, linux, perl, tmux, ubuntu
+Tags: 28c3, android, ARM, C, CCC, java, perl
+
+<!-- PELICAN_BEGIN_SUMMARY -->
 
 One of the things I need for [xqdr][], the flying robot that I'm
 building, is a terminal multiplexer, like [screen][] or [tmux][]. I use
@@ -25,6 +27,8 @@ wrapper][] to compile the code. I think I made it through all the
 compiling compilers parts, and then my [finished compiler][] crapped all
 over its pants.
 
+<!-- PELICAN_END_SUMMARY -->
+
 It was at this point that I decided to check my phone, and I realised
 that CyanogenMod7 already has a shared object library for standard C.
 (It's at /system/lib/libc.so). There is the possibility that I could use
@@ -38,7 +42,7 @@ on brutal series of international flights for [Chaos Computer Club][]'s
 [28C3][] in Berlin, and my connection is slower than liberal reformist
 tactics are at creating a freer society.
 
-\<(A)3
+♥Ⓐ
 
   [xqdr]: http://www.patternsinthevoid.net/blog/2011/12/xqdr-a-flying-robot-that-does-things/
     "xqdr: A Flying Robot That Does Things"
