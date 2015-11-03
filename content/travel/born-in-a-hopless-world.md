@@ -43,7 +43,7 @@ to be tattooed across his chest.
 
 The next morning, they brought me a steel tray, and announced, *"Ton petit
 déjeuner"*.  On it was a sealed vial of some transparent reddish liquid,
-labelled with chemical numbers and in French with some Latin, a three
+labelled with chemical numbers in French and with some Latin, a three
 centimeter hypodermic needle and a syringe, both wrapped in plastic autoclave
 packaging, and an alcohol swab.
 
