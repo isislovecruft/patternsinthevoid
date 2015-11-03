@@ -56,6 +56,6 @@ Fuori piove, è un mondo freddo.*
 
 ![](|filename|../blog/wp-content/uploads/2012/01/arturorome11.jpg)
 
-![](|filename|..blog/wp-content/uploads/2012/01/arturorome10.jpg)
+![](|filename|../blog/wp-content/uploads/2012/01/arturorome10.jpg)
 
 ![](|filename|../blog/wp-content/uploads/2012/01/rome8.jpg)
