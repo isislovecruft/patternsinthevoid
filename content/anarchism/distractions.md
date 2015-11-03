@@ -2,24 +2,33 @@ Title: Distractions
 Date: 2011-10-04 22:55
 Author: isis agora lovecruft
 Category: anarchism
-Tags: anarchism
+Tags: jokes
 
-Physics
--------
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+## Physics
 
 Q: Why are quantum physicists so poor at sex?
 
 A: Because when they find the position, they can't find the momentum,
 and when they have the momentum, they can't find the position.
 
+---
+
 Heisenberg went for a drive and got stopped by a traffic cop. The cop
 asked, "Do you know how fast you were going?" Heisenberg replied, "No,
 but I know where I am."
+
+---
 
 Q: How many theoretical physicists specializing in general relativity
 does it take to change a light bulb?
 
 A: Two. One to hold the bulb and one to rotate the universe.
+
+<!-- PELICAN_END_SUMMARY -->
+
+---
 
 There is this farmer who is having problems with his chickens. All of
 the sudden, they are all getting very sick and he doesn't know what is
@@ -34,11 +43,17 @@ of the sudden he starts scribbling away in a notebook. Finally, after
 several gruesome calculations, he exclaims, 'I've got it! But it only
 works for spherical chickens in a vacuum.'
 
+---
+
 A student recognizes Einstein in a train and asks: Excuse me, professor,
 but does New York stop at this train?
 
+---
+
 Researchers in Fairbanks Alaska announced last week that they have
 discovered a superconductor which will operate at room temperature.
+
+---
 
 Psychopathic Physics Test:
 
@@ -90,54 +105,73 @@ velocity of the car.
 
 A: 140.91 happy mph.
 
-anarchism
----------
+## Anarchism
 
 Q: Why do they bury cops six feet under?
 
 A: Because deep down they're really good.
 
+---
+
 Q: What's the difference between a porcupine and a cop car?
 
 A: The porcupine has its pricks on the outside.
+
+---
 
 Q: How do you make a cop sound like a dog?
 
 A: Pour gas and light a match. WOOF.
 
+---
+
 Q: How do you make a cop cry?
 
 A: Throw back the teargas canister.
 
-Q: What's the worst thing about a squad car with two cops in it driving
-off a cliff?
+---
+
+Q: What's the worst thing about a squad car with two cops in it driving off a cliff?
 
 A: Squad cars seat at least four.
 
-Q: How many insurrectionist anarchists does it take to change a
-lightbulb?
+---
+
+Q: How many insurrectionist anarchists does it take to change a lightbulb?
 
 A: The lightbulb cannot be changed, it must be smashed!
+
+---
 
 Q: How many crust punks does it take to change a lightbulb?
 
 A: There's change in a lightbulb?
 
+---
+
 Q: How many tree-sitters does it take to screw in a lightbulb?
 
 A: Tree-sitters don't screw in lightbulbs, silly; they screw in trees.
+
+---
 
 Q: How many individualist anarchists does it take to change a lightbulb?
 
 A: One.
 
+---
+
 Q: How many hipsters does it take to screw in a lightbulb?
 
 A: Ah, it's a really obscure number, man...you wouldn't know.
 
+---
+
 Q: How many vegans does it take to screw in a lightbulb?
 
 A: I don't know, but where do you get your protein?
+
+---
 
 Q: Why did the primitivist move to Eugene?
 
