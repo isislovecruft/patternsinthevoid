@@ -4,19 +4,24 @@ Author: isis agora lovecruft
 Category: anarchism
 Tags: anarchism, epistemology, post-revolution, science
 
-[This is an interesting piece][] on what science might look like after
-an anarchist revolution.
+<!-- PELICAN_BEGIN_SUMMARY -->
+
+[This is an interesting piece](http://www.bmartin.cc/pubs/94raven.html)
+on what science might look like after an anarchist revolution.
 
 However, it is depressingly 1980s in its perceptions of developing
 action within modern scientific theory (specifically the section on
-Anarchist Epistemology, which states, *"Paul Feyerabend is the most
-prominent philosopher to champion a different philosophy of science. He
-criticises the positivist, dogmatic approach to knowledge that is common
-in establishment science, in which almost all resources are devoted to
-exploring the implications of the dominant theoretical framework. He
-supports, instead, investigation of a range of competing theories. This
-is called 'anarchist' because there is no central theoretical dogma that
-dictates scientific research [[13]][].*"
+Anarchist Epistemology,
+[which states](http://www.bmartin.cc/pubs/94raven.html#fn13):
+
+> Paul Feyerabend is the most prominent philosopher to champion a
+> different philosophy of science. He criticises the positivist,
+> dogmatic approach to knowledge that is common in establishment
+> science, in which almost all resources are devoted to exploring the
+> implications of the dominant theoretical framework. He supports,
+> instead, investigation of a range of competing theories. This is
+> called 'anarchist' because there is no central theoretical dogma
+> that dictates scientific research.
 
 I'm sorry, and maybe it's just within the physics community, but I would
 like to point out that General Relativity and the Standard Model are the
@@ -33,9 +38,12 @@ get to tell me about your theory of how Atlantean sacred geometry causes
 pressure to equal gravitation. Go sell Hollywood your idea, because I
 sure as hell am not interested.
 
-Ahem. There were some positive points, especially the author's clear
-elucidation of the separation of society and the scientific communities,
-and how this ideological framework restricts positive change:
+*Ahem.*
+
+There were some positive points, especially the author's
+<!-- PELICAN_END_SUMMARY --> clear elucidation of the separation of society
+and the scientific communities, and how this ideological framework
+restricts positive change:
 
 > This set of directions for an anarchist science policy implies a
 > dramatic shift in the present social context of science: many research
@@ -64,6 +72,3 @@ and how this ideological framework restricts positive change:
 > science systems. As I've indicated, various aspects of science could
 > be potentially be changed: research directions, institutional context,
 > participation in research, decision-making.
-
-  [This is an interesting piece]: http://www.bmartin.cc/pubs/94raven.html
-  [[13]]: http://www.bmartin.cc/pubs/94raven.html#fn13
