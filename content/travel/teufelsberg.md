@@ -176,6 +176,14 @@ abused for surveillance, now serve a much better use for street artists and
       </tr>
       <tr>
         <td style="text-align:center; padding: 1px;">
+          <a href="./static/images/2015/09/berlin-teufelsberg-processed-small/2015-09-27-P9270149_small.png">
+            <img alt="" style="width: 700px;"
+                 src="./static/images/2015/09/berlin-teufelsberg-processed-small/2015-09-27-P9270149_small.png" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:center; padding: 1px;">
           <a href="./static/images/2015/09/berlin-teufelsberg-processed-small/2015-09-27-P9270151_small.png">
             <img alt="" style="width: 700px;"
                  src="./static/images/2015/09/berlin-teufelsberg-processed-small/2015-09-27-P9270151_small.png" />
