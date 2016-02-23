@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url('/lato-regular.woff') format('woff');
+}
+
+body, pre {
+    padding: 0px;
+    color: #c0c0c0;
+    background-color: #080808;
+}
+.outer {
+    width: 50%;
+    margin: auto;
+    align: center;
+}
+#keys-text {
+    padding: 2%;
+    text-align: left;
+    font-size: 9pt;
+}
+a {
+    font-size: apt;
+    color: #606060;
+    text-decoration:none;
+}
