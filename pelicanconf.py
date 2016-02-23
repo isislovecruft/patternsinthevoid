@@ -119,11 +119,11 @@ SUMMARY_MAX_LENGTH = 500
 # Blogroll
 LINKS =  (
     ('pelagus', 'https://fyb.patternsinthevoid.net'),
-    ('clavium apertum', 'https://blog.patternsinthevoid.net/isis.txt'),
-    ('codii et codicilli', 'https://code.patternsinthevoid.net'),
+    ('clavium apertum', 'https://fyb.patternsinthevoid.net/isis.txt'),
+    ('codii et codicilli', 'https://code.ciph.re/isis'),
     #('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
     ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about-the-author.html'),
-    ('libris atricoloris', 'https://blog.patternsinthevoid.net/pages/libris.html'),
+    ('libris atricoloris', 'https://code.ciph.re/isis/library'),
     ('imaginis', 'https://blog.patternsinthevoid.net/static/images'),
     #('strepitus', 'https://sound.patternsinthevoid.net')
     )
