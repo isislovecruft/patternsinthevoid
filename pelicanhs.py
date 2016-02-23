@@ -119,11 +119,11 @@ SUMMARY_MAX_LENGTH = 500
 # Blogroll
 LINKS =  (
     ('pelagus', 'http://7y35c6p2lq7sk45h.onion'),
-    ('clavium apertum', 'http://blog.7y35c6p2lq7sk45h.onion/isis.txt'),
-    ('codii et codicilli', 'http://code.7y35c6p2lq7sk45h.onion'),
+    ('clavium apertum', 'http://7y35c6p2lq7sk45h.onion/isis.txt'),
+    ('codii et codicilli', 'http://code.ciph.re/isis'),
     #('horologii', 'http://7y35c6p2lq7sk45h.onion/calendar.html'),
-    ('elogii biothanatum', 'http://blog.7y35c6p2lq7sk45h.onion/pages/about-the-author.html'),
-    ('libris atricoloris', 'http://blog.7y35c6p2lq7sk45h.onion/pages/libris.html'),
+    ('elogii biothanatum', 'http://blog.7y35c6p2lq7sk45h.onion/pages/about.html'),
+    ('libris atricoloris', 'https://code.ciph.re/isis/library'),
     ('imaginis', 'http://blog.7y35c6p2lq7sk45h.onion/static/images'),
     #('strepitus', 'https://sound.patternsinthevoid.net')
     )
