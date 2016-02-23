@@ -122,7 +122,7 @@ LINKS =  (
     ('clavium apertum', 'https://fyb.patternsinthevoid.net/isis.txt'),
     ('codii et codicilli', 'https://code.ciph.re/isis'),
     #('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
-    ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about-the-author.html'),
+    ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about.html'),
     ('libris atricoloris', 'https://code.ciph.re/isis/library'),
     ('imaginis', 'https://blog.patternsinthevoid.net/static/images'),
     #('strepitus', 'https://sound.patternsinthevoid.net')
