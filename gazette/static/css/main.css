@@ -145,11 +145,19 @@ cite {}
 
 q {}
 
-div.note {
-   float: right;
-   margin: 5px;
+div.note,
+div.note-left,
+div.note-right {
+   /*margin: 5px;*/
+    padding: 5px 5px 10px 5px;
    font-size: 85%;
-   max-width: 300px;
+   max-width: 48%;
+}
+div.note-right {
+   float: right;
+}
+div.note-left {
+   float: left;
 }
 
 #over {
