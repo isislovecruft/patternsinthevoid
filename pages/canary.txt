@@ -24,6 +24,6 @@ well, this canary will be renewed every six months.  Effectively, this means
 that if you can verify the validity of the signature below, then this warrant
 canary is still going strong.
 
-  22 Feb 2016
+  22 Aug 2016
   ♥Ⓐ isis agora lovecruft
 
