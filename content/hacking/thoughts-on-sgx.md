@@ -97,7 +97,7 @@ for moving execution (on either side) into an SGX enclave as well.
 
 Moving forward towards more secure computing platforms, the most realistic
 candidate I can currently imagine would be comprised by a
-[hardware-modified Thinkpad](|filename|../replacing-a-thinkpad-x60-bootflash-chip.html)
+[hardware-modified Thinkpad](|filename|/../replacing-a-thinkpad-x60-bootflash-chip.html)
 which uses the above local attestation scheme to verify the integrity of
 [QubesOS's security-critical code](https://www.qubes-os.org/doc/security-critical-code/)
 and the integrity of a [Coreboot](https://www.coreboot.org/) (the latter of
