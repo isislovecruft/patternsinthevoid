@@ -20,7 +20,7 @@ To do this, you need a wireless card which supports packet injection and
 monitoring, and simply the aircrack-ng suite of tools. The command for
 it is
 
-    airplay-ng --death 0 -a [BSSID of victim network access point] mon0
+    airplay-ng --deauth 0 -a [BSSID of victim network access point] mon0
 
 There's no way to defend against this type of attack, but the victim(s)
 could triangulate your position using the frequency strength of your
