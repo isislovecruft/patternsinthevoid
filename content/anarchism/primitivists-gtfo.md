@@ -21,7 +21,7 @@ It's closely tied to other problematic and illogical argument forms like
 calling yourselves anarchists? Anarchists making *appeals to tradition*.
 Yeah. Okay." Get the fuck out of my movement.
 
-I'm concerned with freedom, not anthropocentrically, but f[reedom in a
+I'm concerned with freedom, not anthropocentrically, but [freedom in a
 broader sense of a maximization of informed agency][], which includes
 taking into context the environment we all share. That's right, I said
 it. I care about the trees; I care about the non-human and human
@@ -65,4 +65,4 @@ Seriously, read ["A Cyborg Manifesto"][].
   [*Queering the Singularity*]: https://queersingularity.wordpress.com/2011/06/26/transhumanism-and-the-radical-left-anarchist-skillshare-2011/
   [you who go around bombing nanotechnology research centers]: https://guerrillanews.wordpress.com/2011/08/17/anti-nanotech-bomb-claim-by-individualists-tending-towards-the-wild-mexico/
   [Yeah, he's cooperating with the FBI]: http://vancouver.mediacoop.ca/audio/deep-green-resistance-death-threats-and-police/8014
-  ["A Cyborg Manifesto"]: https://www.stanford.edu/dept/HPS/Haraway/CyborgManifesto.html
+  ["A Cyborg Manifesto"]: http://faculty.georgetown.edu/irvinem/theory/Haraway-CyborgManifesto.html
