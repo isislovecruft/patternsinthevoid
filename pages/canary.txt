@@ -20,10 +20,10 @@ https://fyb.patternsinthevoid.net/canary.asc.
 
 The OpenPGP signature on this warrant canary has a pre-determined expiration
 date that coincides with the date on which this canary will die.  If all goes
-well, this canary will be renewed every six months.  Effectively, this means
+well, this canary will be renewed every year.  Effectively, this means
 that if you can verify the validity of the signature below, then this warrant
 canary is still going strong.
 
-  22 Feb 2017
+  11 September 2017
   ♥Ⓐ isis agora lovecruft
 
