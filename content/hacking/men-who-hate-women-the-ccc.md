@@ -51,7 +51,7 @@ privately showing no interest in learning about what had happened from the survi
 One of those expelled was
 7a573b399812f3260385bd1790cd3e22612fad1b02ad8d95946bd096f1c8455d (hereafter
 truncated to "7a573b39"), the second
-participant in River's account, which describes a horrific gang rape while she was
+participant in River's account, which describes a horrific assault while she was
 intoxicated to the point of being non-responsive.  Unlike my coworkers, 7a573b39 was
 given a talk at 33C3.  (Ironically, on a project I helped design and implement.)
 This was the CCC's idea of the way forward.
