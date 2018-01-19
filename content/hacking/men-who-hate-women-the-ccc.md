@@ -1,5 +1,5 @@
 Title: The CCC: Men Who Hate Women
-Date: 2017-12-24 22:00
+Date: 2017-12-26 20:00
 Tags: ccc
 Category: hacking
 Author: isis agora lovecruft
@@ -48,26 +48,28 @@ Two other members of the Tor community were expelled for their participation in
 The CCC continued their pattern of feigning interest in making progress, while
 privately showing no interest in learning about what had happened from the survivors.
 
-One of those expelled was Will Scott, the second rapist in River's account, which
-describes a horrific gang rape while she was intoxicated to the point of being
-non-responsive.  Unlike my coworkers, Will was given a talk at 33C3.
-(Ironically, on a project I helped design and implement.)
+One of those expelled was
+7a573b399812f3260385bd1790cd3e22612fad1b02ad8d95946bd096f1c8455d (hereafter
+truncated to "7a573b39"), the second
+participant in River's account, which describes a horrific gang rape while she was
+intoxicated to the point of being non-responsive.  Unlike my coworkers, 7a573b39 was
+given a talk at 33C3.  (Ironically, on a project I helped design and implement.)
 This was the CCC's idea of the way forward.
 
-Survivors of Jacob's abuse had collectively agreed to give Will a second chance:
-he said he had been manipulated by Jake into participating in the rape; he did
-not appear to have committed any similar abuse; he expressed remorse and
+Survivors of Jacob's abuse had collectively agreed to give 7a573b39 a second
+chance: he said he had been manipulated by Jake into participating in the rape;
+he did not appear to have committed any similar abuse; he expressed remorse and
 apologised to River; he claimed to have taken a class on not only recognising,
 but enacting bystander intervention in sexual harassment.
 
-Here is Will nine months later, in September 2017, standing next to Jake:
+Here is 7a573b39 nine months later, in September 2017, standing next to Jake:
 
 </p><span id="wrapper" style="width:100%;">
 <table id="wrapper-table" style="width:100%; padding:0.2em;"><tbody>
 <tr>
   <td style="text-align:center; padding:0.2em;">
     <a href="./static/images/2017/12/ascrypto2017.JPG">
-    <img alt="Will and Jake" width="100%"
+    <img alt="7a573b39 and Jake" width="100%"
          src="./static/images/2017/12/ascrypto2017.JPG" />
     </a>
   </td>
@@ -77,16 +79,16 @@ Here is Will nine months later, in September 2017, standing next to Jake:
 
 This photo was taken in Cuba at ASCrypto, a self-described school for "graduate
 students in cryptography" aiming to "build cryptologic research capacity in the
-region".  Will explained to others
-within the Tor Project that he hadn't intended to run into Jake, and that Jake
-had "followed" him around "harassing him" the whole time.
+region".  7a573b39 explained to others within the Tor Project that he hadn't
+intended to run into Jake, and that Jake had "followed" him around "harassing
+him" the whole time.
 
-Will is not a student of cryptography, so it seems pretty implausible that he'd
+7a573b39 is not a student of cryptography, so it seems pretty implausible that he'd
 fly all the way to Cuba for a cryptography school with lectures given by Jacob's
 advisers and enablers,
 [Dan Bernstein and Tanja Lange](https://medium.com/@hdevalence/when-hell-kept-on-payroll-somewhere-is-where-you-are-f419d3022d0),
 and then be shocked (*shocked!*) to discover Jacob there.  But even if this
-story were true, standing idly by your fellow rapist is not the action of
+story were true, standing idly by your fellow abuser is not the action of
 someone who feels genuine remorse or regret.
 
 This appears to be the same pattern of behaviour as the CCC: in
@@ -94,7 +96,7 @@ public, do the bare minimum to feign progress; in private, do whatever
 they think they can get away with.
 
 This year, for 34C3, the CCC rejected talks discussing harassment and abuse, yet
-they found time to give Will *two* talks.  They shut down
+they found time to give 7a573b39 *two* talks.  They shut down
 conversations on paths towards progress, safety, and inclusivity, but they allow
 [an assembly](https://pbs.twimg.com/media/DRQupEeXUAAI_T7.jpg) which proclaims
 "a code-of-conduct free zone", warning attendees to "enter at own risk".  It is never enough to just
@@ -103,3 +105,31 @@ is vital to fight, root and branch, against the organisations, structures, and
 people which enable sexual assault, harassment, and other forms of
 discrimination.  The CCC's actions have been entirely within bad faith, meant to
 cause and enable further harm.  I do not say this lightly: the CCC hates women.
+
+---
+
+*Edit (2017-12-27 18:00): After additional conversations with River, we have
+agreed to edit this post in the following ways:*
+
+First, it is important to clarify that River describes Jacob Appelbaum's actions
+as rape, and the other participant's actions as sexual assault.  Further, we
+would like to make clear the differences between the two: Jacob has never
+attempted any apology to any of his survivors (and instead has proceeded to
+threaten and direct further abuses at them), while the other participant, as
+described above, has taken every step asked of him in an accountability process,
+only to afterwards betray survivors.  There are degrees to violence and
+sexualised violence, and, within context, the actions of one abuser should not
+necessarily be categorised as equivalent to another.  (The author, isis agora
+lovecruft, takes full responsibility for the mistakes in the original word
+choices and would like to point out the importance of having
+[survivor-led processes and noting the ways in which accountability may fail](https://crimethinc.com/2013/04/17/accounting-for-ourselves-breaking-the-impasse-around-assault-and-abuse-in-anarchist-scenes).)
+
+Second, we have chosen to redact the other participant's name.  While it is one
+thing to speak in our own words of his successes and failures in healing
+alongside with survivors, it is our fear that others will use his name with
+words that are not ours — that is, not survivor-led — in ways that might damage
+his capabilities for further healing and remediation.  It is our hope to work
+with him to combat the ongoing damages of our patriarchal society, our systems
+entrenched with and built around (trans)misogyny, and to build entirely new
+systems and spaces for community interaction which prevent what we have survived
+from occuring in the future.
