@@ -12,7 +12,7 @@ Content Warning: rape, sexual assault, whistleblower retaliation
 </p>
 
 Sarah Jeong's recent article,
-<a href=https://www.theverge.com/2017/12/21/16807116/infosec-community-sexual-predators-weinstein-assault><i>Vulnerabilities and exploits: what happened when the infosec community outed its own sexual predators</i></a>
+<a href=https://www.theverge.com/2017/12/21/16807116/infosec-community-sexual-predators-weinstein-assault><i>Vulnerabilities and exploits: what happened when the infosec community outed its own sexual predators</i></a>,
 discusses some positive cultural changes in North America since the outings of
 serial rapists Jacob Appelbaum and Morgan Marquis-Boire.
 
@@ -37,7 +37,7 @@ had, "of course", referred to Jake all along.  Of course, they only clarified
 this on Twitter and never updated their statement. In English, this is called
 "gaslighting".
 
-There were no Tor talks last year at 33C3, because every Tor talk sumbitted was
+There were no Tor talks last year at 33C3, because every Tor talk submitted was
 silently removed by the CCC to "avoid controversy".  Before the congress, the
 CCC requested a meeting with their selection of representatives from Tor to
 discuss a way forward.  I requested to attend the meeting, and was forbidden
@@ -83,7 +83,7 @@ had "followed" him around "harassing him" the whole time.
 
 Will is not a student of cryptography, so it seems pretty implausible that he'd
 fly all the way to Cuba for a cryptography school with lectures given by Jacob's
-advisors and enablers,
+advisers and enablers,
 [Dan Bernstein and Tanja Lange](https://medium.com/@hdevalence/when-hell-kept-on-payroll-somewhere-is-where-you-are-f419d3022d0),
 and then be shocked (*shocked!*) to discover Jacob there.  But even if this
 story were true, standing idly by your fellow rapist is not the action of
