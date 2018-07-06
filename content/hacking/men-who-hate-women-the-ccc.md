@@ -3,7 +3,7 @@ Date: 2017-12-26 20:00
 Tags: ccc
 Category: hacking
 Author: isis agora lovecruft
-Image: /static/images/2016/12/XXX.jpg
+Image: /static/images/2017/12/640px-Logo_CCC.svg.png
 
 <!-- PELICAN_BEGIN_SUMMARY -->
 
