@@ -19,7 +19,7 @@ RELATIVE_URLS = True
 # Basic settings
 #################
 
-AUTHOR = u'Isis Agora Lovecruft'
+AUTHOR = u'isis agora lovecruft'
 SITENAME = u'Patterns in the Void'
 SITEURL = 'https://blog.patternsinthevoid.net'
 FEED_DOMAIN = 'https://blog.patternsinthevoid.net'
@@ -78,7 +78,7 @@ CLEAN_SUMMARY_MAXIMUM = 3
 CLEAN_SUMMARY_MINIMUM_ONE = True
 
 ## Whether to include a flashproxy and CC license in the footer:
-FLASHPROXY = True
+FLASHPROXY = False
 DISPLAY_CC = True
 
 ## These show up as 'http(s)://<SITE_URL>/static/libris/'
@@ -131,5 +131,4 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/isislovecruft'),
     ('github', 'https://github.com/isislovecruft'),
     #('flattr this!', 'https://flattr.com/submit/auto?user_id=isislovecruft&url=https://blog.patternsinthevoid.net/index.html'),
-    #('#tor-status', 'https://gs.torproject.org/person/isis'),
 )
