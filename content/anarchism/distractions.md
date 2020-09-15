@@ -3,6 +3,9 @@ Date: 2011-10-04 22:55
 Author: isis agora lovecruft
 Category: anarchism
 Tags: jokes
+Status: Draft
+
+<!-- draft status added 2020-09-15 -->
 
 <!-- PELICAN_BEGIN_SUMMARY -->
 

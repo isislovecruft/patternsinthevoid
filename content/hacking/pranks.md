@@ -3,6 +3,9 @@ Date: 2012-06-28 07:42
 Author: isis agora lovecruft
 Category: hacking
 Tags: censorship, JS, MPOTR, python, reverse engineering
+Status: Hidden
+
+<!-- status changed to hidden 2020-09-15 -->
 
 So, while I'm busy researching away, hard at work
 [reverse engineering proprietary network monitoring software](https://trac.torproject.org/projects/tor/ticket/6184),

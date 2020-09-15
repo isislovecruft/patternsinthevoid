@@ -2,6 +2,9 @@ Title: anarchism and Magic...cards
 Date: 2011-05-26 03:26
 Author: isis agora lovecruft
 Category: anarchism
+Status: Hidden
+
+<!-- draft status added 2020-09-15 -->
 
 When I was a kid, there was a period in which I answered the query,
 "What do you want to be when you grow up?" with "I want to write flavor

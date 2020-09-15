@@ -2,6 +2,9 @@ Title: Alchemical Bust Card
 Date: 2010-03-10 14:07
 Author: isis agora lovecruft
 Category: anarchism
+Status: Draft
+
+<!-- draft status added 2020-09-15 -->
 
 [![][]][]
 

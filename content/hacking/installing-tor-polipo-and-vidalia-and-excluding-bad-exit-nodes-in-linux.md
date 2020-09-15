@@ -3,6 +3,7 @@ Date: 2011-06-21 20:15
 Author: isis agora lovecruft
 Category: hacking
 Tags: .onion, anonymity, Bad Apple Attack, Excluding Bad Exit Nodes, linux, Polipo, Setting Up a Tor Relay, Tor, Tor Hidden Services, Vidalia
+Status: hidden
 
 **EDITED 1 September 2011:** I STRONGLY SUGGEST THAT YOU FOLLOW
 DOCUMENTATION ON THE TOR PROJECT'S WEBSITE, AND IF THAT DOESN"T WORK
