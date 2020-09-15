@@ -263,7 +263,7 @@ some of the worst C code I've ever read.  The code isn't constant time, and
 numerous attacks have resulted from this, as the developers scurry to jump
 through hoops of fire to implement yet another variable-timed algorithm they've
 seemingly come up with on the spot which is vulnerable to a dozen more attacks
-*just not that one from the latest paper*. OpenPGP (RFC4480) is one of the worst
+*just not that one from the latest paper*. OpenPGP (RFC4880) is one of the worst
 designs and specifications ever written.  I have to spend spots, here and there,
 of my non-existent free time maintaining a whitelist as the GnuPG developers
 randomly change their internal, nearly undocumented line protocol, between micro
