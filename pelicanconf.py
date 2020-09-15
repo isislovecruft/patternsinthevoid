@@ -120,10 +120,10 @@ SUMMARY_MAX_LENGTH = 500
 LINKS =  (
     ('pelagus', 'https://fyb.patternsinthevoid.net'),
     ('clavium apertum', 'https://fyb.patternsinthevoid.net/isis.txt'),
-    ('codii et codicilli', 'https://code.ciph.re/isis'),
+    ('codii et codicilli', 'https://github.com/isislovecruft'),
     #('horologii', 'https://blog.patternsinthevoid.net/calendar.html'),
     ('elogii biothanatum', 'https://blog.patternsinthevoid.net/pages/about.html'),
-    ('libris atricoloris', 'https://code.ciph.re/isis/library'),
+    ('libris atricoloris', 'https://github.com/isislovecruft/library--'),
     ('imaginis', 'https://blog.patternsinthevoid.net/static/images'),
     #('strepitus', 'https://sound.patternsinthevoid.net')
     )
