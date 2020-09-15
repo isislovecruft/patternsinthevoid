@@ -11,7 +11,7 @@ from pelican import signals
 from pelican.generators import ArticlesGenerator, StaticGenerator, PagesGenerator
 
 def initialized(pelican):
-    from pelican.settings import _DEFAULT_CONFIG as DEFAULT_CONFIG
+    from pelican.settings import DEFAULT_CONFIG
     DEFAULT_CONFIG.setdefault('SUMMARY_BEGIN_MARKER',
                               '<!-- PELICAN_BEGIN_SUMMARY -->')
     DEFAULT_CONFIG.setdefault('SUMMARY_END_MARKER',
