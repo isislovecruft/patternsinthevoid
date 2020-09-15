@@ -14,7 +14,7 @@ pre .dec, code .dec { color: #963c59; } /* decimal - blue */
 
 pre.prettyprint, code.prettyprint {
         background-color: rgb(5, 5, 5);
-        font-size: 85%;
+        font-size: 95%;
         -moz-border-radius: 15px;
         -webkit-border-radius: 15px;
         -o-border-radius: 15px;

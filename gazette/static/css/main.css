@@ -17,7 +17,7 @@
   font-family: 'Droid Sans';
   font-style: normal;
   font-weight: normal;
-  font-size: 90%;
+  font-size: 110%;
   src: local('Droid Sans Mono'), local('DroidSansMono'), url('fonts/DroidSansMono.ttf') format('truetype');
     }
 
@@ -34,7 +34,7 @@
 body {
     background: #FFF;
     color: rgb(5, 10, 5);
-    font-size: 105%;
+    font-size: 115%;
     font-family: 'Garamond', 'Lucida Unicode', serif;
     line-height: 1.329;
     margin: auto;
