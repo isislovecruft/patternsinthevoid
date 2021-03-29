@@ -1,6 +1,6 @@
 Jinja2==2.11.2
 Markdown==2.2.1
-Pygments==2.7
+Pygments==2.7.4
 Unidecode==0.04.12
 argparse==1.2.1
 blinker==1.2
